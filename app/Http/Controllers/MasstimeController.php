@@ -9,7 +9,9 @@ class MasstimeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->only('create','edit');
+        $this->middleware('auth')->only('create','edit');            
+        $heading = Masstime::latest()->first();
+        \View::share('heading', $heading);
     }
 
 
@@ -27,6 +29,8 @@ class MasstimeController extends Controller
 
     public function show($id){
     	$masstime = Masstime::findOrFail($id);
+ ;
+       
 		return view('masstime.show', compact('masstime'));
     }
 
@@ -41,13 +45,16 @@ class MasstimeController extends Controller
     	$masstime->fill($request->all());
     	$masstime->save();
     	return redirect('masstime/'.$id);
-
     }
 
     public function index(){
-
         $masstimes = Masstime::get();
-
         return view('masstime.index', compact('masstimes'));
     }
+
+        public function destroy($id){
+        $masstime = Masstime::findOrFail($id);
+        $masstime->delete();
+        return redirect('/');
+        }
 }

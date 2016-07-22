@@ -7,48 +7,41 @@ use App\Fileupload;
 
 class FileuploadController extends Controller
 {
-    public function create(){
-    	return view('fileupload.create');
-    }
+
+    public function index(){
+        $fileuploads = Fileupload::get();
+        $list = array();
+        foreach ($fileuploads as $fileupload){
+            $img = new \StdClass;
+            $img->url  = "http://sp.df.ercorr.com/" . $fileupload->path;
+            $img->thumb = "http://sp.df.ercorr.com/" . $fileupload->path;
+            $img->id = $fileupload->id;
+            $list[] = $img;
+            }
+        return stripslashes(response()->json($list)->content());
+        }    
+  //   public function create(){
+  //   	return view('fileupload.create');
+  //   }
 
     public function store(Request $request){
-
-    	$input = $request->all();
-    	$file = new Fileupload;
-    	$fileData = $request->file('upload');
-    	$filename = $fileData->getClientOriginalName();
-    	$filepath = 'files/';
-    	$file = new Fileupload;
-		$file->fill($request->all());
-		$file->save();
- 	
-
-
-  
-
-    	
-
- 
-
-
-
- 
-
-
-	
-	
-
-		$request->file('upload')->move($filepath, $filename);
-
-
- 		\Session::flash('success_message', 'Successfully saved!');
-
-		return redirect('files/'.$file->id);
-   
-
-
-
-
+        if($request->hasFile('image')){
+            $fileData = $request->file('image');
+            $filepath = 'img/';
+        }
+        if($request->hasFile('file')){
+            $fileData = $request->file('file');
+            $filepath = 'files/';
+        }
+        $file = new Fileupload;
+     	$input = $request->all();
+     	$filename = $fileData->getClientOriginalName();
+        $file->title = $filename;
+        $file->path = $filepath.$filename;
+        $fileData->move($filepath, $filename); 
+        $completePath = "http://sp.df.ercorr.com/".$filepath.$filename;
+        $file->save();  
+        return stripslashes(response()->json(['link' => $completePath])->content());
     }
 
 }

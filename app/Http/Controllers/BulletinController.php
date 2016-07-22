@@ -10,6 +10,10 @@ class BulletinController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->only('create','edit');
+
+        
+        $heading = Bulletin::latest()->first();
+        \View::share('heading', $heading);
     }
 
 

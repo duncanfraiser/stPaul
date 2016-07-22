@@ -3,9 +3,9 @@
 <div class="col-md-8 col-md-offset-2">
 		<center><h1>Following Christ Registration</h1></center><br>
 {{Form::open(['method' => 'POST', 'action' => 'ChristLifeController@store'])}}
-    <div class="form-group">    	
-		{{ Form::label('completed', '"I completed the 7-week Discovering Christ Series and am ready to continue with the Following Christ Series. I commit to attend all seven Thursday evening sessions and the Saturday Retreat.":')}}
-		{{ Form::checkbox('completed', 'yes', null) }}        
+    <div class="checkbox">
+    {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I completed the 7-week Discovering Christ Series and am ready to continue with the Following Christ Series. I commit to attend all seven Thursday evening sessions and the Saturday Retreat.":')}}
+		       
     </div>
     <div class="form-group">
 		{{ Form::label('day', 'Select Session Day:')}}

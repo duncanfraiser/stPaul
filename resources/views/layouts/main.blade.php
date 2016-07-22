@@ -23,7 +23,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-   <link rel="stylesheet" href="{{ asset('css/custom.css') }}?1">
+
+
+    @include('includes._froala-css')
+
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?1">
+ 
 </head>
 
 
@@ -101,6 +106,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+    @include('includes._froala-js')
 
  
     @yield('scripts')

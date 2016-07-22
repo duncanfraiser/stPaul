@@ -18,4 +18,12 @@
 	</div>
 	<a href="{{url('/')}}"><button class="pull-right btn btn-secondary">Cancel</button></a>
 </div>
+                <div class="col-md-6 col-md-offset-3">
+                    {{Form::open(['method' => 'DELETE', 'route' => ['bulletin.destroy', $bulletin->id]])}}
+                    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                    {{Form::close()}}
+                </div>
+@stop
+@section('scripts')
+@include('includes._froalaOptions')
 @stop

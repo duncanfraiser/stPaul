@@ -12,7 +12,7 @@
 @endif
 @endif
 <h1>{{$homily->title}}</h1>
-<h3>{{$homily->body}}</h3>
+<h3>{!!$homily->body!!}</h3>
 <span class="pull-right">
 <a href="{{ url('/homily/')}}">homily Archive</button></a>
 </span>

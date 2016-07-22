@@ -14,6 +14,7 @@ class CreateMasstimesTable extends Migration
     {
             Schema::create('masstimes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('heading');
             $table->string('title');
             $table->string('excerpt');
             $table->string('body');

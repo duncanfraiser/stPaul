@@ -6,7 +6,7 @@
 <div class="row">
 <div class="col-md-12">
 <div class="col-md-4">
-	<center><h1>Announcements</h1></center>
+	<center><h1>{{$announcement->heading}}</h1></center>
 	<strong>{{$announcement->title}}</strong>
 	@if(\Auth::check())
 	@if(\Auth::user()->isAdmin())
@@ -16,7 +16,7 @@
 	</span>
 	@endif
 	@endif
-	<p>{{$announcement->excerpt}}
+	<p>{!!$announcement->excerpt!!}
 	<a href="{{ url('/announcement/'.$announcement->id)}}">...Read More</button></a>
 	</p>
 </div>
@@ -31,7 +31,7 @@
 	</span>
 	@endif
 	@endif
-	<p>{{$masstime->excerpt}}
+	<p>{!!$masstime->excerpt!!}
 	<a href="{{ url('/masstime/'.$masstime->id)}}">...Read More</button></a>
 	</p>
 </div>
@@ -46,7 +46,7 @@
 	</span>
 	@endif
 	@endif
-	<p>{{$bulletin->excerpt}}
+	<p>{!!$bulletin->excerpt!!}
 	<a href="{{ url('/bulletin/'.$bulletin->id)}}">...Read More</button></a>
 	</p>
 </div>
@@ -66,7 +66,7 @@
 	</span>
 	@endif
 	@endif
-	<p>{{$homily->body}} {{$homily->filepath}}
+	<p>{!!$homily->body!!} 
 	<a href="{{ url('/homily/'.$homily->id)}}">...Read More</button></a>
 	</p>
 </div>

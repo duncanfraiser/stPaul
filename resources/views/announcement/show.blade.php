@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-md-12">
 <div class="col-md-8 col-md-offset-2">
-<center><h1>Announcements</h1></center>
+<center><h1>{{$heading->heading}}</h1></center>
 @if(\Auth::check())
 @if(\Auth::user()->isAdmin())
 <span class="pull-right">
@@ -12,9 +12,9 @@
 @endif
 @endif
 <h1>{{$announcement->title}}</h1>
-<h3>{{$announcement->body}}</h3>
+<h3>{!!$announcement->body!!}</h3>
 <span class="pull-right">
-<a href="{{ url('/announcement/')}}">Announcement Archive</button></a>
+<a href="{{ url('/announcement/')}}">{{$heading->heading}} Archive</button></a>
 </span>
 </div>
 </div>
