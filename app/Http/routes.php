@@ -14,6 +14,7 @@ Route::resource('bulletin', 'BulletinController');
 Route::resource('homily', 'HomilyController');
 Route::resource('youth', 'YouthController');
 Route::resource('masstime', 'MasstimeController');
+Route::resource('ministry', 'MinistryController');
 Route::resource('member/{member}/dependents', 'DependentsController');
 Route::resource('attending', 'AttendingController');
 

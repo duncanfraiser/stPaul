@@ -18,15 +18,17 @@
 		{{Form::close()}}		
 		</div>
 	</div>
-<div class='pull-right'>
-	<a href="{{url('/')}}"><button class="btn btn-secondary">Cancelee</button></a>
+	<div class='pull-right'>
+	<a href="{{url('/')}}"><button class="btn btn-secondary">Cancel</button></a>
 	</div>
+    <div class="pull-right">
+       	<div class="form-group">
+        {{Form::open(['method' => 'DELETE', 'route' => ['announcement.destroy', $announcement->id], 'class' => 'delete'])}}
+        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+        {{Form::close()}}
+    	</div>
+    </div>
 </div>
-                <div class="col-md-6 col-md-offset-3">
-                    {{Form::open(['method' => 'DELETE', 'route' => ['announcement.destroy', $announcement->id], 'class' => 'delete'])}}
-                    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-                    {{Form::close()}}
-                </div>
 
 @stop
 @section('scripts')

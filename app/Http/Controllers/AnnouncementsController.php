@@ -22,7 +22,7 @@ class AnnouncementsController extends Controller
 		$announcement->fill($request->all());
 		$announcement->save();
  		\Session::flash('success_message', 'Successfully saved!');
-		return redirect('announcement/'.$announcement->id);
+		return redirect('/');
         }
 
     public function show($id){

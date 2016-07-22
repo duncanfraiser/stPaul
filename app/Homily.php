@@ -10,6 +10,7 @@ class Homily extends Model
 	use SoftDeletes;
 
       protected $fillable = [
+   			'heading',
    			'title',
             'body',
             'filepath'

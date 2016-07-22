@@ -3,6 +3,8 @@
 <div class="DFcontainer col-md-8 col-md-offset-2">
 {{Form::open(['method' => 'POST', 'action' => 'YouthController@store'])}}
 	<div class="form-group">
+		{{Form::label('heading', 'Heading:')}}
+		{{Form::text('heading', null, ['class' => 'form-control', 'placeholder' => 'Enter Heading'])}}
 		{{Form::label('title', 'Title:')}}
 		{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Title'])}}
 		{{Form::label('excerpt', 'Excerpt:')}}

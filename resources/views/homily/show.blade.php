@@ -14,7 +14,7 @@
 <h1>{{$homily->title}}</h1>
 <h3>{!!$homily->body!!}</h3>
 <span class="pull-right">
-<a href="{{ url('/homily/')}}">homily Archive</button></a>
+<a href="{{ url('/homily/')}}">{{$heading->heading}} Archive</button></a>
 </span>
 </div>
 </div>

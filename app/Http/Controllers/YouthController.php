@@ -10,6 +10,9 @@ class YouthController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->only('create','edit');
+
+        $heading = Youth::latest()->first();
+        \View::share('heading', $heading);
     }
 
 

@@ -12,21 +12,30 @@
 		{{Form::label('body', 'Body:')}}
 		{{Form::textarea('body', null, ['class' => 'form-control'])}}
 	</div>
-	<div class="form-group">
-		<div class='pull-right'>		
-		{{Form::submit('Edit Mass Times', ['class' => 'btn btn-primary'])}}
-		{{Form::close()}}
-		<a href="{{ URL::previous() }}"><button class="btn btn-secondary">Cancel</button></a>
+	<div class='pull-right'>
+		<div class="form-group">
+		{{Form::submit('Update', ['class' => 'btn btn-primary'])}}
+		{{Form::close()}}		
 		</div>
 	</div>
+	<div class='pull-right'>
+	<a href="{{url('/')}}"><button class="btn btn-secondary">Cancel</button></a>
+	</div>
+    <div class="pull-right">
+       	<div class="form-group">
+        {{Form::open(['method' => 'DELETE', 'route' => ['masstime.destroy', $masstime->id], 'class' => 'delete'])}}
+        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+        {{Form::close()}}
+    	</div>
+    </div>
 </div>
-                <div class="col-md-6 col-md-offset-3">
-                    {{Form::open(['method' => 'DELETE', 'route' => ['masstime.destroy', $masstime->id]])}}
-                    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-                    {{Form::close()}}
-                </div>
 @stop
 
 @section('scripts')
 @include('includes._froalaOptions')
+<script>
+	$(".delete").on("submit", function(){
+		return confirm("Do you want to delete this item?");
+	});
+</script>
 @stop

@@ -10,6 +10,9 @@ class HomilyController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->only('create','edit');
+
+        $heading = Homily::latest()->first();
+        \View::share('heading', $heading);
     }
 
     public function create(){

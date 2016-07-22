@@ -13,8 +13,8 @@ class FileuploadController extends Controller
         $list = array();
         foreach ($fileuploads as $fileupload){
             $img = new \StdClass;
-            $img->url  = "http://sp.df.ercorr.com/" . $fileupload->path;
-            $img->thumb = "http://sp.df.ercorr.com/" . $fileupload->path;
+            $img->url  = "http://new.saintpaulcatholicchurch.com/" . $fileupload->path;
+            $img->thumb = "http://new.saintpaulcatholicchurch.com/" . $fileupload->path;
             $img->id = $fileupload->id;
             $list[] = $img;
             }
@@ -39,7 +39,7 @@ class FileuploadController extends Controller
         $file->title = $filename;
         $file->path = $filepath.$filename;
         $fileData->move($filepath, $filename); 
-        $completePath = "http://sp.df.ercorr.com/".$filepath.$filename;
+        $completePath = "http://new.saintpaulcatholicchurch.com/".$filepath.$filename;
         $file->save();  
         return stripslashes(response()->json(['link' => $completePath])->content());
     }
