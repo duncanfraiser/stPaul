@@ -13,8 +13,8 @@
 </span>
 @endif
 @endif
-<h1>{{$ministry->title}}</h1>
-<h3>{!!$ministry->body!!}</h3>
+<h3>{{$ministry->title}}</h3>
+<p>{!!$ministry->body!!}</p>
 <span class="pull-right">
 <a href="{{ url('/ministry/')}}">{{$heading->heading}} Archive</button></a>
 </span>

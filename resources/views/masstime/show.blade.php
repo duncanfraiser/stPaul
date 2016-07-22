@@ -11,8 +11,8 @@
 </span>
 @endif
 @endif
-<h1>{{$masstime->title}}</h1>
-<h3>{!!$masstime->body!!}</h3>
+<h3>{{$masstime->title}}</h3>
+<p>{!!$masstime->body!!}</p>
 <span class="pull-right">
 <a href="{{ url('/masstime/')}}">Mass Time Archive</button></a>
 </span>

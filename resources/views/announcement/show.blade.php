@@ -11,8 +11,8 @@
 </span>
 @endif
 @endif
-<h1>{{$announcement->title}}</h1>
-<h3>{!!$announcement->body!!}</h3>
+<h3>{{$announcement->title}}</h3>
+<p>{!!$announcement->body!!}</p>
 <span class="pull-right">
 <a href="{{ url('/announcement/')}}">{{$heading->heading}} Archive</button></a>
 </span>

@@ -26,7 +26,9 @@
 
 
     @include('includes._froala-css')
-
+    <!--google font ovo-->
+    <link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+    
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}?1">
  
 </head>
