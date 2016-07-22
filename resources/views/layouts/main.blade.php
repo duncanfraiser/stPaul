@@ -58,21 +58,20 @@
                     <li>
                         <a href="#">Welcome</a>
                     </li>
+                   
                     <li>
-                        <a href="{{url('/ChristLife/create')}}">Register</a>
+                        <div class="dropdown">
+                        <button class=" dropdown-toggle" data-toggle="dropdown">Registration Forms
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                        <li><a href="{{url('/ChristLife/create')}}">Christ Life</a></li>
+                        </ul>
+                        </div>
                     </li>
 
-                    @if(!\Auth::guest())
-                    <li >
-                    <a href="{{url('/logout')}}">Log Out, {{\Auth::user()->name}}</a>
-                    </li>
-                    @else
-                    <li>
-                        <a href="{{url('/login')}}">Login </a>
-                    </li>
-                    @endif
 
                 </ul>
+
             </div>
             <!-- /.navbar-collapse -->
         </div>

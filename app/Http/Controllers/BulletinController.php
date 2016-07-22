@@ -26,7 +26,7 @@ class BulletinController extends Controller
 		$bulletin->fill($request->all());
 		$bulletin->save();
  		\Session::flash('success_message', 'Successfully saved!');
-		return redirect('bulletin/'.$bulletin->id);
+		return redirect('/');
     }
 
     public function show($id){
@@ -44,7 +44,7 @@ class BulletinController extends Controller
     	$bulletin = Bulletin::findOrFail($id);
     	$bulletin->fill($request->all());
     	$bulletin->save();
-    	return redirect('bulletin/'.$id);
+    	return redirect('/');
 
     }
 

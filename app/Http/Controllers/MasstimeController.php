@@ -24,7 +24,7 @@ class MasstimeController extends Controller
 		$masstime->fill($request->all());
 		$masstime->save();
  		\Session::flash('success_message', 'Successfully saved!');
-		return redirect('masstime/'.$masstime->id);
+		return redirect('/');
     }
 
     public function show($id){
@@ -44,7 +44,7 @@ class MasstimeController extends Controller
     	$masstime = Masstime::findOrFail($id);
     	$masstime->fill($request->all());
     	$masstime->save();
-    	return redirect('masstime/'.$id);
+    	return redirect('/');
     }
 
     public function index(){

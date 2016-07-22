@@ -12,7 +12,7 @@
 @endif
 @endif
 <h1>{{$bulletin->title}}</h1>
-<h3>{{$bulletin->body}}</h3>
+<h3>{!!$bulletin->body!!}</h3>
 <span class="pull-right">
 <a href="{{ url('/bulletin/')}}">Bulletin Archive</button></a>
 </span>

@@ -40,7 +40,7 @@ class AnnouncementsController extends Controller
     	$announcement = Announcement::findOrFail($id);
     	$announcement->fill($request->all());
     	$announcement->save();
-    	return redirect('announcement/'.$id);
+    	return redirect('/');
         }
 
     public function index(){

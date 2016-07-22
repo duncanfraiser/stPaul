@@ -25,7 +25,7 @@ class YouthController extends Controller
 		$youth->fill($request->all());
 		$youth->save();
  		\Session::flash('success_message', 'Successfully saved!');
-		return redirect('youth/'.$youth->id);
+		return redirect('/');
     }
 
     public function show($id){
@@ -44,7 +44,7 @@ class YouthController extends Controller
     	$youth = Youth::findOrFail($id);
     	$youth->fill($request->all());
     	$youth->save();
-    	return redirect('youth/'.$id);
+    	return redirect('/');
 
     }
 

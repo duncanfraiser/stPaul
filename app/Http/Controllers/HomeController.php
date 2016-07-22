@@ -10,6 +10,7 @@ use App\Masstime;
 use App\Bulletin;
 use App\Homily;
 use App\Youth;
+use App\Ministry;
 
 class HomeController extends Controller
 {
@@ -36,8 +37,9 @@ class HomeController extends Controller
         $bulletin = Bulletin::latest()->first();
         $homily = Homily::latest()->first();
         $youth = Youth::latest()->first();
+        $ministry = Ministry::latest()->first();
 
 
-        return view('home.index', compact('banners', 'announcement', 'masstime', 'bulletin', 'homily', 'youth'));
+        return view('home.index', compact('banners', 'announcement', 'masstime', 'bulletin', 'homily', 'youth', 'ministry'));
     }
 }
