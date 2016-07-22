@@ -7,8 +7,6 @@
 		{{Form::text('heading', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Heading'])}}
 		{{Form::label('title', 'Title:')}}
 		{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Title'])}}
-		{{Form::label('excerpt', 'Excerpt:')}}
-		{{Form::textarea('excerpt', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Excerpt'])}}
 		{{Form::label('body', 'Body:')}}
 		{{Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Body'])}}
 	</div>
