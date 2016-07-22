@@ -54,4 +54,12 @@ class BulletinController extends Controller
 
         return view('bulletin.index', compact('bulletins'));
     }
+
+        public function destroy($id){
+        $announcement = Bulletin::findOrFail($id);
+        $announcement->delete();
+        return redirect('/');
+        }
+
+
 }

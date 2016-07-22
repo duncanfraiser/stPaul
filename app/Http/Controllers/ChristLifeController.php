@@ -17,6 +17,23 @@ class ChristLifeController extends Controller
     }
 
     public function store(Request $request){
+
+                $this->validate($request,[
+                'completed' => 'required',
+                'firstname' => 'required',
+                'lastname' => 'required',
+                'completed' => 'required',
+                'day' => 'required',
+                'gender' => 'required',
+                'phone' => 'required',
+                'street' => 'required',
+                'city' => 'required',
+                'state' => 'required',
+                'zip' => 'required'
+                ]);
+
+
+
         $christlife = new ChristLife;
 		$christlife->fill($request->all());
 		$christlife->save();

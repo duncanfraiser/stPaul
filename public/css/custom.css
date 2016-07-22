@@ -40,8 +40,11 @@ body {
     color: #337ab7;
 }
 
-
-
+/*errors*/
+ul.err {
+    color: #FF0000;
+     list-style-type: square;
+}
 
 
 
