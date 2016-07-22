@@ -46,7 +46,7 @@
 	</span>
 	@endif
 	@endif
-	<p>{{$youth->excerpt}}
+	<p>{!!$youth->excerpt!!}
 	<a href="{{ url('/youth/'.$youth->id)}}">...Read More</button></a>
 	</p>
 </div>
