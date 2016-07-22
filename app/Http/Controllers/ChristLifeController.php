@@ -20,10 +20,11 @@ class ChristLifeController extends Controller
 
                 $this->validate($request,[
                 'completed' => 'required',
-                'firstname' => 'required',
-                'lastname' => 'required',
+                'firstName' => 'required',
+                'lastName' => 'required',
                 'completed' => 'required',
                 'day' => 'required',
+                'age' => 'required',
                 'gender' => 'required',
                 'phone' => 'required',
                 'street' => 'required',

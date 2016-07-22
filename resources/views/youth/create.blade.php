@@ -21,3 +21,7 @@
 	<a href="{{url('/')}}"><button class="pull-right btn btn-secondary">Cancel</button></a>
 </div>		
 @stop
+
+@section('scripts')
+@include('includes._froalaOptions')
+@stop
