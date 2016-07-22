@@ -80,7 +80,7 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('comments', 'Additional Comments:')}}
-		{{Form::textarea('comments', null, ['class' => 'form-control', 'placeholder' => 'Please Add Additional Comments'])}}
+		{{Form::textarea('comments', null, ['class' => 'form-control'])}}
 	</div>
 
 
