@@ -17,13 +17,17 @@
 
 {{Form::open(['method' => 'POST', 'action' => 'ChristLifeController@store'])}}
     <div class="checkbox">
-    {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I completed the 7-week Discovering Christ Series. I commit to attend all seven Thursday evening sessions and the Saturday Retreat.')}}
-		       
+    {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I completed the 7-week Discovering Christ Series. I commit to attend all seven Thursday evening sessions and the Saturday Retreat.')}}		       
     </div>
-    <div class="form-group">
-		{{ Form::label('day', 'Select Session Day:')}}
-        {{Form::select('day', ['placeholder' => 'Select Session', 'Tuesday' => 'Tuesday', 'Thursday' => 'Thursday'])}}
-    </div>
+
+
+ 	<div class="form-group">
+		{{ Form::label('day', 'Select Session Day:')}}<br />
+    	{{ Form::radio('day', 'Tuesday') }} {{ Form::label('day', 'Tuesday')}}<br />
+		{{ Form::radio('day', 'Thursday') }} {{ Form::label('day', 'Thursday')}}
+ 	</div>
+
+
     
 	<div class="form-group">
 		{{Form::label('firstName', 'Full Name:')}}
@@ -34,18 +38,29 @@
 		{{Form::label('age', 'Age:')}}
 		{{Form::text('age', null, ['class' => 'form-control'])}}
 	</div>
-	<div class="form-group">
-		{{ Form::label('gender', 'Select Gender:')}}
-        {{Form::select('gender', ['placeholder' => 'Select Gender','Male' => 'Male', 'Female' => 'Female'])}}
-    </div>
+
+	 <div class="form-group">
+		{{ Form::label('gender', 'Select Gender:')}}<br />
+    	{{ Form::radio('gender', 'Male') }} {{ Form::label('gender', 'Male')}}<br />
+		{{ Form::radio('gender', 'Female') }} {{ Form::label('gender', 'Female')}}
+ 	</div>
+
+
+
+
 	<div class="form-group">
 		{{Form::label('phone', 'Phone Number:')}}
 		{{Form::text('phone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone Number'])}}
 	</div>
-	<div class="form-group">
-		{{Form::label('text', 'Would you like to receive text messages:')}}
-		{{Form::select('text', ['placeholder' => 'Select Option', 'Yes' => 'Yes', 'No' => 'No'])}}
-	</div>
+
+	 <div class="form-group">
+		{{ Form::label('text', 'Would you like to receive text messages:')}}<br />
+    	{{ Form::radio('text', 'Yes') }} {{ Form::label('text', 'Yes')}}<br />
+		{{ Form::radio('text', 'No') }} {{ Form::label('text', 'No')}}
+ 	</div>
+
+
+
 	<div class="form-group">
 		{{Form::label('email', 'Primary Email Address:')}}
 		{{Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Enter Email Address'])}}
@@ -57,23 +72,33 @@
 		{{Form::text('state', null, ['class' => 'form-control', 'placeholder' => 'Enter State'])}}
 		{{Form::text('zip', null, ['class' => 'form-control', 'placeholder' => 'Enter Zip Code'])}}
 	</div>
-	<div class="form-group">
-		{{Form::label('childcare', 'I need child care:')}}
-		{{Form::select('childcare', ['placeholder' => 'Select Option','Yes' => 'Yes', 'No' => 'No'])}}
-	</div>
+
+	 <div class="form-group">
+		{{ Form::label('childcare', 'I need child care:')}}<br />
+    	{{ Form::radio('childcare', 'Yes') }} {{ Form::label('childcare', 'Yes')}}<br />
+		{{ Form::radio('childcare', 'No') }} {{ Form::label('childcare', 'No')}}
+ 	</div>
+
+
+
+
 	<div class="form-group">
 		{{Form::label('childage', 'If yes, ages of children:')}}
 		{{Form::text('childage', null, ['class' => 'form-control', 'placeholder' => 'List Ages of Children'])}}
 	</div>
-		<div class="form-group">
-		{{Form::label('ride', 'I require a ride:')}}
-		{{Form::select('ride', ['placeholder' => 'Select Option','Yes' => 'Yes', 'No' => 'No'])}}
-	</div>
-	
-	<div class="form-group">
-		{{Form::label('provideride', 'I can provide a ride to someone in need of transportation:')}}
-		{{Form::select('provideride', ['placeholder' => 'Select Option','Yes' => 'Yes', 'No' => 'No'])}}
-	</div>
+
+	 <div class="form-group">
+		{{ Form::label('ride', 'I require a ride:')}}<br />
+    	{{ Form::radio('ride', 'Yes') }} {{ Form::label('ride', 'Yes')}}<br />
+		{{ Form::radio('ride', 'No') }} {{ Form::label('ride', 'No')}}
+ 	</div>
+	 <div class="form-group">
+		{{ Form::label('provideride', 'I can provide a ride to someone in need of transportation:')}}<br />
+    	{{ Form::radio('provideride', 'Yes') }} {{ Form::label('provideride', 'Yes')}}<br />
+		{{ Form::radio('provideride', 'No') }} {{ Form::label('provideride', 'No')}}
+ 	</div>
+
+
 	<div class="form-group">
 		{{Form::label('allergies', 'List Food Allergies:')}}
 		{{Form::text('allergies', null, ['class' => 'form-control', 'placeholder' => 'List Food Allergies'])}}
