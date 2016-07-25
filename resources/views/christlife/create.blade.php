@@ -13,7 +13,9 @@
 		<center><h1>Following Christ Registration</h1></center><br>
 		
 
-
+		@if($counttuesdays > 150 && $countthursdays >150)
+		<center><h2>We're Sorry, Following Christ Registration is Full!</h2></center><br>
+		@else
 
 {{Form::open(['method' => 'POST', 'action' => 'ChristLifeController@store'])}}
     <div class="checkbox">
@@ -23,8 +25,16 @@
 
  	<div class="form-group">
 		{{ Form::label('day', 'Select Session Day:')}}<br />
-    	{{ Form::radio('day', 'Tuesday') }} {{ Form::label('day', 'Tuesday')}}<br />
-		{{ Form::radio('day', 'Thursday') }} {{ Form::label('day', 'Thursday')}}
+		@if($counttuesdays > 150)
+		{{ Form::label('day', 'Tuesday Session is Full')}}<br />
+		@else
+		{{ Form::radio('day', 'Tuesday') }} {{ Form::label('day', 'Tuesday')}}<br />
+		@endif
+		@if($countthursdays > 150)
+		{{ Form::label('day', 'Thursday Session is Full')}}<br />
+		@else
+		{{ Form::radio('day', 'Thursday') }} {{ Form::label('day', 'Thursday')}}<br />
+		@endif
  	</div>
 
 
@@ -115,4 +125,5 @@
 	</div>
 {{Form::close()}}
 </div>
+@endif
 @stop

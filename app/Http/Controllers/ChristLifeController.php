@@ -9,11 +9,15 @@ class ChristLifeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->only('edit');
+        $this->middleware('auth')->only('edit', 'index', 'show');
     }
 
 	public function create(){
-    	return view('christlife.create');
+        $counttuesdays = ChristLife::where('day','Tuesday')->count();
+
+        $countthursdays = ChristLife::where('day','Thursday')->count();
+ 
+    	return view('christlife.create', compact('counttuesdays', 'countthursdays'));
     }
 
     public function store(Request $request){
@@ -66,6 +70,13 @@ class ChristLifeController extends Controller
     	$christlife->fill($request->all());
     	$christlife->save();
     	return redirect('ChristLife/'.$id);
+
+    }
+
+    public function index(){
+        $tuesdays = ChristLife::where('day','Tuesday')->get();
+        $thursdays = ChristLife::where('day','Thursday')->get();
+        return view('christlife.index', compact('tuesdays', 'thursdays'));
 
     }
 }

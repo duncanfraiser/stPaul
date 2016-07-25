@@ -58,7 +58,7 @@
                         <a href="{{url('/')}}">Home</a>
                     </li>
                     <li>
-                        <a href="#">Welcome</a>
+                        <a href="{{url('/welcome/1')}}">Welcome</a>
                     </li>
                    
                     <li>
@@ -70,6 +70,19 @@
                         </ul>
                         </div>
                     </li>
+    @if(\Auth::Check())
+                    <li>
+                        <div class="dropdown">
+                        <button class=" dropdown-toggle" data-toggle="dropdown">Administration<span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                        <li><a href="{{url('/ChristLife/')}}">Christ Life Index</a></li>
+                        </ul>
+                        </div>
+                    </li>
+
+    @endif
+
+
 
 
                 </ul>
