@@ -1,4 +1,4 @@
-@extends('includes.layout')
+@extends('layouts.main')
 @section('content')
 
 
@@ -16,4 +16,12 @@
 	</div>
 {{Form::close()}}
 </div>
+@stop
+@section('scripts')
+@include('includes._froalaOptions')
+<script>
+	$(".delete").on("submit", function(){
+		return confirm("Do you want to delete this item?");
+	});
+</script>
 @stop

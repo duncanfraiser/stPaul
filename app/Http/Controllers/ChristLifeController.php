@@ -39,13 +39,21 @@ class ChristLifeController extends Controller
 		$christlife->fill($request->all());
 		$christlife->save();
  		\Session::flash('success_message', 'Successfully saved!');
-		return redirect('ChristLife/'.$christlife->id);
+		return redirect('ChristLife/'.$christlife->id.'/thanks');
     }
 
     public function show($id){
+
     	$christlife = ChristLife::findOrFail($id);
 		return view('christlife.show', compact('christlife'));
     }
+
+        public function thanks($id){
+      
+        $christlife = ChristLife::findOrFail($id);
+        return view('christlife.thanks', compact('christlife'));
+    }
+
 
     public function edit($id){
     	$christlife = ChristLife::findOrFail($id);

@@ -17,7 +17,7 @@
 
 {{Form::open(['method' => 'POST', 'action' => 'ChristLifeController@store'])}}
     <div class="checkbox">
-    {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I completed the 7-week Discovering Christ Series. I commit to attend all seven Thursday evening sessions and the Saturday Retreat.')}}		       
+    {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I completed the 7-week Discovering Christ Series. I commit to attend all seven evening sessions and the Saturday Retreat.')}}		       
     </div>
 
 

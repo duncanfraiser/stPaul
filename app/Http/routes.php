@@ -3,7 +3,11 @@
 Route::resource('/', 'HomeController');
 Route::resource('member', 'MembersController');
 Route::resource('forms', 'FormController');
+
+
 Route::resource('ChristLife', 'ChristLifeController');
+Route::get('/ChristLife/{id}/thanks', 'ChristLifeController@thanks');
+
 Route::resource('catechumen', 'CatechumensController');
 Route::resource('RCIA', 'RciaController');
 Route::resource('fileuploads', 'FileuploadController');
