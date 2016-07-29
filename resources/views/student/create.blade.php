@@ -1,8 +1,8 @@
+
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
-
-<h3>ELDEST CHILD being registered for Religious Education Classes</h3>
+<h1>Student Registration for Religious Education Classes</h1>
 {{Form::open(['method' => 'POST', 'action' => ['StudentController@store', Request::route()->education]])}}
 	<div class="form-group">
 		{{Form::hidden('education_id', Request::route()->education)}}
@@ -68,6 +68,7 @@
 		{{Form::textarea('needs', null, ['class' => 'form-control', 'placeholder' => 'Enter Special Needs/Allergies'])}}
 	</div>
 
+
 	<div class='pull-right'>
 		<div class="form-group">
 		{{Form::submit('Enter', ['class' => 'btn btn-primary'])}}
@@ -75,6 +76,8 @@
 		</div>
 	</div>
 	<a href="{{url('/')}}"><button class="pull-right btn btn-secondary">Cancel</button></a>
-</div>
+</div>		
+@stop
 
+@section('scripts')
 @stop

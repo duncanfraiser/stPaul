@@ -35,7 +35,7 @@ class Dependent extends Model
                ];
 
 
-       public function location(){
+       public function member(){
         return $this->belongsTo('App\Member');
     }
 

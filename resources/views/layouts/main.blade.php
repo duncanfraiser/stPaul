@@ -72,6 +72,7 @@
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                         <li><a href="{{url('/ChristLife/create')}}">Christ Life</a></li>
+                        <li><a href="{{url('/education/create')}}">Religious Education</a></li>
                         </ul>
                         </div>
                     </li>
