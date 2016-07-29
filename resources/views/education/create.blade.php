@@ -2,8 +2,13 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
 <h1>Religious Education Registration</h1>
-<p>Parents need to fill out and submit the 8 page <a target="blank" href="{{url('/files/FormsPermanent2.pdf')}}">Diocesan Youth Form</a> to participate in Youth Group. 
-</p><br />
+<p><h3>Fees:</h3><ul><li>$30 for one child</li>
+<li>$50 for two children</li>
+<li>$75 for three or more children</li>
+</ul></p>
+<p><h3>Diocesan Youth Form</h3>
+<ul><li>Parents must print and complete the 8-page <a target="blank" href="{{url('/files/FormsPermanent2.pdf')}}">Diocesan Youth Form</a> to participate in Youth Group. Please note this form must be notarized.</p></li></ul><br />
+<h3>Registration Form</h3>
 {{Form::open(['method' => 'POST', 'action' => 'EducationController@store'])}}
 	<div class="form-group">
 		{{Form::label('father_first_name', 'Father&rsquo;s Full Name:')}}<br>

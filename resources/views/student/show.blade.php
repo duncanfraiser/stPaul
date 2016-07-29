@@ -9,7 +9,7 @@
  	</ul><br /><br />
 
  	<div><p>
- 		Please complete and submit the <a target="blank" href="{{url('/files/Release form - Copy.docx')}}">Parental Consent, Photo Release, Medical Release Form</a> for all registered children. (One form per family)
+ 		Please complete and submit the <a target="blank" href="{{url('/files/Release form - Copy.docx')}}">Parental Consent, Photo Release, Medical Release Form</a> for all registered children. (One form per family) and payment before classs begin on September 11. You may place it in a sealed envelope marked "Religious Ed" and drop it in the collection basket at Mass. Thank you! 
  	</p>
  		
  	</div><br /><br /><br />
