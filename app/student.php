@@ -33,5 +33,4 @@ class Student extends Model
       public function education(){
             return $this->belongsTo('App\Education');
       }
-
 }
