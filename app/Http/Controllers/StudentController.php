@@ -19,7 +19,7 @@ class StudentController extends Controller
 
     public function store(Request $request){
 
-        $student = new student;
+        $student = new Student;
         //dd($request->education_id);
         //$student->parent_id = $request->parent_id;
 
