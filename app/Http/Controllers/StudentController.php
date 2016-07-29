@@ -10,7 +10,6 @@ class StudentController extends Controller
 {
     public function __construct(){
         //$this->middleware('auth')->only('create','edit');
-
         }
 
     public function create(){
@@ -20,13 +19,8 @@ class StudentController extends Controller
     public function store(Request $request){
 
         $student = new Student;
-        //dd($request->education_id);
-        //$student->parent_id = $request->parent_id;
-
 		$student->fill($request->all());
 		$student->save();
-       // dd($student->education_id);
- 		\Session::flash('success_message', 'Successfully saved!');
 		return redirect('/education/'.$student->education_id.'/student/'.$student->id);
         }
 

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Education;
 
-class student extends Model
+class Student extends Model
 {
             use SoftDeletes;
 	      protected $fillable = [
