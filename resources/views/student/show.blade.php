@@ -6,9 +6,15 @@
     @foreach($parent->student as $stud)
     <li><h3>{{$stud->firstName}} {{$stud->middleName}} {{$stud->lastName}}</h3></li>
     @endforeach                      
- 	</ul>
+ 	</ul><br /><br />
+
+ 	<div><p>
+ 		Please complete and submit the <a target="blank" href="{{url('/files/Release form - Copy.docx')}}">Parental Consent, Photo Release, Medical Release Form</a> for all registered children. (One form per family)
+ 	</p>
+ 		
+ 	</div><br /><br /><br />
 	 
-	 <a href="{{url('/education/'.Request::route()->education.'/student/create')}}"><button class="pull-right btn btn-primary">Registered Additional Student</button></a>
+	 <a href="{{url('/education/'.Request::route()->education.'/student/create')}}"><button class="pull-right btn btn-primary">Register Additional Student</button></a>
 	<a href="{{url('/')}}"><button class="pull-right btn btn-secondary">Return Home</button></a>
 </div>       
 @stop
