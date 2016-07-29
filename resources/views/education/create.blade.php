@@ -2,8 +2,8 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
 <h1>Religious Education Registration</h1>
-<p>Parents need to fill out and submit the 8 page Diocesan Youth Form to participate in Youth Group. 
-<a target="blank" href="{{url('/files/FormsPermanent2.pdf')}}">Diocesan Youth Form</a></p><br />
+<p>Parents need to fill out and submit the 8 page <a target="blank" href="{{url('/files/FormsPermanent2.pdf')}}">Diocesan Youth Form</a> to participate in Youth Group. 
+</p><br />
 {{Form::open(['method' => 'POST', 'action' => 'EducationController@store'])}}
 	<div class="form-group">
 		{{Form::label('father_first_name', 'Father&rsquo;s Full Name:')}}<br>
