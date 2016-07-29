@@ -1,14 +1,12 @@
 @extends('layouts.main')
 @section('content')
-<div class="DFcontainer col-md-8 col-md-offset-2">
-{{Form::model($homily, ['method' => 'PATCH', 'action' => ['HomilyController@update', $homily->id]])}}
+<div class="col-md-8 col-md-offset-2">
+{{Form::model($contact, ['method' => 'PATCH', 'action' => ['ContactController@update', $contact->id]])}}
 	<div class="form-group">
-		{{Form::label('heading', 'Heading:')}}
-		{{Form::text('heading', null, ['class' => 'form-control', 'placeholder' => 'Enter Heading Title'])}}
 		{{Form::label('title', 'Title:')}}
-		{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Homily Title'])}}
+		{{Form::text('title', null, ['class' => 'form-control'])}}
 		{{Form::label('body', 'Body:')}}
-		{{Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Enter Homily Body'])}}
+		{{Form::textarea('body', null, ['class' => 'form-control'])}}
 	</div>
 	<div class='pull-right'>
 		<div class="form-group">
@@ -21,12 +19,13 @@
 	</div>
     <div class="pull-right">
        	<div class="form-group">
-        {{Form::open(['method' => 'DELETE', 'route' => ['homily.destroy', $homily->id], 'class' => 'delete'])}}
+        {{Form::open(['method' => 'DELETE', 'route' => ['contact.destroy', $contact->id], 'class' => 'delete'])}}
         {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
         {{Form::close()}}
     	</div>
     </div>
-</div>	
+</div>
+
 @stop
 @section('scripts')
 @include('includes._froalaOptions')
@@ -35,5 +34,4 @@
 		return confirm("Do you want to delete this item?");
 	});
 </script>
-
 @stop

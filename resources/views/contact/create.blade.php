@@ -1,11 +1,11 @@
-@extends('layouts.main')
+ @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
 
-{{Form::open(['method' => 'POST', 'action' => 'WelcomeController@store'])}}
+{{Form::open(['method' => 'POST', 'action' => 'ContactController@store'])}}
 	<div class="form-group">
 		{{Form::label('title', 'Title:')}}
-		{{Form::text('title', null, ['class' => 'form-control'])}}
+		{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Title'])}}
 		{{Form::label('body', 'Body:')}}
 		{{Form::textarea('body', null, ['class' => 'form-control'])}}
 	</div>

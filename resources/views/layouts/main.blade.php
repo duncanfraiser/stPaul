@@ -60,7 +60,12 @@
                     <li>
                         <a href="{{url('/welcome/1')}}">Welcome</a>
                     </li>
-                   
+                    <li>
+                        <a href="{{url('')}}">Prayer</a>
+                    </li>
+                    <li>
+                        <a href="{{url('')}}">Contact Us</a>
+                    </li>
                     <li>
                         <div class="dropdown">
                         <button class=" dropdown-toggle" data-toggle="dropdown">Registration Forms

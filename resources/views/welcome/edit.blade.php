@@ -11,11 +11,14 @@
 		{{Form::label('body', 'Body:')}}
 		{{Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Body'])}}
 	</div>
-	<div class="form-group">
-		{{Form::submit('Enter', ['class' => 'btn btn-primary form-control'])}}
+	<div class='pull-right'>
+		<div class="form-group">
+		{{Form::submit('Update', ['class' => 'btn btn-primary'])}}
+		{{Form::close()}}		
+		</div>
 	</div>
-{{Form::close()}}
-</div>
+	<a href="{{url('/')}}"><button class="pull-right btn btn-secondary">Cancel</button></a>
+</div>	
 @stop
 @section('scripts')
 @include('includes._froalaOptions')

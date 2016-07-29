@@ -1,6 +1,6 @@
-@extends('includes.layout')
+@extends('layouts.main')
 @section('content')
-<div class="DFcontainer col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2"><br />
 {{Form::open(['method' => 'POST', 'action' => 'EducationController@store'])}}
 	<div class="form-group">
 		{{Form::label('firstName', 'Full Name:')}}
