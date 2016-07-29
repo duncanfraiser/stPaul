@@ -74,8 +74,8 @@ class ChristLifeController extends Controller
     }
 
     public function index(){
-        $tuesdays = ChristLife::where('day','Tuesday')->get();
-        $thursdays = ChristLife::where('day','Thursday')->get();
+        $tuesdays = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->get();
+        $thursdays = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->get();
         return view('christlife.index', compact('tuesdays', 'thursdays'));
 
     }

@@ -6,14 +6,14 @@
 <h3>Tuesday Session</h3>
 	@foreach($tuesdays as $key=>$tuesday)
 	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$tuesday->id)}}">{{$tuesday->firstName}} {{$tuesday->lastName}}</a><br />
+	<a href="{{url('/ChristLife/'.$tuesday->id)}}">{{$tuesday->lastName}}, {{$tuesday->firstName}}</a><br />
 	@endforeach
 </div>
 <div class="col-md-5">
 <h3>Thursday Session</h3>
 	@foreach($thursdays as $key=>$thursday)
 	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$thursday->id)}}">{{$thursday->firstName}} {{$thursday->lastName}}</a><br />
+	<a href="{{url('/ChristLife/'.$thursday->id)}}">{{$thursday->lastName}}, {{$thursday->firstName}}</a><br />
 	@endforeach
 </div>
 	
