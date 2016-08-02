@@ -73,6 +73,15 @@ class ChristLifeController extends Controller
 
     }
 
+        public function destroy($id){
+        $christlife = ChristLife::findOrFail($id);
+        $christlife->delete();
+        return redirect('/ChristLife');
+        }
+
+
+
+
     public function index(){
 
         $tuesdays = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->get();

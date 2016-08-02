@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<h2>{{$christlife->firstName}} {{$christlife->lastName}} </h2>
+<h2>{{$christlife->firstName}} {{$christlife->lastName}}  <small><a style="color:red" href="{{url('/ChristLife/'.$christlife->id.'/edit')}}">edit|delete</a></small></h2>
 <ul>
 <li>Session Day: <span style="color:blue">{{$christlife->day}}</span></li>
 <li>Age: <span style="color:blue">{{$christlife->age}}</span></li>
