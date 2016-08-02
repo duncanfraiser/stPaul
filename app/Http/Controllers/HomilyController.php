@@ -53,4 +53,12 @@ class HomilyController extends Controller
 
         return view('homily.index', compact('homilies'));
     }
+
+    public function destroy($id){
+        $announcement = Homily::findOrFail($id);
+        $announcement->delete();
+        return redirect('/');
+        }
+
+
 }
