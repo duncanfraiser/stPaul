@@ -13,9 +13,7 @@
 @endif
 <h3>{{$youth->title}}</h3>
 <p>{!!$youth->body!!}</p>
-<span class="pull-right">
 <a href="{{ url('/youth/')}}">{{$heading->heading}} Archive</button></a>
-</span>
 </div>
 </div>
 @stop

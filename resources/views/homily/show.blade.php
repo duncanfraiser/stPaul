@@ -13,9 +13,9 @@
 @endif
 <h3>{{$homily->title}}</h3>
 <p>{!!$homily->body!!}<p>
-<span class="pull-right">
+
 <a href="{{ url('/homily/')}}">{{$heading->heading}} Archive</button></a>
-</span>
+
 </div>
 </div>
 @stop

@@ -4,6 +4,14 @@ Route::resource('/', 'HomeController');
 Route::resource('member', 'MembersController');
 Route::resource('forms', 'FormController');
 
+Route::get('/ChristLife/email', 'ChristLifeController@email');
+Route::get('/ChristLife/allergies', 'ChristLifeController@allergies');
+Route::get('/ChristLife/allergiesEmail', 'ChristLifeController@allergiesEmail');
+Route::get('/ChristLife/ride', 'ChristLifeController@ride');
+Route::get('/ChristLife/rideEmail', 'ChristLifeController@rideEmail');
+Route::get('/ChristLife/comments', 'ChristLifeController@comments');
+
+
 Route::get('/ChristLife/info', 'ChristLifeController@info');
 Route::resource('ChristLife', 'ChristLifeController');
 Route::get('/ChristLife/{id}/thanks', 'ChristLifeController@thanks');

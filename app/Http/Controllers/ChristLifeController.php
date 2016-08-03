@@ -89,12 +89,63 @@ class ChristLifeController extends Controller
         return view('christlife.index', compact('tuesdays', 'thursdays'));
 
     }
+    
     public function info(){
-       
-
         $tuesdays = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->get();
         $thursdays = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->get();
         return view('christlife.index', compact('tuesdays', 'thursdays'));
 
     }
+
+    public function email(){      
+        $tuesEmail = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->lists('email');
+        $tuEmails = $tuesEmail->unique();
+        $thursEmail = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->lists('email');
+        $trEmails = $thursEmail->unique();
+        return view('christlife.email', compact('tuEmails', 'trEmails'));
+    }
+
+    public function thursEmail(){      
+        $thursEmail = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->lists('email');
+        $tEmail = $thursEmail->unique();
+        return view('christlife.thursEmail', compact('tEmail'));
+    }
+
+    public function allergies(){ 
+        $tuesAllergies = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('allergies', '!=', '')->where('allergies', '!=', 'none')->where('allergies', '!=', 'n/a')->where('allergies', '!=', 'na')->get();
+        $thursAllergies = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('allergies', '!=', '')->where('allergies', '!=', 'none')->where('allergies', '!=', 'n/a')->where('allergies', '!=', 'na')->get();
+        return view('christlife.allergies', compact('tuesAllergies', 'thursAllergies'));
+    }
+
+    public function allergiesEmail(){
+        $tuesAllergies = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('allergies', '!=', '')->where('allergies', '!=', 'none')->where('allergies', '!=', 'n/a')->where('allergies', '!=', 'na')->lists('email');
+        $tuEmails = $tuesAllergies->unique();
+        $thursAllergies = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('allergies', '!=', '')->where('allergies', '!=', 'none')->where('allergies', '!=', 'n/a')->where('allergies', '!=', 'na')->lists('email');
+        $trEmails = $thursAllergies->unique();
+        return view('christlife.allergiesEmail', compact('tuEmails', 'trEmails'));
+    }
+
+    public function ride(){      
+        $tuNeeds = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('ride','Yes')->get();
+        $tuGives = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('provideride','Yes')->get();
+        $trNeeds = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('ride','Yes')->get();
+        $trGives = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('provideride','Yes')->get();
+        return view('christlife.ride', compact('tuNeeds', 'tuGives', 'trNeeds', 'trGives'));
+    }
+    public function rideEmail(){
+        $tuNeeds = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('ride','Yes')->lists('email');
+        $tuGives = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('provideride','Yes')->lists('email');
+        $trNeeds = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('ride','Yes')->lists('email');
+        $trGives = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('provideride','Yes')->lists('email');
+        return view('christlife.rideEmail', compact('tuNeeds', 'tuGives', 'trNeeds', 'trGives'));
+    }
+    public function comments(){      
+        $tuComments = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('comments','!=','')->get();
+        $trComments = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('comments','!=','')->get();    
+        return view('christlife.comments', compact('tuComments', 'trComments'));
+    }
+
+
+
+
 }

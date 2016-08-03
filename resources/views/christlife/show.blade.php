@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('content')
+<div class="col-md-8 col-md-offset-2">
 <h2>{{$christlife->firstName}} {{$christlife->lastName}}  <small><a style="color:red" href="{{url('/ChristLife/'.$christlife->id.'/edit')}}">edit|delete</a></small></h2>
 <ul>
 <li>Session Day: <span style="color:blue">{{$christlife->day}}</span></li>
@@ -17,11 +18,8 @@
 <li>Food Allergies: <span style="color:blue">{{$christlife->allergies}}</span></li>
 <li>Additional Comments: <span style="color:blue">{{$christlife->comments}}</span></li>
 </ul>
-
-
-
-
-
-
-
+<div class='pull-right'>
+<a href="{{URL::previous()}}"><button class="btn btn-primary">Back</button></a>
+</div>
+</div>
 @stop
