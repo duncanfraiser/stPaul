@@ -4,21 +4,24 @@ Route::resource('/', 'HomeController');
 Route::resource('member', 'MembersController');
 Route::resource('forms', 'FormController');
 
+/*Christ Lise Routes*/
 Route::get('/ChristLife/email', 'ChristLifeController@email');
 Route::get('/ChristLife/allergies', 'ChristLifeController@allergies');
 Route::get('/ChristLife/allergiesEmail', 'ChristLifeController@allergiesEmail');
 Route::get('/ChristLife/ride', 'ChristLifeController@ride');
 Route::get('/ChristLife/rideEmail', 'ChristLifeController@rideEmail');
 Route::get('/ChristLife/comments', 'ChristLifeController@comments');
-
-
 Route::get('/ChristLife/info', 'ChristLifeController@info');
 Route::resource('ChristLife', 'ChristLifeController');
 Route::get('/ChristLife/{id}/thanks', 'ChristLifeController@thanks');
 
+/* RCIA Routes*/
+Route::resource('RCIA', 'CatechumensController');
+Route::get('/RCIA/{id}/thanks', 'CatechumensController@thanks');
 
-Route::resource('catechumen', 'CatechumensController');
-Route::resource('RCIA', 'RciaController');
+//Route::resource('RCIA', 'RciaController');
+
+
 Route::resource('fileuploads', 'FileuploadController');
 Route::resource('announcement', 'AnnouncementsController');
 Route::resource('welcome', 'WelcomeController');
@@ -31,6 +34,10 @@ Route::resource('member/{member}/dependents', 'DependentsController');
 Route::resource('attending', 'AttendingController');
 Route::resource('contact', 'ContactController');
 Route::resource('prayer', 'PrayerController');
+
+
+/*education routes*/
+Route::resource('education/grade', 'EducationController@grade');
 Route::resource('education', 'EducationController');
 Route::resource('education/{education}/student', 'StudentController');
 

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use App\Http\Requests; 
 use App\Education;
+use App\Student;
 
 class EducationController extends Controller
 {
@@ -35,7 +36,24 @@ class EducationController extends Controller
     	$education = Education::findOrFail($id);
     	$education->fill($request->all());
     	$education->save();
-    	return redirect('education/'.$id);
-
+    	return redirect('education/');
     }
+
+    public function index(){
+        $eds = Education::orderBy('father_last_name', 'asc')->get();
+        return view('education.index', compact('eds'));
+    }
+
+        public function grade(){
+
+        $students = Student::orderBy('grade', 'asc')->get();
+        return view('education.grade', compact('students'));
+    }
+
+    public function destroy($id){
+        $education = Education::findOrFail($id);
+        $education->delete();
+        return redirect('/education');
+    }
+
 }

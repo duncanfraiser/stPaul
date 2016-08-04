@@ -18,17 +18,20 @@ class CatechumensController extends Controller
 		$catechumen->fill($request->all());
 		$catechumen->save();
  		\Session::flash('success_message', 'Successfully saved!');
-		return redirect('catechumen/'.$catechumen->id);
+		return redirect('RCIA/'.$catechumen->id.'/thanks');
     }
 
     public function show($id){
-    	$catechumen = Catechumen::findOrFail($id);
-		return view('catechumen.show', compact('catechumen'));
+
+
+    	$rcia = Catechumen::findOrFail($id);
+   
+		return view('catechumen.show', compact('rcia'));
     }
 
     public function edit($id){
-    	$catechumen = Catechumen::findOrFail($id);
-    	return view('catechumen.edit', compact('catechumen'));
+    	$rcia = Catechumen::findOrFail($id);
+    	return view('catechumen.edit', compact('rcia'));
     }
 
     public function update($id, Request $request){
@@ -36,7 +39,24 @@ class CatechumensController extends Controller
     	$catechumen = Catechumen::findOrFail($id);
     	$catechumen->fill($request->all());
     	$catechumen->save();
-    	return redirect('catechumen/'.$id);
+    	return redirect('RCIA/'.$id);
 
     }
+
+    public function thanks($id){
+        $catechumen = Catechumen::findOrFail($id);
+        return view('catechumen.thanks', compact('catechumen'));
+    }
+
+    public function index(){
+        $rcias = Catechumen::orderBy('lastName', 'asc')->get();
+        return view('catechumen.index', compact('rcias'));        
+    }
+
+    public function destroy($id){
+        $rcias = Catechumen::findOrFail($id);
+        $rcias->delete();
+        return redirect('/RCIA');
+    }
+
 }

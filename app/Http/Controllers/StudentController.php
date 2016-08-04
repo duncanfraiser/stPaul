@@ -30,8 +30,8 @@ class StudentController extends Controller
 		return view('student.show', compact('student', 'parent'));
         }
 
-    public function edit($id){
-    	$student = Student::findOrFail($id);
+    public function edit($parent_id, $student_id){
+    	$student = Student::findOrFail($student_id);
     	return view('student.edit', compact('student'));
         }
 

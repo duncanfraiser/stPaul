@@ -2,12 +2,16 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
 <h1>Religious Education Registration</h1>
+<p>Complete the Registration form (below) for children to be enrolled in the St. Paul Religious Education Program, ages 3 years through 12th Grade. This form is to be completed and submitted online.</p>
+<p>Once you have registered online, please print, complete and sign the "Parental Consent, Photo Release, Medical Release Form" which can be accessed after submitting the Registration Form. You may place this form and payment in a sealed envelope marked, "Religious Ed" and drop it in the collection basket at Mass.</p>
+<p>Please note that parents of students in 7th-12th Grades need to print, complete, sign and notarize a  <a target="blank" href="{{url('/files/FormsPermanent2.pdf')}}">Diocesan Youth Form</a></p>
+
+
 <p><h3>Fees:</h3><ul><li>$30 for one child</li>
 <li>$50 for two children</li>
 <li>$75 for three or more children</li>
 </ul></p>
-<p><h3>Diocesan Youth Form</h3>
-<ul><li>Parents must print and complete the 8-page <a target="blank" href="{{url('/files/FormsPermanent2.pdf')}}">Diocesan Youth Form</a> to participate in Youth Group. Please note this form must be notarized.</p></li></ul><br />
+
 <h3>Registration Form</h3>
 {{Form::open(['method' => 'POST', 'action' => 'EducationController@store'])}}
 	<div class="form-group">
@@ -97,17 +101,9 @@
 		{{Form::label('contact_two_phone', 'Phone:')}}<br>
 		{{Form::text('contact_two_phone', null, ['class' => 'form-control', 'placeholder' => '(###) ###-#####'])}}
 	</div>
-
-
-
-
-
-	<div class='pull-right'>
-		<div class="form-group">
-		{{Form::submit('Next', ['class' => 'btn btn-primary'])}}
-		{{Form::close()}}		
-		</div>
+	<div class="form-group">
+		{{Form::submit('Sign Up', ['class' => 'btn btn-primary form-control'])}}
 	</div>
-	<a href="{{url('/')}}"><button class="pull-right btn btn-secondary">Cancel</button></a>
+
 </div>	
 @stop

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2">
-		<div class="col-md-12">
+<div class="col-md-12">
     @if (count($errors))
     <ul class="err">
     @foreach($errors->all() as $error)

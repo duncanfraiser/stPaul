@@ -31,6 +31,14 @@ class Catechumen extends Model
             'momMiddleName',
             'momLastName',
             'married',
-            'firstMarriage'
+            'firstMarriage',
+            'married_location',
+            'divorced',
+            'annulment_granted',
+            'annulment_pending',
+            'spouse_baptized',
+            'spouse_faith',
+            'spouse_church',
+            'spouse_church_address'
             ];
 }
