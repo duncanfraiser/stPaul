@@ -42,7 +42,7 @@
 		{{ Form::radio('baptized', 'No') }} {{ Form::label('baptized', 'No')}}<br/>
 	</div>
 	<div class="form-group">
-		{{Form::label('bapChurch', 'If Yes, Where?')}}
+		{{Form::label('bapChurch', 'If "Yes," Where?')}}
 		{{Form::text('bapChurch', null, ['class' => 'form-control', 'placeholder' => 'Enter Church'])}}
 	</div>
 	<div class="form-group">
@@ -90,7 +90,7 @@
 		{{ Form::radio('divorced', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('annulment_granted', 'If "Yes", has there been an annulment granted by the Catholic Church?')}}<br/>
+		{{Form::label('annulment_granted', 'If "Yes," has there been an annulment granted by the Catholic Church?')}}<br/>
     	{{ Form::radio('annulment_granted', 'Yes') }} {{ Form::label('firstMarriage', 'Yes')}}<br />
 		{{ Form::radio('annulment_granted', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
@@ -105,7 +105,7 @@
 		{{ Form::radio('spouse_baptized', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('spouse_faith', 'If "Yes", in what faith tradition and where?')}}
+		{{Form::label('spouse_faith', 'If "Yes," in what faith tradition and where?')}}
 		{{Form::text('spouse_faith', null, ['class' => 'form-control', 'placeholder' => 'Enter Faith'])}}
 		{{Form::text('spouse_church', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Name'])}}
 		{{Form::text('spouse_church_address', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Address'])}}
