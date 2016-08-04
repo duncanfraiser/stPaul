@@ -21,7 +21,7 @@
 	</div>
 		<div class="form-group">
 		{{Form::label('grade', 'Grade:')}}<br>
-		{{Form::text('grade', null, ['class' => 'form-control', 'placeholder' => 'Enter Grade'])}}
+		{{Form::select('grade', ['NULL' => 'Please Select','Preschool' => 'Preschool','kindergarten' => 'kindergarten', '1' => '1st','2' => '2nd','3' => '3rd', '4' => '4th', '5' => '5th', '6' => '6th','7' => '7th','8' => '8th','9' => '9th','10' => '10th','11' => '11th','12' => '12th'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('school', 'School Attending:')}}<br>
