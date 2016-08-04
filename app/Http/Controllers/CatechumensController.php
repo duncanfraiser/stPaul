@@ -39,7 +39,7 @@ class CatechumensController extends Controller
     	$catechumen = Catechumen::findOrFail($id);
     	$catechumen->fill($request->all());
     	$catechumen->save();
-    	return redirect('RCIA/'.$id);
+    	return redirect('RCIA/');
 
     }
 

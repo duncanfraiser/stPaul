@@ -2,7 +2,8 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2">
 <div class="col-md-12">
-		<center><h1>The Rite of Christian Initiation of Adults (RCIA) Registration</h1></center><br>
+		<center><h1>The Rite of Christian Initiation of Adults (RCIA) Registration</h1></center>
+		<center><h3>Class meets on Tuesday nights at 6:30 pm beginning<br>September 27, 2016</h3></center><br>
 {{Form::open(['method' => 'POST', 'action' => 'CatechumensController@store'])}}
 	<div class="form-group">
 		{{Form::label('firstName', 'Full Name:')}}
@@ -55,7 +56,7 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('why', 'Why are you interested in the Catholic Church at this time?')}}
-		{{Form::textarea('why', null, ['class' => 'form-control', 'placeholder' => 'Enter Why'])}}
+		{{Form::textarea('why', null, ['class' => 'form-control', 'placeholder' => 'Enter Explanation'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('dadFirstName', 'Father\'s Full Name:')}}
@@ -81,38 +82,38 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('married_location', 'Where were you married?')}}
-		{{Form::text('married_location', null, ['class' => 'form-control', 'placeholder' => 'Enter marriage Location'])}}
+		{{Form::text('married_location', null, ['class' => 'form-control', 'placeholder' => 'Enter Marriage Location'])}}
 	</div>
 	<div class="form-group">
-		{{Form::label('divorced', 'Have you or your spouce/fiancee ever been divorced?')}}<br/>
+		{{Form::label('divorced', 'Have you or your spouse/fianc&eacute;e ever been divorced?')}}<br/>
     	{{ Form::radio('divorced', 'Yes') }} {{ Form::label('firstMarriage', 'Yes')}}<br />
 		{{ Form::radio('divorced', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('annulment_granted', 'If "yes", has there been an annulment granted by the Catholic Church?')}}<br/>
+		{{Form::label('annulment_granted', 'If "Yes", has there been an annulment granted by the Catholic Church?')}}<br/>
     	{{ Form::radio('annulment_granted', 'Yes') }} {{ Form::label('firstMarriage', 'Yes')}}<br />
 		{{ Form::radio('annulment_granted', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('annulment_pending', 'Are you or your spouce/fiancee presently seeking an annulment?')}}<br/>
+		{{Form::label('annulment_pending', 'Are you or your spouse/fianc&eacute;e presently seeking an annulment?')}}<br/>
     	{{ Form::radio('annulment_pending', 'Yes') }} {{ Form::label('firstMarriage', 'Yes')}}<br />
 		{{ Form::radio('annulment_pending', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('spouse_baptized', 'Has your spouce/fiancee ever been baptized?')}}<br/>
+		{{Form::label('spouse_baptized', 'Has your spouse/fianc&eacute;e ever been baptized?')}}<br/>
     	{{ Form::radio('spouse_baptized', 'Yes') }} {{ Form::label('firstMarriage', 'Yes')}}<br />
 		{{ Form::radio('spouse_baptized', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('spouse_faith', 'If "yes", in what faith tradition?')}}
+		{{Form::label('spouse_faith', 'If "Yes", in what faith tradition?')}}
 		{{Form::text('spouse_faith', null, ['class' => 'form-control', 'placeholder' => 'Enter Faith'])}}
 	</div>
 	<div class="form-group">
-		{{Form::label('spouse_church', 'In what church did the baptism take place?')}}
-		{{Form::text('spouse_church', null, ['class' => 'form-control', 'placeholder' => 'Enter Church'])}}
+		{{Form::label('spouse_church', 'If "Yes", where?')}}
+		{{Form::text('spouse_church', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Name'])}}
 	</div>
 		<div class="form-group">
-		{{Form::label('spouse_church_address', 'Church Address:')}}
+		{{Form::label('spouse_church_address', 'Enter Church Address:')}}
 		{{Form::text('spouse_church_address', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Address'])}}
 	</div>
 	<div class="form-group">

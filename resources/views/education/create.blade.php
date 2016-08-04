@@ -3,8 +3,8 @@
 <div class="col-md-8 col-md-offset-2"><br />
 <h1>Religious Education Registration</h1>
 <p>Complete the Registration form (below) for children to be enrolled in the St. Paul Religious Education Program, ages 3 years through 12th Grade. This form is to be completed and submitted online.</p>
-<p>Once you have registered online, please print, complete and sign the "Parental Consent, Photo Release, Medical Release Form" which can be accessed after submitting the Registration Form. You may place this form and payment in a sealed envelope marked, "Religious Ed" and drop it in the collection basket at Mass.</p>
-<p>Please note that parents of students in 7th-12th Grades need to print, complete, sign and notarize a  <a target="blank" href="{{url('/files/FormsPermanent2.pdf')}}">Diocesan Youth Form</a></p>
+<p>Once you have registered online, please print, complete and sign the <a target="blank" href="{{url('/files/Parent Consent, Photo Release, Medical Release Form.pdf')}}">"Parental Consent, Photo Release, Medical Release Form"</a> which can be accessed after submitting the Registration Form. You may place this form and payment in a sealed envelope marked, "Religious Ed" and drop it in the collection basket at Mass or mail it to the church office.</p>
+<p>Please note that parents of students in 7th-12th Grades need to print, complete, sign and notarize a  <a target="blank" href="{{url('/files/FormsPermanent2.pdf')}}">Diocesan Youth Form</a>. Thank you.</p>
 
 
 <p><h3>Fees:</h3><ul><li>$30 for one child</li>
