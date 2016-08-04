@@ -8,7 +8,7 @@
 <ul class="dropdown-menu">
 <li><a href="{{url('/ChristLife/allergiesEmail')}}">Allergies Email List</a></li>
 <li><a href="{{url('/ChristLife/')}}">Christ Life Index</a></li>
-<li><a href="{{url('/ChristLife/ride')}}">Transpotation</a></li>
+<li><a href="{{url('/ChristLife/ride')}}">Transportation</a></li>
 <li><a href="{{url('/ChristLife/comments')}}">Additional Comments</a></li>
 </ul></div></small></h2>
 <h3><u>Tuesday Session</u></h3>
