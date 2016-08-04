@@ -111,9 +111,6 @@
 	<div class="form-group">
 		{{Form::label('spouse_church', 'If "Yes", where?')}}
 		{{Form::text('spouse_church', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Name'])}}
-	</div>
-		<div class="form-group">
-		{{Form::label('spouse_church_address', 'Enter Church Address:')}}
 		{{Form::text('spouse_church_address', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Address'])}}
 	</div>
 	<div class="form-group">
