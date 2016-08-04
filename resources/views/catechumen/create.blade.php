@@ -105,11 +105,8 @@
 		{{ Form::radio('spouse_baptized', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('spouse_faith', 'If "Yes", in what faith tradition?')}}
+		{{Form::label('spouse_faith', 'If "Yes", in what faith tradition and where?')}}
 		{{Form::text('spouse_faith', null, ['class' => 'form-control', 'placeholder' => 'Enter Faith'])}}
-	</div>
-	<div class="form-group">
-		{{Form::label('spouse_church', 'If "Yes", where?')}}
 		{{Form::text('spouse_church', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Name'])}}
 		{{Form::text('spouse_church_address', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Address'])}}
 	</div>
