@@ -13,6 +13,15 @@
 </ul></p>
 
 <h3>Registration Form</h3>
+<div class="col-md-12">
+    @if (count($errors))
+    <ul class="err">
+    @foreach($errors->all() as $error)
+    <li class="err">{{$error}}</li>
+    @endforeach
+    </ul>
+    @endif
+</div>
 {{Form::open(['method' => 'POST', 'action' => 'EducationController@store'])}}
 	<div class="form-group">
 		{{Form::label('father_first_name', 'Father&rsquo;s Full Name:')}}<br>

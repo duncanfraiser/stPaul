@@ -14,6 +14,15 @@ class CatechumensController extends Controller
     }
 
     public function store(Request $request){
+            
+
+            $this->validate($request,[
+                'firstName' => 'required',
+                'lastName' => 'required',
+                ]);
+
+
+
         $catechumen = new Catechumen;
 		$catechumen->fill($request->all());
 		$catechumen->save();

@@ -3,6 +3,15 @@
 <div class="col-md-8 col-md-offset-2"><br />
 
 <h3>ELDEST CHILD being registered for Religious Education Classes</h3>
+<div class="col-md-12">
+    @if (count($errors))
+    <ul class="err">
+    @foreach($errors->all() as $error)
+    <li class="err">{{$error}}</li>
+    @endforeach
+    </ul>
+    @endif
+</div>
 {{Form::open(['method' => 'POST', 'action' => ['StudentController@store', Request::route()->education]])}}
 	<div class="form-group">
 		{{Form::hidden('education_id', Request::route()->education)}}

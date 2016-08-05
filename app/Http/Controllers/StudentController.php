@@ -18,6 +18,13 @@ class StudentController extends Controller
 
     public function store(Request $request){
 
+            $this->validate($request,[
+                'firstName' => 'required',
+                'lastName' => 'required',
+                ]);
+
+
+
         $student = new Student;
 		$student->fill($request->all());
 		$student->save();

@@ -43,8 +43,9 @@
 		{{ Form::radio('baptized', 'No') }} {{ Form::label('baptized', 'No')}}<br/>
 	</div>
 	<div class="form-group">
-		{{Form::label('bapChurch', 'If Yes, Where?')}}
-		{{Form::text('bapChurch', null, ['class' => 'form-control', 'placeholder' => 'Enter Church'])}}
+		{{Form::label('bapChurch', 'If "Yes," Where?')}}
+		{{Form::text('bapChurch', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Name'])}}
+		{{Form::text('bapChurchAddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Address'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('bapDate', 'Date of Baptism:')}}
@@ -57,7 +58,7 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('why', 'Why are you interested in the Catholic Church at this time?')}}
-		{{Form::textarea('why', null, ['class' => 'form-control', 'placeholder' => 'Enter Why'])}}
+		{{Form::textarea('why', null, ['class' => 'form-control', 'placeholder' => 'Enter Explanation'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('dadFirstName', 'Father\'s Full Name:')}}
@@ -83,38 +84,33 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('married_location', 'Where were you married?')}}
-		{{Form::text('married_location', null, ['class' => 'form-control', 'placeholder' => 'Enter marriage Location'])}}
+		{{Form::text('married_locationName', null, ['class' => 'form-control', 'placeholder' => 'Enter Venue Name'])}}
+		{{Form::text('married_location', null, ['class' => 'form-control', 'placeholder' => 'Enter Venue Location'])}}
 	</div>
 	<div class="form-group">
-		{{Form::label('divorced', 'Have you or your spouce/fiancee ever been divorced?')}}<br/>
+		{{Form::label('divorced', 'Have you or your spouse/fianc&eacute;e ever been divorced?')}}<br/>
     	{{ Form::radio('divorced', 'Yes') }} {{ Form::label('firstMarriage', 'Yes')}}<br />
 		{{ Form::radio('divorced', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('annulment_granted', 'If "yes", has there been an annulment granted by the Catholic Church?')}}<br/>
+		{{Form::label('annulment_granted', 'If "Yes," has there been an annulment granted by the Catholic Church?')}}<br/>
     	{{ Form::radio('annulment_granted', 'Yes') }} {{ Form::label('firstMarriage', 'Yes')}}<br />
 		{{ Form::radio('annulment_granted', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('annulment_pending', 'Are you or your spouce/fiancee presently seeking an annulment?')}}<br/>
+		{{Form::label('annulment_pending', 'Are you or your spouse/fianc&eacute;e presently seeking an annulment?')}}<br/>
     	{{ Form::radio('annulment_pending', 'Yes') }} {{ Form::label('firstMarriage', 'Yes')}}<br />
 		{{ Form::radio('annulment_pending', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('spouse_baptized', 'Has your spouce/fiancee ever been baptized?')}}<br/>
+		{{Form::label('spouse_baptized', 'Has your spouse/fianc&eacute;e ever been baptized?')}}<br/>
     	{{ Form::radio('spouse_baptized', 'Yes') }} {{ Form::label('firstMarriage', 'Yes')}}<br />
 		{{ Form::radio('spouse_baptized', 'No') }} {{ Form::label('firstMarriage', 'No')}}<br />
 	</div>
 	<div class="form-group">
-		{{Form::label('spouse_faith', 'If "yes", in what faith tradition?')}}
+		{{Form::label('spouse_faith', 'If "Yes," in what faith tradition and where?')}}
 		{{Form::text('spouse_faith', null, ['class' => 'form-control', 'placeholder' => 'Enter Faith'])}}
-	</div>
-	<div class="form-group">
-		{{Form::label('spouse_church', 'In what church did the baptism take place?')}}
-		{{Form::text('spouse_church', null, ['class' => 'form-control', 'placeholder' => 'Enter Church'])}}
-	</div>
-		<div class="form-group">
-		{{Form::label('spouse_church_address', 'Church Address:')}}
+		{{Form::text('spouse_church', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Name'])}}
 		{{Form::text('spouse_church_address', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Address'])}}
 	</div>
 <div class='pull-right'>

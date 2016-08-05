@@ -4,6 +4,15 @@
 <div class="col-md-12">
 		<center><h1>The Rite of Christian Initiation of Adults (RCIA) Registration</h1></center>
 		<center><h3>Class meets on Tuesday nights at 6:30 pm beginning<br>September 27, 2016</h3></center><br>
+<div class="col-md-12">
+    @if (count($errors))
+    <ul class="err">
+    @foreach($errors->all() as $error)
+    <li class="err">{{$error}}</li>
+    @endforeach
+    </ul>
+    @endif
+</div>
 {{Form::open(['method' => 'POST', 'action' => 'CatechumensController@store'])}}
 	<div class="form-group">
 		{{Form::label('firstName', 'Full Name:')}}
@@ -43,7 +52,8 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('bapChurch', 'If "Yes," Where?')}}
-		{{Form::text('bapChurch', null, ['class' => 'form-control', 'placeholder' => 'Enter Church'])}}
+		{{Form::text('bapChurch', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Name'])}}
+		{{Form::text('bapChurchAddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Address'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('bapDate', 'Date of Baptism:')}}
@@ -82,7 +92,8 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('married_location', 'Where were you married?')}}
-		{{Form::text('married_location', null, ['class' => 'form-control', 'placeholder' => 'Enter Marriage Location'])}}
+		{{Form::text('married_locationName', null, ['class' => 'form-control', 'placeholder' => 'Enter Venue Name'])}}
+		{{Form::text('married_location', null, ['class' => 'form-control', 'placeholder' => 'Enter Venue Location'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('divorced', 'Have you or your spouse/fianc&eacute;e ever been divorced?')}}<br/>
