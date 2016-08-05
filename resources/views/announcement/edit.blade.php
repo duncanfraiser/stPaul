@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2"><br>
 {{Form::model($announcement, ['method' => 'PATCH', 'action' => ['AnnouncementsController@update', $announcement->id]])}}
 	<div class="form-group">
 		{{Form::label('heading', 'Heading:')}}

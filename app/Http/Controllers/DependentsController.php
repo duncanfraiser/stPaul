@@ -6,9 +6,18 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Dependent;
+use App\Prayer;
+
 
 class DependentsController extends Controller
 {
+
+    public function __construct(){
+        $prayer = Prayer::latest()->first();                
+        \View::share('prayer', $prayer);
+        }
+
+
     public function create($id){
       return view('dependent.create');
     }

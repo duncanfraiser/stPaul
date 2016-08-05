@@ -3,22 +3,16 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Bulletin;
+use App\Contemplative;
 use App\Prayer;
 use App\Suggested_Prayer;
 use App\Divina;
-use App\Contemplative;
 
-class BulletinController extends Controller
+class ContemplativeController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware('auth')->only('create','edit');
 
-        
-        $heading = Bulletin::latest()->first();
-        \View::share('heading', $heading);
-        
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
 
@@ -30,52 +24,46 @@ class BulletinController extends Controller
 
         $contemplative = Contemplative::latest()->first();                
         \View::share('contemplative', $contemplative);
-    }
-
+        }
 
     public function create(){
-    	return view('bulletin.create');
-    }
+        return view('contemplative.create');
+        }
 
     public function store(Request $request){
-        $bulletin = new Bulletin;
-		$bulletin->fill($request->all());
-		$bulletin->save();
+        $contemplative = new Contemplative;
+		$contemplative->fill($request->all());
+		$contemplative->save();
  		\Session::flash('success_message', 'Successfully saved!');
 		return redirect('/');
-    }
+        }
 
     public function show($id){
-    	$bulletin = Bulletin::findOrFail($id);
-		return view('bulletin.show', compact('bulletin'));
-    }
+    	$contemplative = Contemplative::findOrFail($id);        
+		return view('contemplative.show', compact('contemplative'));
+        }
 
     public function edit($id){
-    	$bulletin = Bulletin::findOrFail($id);
-    	return view('bulletin.edit', compact('bulletin'));
-    }
+    	$contemplative = Contemplative::findOrFail($id);
+    	return view('contemplative.edit', compact('contemplative'));
+        }
 
     public function update($id, Request $request){
 		$input = $request->all();
-    	$bulletin = Bulletin::findOrFail($id);
-    	$bulletin->fill($request->all());
-    	$bulletin->save();
+    	$contemplative = Contemplative::findOrFail($id);
+    	$contemplative->fill($request->all());
+    	$contemplative->save();
     	return redirect('/');
-
-    }
-
-    public function index(){
-
-        $bulletins = Bulletin::get();
-
-        return view('bulletin.index', compact('bulletins'));
-    }
-
-        public function destroy($id){
-        $announcement = Bulletin::findOrFail($id);
-        $announcement->delete();
-        return redirect('/');
         }
 
+    public function index(){
+        $contemplatives = Contemplative::get();
+        return view('contemplative.index', compact('contemplatives'));
+        }
 
+    public function destroy($id){
+        $contemplative = Contemplative::findOrFail($id);
+        $contemplative->delete();
+        return redirect('/');
+        }
 }

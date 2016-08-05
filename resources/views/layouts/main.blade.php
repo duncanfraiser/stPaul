@@ -61,10 +61,18 @@
                         <a href="{{url('/welcome/1')}}">Welcome</a>
                     </li>
                     <li>
-                        <a href="{{url('')}}">Prayer</a>
+                        <div class="dropdown">
+                        <button class=" dropdown-toggle" data-toggle="dropdown">Prayer<span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                        <li><a href="{{url('/prayer/'.$prayer->id)}}">Prayer List</a></li>
+                        <li><a href="{{url('/suggested_prayer/'.$suggestedprayer->id)}}">Suggested Prayer</a></li>
+                        <li><a href="{{url('/Lectio_Divina/'.$divina->id)}}">Lectio Divina</a></li>
+                        <li><a href="{{url('/contemplative/'.$contemplative->id)}}">Contemplative Prayer</a></li>
+                        </ul>
+                        </div>
                     </li>
                     <li>
-                        <a href="{{url('')}}">Contact Us</a>
+                        <a href="{{url('/contact/1')}}">Contact Us</a>
                     </li>
                     <li>
                         <div class="dropdown">

@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<div class="DFcontainer col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2"><br />
 {{Form::model($homily, ['method' => 'PATCH', 'action' => ['HomilyController@update', $homily->id]])}}
 	<div class="form-group">
 		{{Form::label('heading', 'Heading:')}}

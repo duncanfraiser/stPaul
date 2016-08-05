@@ -3,22 +3,17 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Bulletin;
 use App\Prayer;
 use App\Suggested_Prayer;
 use App\Divina;
 use App\Contemplative;
 
-class BulletinController extends Controller
+
+class SuggestedPrayerController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware('auth')->only('create','edit');
 
-        
-        $heading = Bulletin::latest()->first();
-        \View::share('heading', $heading);
-        
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
 
@@ -32,50 +27,45 @@ class BulletinController extends Controller
         \View::share('contemplative', $contemplative);
     }
 
-
     public function create(){
-    	return view('bulletin.create');
-    }
+        return view('suggested_prayer.create');
+        }
 
     public function store(Request $request){
-        $bulletin = new Bulletin;
-		$bulletin->fill($request->all());
-		$bulletin->save();
+        $suggestedprayer = new Suggested_Prayer;
+		$suggestedprayer->fill($request->all());
+		$suggestedprayer->save();
  		\Session::flash('success_message', 'Successfully saved!');
 		return redirect('/');
-    }
+        }
 
     public function show($id){
-    	$bulletin = Bulletin::findOrFail($id);
-		return view('bulletin.show', compact('bulletin'));
-    }
+    	$suggestedprayer = Suggested_Prayer::findOrFail($id);        
+		return view('suggested_prayer.show', compact('suggestedprayer'));
+        }
 
     public function edit($id){
-    	$bulletin = Bulletin::findOrFail($id);
-    	return view('bulletin.edit', compact('bulletin'));
-    }
+    	$suggestedprayer = Suggested_Prayer::findOrFail($id);
+    	return view('suggested_prayer.edit', compact('suggestedprayer'));
+        }
 
     public function update($id, Request $request){
 		$input = $request->all();
-    	$bulletin = Bulletin::findOrFail($id);
-    	$bulletin->fill($request->all());
-    	$bulletin->save();
+    	$suggestedprayer =Suggested_Prayer::findOrFail($id);
+    	$suggestedprayer->fill($request->all());
+    	$suggestedprayer->save();
     	return redirect('/');
-
-    }
-
-    public function index(){
-
-        $bulletins = Bulletin::get();
-
-        return view('bulletin.index', compact('bulletins'));
-    }
-
-        public function destroy($id){
-        $announcement = Bulletin::findOrFail($id);
-        $announcement->delete();
-        return redirect('/');
         }
 
+    public function index(){
+        $suggestedprayers = Suggested_Prayer::get();
+ 
+        return view('suggested_prayer.index', compact('suggestedprayers'));
+        }
 
+    public function destroy($id){
+        $suggestedprayer = Suggested_Prayer::findOrFail($id);
+        $suggestedprayer->delete();
+        return redirect('/');
+        }
 }

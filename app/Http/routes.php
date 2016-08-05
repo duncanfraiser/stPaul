@@ -33,7 +33,11 @@ Route::resource('ministry', 'MinistryController');
 Route::resource('member/{member}/dependents', 'DependentsController');
 Route::resource('attending', 'AttendingController');
 Route::resource('contact', 'ContactController');
+
 Route::resource('prayer', 'PrayerController');
+Route::resource('suggested_prayer', 'SuggestedPrayerController');
+Route::resource('Lectio_Divina', 'DivinaController');
+Route::resource('contemplative', 'ContemplativeController');
 
 
 /*education routes*/

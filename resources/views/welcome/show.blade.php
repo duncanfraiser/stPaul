@@ -6,15 +6,12 @@
 @if(\Auth::check())
 @if(\Auth::user()->isAdmin())
 <span class="pull-right">
-<a href="{{ url('/welcome/create/')}}">New</button></a> | 
 <a href="{{ url('/welcome/'.$welcome->id.'/edit/')}}">Edit</button></a>
 </span>
 @endif
 @endif
 <p>{!!$welcome->body!!}</p>
-<span class="pull-right">
-<a href="{{ url('/welcome/')}}">Archive</button></a>
-</span>
+
 </div>
 </div>
 @stop

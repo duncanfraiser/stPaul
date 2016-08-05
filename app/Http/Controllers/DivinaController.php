@@ -3,22 +3,16 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Bulletin;
 use App\Prayer;
 use App\Suggested_Prayer;
 use App\Divina;
 use App\Contemplative;
 
-class BulletinController extends Controller
+class DivinaController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware('auth')->only('create','edit');
 
-        
-        $heading = Bulletin::latest()->first();
-        \View::share('heading', $heading);
-        
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
 
@@ -32,50 +26,44 @@ class BulletinController extends Controller
         \View::share('contemplative', $contemplative);
     }
 
-
     public function create(){
-    	return view('bulletin.create');
-    }
+        return view('Lectio_Divina.create');
+        }
 
     public function store(Request $request){
-        $bulletin = new Bulletin;
-		$bulletin->fill($request->all());
-		$bulletin->save();
+        $divina = new Divina;
+		$divina->fill($request->all());
+		$divina->save();
  		\Session::flash('success_message', 'Successfully saved!');
 		return redirect('/');
-    }
+        }
 
     public function show($id){
-    	$bulletin = Bulletin::findOrFail($id);
-		return view('bulletin.show', compact('bulletin'));
-    }
+    	$divina = Divina::findOrFail($id);        
+		return view('Lectio_Divina.show', compact('divina'));
+        }
 
     public function edit($id){
-    	$bulletin = Bulletin::findOrFail($id);
-    	return view('bulletin.edit', compact('bulletin'));
-    }
+    	$divina = Divina::findOrFail($id);
+    	return view('Lectio_Divina.edit', compact('divina'));
+        }
 
     public function update($id, Request $request){
 		$input = $request->all();
-    	$bulletin = Bulletin::findOrFail($id);
-    	$bulletin->fill($request->all());
-    	$bulletin->save();
+    	$divina = Divina::findOrFail($id);
+    	$divina->fill($request->all());
+    	$divina->save();
     	return redirect('/');
-
-    }
-
-    public function index(){
-
-        $bulletins = Bulletin::get();
-
-        return view('bulletin.index', compact('bulletins'));
-    }
-
-        public function destroy($id){
-        $announcement = Bulletin::findOrFail($id);
-        $announcement->delete();
-        return redirect('/');
         }
 
+    public function index(){
+        $divinas = Divina::get();
+        return view('Lectio_Divina.index', compact('divinas'));
+        }
 
+    public function destroy($id){
+        $divina = Divina::findOrFail($id);
+        $divina->delete();
+        return redirect('/');
+        }
 }

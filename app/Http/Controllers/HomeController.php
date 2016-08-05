@@ -11,6 +11,10 @@ use App\Bulletin;
 use App\Homily;
 use App\Youth;
 use App\Ministry;
+use App\Prayer;
+use App\Suggested_Prayer;
+use App\Divina;
+use App\Contemplative;
 
 class HomeController extends Controller
 {
@@ -19,10 +23,19 @@ class HomeController extends Controller
      *
      * @return void
      */
-   // public function __construct()
-    //{
-    //    $this->middleware('auth');
-   // }
+    public function __construct(){
+        $prayer = Prayer::latest()->first();                
+        \View::share('prayer', $prayer);
+
+        $suggestedprayer = Suggested_Prayer::latest()->first();                
+        \View::share('suggestedprayer', $suggestedprayer);
+
+        $divina = Divina::latest()->first();                
+        \View::share('divina', $divina);
+
+        $contemplative = Contemplative::latest()->first();                
+        \View::share('contemplative', $contemplative);
+    }
 
     /**
      * Show the application dashboard.
