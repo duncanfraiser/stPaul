@@ -65,7 +65,7 @@
                         <button class=" dropdown-toggle" data-toggle="dropdown">Prayer<span class="caret"></span></button>
                         <ul class="dropdown-menu">
                         <li><a href="{{url('/prayer/'.$prayer->id)}}">Prayer List</a></li>
-                        <li><a href="{{url('/suggested_prayer/'.$suggestedprayer->id)}}">Suggested Prayer</a></li>
+                        <li><a href="{{url('/suggested_prayer/'.$suggestedprayer->id)}}">Suggested Prayers</a></li>
                         <li><a href="{{url('/Lectio_Divina/'.$divina->id)}}">Lectio Divina</a></li>
                         <li><a href="{{url('/contemplative/'.$contemplative->id)}}">Contemplative Prayer</a></li>
                         </ul>
