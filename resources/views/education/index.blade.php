@@ -5,7 +5,7 @@
  <div class="col-md-5">                   
 	@foreach($eds as $key=>$ed)
 	{{++$key}}.
-	<a href="{{url('/education/'.$ed->id.'/edit')}}">{{$ed->father_last_name}} Family</a><br />
+	<a href="{{url('/education/'.$ed->id.'/edit')}}">{{$ed->father_last_name}} Family  </a><span style="color:red">{{ $ed->paid}}</span><br />
 	<ul>
 	    @foreach($ed->student as $stud)
     <a href="{{url('/education/'.$ed->id.'/student/'.$stud->id.'/edit')}}"><li>{{$stud->firstName}} {{$stud->middleName}} {{$stud->lastName}}</li></a>

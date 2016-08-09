@@ -10,6 +10,7 @@ class Education extends Model
     protected $table = 'educations';
     use SoftDeletes;
 	protected $fillable = [
+            'paid',
             'father_first_name',
             'father_middle_name',
             'father_last_name',

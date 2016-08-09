@@ -4,6 +4,10 @@
 <h1>Religious Education Registration</h1>
 {{Form::model($education, ['method' => 'PATCH', 'action' => ['EducationController@update', $education->id]])}}
 <div class="form-group">
+	{{Form::label('paid', 'Payment Received?')}}
+   	{{ Form::radio('paid', 'Payment Received') }} {{ Form::label('paid', 'Yes')}} {{ Form::radio('paid', '') }} {{ Form::label('paid', 'No')}}<br />
+</div>
+<div class="form-group">
 		{{Form::label('father_first_name', 'Father&rsquo;s Full Name:')}}<br>
 		{{Form::text('father_first_name', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
 		{{Form::text('father_middle_name', null, ['class' => 'form-control', 'placeholder' => 'Enter Middle Name'])}}
