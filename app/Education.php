@@ -11,6 +11,8 @@ class Education extends Model
     use SoftDeletes;
 	protected $fillable = [
             'paid',
+            'paidType',
+            'paidAmount',
             'father_first_name',
             'father_middle_name',
             'father_last_name',

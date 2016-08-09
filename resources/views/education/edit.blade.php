@@ -4,9 +4,14 @@
 <h1>Religious Education Registration</h1>
 {{Form::model($education, ['method' => 'PATCH', 'action' => ['EducationController@update', $education->id]])}}
 <div class="form-group">
-	{{Form::label('paid', 'Payment Received?')}}
-   	{{ Form::radio('paid', 'Payment Received') }} {{ Form::label('paid', 'Yes')}} {{ Form::radio('paid', '') }} {{ Form::label('paid', 'No')}}<br />
-</div>
+	{{Form::label('paid', 'Payment Received?')}}<br>
+   	{{ Form::radio('paid', 'Payment Received') }} {{ Form::label('paid', 'Yes')}}<br> {{ Form::radio('paid', '') }} {{ Form::label('paid', 'No')}}<br />
+	{{Form::label('paidType', 'Payment Type?')}}<br>
+   	{{ Form::radio('paidType', 'Cash') }} {{ Form::label('paidType', 'Cash')}}<br> {{ Form::radio('paidType', 'Check') }} {{ Form::label('paidType', 'Check')}}<br />
+   	{{ Form::radio('paidType', '') }} {{ Form::label('paidType', 'None')}}<br />
+	{{Form::label('paidAmount', 'Payment Amount:')}}
+	{{Form::text('paidAmount', null, ['class' => 'form-inline', 'placeholder' => 'Enter Amount'])}}
+</div><br>
 <div class="form-group">
 		{{Form::label('father_first_name', 'Father&rsquo;s Full Name:')}}<br>
 		{{Form::text('father_first_name', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
