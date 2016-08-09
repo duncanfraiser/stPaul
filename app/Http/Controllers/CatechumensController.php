@@ -89,12 +89,15 @@ class CatechumensController extends Controller
     }
 
     public function baptized(){
-        //dd('foo');
         $yesBaps = Catechumen::where('baptized','Yes')->get();
         $noBaps = Catechumen::where('baptized','No')->get();
-        // dd($noBaps);
-
         return view('catechumen.baptized', compact('yesBaps', 'noBaps'));
+    }
+
+    public function annulment(){
+        $grantAnnuls = Catechumen::where('annulment_granted','Yes')->get();
+        $pendAnnuls = Catechumen::where('annulment_pending','Yes')->get();
+        return view('catechumen.annulment', compact('grantAnnuls', 'pendAnnuls'));
     }
 }
 
