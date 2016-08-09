@@ -18,7 +18,12 @@
     {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I completed the 7-week Discovering Christ Series. I commit to attend all seven evening sessions and the Saturday Retreat.')}}		       
     </div>
 
+ 	<div class="form-group">
+		{{ Form::label('day', 'Select Session Day:')}}<br />
+		{{ Form::radio('day', 'Tuesday') }} {{ Form::label('day', 'Tuesday')}}<br />
+		{{ Form::radio('day', 'Thursday') }} {{ Form::label('day', 'Thursday')}}<br />
 
+ 	</div>
 
 
 

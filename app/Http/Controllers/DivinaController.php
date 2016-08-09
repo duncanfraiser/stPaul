@@ -35,7 +35,7 @@ class DivinaController extends Controller
 		$divina->fill($request->all());
 		$divina->save();
  		\Session::flash('success_message', 'Successfully saved!');
-		return redirect('/');
+		return redirect('/Lectio_Divina/'.$divina->id);
         }
 
     public function show($id){
@@ -53,7 +53,7 @@ class DivinaController extends Controller
     	$divina = Divina::findOrFail($id);
     	$divina->fill($request->all());
     	$divina->save();
-    	return redirect('/');
+    	return redirect('/Lectio_Divina/'.$divina->id);
         }
 
     public function index(){

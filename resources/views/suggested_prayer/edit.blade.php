@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
-{{Form::model($suggestedprayer, ['method' => 'PATCH', 'action' => ['SuggestedPrayerController@update', $prayer->id]])}}
+{{Form::model($suggestedprayer, ['method' => 'PATCH', 'action' => ['SuggestedPrayerController@update', $suggestedprayer->id]])}}
 	<div class="form-group">
 
 		{{Form::label('title', 'Title:')}}

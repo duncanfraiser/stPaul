@@ -35,7 +35,7 @@ class PrayerController extends Controller
 		$prayer->fill($request->all());
 		$prayer->save();
  		\Session::flash('success_message', 'Successfully saved!');
-		return redirect('/');
+		return redirect('/prayer/'.$prayer->id);
         }
 
     public function show($id){
@@ -53,7 +53,7 @@ class PrayerController extends Controller
     	$prayer = Prayer::findOrFail($id);
     	$prayer->fill($request->all());
     	$prayer->save();
-    	return redirect('/');
+    	return redirect('/prayer/'.$prayer->id);
         }
 
     public function index(){

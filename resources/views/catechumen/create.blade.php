@@ -30,6 +30,10 @@
 		{{Form::text('cellPhone', null, ['class' => 'form-control', 'placeholder' => '(###) ###-####'])}}
 	</div>
 	<div class="form-group">
+		{{Form::label('address', 'Home Address:')}}
+		{{Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Enter Home Address'])}}
+	</div>
+	<div class="form-group">
 		{{Form::label('dob', 'Date of Birth:')}}
 		{{Form::text('dob', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
 	</div>
@@ -44,6 +48,15 @@
 	<div class="form-group">
 		{{Form::label('email', 'Primary Email Address:')}}
 		{{Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Enter Email Address'])}}
+	</div>
+	<div class="form-group">
+		{{Form::label('childcare', 'Do you require child care?')}}<br/>
+    	{{ Form::radio('childcare', 'Yes') }} {{ Form::label('childcare', 'Yes')}}<br />
+		{{ Form::radio('childcare', 'No') }} {{ Form::label('childcare', 'No')}}<br/>
+	</div>
+	<div class="form-group">
+		{{Form::label('childage', 'If "Yes," ages of children:')}}
+		{{Form::text('childage', null, ['class' => 'form-control', 'placeholder' => 'List Ages of Children'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('baptized', 'Have you ever been baptized?')}}<br/>

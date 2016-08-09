@@ -38,6 +38,7 @@ class CatechumensController extends Controller
             $this->validate($request,[
                 'firstName' => 'required',
                 'lastName' => 'required',
+                'baptized' => 'required',
                 ]);
 
 
@@ -87,4 +88,13 @@ class CatechumensController extends Controller
         return redirect('/RCIA');
     }
 
+    public function baptized(){
+        //dd('foo');
+        $yesBaps = Catechumen::where('baptized','Yes')->get();
+        $noBaps = Catechumen::where('baptized','No')->get();
+        // dd($noBaps);
+
+        return view('catechumen.baptized', compact('yesBaps', 'noBaps'));
+    }
 }
+

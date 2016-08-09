@@ -36,7 +36,7 @@ class SuggestedPrayerController extends Controller
 		$suggestedprayer->fill($request->all());
 		$suggestedprayer->save();
  		\Session::flash('success_message', 'Successfully saved!');
-		return redirect('/');
+		return redirect('/suggested_prayer/'.$suggestedprayer->id);
         }
 
     public function show($id){
@@ -54,7 +54,7 @@ class SuggestedPrayerController extends Controller
     	$suggestedprayer =Suggested_Prayer::findOrFail($id);
     	$suggestedprayer->fill($request->all());
     	$suggestedprayer->save();
-    	return redirect('/');
+    	return redirect('/suggested_prayer/'.$suggestedprayer->id);
         }
 
     public function index(){

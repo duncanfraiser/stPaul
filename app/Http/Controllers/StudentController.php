@@ -77,4 +77,10 @@ class StudentController extends Controller
         $student->delete();
         return redirect('/');
         }
+
+    public function grade(){
+        $students = Student::get();
+        return view('student.grade', compact('students'));
+    }
+
 }

@@ -16,8 +16,11 @@ Route::resource('ChristLife', 'ChristLifeController');
 Route::get('/ChristLife/{id}/thanks', 'ChristLifeController@thanks');
 
 /* RCIA Routes*/
+Route::get('RCIA/baptized', 'CatechumensController@baptized');
+Route::get('RCIA/annulment', 'CatechumensController@annulment');
 Route::resource('RCIA', 'CatechumensController');
 Route::get('/RCIA/{id}/thanks', 'CatechumensController@thanks');
+
 
 //Route::resource('RCIA', 'RciaController');
 
@@ -44,6 +47,8 @@ Route::resource('contemplative', 'ContemplativeController');
 Route::resource('education/grade', 'EducationController@grade');
 Route::resource('education', 'EducationController');
 Route::resource('education/{education}/student', 'StudentController');
+Route::get('/student', 'StudentController@grade');
+
 
 /*Route::get('/', function () {
     return view('welcome');

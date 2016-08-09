@@ -35,7 +35,7 @@ class ContemplativeController extends Controller
 		$contemplative->fill($request->all());
 		$contemplative->save();
  		\Session::flash('success_message', 'Successfully saved!');
-		return redirect('/');
+		return redirect('/contemplative/'.$contemplative->id);
         }
 
     public function show($id){
@@ -53,7 +53,7 @@ class ContemplativeController extends Controller
     	$contemplative = Contemplative::findOrFail($id);
     	$contemplative->fill($request->all());
     	$contemplative->save();
-    	return redirect('/');
+    	return redirect('/contemplative/'.$contemplative->id);
         }
 
     public function index(){
