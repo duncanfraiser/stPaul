@@ -68,14 +68,33 @@
 		{{Form::label('needs', 'Special Needs/Allergies:')}}
 		{{Form::textarea('needs', null, ['class' => 'form-control', 'placeholder' => 'Enter Special Needs/Allergies'])}}
 	</div>
-	<div class='pull-right'>
-		<div class="form-group">
-		{{Form::submit('Enter', ['class' => 'btn btn-primary'])}}
+
+
+
+<div class='pull-right'>
+<div class="form-group">
+		{{Form::submit('Update', ['class' => 'btn btn-primary'])}}
 		{{Form::close()}}		
-		</div>
-	</div>
-	<a href="{{url('/education')}}"><button class="pull-right btn btn-secondary">Cancel</button></a>
+</div>
+</div>
+<div class='pull-right'>
+	<a href="{{url('/education')}}"><button class="btn btn-secondary">Cancel</button></a>
+</div>
+<div class="pull-right">
+    {{Form::close()}}
+		{{Form::open(['method' => 'DELETE', 'action' => ['StudentController@destroy',$student->education_id, $student->id]])}}
+		                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+        {{Form::close()}}
+</div>
+
+
+
+
+
+
 </div>		
+
+
 @stop
 
 @section('scripts')

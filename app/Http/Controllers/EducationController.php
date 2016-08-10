@@ -74,7 +74,8 @@ class EducationController extends Controller
 
         public function grade(){
 
-        $students = Student::orderBy('grade', 'asc')->get();
+        $students = Student::orderBy('lastName', 'asc')->get();
+
         return view('education.grade', compact('students'));
     }
 
@@ -83,5 +84,17 @@ class EducationController extends Controller
         $education->delete();
         return redirect('/education');
     }
+
+    public function family($id){
+        $education = Education::findOrFail($id);
+        return view('education.family', compact('education'));
+    }
+
+    public function student($family, $student){
+        $student = Student::findOrFail($student);
+
+        return view('education.student', compact('student'));
+    }
+
 
 }

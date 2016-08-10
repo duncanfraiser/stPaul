@@ -64,7 +64,7 @@ class StudentController extends Controller
     	$student = Student::findOrFail($id);
     	$student->fill($request->all());
     	$student->save();
-    	return redirect('/');
+    	return redirect('/education/');
         }
 
     public function index(){
@@ -72,10 +72,11 @@ class StudentController extends Controller
         return view('student.index', compact('students'));
         }
 
-    public function destroy($id){
-        $student = Student::findOrFail($id);
+    public function destroy($id, $studentId){
+   
+        $student = Student::findOrFail($studentId);
         $student->delete();
-        return redirect('/');
+        return redirect('/education');
         }
 
     public function grade(){

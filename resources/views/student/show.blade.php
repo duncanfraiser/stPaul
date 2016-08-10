@@ -4,7 +4,7 @@
 	<h3> Thank you for registering the following student or students for Religious Education Classes.</h3>
 	<ul>
     @foreach($parent->student as $stud)
-    <li><h3>{{$stud->firstName}} {{$stud->middleName}} {{$stud->lastName}}</h3></li>
+    <li><h4>{{$stud->firstName}} {{$stud->middleName}} {{$stud->lastName}}</h4></li>
     @endforeach                      
  	</ul><br /><br />
 
