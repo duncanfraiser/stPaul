@@ -13,7 +13,7 @@ class ChristLifeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->only('edit', 'index', 'show');
+        $this->middleware('auth')->only('edit', 'index', 'show', 'info', 'email', 'thursEmail', 'allergies', 'ride', 'rideEmail', 'comments', 'destroy', 'update', 'allergiesEmail', 'allergies');
 
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);

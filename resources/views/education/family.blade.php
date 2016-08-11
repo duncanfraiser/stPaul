@@ -17,7 +17,10 @@
 <li>Mother's Date of Birth: <span style="color:#337ab7">{{$education->mother_dob}}</span></li>
 <li>Marital Status: <span style="color:#337ab7">{{$education->marital_status}}</span></li>
 <li>Children Reside With: <span style="color:#337ab7">{{$education->reside_with}}</span></li>
-<li>Home Address: <span style="color:#337ab7">{{$education->address}}</span></li>
+<li>Street Address: <span style="color:#337ab7">{{$education->address}}</span></li>
+<li>City: <span style="color:#337ab7">{{$education->city}}</span></li>
+<li>State: <span style="color:#337ab7">{{$education->state}}</span></li>
+<li>Zip: <span style="color:#337ab7">{{$education->zip}}</span></li>
 <li>Home Phone: <span style="color:#337ab7">{{$education->phone}}</span></li>
 <li>Father's Work Phone: <span style="color:#337ab7">{{$education->father_work}}</span></li>
 <li>Father's Cell Phone: <span style="color:#337ab7">{{$education->father_cell}}</span></li>

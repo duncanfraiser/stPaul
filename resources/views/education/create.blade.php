@@ -54,7 +54,10 @@
         <br /><h3>Family Information</h3>
     <div class="form-group">
 		{{Form::label('address', 'Home Address:')}}
-		{{Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Street, City, State, Zip'])}}
+		{{Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Enter Street Address'])}}
+		{{Form::text('city', null, ['class' => 'form-control', 'placeholder' => 'Enter City'])}}
+		{{Form::text('state', null, ['class' => 'form-control', 'placeholder' => 'Enter State'])}}
+		{{Form::text('zip', null, ['class' => 'form-control', 'placeholder' => 'Enter Zip'])}}
 	</div>
     <div class="form-group">
 		{{Form::label('phone', 'Home Phone:')}}

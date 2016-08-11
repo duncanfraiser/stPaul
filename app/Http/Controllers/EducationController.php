@@ -16,6 +16,8 @@ class EducationController extends Controller
 {
 
     public function __construct(){
+        $this->middleware('auth')->only('edit', 'index', 'family', 'grade', 'student');
+
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
 

@@ -14,6 +14,9 @@ class RciaController extends Controller
 {
 
     public function __construct(){
+
+
+
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
 

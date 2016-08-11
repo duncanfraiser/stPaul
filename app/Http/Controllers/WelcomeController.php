@@ -16,6 +16,8 @@ class WelcomeController extends Controller
 {
 
     public function __construct(){
+        $this->middleware('auth')->only('create','edit');
+
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
 

@@ -14,7 +14,7 @@ use App\Contemplative;
 class StudentController extends Controller
 {
     public function __construct(){
-        //$this->middleware('auth')->only('create','edit');
+        $this->middleware('auth')->only('edit', 'grade');
 
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
