@@ -44,6 +44,8 @@ Route::resource('contemplative', 'ContemplativeController');
 
 
 /*education routes*/
+Route::get('education/studentEmail', 'EducationController@studentEmail');
+Route::get('education/familyEmail', 'EducationController@familyEmail');
 Route::get('education/grade', 'EducationController@grade');
 Route::get('education/{education}/family', 'EducationController@family');
 Route::get('education/{education}/family/{student}', 'EducationController@student');

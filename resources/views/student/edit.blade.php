@@ -82,20 +82,23 @@
 </div>
 <div class="pull-right">
     {{Form::close()}}
-		{{Form::open(['method' => 'DELETE', 'action' => ['StudentController@destroy',$student->education_id, $student->id]])}}
-		                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-        {{Form::close()}}
+{{-- 		{{Form::open(['method' => 'DELETE', 'action' => ['StudentController@destroy',$student->education_id, $student->id]])}}
+		{{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+        {{Form::close()}} --}}
+
+    {{Form::open(['method' => 'DELETE', 'route' => ['education.{education}.student.destroy',$student->education_id, $student->id], 'class' => 'delete'])}}
+        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+    {{Form::close()}}
+
+
 </div>
-
-
-
-
-
-
 </div>		
 
-
 @stop
-
 @section('scripts')
+<script>
+	$(".delete").on("submit", function(){
+		return confirm("Do you want to delete this item?");
+	});
+</script>
 @stop

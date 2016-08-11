@@ -7,6 +7,8 @@
 <span class="caret"></span></button>
 <ul class="dropdown-menu">
 <li><a href="{{url('/education/grade')}}">Sort by Grade</a></li>
+<li><a href="{{url('/education/familyEmail')}}">Family Email List</a></li>
+<li><a href="{{url('/education/studentEmail')}}">Student Email List</a></li>
 </ul></div></small></h2>
  <div class="col-md-5">                   
 	@foreach($eds as $key=>$ed)

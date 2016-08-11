@@ -59,9 +59,10 @@ class StudentController extends Controller
     	return view('student.edit', compact('student'));
         }
 
-    public function update($id, Request $request){
+    public function update($familyId, $studentId, Request $request){
+         
 		$input = $request->all();
-    	$student = Student::findOrFail($id);
+    	$student = Student::findOrFail($studentId);
     	$student->fill($request->all());
     	$student->save();
     	return redirect('/education/');

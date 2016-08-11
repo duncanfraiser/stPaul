@@ -16,7 +16,7 @@ class EducationController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth')->only('edit', 'index', 'family', 'grade', 'student');
+        $this->middleware('auth')->only('edit', 'index', 'family', 'grade', 'student', 'familyEmail', 'studentEmail');
 
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
@@ -62,6 +62,7 @@ class EducationController extends Controller
     }
 
     public function update($id, Request $request){
+        
 		$input = $request->all();
     	$education = Education::findOrFail($id);
     	$education->fill($request->all());
@@ -96,6 +97,18 @@ class EducationController extends Controller
         $student = Student::findOrFail($student);
 
         return view('education.student', compact('student'));
+    }
+
+    public function familyEmail(){
+        $fatherEmails = Education::where('father_email','!=','')->where('father_email','!=','none')->where('father_email','!=','n/a')->lists('father_email');
+        $motherEmails = Education::where('mother_email','!=','')->where('mother_email','!=','none')->where('mother_email','!=','n/a')->lists('mother_email');
+
+        return view('education.familyEmail', compact('fatherEmails', 'motherEmails'));
+    }
+
+    public function studentEmail(){
+        $emails = Student::where('email','!=','')->where('email','!=','none')->where('email','!=','n/a')->lists('email');
+        return view('education.studentEmail', compact('emails'));
     }
 
 
