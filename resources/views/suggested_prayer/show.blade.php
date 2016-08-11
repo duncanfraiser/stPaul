@@ -4,7 +4,7 @@
 <div class="col-md-8 col-md-offset-2">
 <center><h1>{{$suggestedprayer->title}}</h1></center>
 @if(\Auth::check())
-@if(\Auth::user()->isAdmin())
+@if(\Auth::user()->isAdmin() || \Auth::user()->isPrayer())
 <span class="pull-right">
 <a href="{{ url('/suggested_prayer/create/')}}">New</button></a> | 
 <a href="{{ url('/suggested_prayer/'.$suggestedprayer->id.'/edit/')}}">Edit</button></a>
