@@ -90,9 +90,7 @@
                         <div class="dropdown">
                         <button class=" dropdown-toggle" data-toggle="dropdown">Administration<span class="caret"></span></button>
                         <ul class="dropdown-menu">
-   
-
-                                                @if(\Auth::user()->isAdmin() || \Auth::User()->isChristlife())
+                        @if(\Auth::user()->isAdmin() || \Auth::User()->isChristlife())
                         <li><a href="{{url('/ChristLife/')}}">Christ Life Index</a></li>
                         @endif
                         @if(\Auth::user()->isAdmin() || \Auth::User()->isEducation())
@@ -101,12 +99,9 @@
                         @if(\Auth::user()->isAdmin() || \Auth::User()->isRcia())
                         <li><a href="{{url('/RCIA/')}}">RCIA Index</a></li>
                         @endif
-
-
                         </ul>
                         </div>
                     </li>
-
     @endif
 
 

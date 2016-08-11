@@ -4,7 +4,7 @@
 <div class="col-md-8 col-md-offset-2">
 <center><h1>Bulletin</h1></center>
 @if(\Auth::check())
-@if(\Auth::user()->isAdmin())
+@if(\Auth::user()->isAdmin() || \Auth::user()->isBulletin())
 <span class="pull-right">
 <a href="{{ url('/bulletin/create/')}}">New</button></a> | 
 <a href="{{ url('/bulletin/'.$bulletin->id.'/edit/')}}">Edit</button></a>

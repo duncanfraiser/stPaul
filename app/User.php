@@ -49,7 +49,23 @@ class User extends Authenticatable
         }
     }
 
+    public function isPrayer(){
+        if (\Auth::user()->prayer == 1) {
+            return true;
+        }
+    }
 
+    public function isBulletin(){
+        if (\Auth::user()->bulletin == 1) {
+            return true;
+        }
+    }
+
+    public function isYouth(){
+        if (\Auth::user()->youth == 1) {
+            return true;
+        }
+    }
 
 
 }

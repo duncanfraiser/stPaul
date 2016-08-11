@@ -39,7 +39,7 @@
 	<center><h1>{{$youth->heading}}</h1></center>
 	<strong>{{$youth->title}}</strong>
 	@if(\Auth::check())
-	@if(\Auth::user()->isAdmin())
+	@if(\Auth::user()->isAdmin() || \Auth::user()->isYouth())
 	<span class="pull-right">
 	<a href="{{ url('/youth/create/')}}">New</button></a> |
 	<a href="{{ url('/youth/'.$youth->id.'/edit/')}}">Edit</button></a>
@@ -76,7 +76,7 @@
 	<center><h1>{{$bulletin->heading}}</h1></center>
 	<strong>{{$bulletin->title}}</strong>
 	@if(\Auth::check())
-	@if(\Auth::user()->isAdmin())
+	@if(\Auth::user()->isAdmin() || \Auth::user()->isBulletin())
 	<span class="pull-right">
 	<a href="{{ url('/bulletin/create/')}}">New</button></a> |
 	<a href="{{ url('/bulletin/'.$bulletin->id.'/edit/')}}">Edit</button></a>
