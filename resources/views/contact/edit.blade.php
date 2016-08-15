@@ -17,13 +17,7 @@
 	<div class='pull-right'>
 	<a href="{{url('/')}}"><button class="btn btn-secondary">Cancel</button></a>
 	</div>
-    <div class="pull-right">
-       	<div class="form-group">
-        {{Form::open(['method' => 'DELETE', 'route' => ['contact.destroy', $contact->id], 'class' => 'delete'])}}
-        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-        {{Form::close()}}
-    	</div>
-    </div>
+
 </div>
 
 @stop
