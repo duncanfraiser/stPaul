@@ -66,7 +66,7 @@ class BulletinController extends Controller
 
     public function index(){
 
-        $bulletins = Bulletin::get();
+        $bulletins = Bulletin::orderBy('created_at', 'desc')->get();
 
         return view('bulletin.index', compact('bulletins'));
     }

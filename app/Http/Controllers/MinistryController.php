@@ -65,7 +65,7 @@ class MinistryController extends Controller
         }
 
     public function index(){
-        $ministries = Ministry::get();
+        $ministries = Ministry::orderBy('created_at', 'desc')->get();
         return view('ministry.index', compact('ministries'));
         }
 

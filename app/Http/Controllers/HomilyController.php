@@ -66,7 +66,7 @@ class HomilyController extends Controller
 
     public function index(){
 
-        $homilies = Homily::get();
+        $homilies = Homily::orderBy('created_at', 'desc')->get();
 
         return view('homily.index', compact('homilies'));
     }

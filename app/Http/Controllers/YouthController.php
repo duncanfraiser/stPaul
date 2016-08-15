@@ -69,8 +69,14 @@ class YouthController extends Controller
 
     public function index(){
 
-        $youths = Youth::get();
+        $youths = Youth::orderBy('created_at', 'desc')->get();
 
         return view('youth.index', compact('youths'));
     }
+
+    public function destroy($id){
+        $youth = Youth::findOrFail($id);
+        $youth->delete();
+        return redirect('/');
+        }
 }

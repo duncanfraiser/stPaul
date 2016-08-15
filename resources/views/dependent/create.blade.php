@@ -1,11 +1,17 @@
-@extends('includes.layout')
+@extends('layouts.main')
 @section('content')
-
-
-<div class="DFcontainer col-md-8 col-md-offset-2"> 
-{{Form::open(['method' => 'POST', 'action' => ['DependentsController@store', Request::route()->member]])}}
-
-		<h3>Dependent Currently Living in Household</h3>
+<div class="col-md-8 col-md-offset-2">
+<div class="col-md-12">
+    @if (count($errors))
+    <ul class="err">
+    @foreach($errors->all() as $error)
+    <li class="err">{{$error}}</li>
+    @endforeach
+    </ul>
+    @endif
+</div>
+		
+		<center><h2>Dependent Currently Living in Household</h2></center>
 		{{Form::hidden('member_id', Request::route()->member)}}
 		<div class="form-group">
 			{{Form::label('firstName', 'Full Name:')}}

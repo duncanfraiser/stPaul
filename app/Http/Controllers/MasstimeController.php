@@ -65,7 +65,7 @@ class MasstimeController extends Controller
     }
 
     public function index(){
-        $masstimes = Masstime::get();
+        $masstimes = Masstime::orderBy('created_at', 'desc')->get();
         return view('masstime.index', compact('masstimes'));
     }
 

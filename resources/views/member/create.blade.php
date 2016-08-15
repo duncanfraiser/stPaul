@@ -10,7 +10,7 @@
     </ul>
     @endif
 </div>
-		<center><h1>Member Registration</h1></center><br>
+		<center><h2>Member Registration</h2></center><br>
 		<div class="form-group">
 			{{Form::label('familyName', 'Family Name:')}}
 			{{Form::text('familyName', null, ['class' => 'form-control', 'placeholder' => 'Enter Family Name'])}}
