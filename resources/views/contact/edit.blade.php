@@ -10,10 +10,10 @@
 	</div>
 	<div class='pull-right'>
 		<div class="form-group">
-		{{Form::submit('Update', ['class' => 'btn btn-primary'])}}
-		{{Form::close()}}		
+		{{Form::submit('Update', ['class' => 'btn btn-primary'])}}				
 		</div>
 	</div>
+	{{Form::close()}}
 	<div class='pull-right'>
 	<a href="{{url('/')}}"><button class="btn btn-secondary">Cancel</button></a>
 	</div>
