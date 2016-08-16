@@ -13,7 +13,7 @@ class CatechumensController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth')->only('create','edit', 'index', 'baptized', 'annulment');
+        $this->middleware('auth')->only('edit', 'index', 'baptized', 'annulment');
 
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
