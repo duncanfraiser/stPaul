@@ -13,7 +13,19 @@
 @endif
 <h3>{{$youth->title}}</h3>
 <p>{!!$youth->body!!}</p>
-<a href="{{ url('/youth/')}}">{{$heading->heading}} Archive</button></a>
+
+<div>
+<h3>{{$heading->heading}} Archive</h3>
+<ul>
+@foreach($archives as $archive)
+@if($archive->id == $youth->id)
+@else
+<li><a href="{{url('/youth/'.$archive->id)}}">{{$archive->title}}</button></a></li>
+@endif
+@endforeach
+</ul>
+</div>
+
 </div>
 </div>
 @stop

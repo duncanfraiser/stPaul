@@ -47,7 +47,8 @@ class BulletinController extends Controller
 
     public function show($id){
     	$bulletin = Bulletin::findOrFail($id);
-		return view('bulletin.show', compact('bulletin'));
+         $archives = Bulletin::orderBy('created_at', 'desc')->get();  
+		return view('bulletin.show', compact('bulletin', 'archives'));
     }
 
     public function edit($id){

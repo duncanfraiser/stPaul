@@ -14,7 +14,18 @@
 
 <p>{!!$divina->body!!}</p>
 
-<a href="{{ url('/Lectio_Divina/')}}">Lectio Divina Archive</button></a>
+<div>
+<h3>Lectio Divina Prayers Archive</h3>
+<ul>
+@foreach($archives as $archive)
+@if($archive->id == $divina->id)
+@else
+<li><a href="{{url('/Lectio_Divina/'.$archive->id)}}">{{$archive->title}}</button></a></li>
+@endif
+@endforeach
+</ul>
+
+</div>
 
 </div>
 </div>

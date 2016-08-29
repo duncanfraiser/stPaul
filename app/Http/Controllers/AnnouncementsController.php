@@ -43,8 +43,9 @@ class AnnouncementsController extends Controller
         }
 
     public function show($id){
-    	$announcement = Announcement::findOrFail($id);        
-		return view('announcement.show', compact('announcement'));
+    	$announcement = Announcement::findOrFail($id);   
+         $archives = Announcement::orderBy('created_at', 'desc')->get();      
+		return view('announcement.show', compact('announcement', 'archives'));
         }
 
     public function edit($id){

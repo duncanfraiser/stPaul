@@ -14,7 +14,18 @@
 <h3>{{$homily->title}}</h3>
 <p>{!!$homily->body!!}<p>
 
-<a href="{{ url('/homily/')}}">{{$heading->heading}} Archive</button></a>
+<div>
+<h3>{{$heading->heading}} Archive</h3>
+<ul>
+
+@foreach($archives as $archive)
+@if($archive->id == $homily->id)
+@else
+<li><a href="{{url('/homily/'.$archive->id)}}">{{$archive->title}}</button></a></li>
+@endif
+@endforeach
+</ul>
+</div>
 
 </div>
 </div>

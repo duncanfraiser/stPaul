@@ -14,8 +14,19 @@
 
 <p>{!!$suggestedprayer->body!!}</p>
 
-<a href="{{ url('/suggested_prayer/')}}">Prayer List Archive</button></a>
 
+<div>
+<h3>Suggested Prayers Archive</h3>
+<ul>
+@foreach($archives as $archive)
+@if($archive->id == $suggestedprayer->id)
+@else
+<li><a href="{{url('/suggested_prayer/'.$archive->id)}}">{{$archive->title}}</button></a></li>
+@endif
+@endforeach
+</ul>
+
+</div>
 </div>
 </div>
 @stop

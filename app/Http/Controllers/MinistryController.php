@@ -43,11 +43,9 @@ class MinistryController extends Controller
         }
 
     public function show($id){
-    	$ministry = Ministry::findOrFail($id);        
-
-
-
-		return view('ministry.show', compact('ministry'));
+    	$ministry = Ministry::findOrFail($id); 
+        $archives = Ministry::orderBy('created_at', 'desc')->get();  
+		return view('ministry.show', compact('ministry', 'archives'));
 
         }
 

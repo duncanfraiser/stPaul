@@ -13,7 +13,17 @@
 @endif
 <h3>{{$bulletin->title}}</h3>
 <p>{!!$bulletin->body!!}</p>
-<a href="{{ url('/bulletin/')}}">Bulletin Archive</button></a>
+<div>
+<h3>{{$heading->heading}} Archive</h3>
+<ul>
+@foreach($archives as $archive)
+@if($archive->id == $bulletin->id)
+@else
+<li><a href="{{url('/announcement/'.$archive->id)}}">{{$archive->title}}</button></a></li>
+@endif
+@endforeach
+</ul>
+</div>
 </div>
 </div>
 @stop

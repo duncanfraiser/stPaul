@@ -40,7 +40,8 @@ class PrayerController extends Controller
 
     public function show($id){
     	$prayer = Prayer::findOrFail($id);        
-		return view('prayer.show', compact('prayer'));
+        $archives = Prayer::orderBy('created_at', 'desc')->get(); 
+		return view('prayer.show', compact('prayer', 'archives'));
         }
 
     public function edit($id){

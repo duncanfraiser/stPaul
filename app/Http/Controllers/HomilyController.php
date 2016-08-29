@@ -46,8 +46,9 @@ class HomilyController extends Controller
 
     public function show($id){
     	$homily = Homily::findOrFail($id);
+        $archives = Homily::orderBy('created_at', 'desc')->get();  
         
-		return view('homily.show', compact('homily'));
+		return view('homily.show', compact('homily', 'archives'));
     }
 
     public function edit($id){

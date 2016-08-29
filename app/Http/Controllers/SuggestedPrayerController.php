@@ -40,8 +40,10 @@ class SuggestedPrayerController extends Controller
         }
 
     public function show($id){
-    	$suggestedprayer = Suggested_Prayer::findOrFail($id);        
-		return view('suggested_prayer.show', compact('suggestedprayer'));
+    	$suggestedprayer = Suggested_Prayer::findOrFail($id);     
+        $archives = Suggested_Prayer::orderBy('created_at', 'desc')->get(); 
+        
+		return view('suggested_prayer.show', compact('suggestedprayer', 'archives'));
         }
 
     public function edit($id){

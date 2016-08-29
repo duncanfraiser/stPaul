@@ -40,7 +40,9 @@ class ContemplativeController extends Controller
 
     public function show($id){
     	$contemplative = Contemplative::findOrFail($id);        
-		return view('contemplative.show', compact('contemplative'));
+        $archives = Contemplative::orderBy('created_at', 'desc')->get(); 
+
+		return view('contemplative.show', compact('contemplative', 'archives'));
         }
 
     public function edit($id){

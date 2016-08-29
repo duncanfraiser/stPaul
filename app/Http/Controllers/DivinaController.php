@@ -40,7 +40,8 @@ class DivinaController extends Controller
 
     public function show($id){
     	$divina = Divina::findOrFail($id);        
-		return view('Lectio_Divina.show', compact('divina'));
+         $archives = Divina::orderBy('created_at', 'desc')->get(); 
+		return view('Lectio_Divina.show', compact('divina', 'archives'));
         }
 
     public function edit($id){

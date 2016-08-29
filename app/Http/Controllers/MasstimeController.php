@@ -46,9 +46,9 @@ class MasstimeController extends Controller
 
     public function show($id){
     	$masstime = Masstime::findOrFail($id);
- ;
-       
-		return view('masstime.show', compact('masstime'));
+        $archives = Masstime::orderBy('created_at', 'desc')->get(); 
+ 
+		return view('masstime.show', compact('masstime', 'archives'));
     }
 
     public function edit($id){
