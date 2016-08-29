@@ -19,7 +19,7 @@
 @foreach($archives as $archive)
 @if($archive->id == $bulletin->id)
 @else
-<li><a href="{{url('/announcement/'.$archive->id)}}">{{$archive->title}}</button></a></li>
+<li><a href="{{url('/bulletin/'.$archive->id)}}">{{$archive->title}}</button></a></li>
 @endif
 @endforeach
 </ul>
