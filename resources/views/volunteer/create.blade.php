@@ -2,6 +2,15 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
 <h1>Volunteer Registration Form</h1>
+<div class="col-md-12">
+    @if (count($errors))
+    <ul class="err">
+    @foreach($errors->all() as $error)
+    <li class="err">{{$error}}</li>
+    @endforeach
+    </ul>
+    @endif
+</div>
 {{Form::open(['method' => 'POST', 'action' => ['VolunteerController@store']])}}
 	<div class="form-group">
 		{{Form::hidden('education_id', Request::route()->education)}}
