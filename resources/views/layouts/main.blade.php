@@ -82,6 +82,7 @@
                         <li><a href="{{url('/ChristLife/create')}}">Christ Life</a></li>
                         <li><a href="{{url('/education/create')}}">Religious Education</a></li>
                         <li><a href="{{url('/RCIA/create')}}">RCIA</a></li>
+                        <li><a href="{{url('/volunteer/create')}}">Volunteer</a></li>
                         </ul>
                         </div>
                     </li>
@@ -98,6 +99,9 @@
                         @endif
                         @if(\Auth::user()->isAdmin() || \Auth::User()->isRcia())
                         <li><a href="{{url('/RCIA/')}}">RCIA Index</a></li>
+                        @endif
+                        @if(\Auth::user()->isAdmin() || \Auth::User()->isVolunteer())
+                        <li><a href="{{url('/volunteer/')}}">Volunteer Index</a></li>
                         @endif
                         </ul>
                         </div>

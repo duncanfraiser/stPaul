@@ -67,5 +67,11 @@ class User extends Authenticatable
         }
     }
 
+        public function isVolunteer(){
+        if (\Auth::user()->volunteer == 1) {
+            return true;
+        }
+    }
+
 
 }
