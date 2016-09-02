@@ -114,9 +114,10 @@
 		{{Form::text('allergies', null, ['class' => 'form-control', 'placeholder' => 'List Food Allergies'])}}
 	</div>
 	<div class="form-group">
-		{{Form::label('comments', 'We have several volunteer opportunities for our Sunday morning and Wednesday Evening programs; including Children's Liturgy (during 10:30 am Sunday Mass), Religious Ed Classes (9:15-10:15 am Sunday), Youth Group (6:00-8:30 pm Wednesday), and special events throughout the year. In what ways are you interested in assisting with our Religious Ed & Youth Ministry?')}}
+		{{Form::label('comments', 'Additional Comments:')}}
 		{{Form::textarea('comments', null, ['class' => 'form-control'])}}
 	</div>
+
 
 
 
