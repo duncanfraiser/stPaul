@@ -6,6 +6,8 @@ Route::resource('forms', 'FormController');
 
 /*Christ Lise Routes*/
 Route::get('/ChristLife/email', 'ChristLifeController@email');
+Route::get('/ChristLife/childCare', 'ChristLifeController@childCare');
+Route::get('/ChristLife/childCareEmail', 'ChristLifeController@childCareEmail');
 Route::get('/ChristLife/allergies', 'ChristLifeController@allergies');
 Route::get('/ChristLife/allergiesEmail', 'ChristLifeController@allergiesEmail');
 Route::get('/ChristLife/ride', 'ChristLifeController@ride');

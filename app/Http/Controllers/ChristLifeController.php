@@ -141,6 +141,19 @@ class ChristLifeController extends Controller
         return view('christlife.allergiesEmail', compact('tuEmails', 'trEmails'));
     }
 
+    public function childCare(){
+        $tuChildCares = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('childcare','Yes')->get();
+        $trChildCares = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('childcare','Yes')->get();
+
+        return view('christlife.childCare', compact('tuChildCares', 'trChildCares'));
+    }
+    public function childCareEmail(){
+        $tuChildCares = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('childcare','Yes')->lists('email');
+        $trChildCares = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('childcare','Yes')->lists('email');
+
+        return view('christlife.childCareEmail', compact('tuChildCares', 'trChildCares'));
+    }
+
     public function ride(){      
         $tuNeeds = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('ride','Yes')->get();
         $tuGives = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('provideride','Yes')->get();
@@ -155,6 +168,10 @@ class ChristLifeController extends Controller
         $trGives = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('provideride','Yes')->lists('email');
         return view('christlife.rideEmail', compact('tuNeeds', 'tuGives', 'trNeeds', 'trGives'));
     }
+
+
+
+
     public function comments(){      
         $tuComments = ChristLife::orderBy('lastName', 'asc')->where('day','Tuesday')->where('comments','!=','')->get();
         $trComments = ChristLife::orderBy('lastName', 'asc')->where('day','Thursday')->where('comments','!=','')->get();    

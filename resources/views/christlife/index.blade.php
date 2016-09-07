@@ -9,6 +9,7 @@
 <li><a href="{{url('/ChristLife/email')}}">Email List</a></li>
 <li><a href="{{url('/ChristLife/allergies')}}">Allergies</a></li>
 <li><a href="{{url('/ChristLife/ride')}}">Transportation</a></li>
+<li><a href="{{url('/ChristLife/childCare')}}">Child Care</a></li>
 <li><a href="{{url('/ChristLife/comments')}}">Additional Comments</a></li>
 </ul></div></small></h2>
 

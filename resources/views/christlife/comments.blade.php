@@ -8,7 +8,9 @@
 <ul class="dropdown-menu">
 <li><a href="{{url('/ChristLife/')}}">Christ Life Index</a></li>
 <li><a href="{{url('/ChristLife/allergies')}}">Allergies</a></li>
+<li><a href="{{url('/ChristLife/childCare')}}">Child Care</a></li>
 <li><a href="{{url('/ChristLife/ride')}}">Transportation</a></li>
+
 </ul></div></small></h2>
 
 <div class="col-md-5">
