@@ -9,6 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+   
+    {{-- FONT AWESOME --}}
+    <script src="https://use.fontawesome.com/80936d74be.js"></script>
+
     <title>St. Paul</title>
 
     <!-- Bootstrap Core CSS -->
@@ -36,16 +40,13 @@
 
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <i class="fa fa-bars" aria-hidden="true" ></i>
                 </button>
                 <a class="navbar-brand" href="{{ url('/')}}">
                     <img  src="/banners/Saint-Paul-Logo-horizontal.png">
