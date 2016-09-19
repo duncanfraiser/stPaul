@@ -101,5 +101,14 @@ class CatechumensController extends Controller
         $pendAnnuls = Catechumen::where('annulment_pending','Yes')->get();
         return view('catechumen.annulment', compact('grantAnnuls', 'pendAnnuls'));
     }
+
+        public function childCare(){
+ 
+        $ChildCares = Catechumen::orderBy('lastName', 'asc')->where('childcare','Yes')->get();
+
+        return view('catechumen.childCare', compact('ChildCares'));
+    }
+
+
 }
 

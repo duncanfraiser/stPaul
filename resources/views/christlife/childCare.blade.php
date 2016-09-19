@@ -22,8 +22,11 @@
 <h3><u>Thursday Session</u></h3>
 <p>
 @foreach($trChildCares as $key=>$trChildCare)
+<tr>
+
 	{{++$key}}.
 	<a href="{{url('/ChristLife/'.$trChildCare->id)}}">{{$trChildCare->lastName}}, {{$trChildCare->firstName}}</a><br />
+</tr>
 @endforeach
 </p>
 </div>

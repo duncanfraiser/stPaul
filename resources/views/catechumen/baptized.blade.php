@@ -8,6 +8,7 @@
 <ul class="dropdown-menu">
 <li><a href="{{url('/RCIA')}}">RCIA Index List</a></li>
 <li><a href="{{url('/RCIA/annulment')}}">Annulment List</a></li>
+<li><a href="{{url('/RCIA/childCare')}}">Child Care</a></li>
 </ul></div></small></h2>
  <div class="col-md-6">        
  <h3><u>Baptized List</u></h3>           

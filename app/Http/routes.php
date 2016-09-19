@@ -20,6 +20,7 @@ Route::get('/ChristLife/{id}/thanks', 'ChristLifeController@thanks');
 /* RCIA Routes*/
 Route::get('RCIA/baptized', 'CatechumensController@baptized');
 Route::get('RCIA/annulment', 'CatechumensController@annulment');
+Route::get('/RCIA/childCare', 'CatechumensController@childCare');
 Route::resource('RCIA', 'CatechumensController');
 Route::get('/RCIA/{id}/thanks', 'CatechumensController@thanks');
 
