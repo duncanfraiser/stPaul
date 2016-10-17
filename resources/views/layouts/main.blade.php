@@ -19,14 +19,14 @@
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
 
+        {{-- Full Calendar Links --}}
+         <link rel="stylesheet" href="{{ asset('css/fullcalendar.css') }}">
+                  <script src="{{ asset('js/jquery.min.js') }}"></script>
+                           <script src="{{ asset('js/moment.min.js') }}"></script>
+                             <script src="{{ asset('js/fullcalendar.js') }}"></script>
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 
 
     @include('includes._froala-css')
@@ -34,6 +34,9 @@
     <link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
     
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}?1">
+
+
+    
  
 </head>
 
@@ -72,9 +75,7 @@
                         </ul>
                         </div>
                     </li>
-                    <li>
-                        <a href="{{url('/contact/1')}}">Contact Us</a>
-                    </li>
+
                     <li>
                         <div class="dropdown">
                         <button class=" dropdown-toggle" data-toggle="dropdown">Registration Forms
@@ -87,6 +88,13 @@
                         </ul>
                         </div>
                     </li>
+                    <li>
+                            <a href="{{url('/event/')}}">Calander</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/contact/1')}}">Contact Us</a>
+                    </li>
+
     @if(\Auth::Check())
                     <li>
                         <div class="dropdown">

@@ -3,7 +3,8 @@
 Route::resource('/', 'HomeController');
 Route::resource('member', 'MembersController');
 Route::resource('forms', 'FormController');
-
+// Calendar Events Routes
+Route::resource('event', 'EventController');
 /*Christ Lise Routes*/
 Route::get('/ChristLife/email', 'ChristLifeController@email');
 Route::get('/ChristLife/childCare', 'ChristLifeController@childCare');

@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateYouthsTable extends Migration
+class CreateEventsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +13,14 @@ class CreateYouthsTable extends Migration
      */
     public function up()
     {
-            Schema::create('youths', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('events', function (Blueprint $table) {
+            $table->increments('id');            
             $table->string('title');
-            $table->string('excerpt');
             $table->string('body');
+            $table->date('start_date');
+            $table->dateTime('start_time');
+            $table->date('end_date');
+            $table->dateTime('end_time');
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
@@ -30,6 +34,6 @@ class CreateYouthsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('youths');
+        Schema::drop('events');
     }
 }
