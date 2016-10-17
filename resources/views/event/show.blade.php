@@ -22,15 +22,6 @@
 </div>
 @stop
 
-@section('scripts')
 
-
-        <script>
-
- $(document).ready(function() {
- 	document.getElementById("demo").innerHTML = new Date('{{$event->start}}');
-
-}); 
-</script>
 
 @stop
