@@ -29,6 +29,7 @@ class ChristLifeController extends Controller
     }
 
 	public function create(){
+        
         $counttuesdays = ChristLife::where('day','Tuesday')->count();
 
         $countthursdays = ChristLife::where('day','Thursday')->count();
@@ -38,6 +39,7 @@ class ChristLifeController extends Controller
 
     public function store(Request $request){
 
+      dd($request);
                 $this->validate($request,[
                 'completed' => 'required',
                 'firstName' => 'required',
