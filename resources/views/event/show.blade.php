@@ -13,7 +13,17 @@
 @endif
 @endif
 <h2>{{$event->title}}</h2>
-<p>{{$event->start}}</p>
+<p><u>Start Date and Time:</u><br/>
+{{ date('F d, Y', strtotime($event->start_date)) }}<br/>{{ date('h:i:s a', strtotime($event->start_time)) }}</p>
+
+@if($event->end_date != '0000-00-00')
+<p><u>End Date and Time:</u><br/>
+{{$event->end_date}}<br/>{{ date('h:i:s a', strtotime($event->end_time)) }}
+</p>
+@endif
+
+
+
 <p>{!!$event->body!!}</p>
 
 <p id="demo"></p>

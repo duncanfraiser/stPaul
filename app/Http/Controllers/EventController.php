@@ -66,8 +66,10 @@ class EventController extends Controller
 
         $event = new Event;
         $event->title = $request->title;
-        $event->start = ($request->start_date.' '.$request->start_time);
-        $event->end = ($request->end_date.' '.$request->end_time);
+        $event->start_date = $request->start_date;
+        $event->start_time = $request->start_time;
+        $event->end_date = $request->end_date;
+        $event->end_time = $request->end_time;
         $event->body = $request->body;
         $event->save();
         \Session::flash('success_message', 'Successfully saved!');
@@ -83,6 +85,14 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
+
+    //     if($event->end_date != '0000-00-00'){
+    //     dd($event->end_date);
+    // }
+     
+
+
+
         return view('event.show', compact('event'));
     }
 
@@ -112,8 +122,10 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id);
         $event->title = $request->title;
-        $event->start = ($request->start_date.' '.$request->start_time);
-        $event->end = ($request->end_date.' '.$request->end_time);
+        $event->start_date = $request->start_date;
+        $event->start_time = $request->start_time;
+        $event->end_date = $request->end_date;
+        $event->end_time = $request->end_time;
         $event->body = $request->body;
         $event->save();
         \Session::flash('success_message', 'Successfully saved!');

@@ -44,8 +44,8 @@
             @foreach($events as $event)
             {
             title  : '{{$event->title}}',
-            start  : '{{$event->start}}',
-            end    : '{{$event->end}}',
+            start  : '{{$event->start_date}}{{$event->start_time}}',
+            end    : '{{$event->end_date}}{{$event->end_time}}',
             url: '{{ url('/event/'.$event->id)  }}',
             color: '',
             textColor: '' // an option!
