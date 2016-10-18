@@ -89,7 +89,7 @@
                         </div>
                     </li>
                     <li>
-                            <a href="{{url('/event/')}}">Calander</a>
+                            <a href="{{url('/event/')}}">Calendar</a>
                     </li>
                     <li>
                         <a href="{{url('/contact/1')}}">Contact Us</a>

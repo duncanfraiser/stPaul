@@ -20,7 +20,7 @@
 		{{Form::time('end_time', null, ['class' => 'form-control'])}}
 	</div>
 	<div class="form-group">
-		{{Form::label('body', 'Event Discription:')}}
+		{{Form::label('body', 'Event Description:')}}
 		{{Form::textarea('body', null, ['class' => 'form-control'])}}
 	</div>
 	<div class='pull-right'>
