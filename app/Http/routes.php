@@ -1,7 +1,14 @@
 <?php
 
 Route::resource('/', 'HomeController');
+
+// Member Routs
 Route::resource('member', 'MembersController');
+Route::get('member/{member}/thanks', 'MembersController@thanks');
+Route::resource('member/{member}/dependents', 'DependentsController');
+
+
+
 Route::resource('forms', 'FormController');
 // Calendar Events Routes
 Route::resource('event', 'EventController');
@@ -39,7 +46,7 @@ Route::resource('homily', 'HomilyController');
 Route::resource('youth', 'YouthController');
 Route::resource('masstime', 'MasstimeController');
 Route::resource('ministry', 'MinistryController');
-Route::resource('member/{member}/dependents', 'DependentsController');
+
 Route::resource('attending', 'AttendingController');
 Route::resource('contact', 'ContactController');
 

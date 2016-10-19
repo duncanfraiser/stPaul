@@ -11,11 +11,12 @@
     @endif
 </div>
 		<center><h2>Member Registration</h2></center><br>
+		{{Form::open(['method' => 'POST', 'action' => 'MembersController@store'])}}
 		<div class="form-group">
 			{{Form::label('familyName', 'Family Name:')}}
 			{{Form::text('familyName', null, ['class' => 'form-control', 'placeholder' => 'Enter Family Name'])}}
 			{{Form::label('todaysDate', 'Todays Date:')}}
-			{{Form::text('todaysdate', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
+			{{Form::date('todaysDate', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
 			
 		</div>
 		<h3>Head of Household (Active Catholic)</h3>

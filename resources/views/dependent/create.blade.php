@@ -15,11 +15,13 @@
 		{{Form::hidden('member_id', Request::route()->member)}}
 		<div class="form-group">
 			{{Form::label('firstName', 'Full Name:')}}
-			{{Form::text('firstName', null, ['class' => 'form-inline', 'placeholder' => 'Enter First Name'])}}
-			{{Form::text('middleName', null, ['class' => 'form-inline', 'placeholder' => 'Enter Middle Name'])}}
-			{{Form::text('lastName', null, ['class' => 'form-inline', 'placeholder' => 'Enter Last Name'])}}
-			{{Form::label('sex', 'Sex:')}}
-			{{Form::select('sex', ['Male' => 'Male', 'Female' => 'Female'])}}
+			{{Form::text('firstName', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
+			{{Form::text('middleName', null, ['class' => 'form-control', 'placeholder' => 'Enter Middle Name'])}}
+			{{Form::text('lastName', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
+		</div>
+		<div class="form-group">
+			{{Form::label('sex', 'Gender:')}}
+			{{Form::select('sex', ['' => '-Please Select-', 'Male' => 'Male', 'Female' => 'Female'])}}
 
 		</div>		
 		<div class="form-group">
@@ -40,47 +42,67 @@
 		</div>
 		<div class="form-group">
 			{{Form::label('school', 'Name of School:')}}
-			{{Form::text('school', null, ['class' => 'form-inline', 'placeholder' => 'Enter School Name'])}}
+			{{Form::text('school', null, ['class' => 'form-control', 'placeholder' => 'Enter School Name'])}}
+		</div>
+		<div class="form-group">
 			{{Form::label('grade', 'Grade:')}}
-			{{Form::text('grade', null, ['class' => 'form-inline', 'placeholder' => 'Enter Grade'])}}
+			{{Form::select('grade', ['NULL' => '-Please Select-','3yr' => '3yr old','4yr' => '4 yr old','kindergarten' => 'kindergarten', '1' => '1st','2' => '2nd','3' => '3rd', '4' => '4th', '5' => '5th', '6' => '6th','7' => '7th','8' => '8th','9' => '9th','10' => '10th','11' => '11th','12' => '12th'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('active', 'Active Catholic:')}}
 			{{Form::select('active', ['Yes' => 'Yes', 'No' => 'No'])}}
+				</div>
+		<div class="form-group">
 			{{Form::label('ifNo', 'If no, list religion:')}}
-			{{Form::text('ifNo', null, ['class' => 'form-inline', 'placeholder' => 'Enter Religion'])}}
+			{{Form::text('ifNo', null, ['class' => 'form-control', 'placeholder' => 'Enter Religion'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('badDate', 'Date of Baptism:')}}
-			{{Form::input('date', 'bapDate', null, ['class' => 'form-inline'])}}
+			{{Form::input('date', 'bapDate', null, ['class' => 'form-control'])}}
+		</div>
+		<div class="form-group">
 			{{Form::label('bapParish', 'Name of Parish:')}}
-			{{Form::text('bapParish', null, ['class' => 'form-inline', 'placeholder' => 'Enter Parish'])}}
+			{{Form::text('bapParish', null, ['class' => 'form-control', 'placeholder' => 'Enter Parish'])}}
+		</div>
+		<div class="form-group">
 			{{Form::label('bapPlace', 'Location:')}}
-			{{Form::text('bapPlace', null, ['class' => 'form-inline', 'placeholder' => 'City, State'])}}
+			{{Form::text('bapPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('recDate', 'Date of Frist Reconciliation:')}}
-			{{Form::input('date', 'recDate', null, ['class' => 'form-inline'])}}
+			{{Form::input('date', 'recDate', null, ['class' => 'form-control'])}}
+		</div>
+		<div class="form-group">
 			{{Form::label('recParish', 'Name of Parish:')}}
-			{{Form::text('recParish', null, ['class' => 'form-inline', 'placeholder' => 'Enter Parish'])}}
+			{{Form::text('recParish', null, ['class' => 'form-control', 'placeholder' => 'Enter Parish'])}}
+		</div>
+		<div class="form-group">
 			{{Form::label('recPlace', 'Location:')}}
-			{{Form::text('recPlace', null, ['class' => 'form-inline', 'placeholder' => 'City, State'])}}
+			{{Form::text('recPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('commDate', 'Date of Frist Communion:')}}
-			{{Form::input('date', 'commDate', null, ['class' => 'form-inline'])}}
+			{{Form::input('date', 'commDate', null, ['class' => 'form-control'])}}
+		</div>
+		<div class="form-group">
 			{{Form::label('commParish', 'Name of Parish:')}}
-			{{Form::text('commParish', null, ['class' => 'form-inline', 'placeholder' => 'Enter Parish'])}}
+			{{Form::text('commParish', null, ['class' => 'form-control', 'placeholder' => 'Enter Parish'])}}
+		</div>
+		<div class="form-group">
 			{{Form::label('commPlace', 'Location:')}}
-			{{Form::text('commPlace', null, ['class' => 'form-inline', 'placeholder' => 'City, State'])}}
+			{{Form::text('commPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('confirmDate', 'Date of Frist Comm:')}}
-			{{Form::input('date', 'confirmDate', null, ['class' => 'form-inline'])}}
+			{{Form::input('date', 'confirmDate', null, ['class' => 'form-control'])}}
+		</div>
+		<div class="form-group">
 			{{Form::label('confirmParish', 'Name of Parish:')}}
-			{{Form::text('confirmParish', null, ['class' => 'form-inline', 'placeholder' => 'Enter Parish'])}}
+			{{Form::text('confirmParish', null, ['class' => 'form-control', 'placeholder' => 'Enter Parish'])}}
+		</div>
+		<div class="form-group">
 			{{Form::label('confirmPlace', 'Location:')}}
-			{{Form::text('confirmPlace', null, ['class' => 'form-inline', 'placeholder' => 'City, State'])}}
+			{{Form::text('confirmPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
 		<div class="form-group">
 			{{Form::submit('Add Member', ['class' => 'btn btn-primary form-control'])}}

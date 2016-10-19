@@ -16,7 +16,9 @@ class MembersController extends Controller
 {
 
 
-	public function __construct(){
+    public function __construct(){
+
+
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
 
@@ -51,14 +53,20 @@ class MembersController extends Controller
 
     public function store(Request $request){
         $member = new Member;
+     
 		$member->fill($request->all());
 		$member->save();
 		$id = $member->id;
  \Session::flash('success_message', 'Successfully saved!');
 
-		return redirect('member/'.$id);
+		return redirect('member/'.$id.'/thanks');
     }
 
+    public function thanks($member){
+        $member = Member::findOrFail($member);
+
+        return view('member.thanks', compact('member'));
+    }
 
 
 
