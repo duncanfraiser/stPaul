@@ -3,12 +3,19 @@
 
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
+<h1>Create an Event</h1>
+
 
 {{Form::open(['method' => 'POST', 'action' => 'EventController@store'])}}
+	<div class="form-group">
+		{{Form::label('color', 'Event Categories:')}}<br>
+		 {{Form::select('color', ['' => 'None','#e8c562' => ' Liturgy & Sacraments','#bf202f' => 'Prayer & Study','#509543' => 'Religious Ed & Youth', '3e95d1' => 'Discipleship & Special Events'])}}
+	</div>
 	<div class="form-group">
 		{{Form::label('title', 'Event Title:')}}
 		{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Event Title'])}}
 	</div>
+
 	<div class="form-group">
 		{{Form::label('start', 'Start Date & Time:')}}
 		{{Form::date('start_date', null, ['class' => 'form-control'])}}

@@ -1,22 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+
 use App\Http\Requests;
-use App\Announcement;
+
 use App\Prayer;
 use App\Suggested_Prayer;
 use App\Divina;
 use App\Contemplative;
-use App\Event;
+use App\Flower;
 
-class EventController extends Controller
+class FlowerController extends Controller
 {
 
-        public function __construct(){
-        $this->middleware('auth')->only('create','edit');
-        $heading = Announcement::latest()->first();
-        \View::share('heading', $heading);
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+
+    public function __construct(){
 
         $prayer = Prayer::latest()->first();                
         \View::share('prayer', $prayer);
@@ -30,19 +37,10 @@ class EventController extends Controller
         $contemplative = Contemplative::latest()->first();                
         \View::share('contemplative', $contemplative);
     }
-
-
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $events = Event::get();
-
-        return view('event.index', compact('events'));
+        $flowers = Flower::get();
+        return view('flower.index', compact('flowers'));
     }
 
     /**
@@ -52,7 +50,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('event.create');
+        //
     }
 
     /**
@@ -63,18 +61,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-
-        $event = new Event;
-        $event->color = $request->color;
-        $event->title = $request->title;
-        $event->start_date = $request->start_date;
-        $event->start_time = $request->start_time;
-        $event->end_date = $request->end_date;
-        $event->end_time = $request->end_time;
-        $event->body = $request->body;
-        $event->save();
-        \Session::flash('success_message', 'Successfully saved!');
-        return redirect('/event');
+        //
     }
 
     /**
@@ -85,16 +72,7 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        $event = Event::findOrFail($id);
-
-    //     if($event->end_date != '0000-00-00'){
-    //     dd($event->end_date);
-    // }
-     
-
-
-
-        return view('event.show', compact('event'));
+        //
     }
 
     /**
@@ -105,11 +83,9 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        $event = Event::findOrFail($id);
-        $start_time = $event->start;
-
-
-        return view('event.edit', compact('event', 'start_time'));
+        $flower = Flower::findOrFail($id);
+       
+        return view('flower.edit', compact('flower'));
     }
 
     /**
@@ -121,17 +97,14 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $event = Event::findOrFail($id);
-        $event->color = $request->color;
-        $event->title = $request->title;
-        $event->start_date = $request->start_date;
-        $event->start_time = $request->start_time;
-        $event->end_date = $request->end_date;
-        $event->end_time = $request->end_time;
-        $event->body = $request->body;
-        $event->save();
+        
+        $flower = Flower::findOrFail($id);
+        $flower->start_date = $request->start_date;
+        $flower->alter = $request->alter;
+        $flower->mother = $request->mother;
+        $flower->save();
         \Session::flash('success_message', 'Successfully saved!');
-        return redirect('/event');
+        return redirect('/flower');
     }
 
     /**
@@ -142,8 +115,6 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        $event = Event::findOrFail($id);
-        $event->delete();
-        return redirect('/event/');
+        //
     }
 }

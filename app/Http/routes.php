@@ -11,8 +11,13 @@ Route::resource('member/{member}/dependents', 'DependentsController');
 
 Route::resource('forms', 'FormController');
 // Calendar Events Routes
+
 Route::resource('event', 'EventController');
 /*Christ Lise Routes*/
+
+// Calendar Flowers Routes
+Route::resource('flower', 'FlowerController');
+
 Route::get('/ChristLife/email', 'ChristLifeController@email');
 Route::get('/ChristLife/childCare', 'ChristLifeController@childCare');
 Route::get('/ChristLife/childCareEmail', 'ChristLifeController@childCareEmail');

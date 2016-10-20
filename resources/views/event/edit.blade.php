@@ -6,6 +6,10 @@
 
 {{Form::model($event, ['method' => 'PATCH', 'action' => ['EventController@update', $event->id]])}}
 	<div class="form-group">
+		{{Form::label('color', 'Event Categories:')}}<br>
+		 {{Form::select('color', ['' => 'None','#e8c562' => ' Liturgy & Sacraments','#bf202f' => 'Prayer & Study','#509543' => 'Religious Ed & Youth', '3e95d1' => 'Discipleship & Special Events'])}}
+	</div>
+	<div class="form-group">
 		{{Form::label('title', 'Event Title:')}}
 		{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Event Title'])}}
 	</div>
