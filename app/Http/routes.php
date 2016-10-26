@@ -10,10 +10,15 @@ Route::resource('member/{member}/dependents', 'DependentsController');
 
 
 Route::resource('forms', 'FormController');
-// Calendar Events Routes
 
+// Calendar Events Routes
+Route::resource('group', 'GroupController');
+Route::get('group/{group}/thanks', 'GroupController@thanks');
+
+
+// Calendar Events Routes
 Route::resource('event', 'EventController');
-/*Christ Lise Routes*/
+
 
 // Calendar Flowers Routes
 Route::resource('flower', 'FlowerController');

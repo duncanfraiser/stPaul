@@ -16,7 +16,7 @@
 		{{Form::hidden('education_id', Request::route()->education)}}
 		{{Form::label('first_name', 'Full Name:')}}
 		{{Form::text('first_name', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
-		{{Form::text('last name', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
+		{{Form::text('last_name', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('age', 'Age:')}}<br>
