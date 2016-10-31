@@ -3,7 +3,7 @@
 @section('content')
 <div class="col-md-12">
 <div class="col-md-8 col-md-offset-2">
-<center><h1>Event Calander</h1></center>
+<center><h1>Event Calendar</h1></center>
 @if(\Auth::check())
 @if(\Auth::user()->isAdmin())
 <span class="pull-right">
