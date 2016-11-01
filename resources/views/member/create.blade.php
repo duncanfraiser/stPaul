@@ -29,8 +29,8 @@
 			{{Form::text('lNameOne', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
 		</div>		
 		<div class="form-group">
-			{{Form::label('perferedNameOne', 'Name you prefer to be callled:')}}
-			{{Form::text('perferedNameOne', null, ['class' => 'form-control', 'placeholder' => 'Enter Prefered Name'])}}
+			{{Form::label('perferedNameOne', 'Name you preferred to be called:')}}
+			{{Form::text('perferedNameOne', null, ['class' => 'form-control', 'placeholder' => 'Enter Preferred Name'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('dobOne', 'Date of Birth:')}}
@@ -83,8 +83,8 @@
 			{{Form::text('lNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
 		</div>
 			<div class="form-group">
-			{{Form::label('perferedNameTwo', 'Name you prefer to be callled:')}}
-			{{Form::text('perferedNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Prefered Name'])}}
+			{{Form::label('perferedNameTwo', 'Name you preferred to be called:')}}
+			{{Form::text('perferedNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Preferred Name'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('dobTwo', 'Date of Birth:')}}

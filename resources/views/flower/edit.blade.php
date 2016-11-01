@@ -15,7 +15,7 @@
 	<p>{{$flower->alter}}</p>	
 	@else
 		{{Form::label('alter', 'Alter:')}}
-		{{Form::text('alter', null, ['class' => 'form-control', 'placeholder' => 'Enter Event Title'])}}
+		{{Form::text('alter', null, ['class' => 'form-control', 'placeholder' => ''])}}
 	</div>
 	@endif
 	@if($flower->mother != '')

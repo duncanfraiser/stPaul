@@ -25,8 +25,8 @@
 
 		</div>		
 		<div class="form-group">
-			{{Form::label('perferedName', 'Prefer Name:')}}
-			{{Form::text('perferedName', null, ['class' => 'form-control', 'placeholder' => 'Enter Prefered Name'])}}
+			{{Form::label('perferedName', 'Preferred Name:')}}
+			{{Form::text('perferedName', null, ['class' => 'form-control', 'placeholder' => 'Enter Preferred Name'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('dob', 'Date of Birth:')}}
@@ -69,7 +69,7 @@
 			{{Form::text('bapPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
 		<div class="form-group">
-			{{Form::label('recDate', 'Date of Frist Reconciliation:')}}
+			{{Form::label('recDate', 'Date of First Reconciliation:')}}
 			{{Form::input('date', 'recDate', null, ['class' => 'form-control'])}}
 		</div>
 		<div class="form-group">
@@ -81,7 +81,7 @@
 			{{Form::text('recPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
 		<div class="form-group">
-			{{Form::label('commDate', 'Date of Frist Communion:')}}
+			{{Form::label('commDate', 'Date of Confirmation:')}}
 			{{Form::input('date', 'commDate', null, ['class' => 'form-control'])}}
 		</div>
 		<div class="form-group">
@@ -93,7 +93,7 @@
 			{{Form::text('commPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
 		<div class="form-group">
-			{{Form::label('confirmDate', 'Date of Frist Comm:')}}
+			{{Form::label('confirmDate', 'Date of First Comm:')}}
 			{{Form::input('date', 'confirmDate', null, ['class' => 'form-control'])}}
 		</div>
 		<div class="form-group">
