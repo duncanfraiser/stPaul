@@ -15,8 +15,8 @@
 		<div class="form-group">
 			{{Form::label('familyName', 'Family Name:')}}
 			{{Form::text('familyName', null, ['class' => 'form-control', 'placeholder' => 'Enter Family Name'])}}
-			{{Form::label('todaysDate', 'Todays Date:')}}
-			{{Form::date('todaysDate', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
+			{{Form::label('todaysDate', "Today's Date:")}}
+			{{Form::date('todaysDate', null, ['class' => 'form-control', 'placeholder' => 'mm/dd/yyyy'])}}
 			
 		</div>
 		<h3>Head of Household (Active Catholic)</h3>

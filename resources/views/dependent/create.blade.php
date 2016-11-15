@@ -81,7 +81,7 @@
 			{{Form::text('recPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
 		<div class="form-group">
-			{{Form::label('commDate', 'Date of Confirmation:')}}
+			{{Form::label('commDate', 'Date of Communion:')}}
 			{{Form::input('date', 'commDate', null, ['class' => 'form-control'])}}
 		</div>
 		<div class="form-group">
@@ -93,7 +93,7 @@
 			{{Form::text('commPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
 		<div class="form-group">
-			{{Form::label('confirmDate', 'Date of First Comm:')}}
+			{{Form::label('confirmDate', 'Date of First Confirmation:')}}
 			{{Form::input('date', 'confirmDate', null, ['class' => 'form-control'])}}
 		</div>
 		<div class="form-group">
