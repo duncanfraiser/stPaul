@@ -27,9 +27,21 @@
 		{{Form::time('end_time', null, ['class' => 'form-control'])}}
 	</div>
 	<div class="form-group">
+		{{Form::label('sunday', 'Select Repeating Days:')}}<br/>
+    	{{ Form::checkbox('sunday', 0) }} {{ Form::label('sunday', 'Sunday')}}<br />
+    	{{ Form::checkbox('monday', 1) }} {{ Form::label('monday', 'Monday')}}<br />
+    	{{ Form::checkbox('tuesday', 2) }} {{ Form::label('tuesday', 'Tuesday')}}<br />
+    	{{ Form::checkbox('wednesday', 3) }} {{ Form::label('Wednesday', 'Wednesday')}}<br />
+    	{{ Form::checkbox('thursday', 4) }} {{ Form::label('thursday', 'Thursday')}}<br />
+    	{{ Form::checkbox('friday', 5) }} {{ Form::label('friday', 'Friday')}}<br />
+    	{{ Form::checkbox('saturday', 6) }} {{ Form::label('saturday', 'Saturday')}}<br />
+
+	</div>
+	<div class="form-group">
 		{{Form::label('body', 'Event Description:')}}
 		{{Form::textarea('body', null, ['class' => 'form-control'])}}
 	</div>
+
 	<div class='pull-right'>
 		<div class="form-group">
 		{{Form::submit('Create', ['class' => 'btn btn-primary'])}}

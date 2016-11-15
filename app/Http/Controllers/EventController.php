@@ -65,15 +65,11 @@ class EventController extends Controller
     {
 
         $event = new Event;
-        $event->color = $request->color;
-        $event->title = $request->title;
-        $event->start_date = $request->start_date;
-        $event->start_time = $request->start_time;
-        $event->end_date = $request->end_date;
-        $event->end_time = $request->end_time;
-        $event->body = $request->body;
+        // $input = $request->all();
+        // dd($input);
+
+        $event->fill($request->all());
         $event->save();
-        \Session::flash('success_message', 'Successfully saved!');
         return redirect('/event');
     }
 
@@ -121,16 +117,11 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // $input = $request->all();
+        // dd($input);
         $event = Event::findOrFail($id);
-        $event->color = $request->color;
-        $event->title = $request->title;
-        $event->start_date = $request->start_date;
-        $event->start_time = $request->start_time;
-        $event->end_date = $request->end_date;
-        $event->end_time = $request->end_time;
-        $event->body = $request->body;
+        $event->fill($request->all());
         $event->save();
-        \Session::flash('success_message', 'Successfully saved!');
         return redirect('/event');
     }
 
