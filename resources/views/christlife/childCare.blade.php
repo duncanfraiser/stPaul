@@ -11,23 +11,14 @@
 <li><a href="{{url('/ChristLife/ride')}}">Transportation</a></li>
 <li><a href="{{url('/ChristLife/comments')}}">Additional Comments</a></li>
 </ul></div></small></h2>
-<h3><u>Tuesday Session</u></h3>
+<h3><u>Following Christ Session</u></h3>
 
 <p>
-@foreach($tuChildCares as $key=>$tuChildCare)
+@foreach($childCares as $key=>$childCare)
 	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$tuChildCare->id)}}">{{$tuChildCare->lastName}}, {{$tuChildCare->firstName}}</a><br />
+	<a href="{{url('/ChristLife/'.$childCare->id)}}">{{$childCare->lastName}}, {{$childCare->firstName}}</a><br />
 @endforeach
 </p>
-<h3><u>Thursday Session</u></h3>
-<p>
-@foreach($trChildCares as $key=>$trChildCare)
-<tr>
 
-	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$trChildCare->id)}}">{{$trChildCare->lastName}}, {{$trChildCare->firstName}}</a><br />
-</tr>
-@endforeach
-</p>
 </div>
 @stop

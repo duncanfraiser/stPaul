@@ -15,36 +15,21 @@
 </ul></div></small></h2>
 
 <div class="col-md-6">
-<h3><u>Tuesday Session</u></h3>
+<h3><u>Following Christ Session</u></h3>
 
 <p>
 <h3>Need a Ride</h3>
-@foreach($tuNeeds as $key=>$tuNeed)
+@foreach($needs as $key=>$need)
 	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$tuNeed->id)}}">{{$tuNeed->lastName}}, {{$tuNeed->firstName}}</a><br />
+	<a href="{{url('/ChristLife/'.$need->id)}}">{{$need->lastName}}, {{$need->firstName}}</a><br />
 @endforeach
 <h3>Provide a Ride</h3>
-@foreach($tuGives as $key=>$tuGive)
+@foreach($gives as $key=>$give)
 	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$tuGive->id)}}">{{$tuGive->lastName}}, {{$tuGive->firstName}}</a><br />
+	<a href="{{url('/ChristLife/'.$give->id)}}">{{$give->lastName}}, {{$give->firstName}}</a><br />
 @endforeach
 </p>
 </div>
-<div class="col-md-6">
-<h3><u>Thursday Session</u></h3>
 
-<p>
-<h3>Need a Ride</h3>
-@foreach($trNeeds as $key=>$trNeed)
-	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$trNeed->id)}}">{{$trNeed->lastName}}, {{$trNeed->firstName}}</a><br />
-@endforeach
-<h3>Provide a Ride</h3>
-@foreach($trGives as $key=>$trGive)
-	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$trGive->id)}}">{{$trGive->lastName}}, {{$trGive->firstName}}</a><br />
-@endforeach
-</p>
-</div>
 </div>
 @stop

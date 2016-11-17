@@ -3,28 +3,19 @@
 <div class="col-md-10 col-md-offset-1">
 <h2>Christ Life Transportation</h2>
 
-<h3><u>Tuesday Session</u></h3>
+<h3><u>Following Christ Session</u></h3>
 <p>
 <h3>Need a Ride Email List</h3>
-@foreach($tuNeeds as $tuNeed)
-{{$tuNeed}}, 
+@foreach($needs as $need)
+{{$need}}, 
 @endforeach
 <h3>Provide a Ride Email List</h3>
-@foreach($tuGives as $tuGive)
-{{$tuGive}}, 
+@foreach($gives as $give)
+{{$give}}, 
 @endforeach
 </p>
-<h3><u>Thursday Session</u></h3>
-<p>
-<h3>Need a Ride Email List</h3>
-@foreach($trNeeds as $trNeed)
-{{$trNeed}}, 
-@endforeach
-<h3>Provide a Ride Email List</h3>
-@foreach($trGives as $trGive)
-{{$trGive}}, 
-@endforeach
-</p>
+
+
 <div class='pull-right'>
 <a href="{{URL::previous()}}"><button class="btn btn-primary">Back</button></a>
 </div>

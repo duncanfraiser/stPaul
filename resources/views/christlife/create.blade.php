@@ -11,7 +11,7 @@
     @endif
 </div>
 		<center><h1>Following Christ Registration</h1></center><br>
-		
+		<p>We are offering night sessions, 7:00-9:00 pm sessions on Thursdays, January 12 through February 23, 2017. Saturday Retreat will be February 11,  8:30 am - 4:00 pm.<p/><p>We will offer a daytime session if there are sufficient numbers who cannot attend the night sessions. Please email <span style="color: #337ab7">office@saintpaulcatholicchurch.com</span> if you are interested in a day time session, 10:00 am to 12 noon on those same Thursdays (January 12 through February 23, 2017. Same Saturday Retreat on February 11,  8:30 am - 4:00 pm.</p><br/>
 
 		@if($counttuesdays > 150 && $countthursdays >150)
 		<center><h2>We're Sorry, Following Christ Registration is Full!</h2></center><br>
@@ -23,7 +23,7 @@
     </div>
 
 
- 	<div class="form-group">
+{{--  	<div class="form-group">
 		{{ Form::label('day', 'Select Session Day:')}}<br />
 		@if($counttuesdays > 150)
 		{{ Form::label('day', 'Tuesday Session is Full')}}<br />
@@ -35,7 +35,7 @@
 		@else
 		{{ Form::radio('day', 'Thursday') }} {{ Form::label('day', 'Thursday')}}<br />
 		@endif
- 	</div>
+ 	</div> --}}
 
 
     

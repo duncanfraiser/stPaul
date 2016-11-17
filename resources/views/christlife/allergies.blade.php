@@ -12,21 +12,15 @@
 <li><a href="{{url('/ChristLife/childCare')}}">Child Care</a></li>
 <li><a href="{{url('/ChristLife/comments')}}">Additional Comments</a></li>
 </ul></div></small></h2>
-<h3><u>Tuesday Session</u></h3>
+
 
 <p>
-@foreach($tuesAllergies as $key=>$tuesAllergie)
+@foreach($allergies as $key=>$allergie)
 	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$tuesAllergie->id)}}">{{$tuesAllergie->lastName}}, {{$tuesAllergie->firstName}}</a>   {{$tuesAllergie->allergies}}<br />
+	<a href="{{url('/ChristLife/'.$allergie->id)}}">{{$allergie->lastName}}, {{$allergie->firstName}}</a>   {{$allergie->allergies}}<br />
 @endforeach
 </p>
-<h3><u>Thursday Session</u></h3>
-<p>
-@foreach($thursAllergies as $key=>$thursAllergie)
-	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$thursAllergie->id)}}">{{$thursAllergie->lastName}}, {{$thursAllergie->firstName}}</a> {{$thursAllergie->allergies}}<br />
-@endforeach
-</p>
+
 </div>
 @stop
 

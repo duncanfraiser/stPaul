@@ -14,21 +14,12 @@
 </ul></div></small></h2>
 
 <div class="col-md-5">
-<h2><u>Tuesday Session</u></h3> 
+<h2><u>Following Christ Session</u></h3> 
 <ul>                   
-	@foreach($tuComments as $tuComment)
+	@foreach($comments as $comment)
 	
-	<li><a href="{{url('/ChristLife/'.$tuComment->id)}}">{{$tuComment->lastName}}, {{$tuComment->firstName}}: </a>{{$tuComment->comments}}</li><br />
+	<li><a href="{{url('/ChristLife/'.$comment->id)}}">{{$comment->lastName}}, {{$comment->firstName}}: </a>{{$comment->comments}}</li><br />
 	@endforeach
-</div>
-<div class="col-md-5">
-<h2><u>Thursday Session</u></h3>    
-<ul>                
-	@foreach($trComments as $trComment)
-	
-	<li><a href="{{url('/ChristLife/'.$trComment->id)}}">{{$trComment->lastName}}, {{$trComment->firstName}}: </a>{{$trComment->comments}}</li><br />
-	@endforeach
-	</ul>
 </div>
 
 	

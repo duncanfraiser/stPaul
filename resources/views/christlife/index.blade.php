@@ -14,18 +14,11 @@
 </ul></div></small></h2>
 
 <div class="col-md-5">
-<h2><u>Tuesday Session</u></h3>
+<h2><u>Following Christ</u></h3>
                     
-	@foreach($tuesdays as $key=>$tuesday)
+	@foreach($christlife as $key=>$cl)
 	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$tuesday->id)}}">{{$tuesday->lastName}}, {{$tuesday->firstName}}</a><br />
-	@endforeach
-</div>
-<div class="col-md-5">
-<h2><u>Thursday Session</u></h2>
-	@foreach($thursdays as $key=>$thursday)
-	{{++$key}}.
-	<a href="{{url('/ChristLife/'.$thursday->id)}}">{{$thursday->lastName}}, {{$thursday->firstName}}</a><br />
+	<a href="{{url('/ChristLife/'.$cl->id)}}">{{$cl->lastName}}, {{$cl->firstName}}</a><br />
 	@endforeach
 </div>
 	

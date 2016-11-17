@@ -1,16 +1,10 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-10 col-md-offset-1">
-<h3>Allergy Email List For Tuesday Christ Life Session</h3>
+<h3>Allergy Email List For Christ Life Session</h3>
 <p>
-@foreach($tuEmails as $tuEmail)
-{{$tuEmail}}, 
-@endforeach
-</p>
-<h3>Email List For Thursday Christ Life Session</h3>
-<p>
-@foreach($trEmails as $trEmail)
-{{$trEmail}}, 
+@foreach($emails as $email)
+{{$email}}, 
 @endforeach
 </p>
 <div class='pull-right'>
