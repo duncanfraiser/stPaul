@@ -145,11 +145,9 @@
     <!-- Yield the slider if there is one -->
     <p align="right ">Follow us on: 
               <a target="BLANK" title="Facebook" href="https://www.facebook.com/StPaulCatholicChurch/">
-              <img src="/img/facebook.png" width="35" height="35" />
-              </a>
+              <img src="/img/facebook.png" width="35" height="35" /></a>
               <a target="BLANK" title="Youtube" href="https://www.youtube.com/channel/UCHG6kYCxd7QY7-n7_FjxIrw">
-              <img src="/img/youtube.png" width="35" height="35" />
-              </a>
+              <img src="/img/youtube.png" width="35" height="35" /></a>
     <br/>&copy; 2016 St. Paul Catholic Church</p>
     </div>
 </div>
