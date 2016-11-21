@@ -6,9 +6,18 @@
 
 {{Form::model($flower, ['method' => 'PATCH', 'action' => ['FlowerController@update', $flower->id]])}}
 
-{{-- 	{{ Form::hidden('start_date', $flower->start_date) }} --}}
-	<h2>{{$flower->date}} Flowers<br>{{$flower->extra}}<br>{{$flower->extratwo}}</h2>
-	<h3>{{$flower->altar_title}}</h3>
+	<h2>{{$flower->altar_title}} for {{$flower->date}}, 2017
+	@if($flower->extra != "")
+	<br>{{$flower->extra}}
+	@endif
+	@if($flower->extratwo != "")
+	<br>{{$flower->extratwo}}
+	@endif
+	</h2>
+
+	<h3>Altar Flowers - Cost $70<br/>
+Blessed Mother Flowers - Cost $40</h3>
+<p>You may mail your payment or drop it in the Weekend Offertory. Please make checks payable to St. Paul Catholic Church, and indicate payment is for Altar Flowers or Blessed Mother Flowers with the designated date. The Church will order the flowers and have them delivered on {{$flower->date}}.</p>
 
 	<div class="form-group">
 

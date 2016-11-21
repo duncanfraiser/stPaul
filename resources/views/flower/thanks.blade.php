@@ -8,6 +8,7 @@
 <h3>Altar Flowers - Cost $70<br/>
 Blessed Mother Flowers - Cost $40</h3>
 <h3>Thank you for signing up to Donate flowers on {{$flower->date}}</h3>
+<p>You may mail your payment or drop it in the Weekend Offertory. Please make checks payable to St. Paul Catholic Church, and indicate payment is for Altar Flowers or Blessed Mother Flowers with the designated date. The Church will order the flowers and have them delivered on {{$flower->date}}.</p>
 @if($flower->altar_spons != "")
 <h3>{{$flower->altar_title}} are Donated by: <span style="color: red">{{$flower->altar_spons}}</span></h3>
 @else
