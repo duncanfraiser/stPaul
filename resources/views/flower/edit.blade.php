@@ -6,16 +6,16 @@
 
 {{Form::model($flower, ['method' => 'PATCH', 'action' => ['FlowerController@update', $flower->id]])}}
 
-	{{ Form::hidden('start_date', $flower->start_date) }}
-
+{{-- 	{{ Form::hidden('start_date', $flower->start_date) }} --}}
+	<h2>{{$flower->date}} Flowers</h2>
 
 	<div class="form-group">
 	@if($flower->alter != '')
-	{{ Form::hidden('alter', $flower->alter) }}
+{{-- 	{{ Form::hidden('alter', $flower->alter) }} --}}
 	<p>{{$flower->alter}}</p>	
 	@else
-		{{Form::label('alter', 'Alter:')}}
-		{{Form::text('alter', null, ['class' => 'form-control', 'placeholder' => ''])}}
+		{{Form::label('altar_spons', $flower->altar_title)}}
+		{{Form::text('altar_spons', null, ['class' => 'form-control', 'placeholder' => "Please Enter Altar Flowers Sponser's Full Name"])}}
 	</div>
 	@endif
 	@if($flower->mother != '')
@@ -23,8 +23,8 @@
 	<p>{{$flower->mother}}</p>	
 	@else
 	<div class="form-group">
-		{{Form::label('mother', 'Mother:')}}
-		{{Form::text('mother', null, ['class' => 'form-control'])}}
+		{{Form::label('mother_spons', $flower->mother_title)}}
+		{{Form::text('mother_spons', null, ['class' => 'form-control', 'placeholder' => "Please Enter Blessed Mother Flowers Sponser's Full Name"])}}
 	</div>
 	@endif
 	<div class='pull-right'>
@@ -42,11 +42,3 @@
 
 @stop
 
-@section('scripts')
-@include('includes._froalaOptions')
-<script>
-	$(".delete").on("submit", function(){
-		return confirm("Do you want to delete this Event?");
-	});
-</script>
-@stop

@@ -22,6 +22,14 @@ Route::resource('event', 'EventController');
 
 // Calendar Flowers Routes
 Route::resource('flower', 'FlowerController');
+Route::get('flower/{id}/altar', 'FlowerController@altar');
+Route::get('flower/{id}/blessedmother', 'FlowerController@blessedmother');
+Route::get('flower/{id}/thanks', 'FlowerController@thanks');
+
+
+
+
+
 
 Route::get('/ChristLife/email', 'ChristLifeController@email');
 Route::get('/ChristLife/childCare', 'ChristLifeController@childCare');

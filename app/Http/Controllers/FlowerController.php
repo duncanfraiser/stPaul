@@ -95,24 +95,49 @@ class FlowerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+
+    public function altar($id)
     {
-        
         $flower = Flower::findOrFail($id);
-        $flower->start_date = $request->start_date;
-        $flower->alter = $request->alter;
-        $flower->mother = $request->mother;
-        $flower->save();
-        \Session::flash('success_message', 'Successfully saved!');
-        return redirect('/flower');
+       
+        return view('flower.altar', compact('flower'));
     }
 
+
+
+
+
+    public function blessedmother($id)
+    {
+        $flower = Flower::findOrFail($id);
+       
+        return view('flower.blessedmother', compact('flower'));
+    }
+
+
+    public function update(Request $request, $id)
+    {
+
+        $flower = Flower::findOrFail($id);
+        $flower->fill($request->all());
+        $flower->save();
+        return redirect('flower/'.$id.'/thanks');
+    }
+
+
+
+    public function thanks($id)
+    {
+        $flower = Flower::findOrFail($id);
+        return view('flower.thanks', compact('flower'));
+    }
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
         //

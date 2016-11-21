@@ -1,56 +1,103 @@
 @extends('layouts.main')
+@section('customStyle')
 
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+@stop
 
 @section('content')
+<div class="col-md-12">
+<div class="col-md-10 col-md-offset-1">
+<h2>2017 Flower Chart</h2>
+<h3>Altar Flowers - Cost $70<br/>
+Blessed Mother Flowers - Cost $40</h3>
+<p>You may mail your payment or drop it in the Weekend Offertory. Please make checks payable to St. Paul Catholic Church, and indicate payment is for Altar Flowers or Blessed Mother Flowers with the designated date. The Church will order the flowers and have them delivered on your specific date (select date below).</p>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Please Select a Flower Optins</th>
+    <th>Sponsors</th>
+  </tr>
+  @foreach($flowers as $flower)
+  @if($flower->date == 'December 8th')
+  <tr>
+    <td>{{$flower->date}}<br/>
+    <td>
+    @if($flower->altar_spons != "")
+    <span style="color: red">{{$flower->altar_title}}--- Reserved</span><br/>
+    @else
+      <a href="{{url('/flower/'.$flower->id.'/altar')}}">{{$flower->altar_title}}---Available</a><br/>
+    @endif
+    </td>
+    <td>
+      @if($flower->altar_spons != "")
+      <span style="color: red">{{$flower->altar_spons}}</span><br/>
+      @else
+       <a href="{{url('/flower/'.$flower->id.'/altar')}}">Open</a><br/>
+       @endif
+    </td>
+  </tr>
+  @else
+
+  <tr>
+    <td>{{$flower->date}}<br/>
+        {{$flower->extra}}<br/>
+        {{$flower->extratwo}}</td>
+    <td>
+    @if($flower->altar_spons != "")
+    <span style="color: red">{{$flower->altar_title}}--- Reserved</span><br/>
+    @else
+      <a href="{{url('/flower/'.$flower->id.'/altar')}}">{{$flower->altar_title}}---Available</a><br/>
+    @endif
+    @if($flower->mother_spons != "")
+    <span style="color: red">{{$flower->mother_title}}--- Reserved</span><br/>
+    @else
+      <a href="{{url('/flower/'.$flower->id.'/blessedmother')}}">{{$flower->mother_title}}---Available</a>
+    @endif
+    </td>
 
 
-            <div class="content">
+
+    <td>
+      @if($flower->altar_spons != "")
+      <span style="color: red">{{$flower->altar_spons}}</span><br/>
+      @else
+       <a href="{{url('/flower/'.$flower->id.'/altar')}}">Open</a><br/>
+       @endif
 
 
-                <div class="container-fluid">
-
-
-                <div id='calendar' class="col-md-10 col-md-offset-1" style="margin-top: 50px"></div>
-
-            
-                </div>
-                <br>
-
-
-
-
-            </div>
+      @if($flower->mother_spons != "")
+      <span style="color: red">{{$flower->mother_spons}}</span>
+      @else
+       <a href="{{url('/flower/'.$flower->id.'/blessedmother')}}">Open</a><br/>
+      @endif
+    </td>
+  </tr>
+  @endif
+  @endforeach
+</table>
  
-
+</div>
+</div>
 
 @stop
 @section('scripts')
 
-<!--         {{-- Full Calendar Links --}} -->
-         <link rel="stylesheet" href="{{ asset('css/fullcalendar.css') }}">
-         <script src="{{ asset('js/jquery.min.js') }}"></script>
-         <script src="{{ asset('js/moment.min.js') }}"></script>
-         <script src="{{ asset('js/fullcalendar.js') }}"></script>
-        <script>
 
- $(document).ready(function() {
-    // page is now ready, initialize the calendar...
-    $('#calendar').fullCalendar({
-        events: [
-            @foreach($flowers as $flower)
-            {
-            title  : '{{$flower->title}}',
-            start  : '{{$flower->start_date}}',
-            end    : '',
-            url: '{{ url('/flower/'.$flower->id.'/edit')  }}',
-            color: '',
-            textColor: '' // an option!
-            },
-            @endforeach
-        ],
-    
-    });
-}); 
-</script>
 
 @stop
