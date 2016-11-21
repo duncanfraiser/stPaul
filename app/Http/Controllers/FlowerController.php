@@ -115,8 +115,26 @@ class FlowerController extends Controller
     }
 
 
+
+
+
+
     public function update(Request $request, $id)
     {
+       if($request['errorswitch'] == 'altar'){
+            $this->validate($request,[
+                'altar_spons' => 'required',
+                ]);
+
+       }
+       
+       if($request['errorswitch'] == 'mother'){
+            $this->validate($request,[
+                'mother_spons' => 'required',
+                ]);
+       }
+
+       
 
         $flower = Flower::findOrFail($id);
         $flower->fill($request->all());

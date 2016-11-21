@@ -3,9 +3,6 @@
 
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
-
-{{Form::model($flower, ['method' => 'PATCH', 'action' => ['FlowerController@update', $flower->id]])}}
-
 	<h2>{{$flower->altar_title}} for {{$flower->date}}, 2017
 	@if($flower->extra != "")
 	<br>{{$flower->extra}}
@@ -19,8 +16,18 @@
 Blessed Mother Flowers - Cost $40</h3>
 <p>You may mail your payment or drop it in the Weekend Offertory. Please make checks payable to St. Paul Catholic Church, and indicate payment is for Altar Flowers or Blessed Mother Flowers with the designated date. The Church will order the flowers and have them delivered on {{$flower->date}}.</p>
 
-	<div class="form-group">
+{{Form::model($flower, ['method' => 'PATCH', 'action' => ['FlowerController@update', $flower->id]])}}
+{{ Form::hidden('errorswitch', 'altar') }}
+    @if (count($errors))
+    <ul class="err">
+    @foreach($errors->all() as $error)
+    <li class="err">Plaese Enter Donator's Full Name</li>
+    @endforeach
+    </ul>
+    @endif
 
+
+	<div class="form-group">
 		{{Form::label('altar_spons', 'Donated By:')}}
 		{{Form::text('altar_spons', null, ['class' => 'form-control', 'placeholder' => "Please Enter Altar Flowers Donator's Full Name"])}}
 	</div>
