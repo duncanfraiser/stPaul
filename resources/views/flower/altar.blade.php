@@ -26,7 +26,7 @@ Blessed Mother Flowers - Cost $40</h3>
 	</div>
 	<div class="form-group">
 		{{Form::label('altar_color', 'Please indicate any special color or flower requests:')}}
-		{{Form::textarea('Altar_color', null, ['class' => 'form-control', 'placeholder' => "Please Enter Special Color or Flower Requests"])}}
+		{{Form::textarea('altar_color', null, ['class' => 'form-control', 'placeholder' => "Please Enter Special Color or Flower Requests"])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('altar_honor', 'In Honor/Memory of:')}}
