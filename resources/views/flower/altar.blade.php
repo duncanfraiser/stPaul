@@ -18,25 +18,39 @@ Blessed Mother Flowers - Cost $40</h3>
 
 {{Form::model($flower, ['method' => 'PATCH', 'action' => ['FlowerController@update', $flower->id]])}}
 {{ Form::hidden('errorswitch', 'altar') }}
-    @if (count($errors))
-    <ul class="err">
-    @foreach($errors->all() as $error)
-    <li class="err">Plaese Enter Donator's Full Name</li>
-    @endforeach
-    </ul>
-    @endif
-
-
 	<div class="form-group">
-		{{Form::label('altar_spons', 'Donated By:')}}
-		{{Form::text('altar_spons', null, ['class' => 'form-control', 'placeholder' => "Please Enter Altar Flowers Donator's Full Name"])}}
+		{{Form::label('altar_donor', 'Donated By:')}}
+			@if($errors->has('altar_donor'))
+		    <ul class="err">
+	    	<li class="err">Please Enter Donor's Full Name</li>
+			</ul>
+			@endif
+		{{Form::text('altar_donor', null, ['class' => 'form-control', 'placeholder' => "Please Enter Altar Flowers Donor's Full Name"])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('altar_color', 'Please indicate any special color or flower requests:')}}
 		{{Form::textarea('altar_color', null, ['class' => 'form-control', 'placeholder' => "Please Enter Special Color or Flower Requests"])}}
 	</div>
 	<div class="form-group">
-		{{Form::label('altar_honor', 'In Honor/Memory of:')}}
+		{{Form::label('altar_flower_honor_memory', 'Please Select:')}}<br/>
+			@if($errors->has('altar_flower_honor_memory'))
+		    <ul class="err">
+	    	<li class="err">Please Make A Selection</li>
+			</ul>
+			@endif
+    	{{ Form::radio('altar_flower_honor_memory', 'In Honor of') }} {{ Form::label('altar_flower_honor_memory', 'In Honor of')}}<br />
+		{{ Form::radio('altar_flower_honor_memory', 'In Memory of') }} {{ Form::label('altar_flower_honor_memory', 'In Memory of')}}<br/>
+
+	</div>
+
+	<div class="form-group">
+		{{Form::label('altar_honor', 'In Honor/Memory of Information:')}}
+			{{Form::label('altar_flower_honor_memory', 'Please Select:')}}<br/>
+			@if($errors->has('altar_honor'))
+		    <ul class="err">
+	    	<li class="err">Please Fill Out Information Below</li>
+			</ul>
+			@endif
 		{{Form::textarea('altar_honor', null, ['class' => 'form-control', 'placeholder' => "Please Enter Honor/Memory Information for Altar Flowers"])}}
 	</div>
 

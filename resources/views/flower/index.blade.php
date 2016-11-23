@@ -36,17 +36,20 @@ Blessed Mother Flowers - Cost $40</h3>
   @foreach($flowers as $flower)
   @if($flower->date == 'December 8th')
   <tr>
-    <td>{{$flower->date}}<br/>
+    <td>{{$flower->date}}
+    @if(\Auth::Check())
+    <a href="{{url('/flower/'.$flower->id)}}" style="float: right"> View</a>
+    @endif
     <td>
-    @if($flower->altar_spons != "")
+    @if($flower->altar_donor != "")
     <span style="color: red">{{$flower->altar_title}}--- Reserved</span><br/>
     @else
       <a href="{{url('/flower/'.$flower->id.'/altar')}}">{{$flower->altar_title}}---Available</a><br/>
     @endif
     </td>
     <td>
-      @if($flower->altar_spons != "")
-      <span style="color: red">{{$flower->altar_spons}}</span><br/>
+      @if($flower->altar_donor != "")
+      <span style="color: red">{{$flower->altar_donor}}</span><br/>
       @else
        <a href="{{url('/flower/'.$flower->id.'/altar')}}">Open</a><br/>
        @endif
@@ -55,16 +58,19 @@ Blessed Mother Flowers - Cost $40</h3>
   @else
 
   <tr>
-    <td>{{$flower->date}}<br/>
+    <td>{{$flower->date}}
+        @if(\Auth::Check())
+    <a href="{{url('/flower/'.$flower->id)}}" style="float: right"> View</a>
+    @endif<br/>
         {{$flower->extra}}<br/>
         {{$flower->extratwo}}</td>
     <td>
-    @if($flower->altar_spons != "")
+    @if($flower->altar_donor != "")
     <span style="color: red">{{$flower->altar_title}}--- Reserved</span><br/>
     @else
       <a href="{{url('/flower/'.$flower->id.'/altar')}}">{{$flower->altar_title}}---Available</a><br/>
     @endif
-    @if($flower->mother_spons != "")
+    @if($flower->blessed_mother_donor != "")
     <span style="color: red">{{$flower->mother_title}}--- Reserved</span><br/>
     @else
       <a href="{{url('/flower/'.$flower->id.'/blessedmother')}}">{{$flower->mother_title}}---Available</a>
@@ -74,15 +80,15 @@ Blessed Mother Flowers - Cost $40</h3>
 
 
     <td>
-      @if($flower->altar_spons != "")
-      <span style="color: red">{{$flower->altar_spons}}</span><br/>
+      @if($flower->altar_donor != "")
+      <span style="color: red">{{$flower->altar_donor}}</span><br/>
       @else
        <a href="{{url('/flower/'.$flower->id.'/altar')}}">Open</a><br/>
        @endif
 
 
-      @if($flower->mother_spons != "")
-      <span style="color: red">{{$flower->mother_spons}}</span>
+      @if($flower->blessed_mother_donor != "")
+      <span style="color: red">{{$flower->blessed_mother_donor}}</span>
       @else
        <a href="{{url('/flower/'.$flower->id.'/blessedmother')}}">Open</a><br/>
       @endif

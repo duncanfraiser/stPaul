@@ -18,25 +18,36 @@ Blessed Mother Flowers - Cost $40</h3>
 
 {{Form::model($flower, ['method' => 'PATCH', 'action' => ['FlowerController@update', $flower->id]])}}
 {{ Form::hidden('errorswitch', 'mother') }}
-    @if (count($errors))
-    <ul class="err">
-    @foreach($errors->all() as $error)
-    <li class="err">Plaese Enter Donator's Full Name</li>
-    @endforeach
-    </ul>
-    @endif
-
-
 	<div class="form-group">
-		{{Form::label('mother_spons', 'Donated by:')}}
-		{{Form::text('mother_spons', null, ['class' => 'form-control', 'placeholder' => "Please Enter Blessed Mother Flowers Donator's Full Name"])}}
+		{{Form::label('blessed_mother_donor', 'Donated by:')}}
+			@if($errors->has('blessed_mother_donor'))
+		    <ul class="err">
+	    	<li class="err">Please Enter Donor's Full Name</li>
+			</ul>
+			@endif
+		{{Form::text('blessed_mother_donor', null, ['class' => 'form-control', 'placeholder' => "Please Enter Blessed Mother Flowers Donator's Full Name"])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('mother_color', 'Please indicate any special color or flower requests:')}}
 		{{Form::textarea('mother_color', null, ['class' => 'form-control', 'placeholder' => "Please Enter Special Color or Flower Requests"])}}
 	</div>
 	<div class="form-group">
+		{{Form::label('blessed_mother_flower_honor_memory', 'Please Select:')}}<br/>
+			@if($errors->has('blessed_mother_flower_honor_memory'))
+		    <ul class="err">
+	    	<li class="err">Please Make A Selection</li>
+			</ul>
+			@endif
+    	{{ Form::radio('blessed_mother_flower_honor_memory', 'In Honor of') }} {{ Form::label('blessed_mother_flower_honor_memory', 'In Honor of')}}<br />
+		{{ Form::radio('blessed_mother_flower_honor_memory', 'In Memory of') }} {{ Form::label('honor_memory', 'In Memory of')}}<br/>
+	</div>
+	<div class="form-group">
 		{{Form::label('mother_honor', 'In Honor/Memory of:')}}
+			@if($errors->has('mother_honor'))
+		    <ul class="err">
+	    	<li class="err">Please Fill Out Information Below</li>
+			</ul>
+			@endif
 		{{Form::textarea('mother_honor', null, ['class' => 'form-control', 'placeholder' => "Please Enter Honor/Memory Information for Blessed Mother Flowers"])}}
 	</div>
 

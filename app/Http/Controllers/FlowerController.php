@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 use App\Http\Requests;
+use App\Http\Requests\customerror;
 
 use App\Prayer;
 use App\Suggested_Prayer;
@@ -37,6 +39,9 @@ class FlowerController extends Controller
         $contemplative = Contemplative::latest()->first();                
         \View::share('contemplative', $contemplative);
     }
+
+
+
     public function index()
     {
         $flowers = Flower::get();
@@ -72,7 +77,8 @@ class FlowerController extends Controller
      */
     public function show($id)
     {
-        //
+        $flower = Flower::findorfail($id);
+        return view('flower.show', compact('flower'));
     }
 
     /**
@@ -119,18 +125,24 @@ class FlowerController extends Controller
 
 
 
+
     public function update(Request $request, $id)
     {
        if($request['errorswitch'] == 'altar'){
             $this->validate($request,[
-                'altar_spons' => 'required',
+                'altar_donor' => 'required',
+                'altar_flower_honor_memory' => 'required',
+                'altar_honor' => 'required',
+
                 ]);
 
        }
        
        if($request['errorswitch'] == 'mother'){
             $this->validate($request,[
-                'mother_spons' => 'required',
+                'blessed_mother_donor' => 'required',
+                'blessed_mother_flower_honor_memory' => 'required',
+                'mother_honor' => 'required',
                 ]);
        }
 

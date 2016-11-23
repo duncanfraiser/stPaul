@@ -12,14 +12,16 @@ class Flower extends Model
       protected $fillable = [
    			'date',
    			'altar_title',
-   			'altar_spons',
+   			'altar_donor',
             'mother_title',
-            'mother_spons',
+            'blessed_mother_donor',
             'altar_honor',
             'mother_honor',
             'extra',
             'altar_color',
-            'mother_color'
+            'mother_color',
+            'blessed_mother_flower_honor_memory',
+            'altar_flower_honor_memory',
 
 
         ];
