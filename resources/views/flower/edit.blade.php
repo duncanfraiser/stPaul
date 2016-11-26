@@ -21,6 +21,7 @@
 		{{Form::label('altar_flower_honor_memory', 'Please Select:')}}<br/>
     	{{ Form::radio('altar_flower_honor_memory', 'In Honor of') }} {{ Form::label('altar_flower_honor_memory', 'In Honor of')}}<br />
 		{{ Form::radio('altar_flower_honor_memory', 'In Memory of') }} {{ Form::label('altar_flower_honor_memory', 'In Memory of')}}<br/>
+		{{ Form::radio('altar_flower_honor_memory', NULL) }} {{ Form::label('altar_flower_honor_memory', 'None')}}<br/>
 	</div>
 
 	<div class="form-group">
@@ -39,7 +40,8 @@
 	<div class="form-group">
 		{{Form::label('blessed_mother_flower_honor_memory', 'Please Select:')}}<br/>
     	{{ Form::radio('blessed_mother_flower_honor_memory', 'In Honor of') }} {{ Form::label('blessed_mother_flower_honor_memory', 'In Honor of')}}<br />
-		{{ Form::radio('blessed_mother_flower_honor_memory', 'In Memory of') }} {{ Form::label('honor_memory', 'In Memory of')}}<br/>
+		{{ Form::radio('blessed_mother_flower_honor_memory', 'In Memory of') }} {{ Form::label('blessed_mother_flower_honor_memory', 'In Memory of')}}<br/>
+		{{ Form::radio('blessed_mother_flower_honor_memory', NULL) }} {{ Form::label('blessed_mother_flower_honor_memory', 'None')}}<br/>
 	</div>
 	<div class="form-group">
 		{{Form::label('mother_honor', 'In Honor/Memory of:')}}

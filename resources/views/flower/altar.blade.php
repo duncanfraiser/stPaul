@@ -44,8 +44,7 @@ Blessed Mother Flowers - Cost $40</h3>
 	</div>
 
 	<div class="form-group">
-		{{Form::label('altar_honor', 'In Honor/Memory of Information:')}}
-			{{Form::label('altar_flower_honor_memory', 'Please Select:')}}<br/>
+		{{Form::label('altar_honor', 'In Honor/Memory of Information:')}}<br/>
 			@if($errors->has('altar_honor'))
 		    <ul class="err">
 	    	<li class="err">Please Fill Out Information Below</li>
