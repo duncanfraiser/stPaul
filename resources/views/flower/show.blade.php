@@ -14,13 +14,13 @@
 <h3>{{$flower->altar_title}} </h3>
 <ul>
 	<li><h4>Donor: <span style="color: #3e95d1">{{$flower->altar_donor}}</span></h4></li>
-	<li><h4>In Honor/Memory of:  <span style="color: #3e95d1">{{$flower->altar_flower_honor_memory}}{{$flower->altar_honor}}</span></h4></li>
+	<li><h4>In Honor/Memory of:  <span style="color: #3e95d1">{{$flower->altar_flower_honor_memory}} {{$flower->altar_honor}}</span></h4></li>
 	<li><h4>Special Flower Requests:  <span style="color: #3e95d1">{{$flower->altar_color}}</span></h4></li>
 </ul>
 <h3>{{$flower->mother_title}}</h3>
 <ul>
 	<li><h4>Donor: <span style="color: #3e95d1">{{$flower->blessed_mother_donor}}</span></h4></li>
-	<li><h4>In Honor/Memory of:  <span style="color: #3e95d1">{{$flower->blessed_mother_flower_honor_memory}}{{$flower->mother_honor}}</span></h4></li>
+	<li><h4>In Honor/Memory of:  <span style="color: #3e95d1">{{$flower->blessed_mother_flower_honor_memory}} {{$flower->mother_honor}}</span></h4></li>
 	<li><h4>Special Flower Requests:  <span style="color: #3e95d1">{{$flower->mother_color}}</span></h4></li>
 </ul>
 
