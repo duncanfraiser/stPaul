@@ -57,6 +57,9 @@ ul.err {
      list-style-type: square;
 }
 
+.staff:hover{
+  opacity: 0.5;
+}
 
 
 

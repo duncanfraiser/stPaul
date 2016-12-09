@@ -11,6 +11,9 @@ Route::resource('member/{member}/dependents', 'DependentsController');
 
 Route::resource('forms', 'FormController');
 
+
+Route::resource('staff', 'StaffController');
+
 // Calendar Events Routes
 Route::resource('group', 'GroupController');
 Route::get('group/{group}/thanks', 'GroupController@thanks');
