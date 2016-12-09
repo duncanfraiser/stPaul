@@ -30,8 +30,8 @@ Blessed Mother Flowers - Cost $40</h3>
 <table>
   <tr>
     <th>Date</th>
-    <th>Please Select a Flower Optins</th>
-    <th>Sponsors</th>
+    <th>Please Select a Flower Options</th>
+    <th>Donated by</th>
   </tr>
   @foreach($flowers as $flower)
   @if($flower->date == 'December 8th')
