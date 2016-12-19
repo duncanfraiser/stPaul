@@ -25,7 +25,7 @@ public function __construct(){
         $suggestedprayer = Suggested_Prayer::latest()->first();                
         \View::share('suggestedprayer', $suggestedprayer);
 
-        $divina = Divina::latest()->first();                
+        $divina = Divina::latest()->first();
         \View::share('divina', $divina);
 
         $contemplative = Contemplative::latest()->first();                

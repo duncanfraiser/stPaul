@@ -64,6 +64,7 @@ class MembersController extends Controller
 
     public function thanks($member){
         $member = Member::findOrFail($member);
+  
 
         return view('member.thanks', compact('member'));
     }

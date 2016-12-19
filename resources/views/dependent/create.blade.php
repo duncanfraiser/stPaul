@@ -10,9 +10,11 @@
     </ul>
     @endif
 </div>
-		
+
 		<center><h2>Dependent Currently Living in Household</h2></center>
-		{{Form::hidden('member_id', Request::route()->member)}}
+	
+	{{Form::open(['method' => 'POST', 'action' => ['DependentsController@store', $id]])}}
+		{{Form::hidden('member_id', $id)}}
 		<div class="form-group">
 			{{Form::label('firstName', 'Full Name:')}}
 			{{Form::text('firstName', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}

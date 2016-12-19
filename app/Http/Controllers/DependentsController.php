@@ -29,7 +29,8 @@ class DependentsController extends Controller
 
 
     public function create($id){
-      return view('dependent.create');
+
+      return view('dependent.create', compact('id'));
     }
 
     public function store(Request $request){

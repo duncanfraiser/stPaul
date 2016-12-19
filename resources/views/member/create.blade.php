@@ -16,12 +16,11 @@
 			{{Form::label('familyName', 'Family Name:')}}
 			{{Form::text('familyName', null, ['class' => 'form-control', 'placeholder' => 'Enter Family Name'])}}
 			{{Form::label('todaysDate', "Today's Date:")}}
-			{{Form::date('todaysDate', null, ['class' => 'form-control', 'placeholder' => 'mm/dd/yyyy'])}}
-			
+			{{Form::text('todaysDate', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}			
 		</div>
 		<h3>Head of Household (Active Catholic)</h3>
 		<div class="form-group">
-{{-- 			{{Form::label('tNameOne', 'Full Name:')}}
+{{--		{{Form::label('tNameOne', 'Full Name:')}}
 			{{Form::select('tNameOne', ['Mr.' => 'Mr.', 'Ms.' => 'Ms.', 'Mrs.' => 'Mrs.'])}} --}}
 			{{Form::label('fNameOne', 'Enter Full Name:')}}
 			{{Form::text('fNameOne', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
@@ -75,14 +74,14 @@
 		{{ Form::radio('active', 'No') }} {{ Form::label('active', 'No')}}
  	</div>
 		<div class="form-group">
-{{-- 			{{Form::label('tNameOne', 'Full Name:')}}
+{{--	{{Form::label('tNameOne', 'Full Name:')}}
 			{{Form::select('tNameTwo', ['Mr.' => 'Mr.', 'Ms.' => 'Ms.', 'Mrs.' => 'Mrs.'])}} --}}
 			{{Form::label('fNameTwo', 'Enter Full Name:')}}
 			{{Form::text('fNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
 			{{Form::text('mNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Middle Name'])}}
 			{{Form::text('lNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
 		</div>
-			<div class="form-group">
+		<div class="form-group">
 			{{Form::label('perferedNameTwo', 'Name you preferred to be called:')}}
 			{{Form::text('perferedNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Preferred Name'])}}
 		</div>
@@ -110,16 +109,13 @@
 			{{Form::label('employmentTwo', 'Place of Employment:')}}
 			{{Form::text('employmentTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Place of Employment'])}}
 		</div>	
-	
-
-
+		<div class='pull-right'>
 		<div class="form-group">
-			{{Form::submit('Add Member', ['class' => 'btn btn-primary form-control'])}}
+			{{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+			{{Form::close()}}
 		</div>
-{{Form::close()}}
+
+		</div>
+	<a href="{{url('/')}}"><button class="pull-right btn btn-secondary">Cancel</button></a>
 </div>
-
-
-
-
 @stop
