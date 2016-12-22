@@ -48,10 +48,35 @@ class MembersController extends Controller
 
 
     public function create(){
+
+
+
+
+
+
     	return view('member.create');
     }
 
     public function store(Request $request){
+
+            $this->validate($request,[
+                'familyName' => 'required',
+                'todaysDate' => 'required',
+                'fNameOne' => 'required',
+                'lNameOne' => 'required',
+                'perferedNameOne' => 'required',
+                'dobOne' => 'required',
+                'maritalStat' => 'required',
+                'address' => 'required',
+                'homePhone' => 'required',
+                'cellPhoneOne' => 'required',
+                'emailOne' => 'required',
+                'careerOne' => 'required',
+                'workPhoneOne' => 'required',
+                'employmentOne' => 'required',
+                ]);
+
+
         $member = new Member;
      
 		$member->fill($request->all());
