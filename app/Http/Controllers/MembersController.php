@@ -30,6 +30,11 @@ class MembersController extends Controller
 
         $contemplative = Contemplative::latest()->first();                
         \View::share('contemplative', $contemplative);
+
+
+
+
+
     }
 
 	public function show($id){

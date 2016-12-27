@@ -15,7 +15,7 @@ class StaffController extends Controller
 {
 
 public function __construct(){
-        // $this->middleware('auth')->only('create','edit');
+        $this->middleware('staff')->only('create','edit');
         // $heading = Announcement::latest()->first();
         // \View::share('heading', $heading);
 
@@ -30,6 +30,12 @@ public function __construct(){
 
         $contemplative = Contemplative::latest()->first();                
         \View::share('contemplative', $contemplative);
+    
+
+
+
+
+
     }
 
 
