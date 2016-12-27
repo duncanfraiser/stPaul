@@ -36,7 +36,7 @@
 @foreach($staffs as $staff)
 <div style="min-height: 20em" class='col-md-3 text-center'>
 <a  href="{{url('/staff/'.$staff->id)}}">
-<img class="staff" style="width: 90%" src="{{url($staff->img_path)}}">
+<img class="staff" style="width: 100%" src="{{url($staff->img_path)}}">
 </a>
 </div>
 @endforeach
