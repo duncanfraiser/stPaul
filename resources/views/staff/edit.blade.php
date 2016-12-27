@@ -38,7 +38,7 @@
 {{Form::close()}}
   </div>
     <div class='pull-right'>
-  <a href="{{url('/')}}"><button class="btn btn-secondary">Cancel</button></a>
+  <a href="{{url('/staff')}}"><button class="btn btn-secondary">Cancel</button></a>
   </div>
       <div class="pull-right">
         <div class="form-group">
