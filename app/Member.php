@@ -11,6 +11,7 @@ class Member extends Model
 {
         protected $fillable = [
             'todaysDate',
+            'prevParish',
             'familyName',
             'tNameOne',
             'fNameOne',
@@ -20,6 +21,9 @@ class Member extends Model
             'dobOne',
             'maritalStat',
             'address',
+            'city',
+            'state',
+            'zip',
             'homePhone',
             'cellPhoneOne',
             'workPhoneOne',
@@ -39,9 +43,11 @@ class Member extends Model
             'emailTwo',
             'careerTwo',
             'employmentTwo',
+            'contact',
             'okPhone',
             'okAddress',
             'okEmail'
+            'stewardship'
 
    ];
 

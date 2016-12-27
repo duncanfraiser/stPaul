@@ -19,28 +19,36 @@
 				@endif
 			{{Form::text('todaysDate', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}			
 		</div>
+		<div class="form-group">
+			{{Form::label('prevParish', 'Parish Previously Registered:')}}
+				@if($errors->has('prevParish'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Parish Previously Registered</li>
+				</ul>
+				@endif
+			{{Form::text('perferedNameOne', null, ['class' => 'form-control', 'placeholder' => 'Enter Parish Previously Registered'])}}
+		</div>
 		<h3>Head of Household (Active Catholic)</h3>
 		<div class="form-group">
-{{--		{{Form::label('tNameOne', 'Full Name:')}}
-			{{Form::select('tNameOne', ['Mr.' => 'Mr.', 'Ms.' => 'Ms.', 'Mrs.' => 'Mrs.'])}} --}}
 			{{Form::label('fNameOne', 'Enter Full Name:')}}
 				@if($errors->has('fNameOne') || $errors->has('lNameOne') )
 		    	<ul class="err">
 	    		<li class="err">Please Enter Full Name</li>
 				</ul>
 				@endif
+			{{Form::select('tNameOne', [NULL => '-please select-', 'Mr.' => 'Mr.', 'Mrs.' => 'Mrs.', 'Miss.' => 'Miss.'])}}<br/>
 			{{Form::text('fNameOne', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
 			{{Form::text('mNameOne', null, ['class' => 'form-control', 'placeholder' => 'Enter Middle Name'])}}
 			{{Form::text('lNameOne', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
 		</div>		
 		<div class="form-group">
-			{{Form::label('perferedNameOne', 'Name you preferred to be called:')}}
+			{{Form::label('perferedNameOne', 'Name You Prefer to be Called:')}}
 				@if($errors->has('perferedNameOne'))
 		    	<ul class="err">
-	    		<li class="err">Please Enter Preferred Name</li>
+	    		<li class="err">Please Enter Name You Prefer to be Called</li>
 				</ul>
 				@endif
-			{{Form::text('perferedNameOne', null, ['class' => 'form-control', 'placeholder' => 'Enter Preferred Name'])}}
+			{{Form::text('perferedNameOne', null, ['class' => 'form-control', 'placeholder' => 'Enter Name You Prefer to be Called'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('dobOne', 'Date of Birth:')}}
@@ -62,12 +70,15 @@
 		</div>
 		<div class="form-group">
 			{{Form::label('address', 'Home Address:')}}
-				@if($errors->has('address'))
+				@if($errors->has('address') || $errors->has('city') || $errors->has('state') || $errors->has('zip'))
 		    	<ul class="err">
 	    		<li class="err">Please Enter Home Address</li>
 				</ul>
 				@endif
-			{{Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Enter Home Address'])}}
+			{{Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Enter Street Address'])}}
+			{{Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Enter City'])}}
+			{{Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Enter State'])}}
+			{{Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Enter Zip'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('homePhone', 'Home Phone:')}}
@@ -126,6 +137,11 @@
 
 	<div class="form-group">
 		<h3>Spouse</h3>{{Form::label('active', 'Active Catholic?')}}<br>
+				@if($errors->has('active'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter if Spouse is an Active Catholic</li>
+				</ul>
+				@endif
     	{{ Form::radio('active', 'Yes') }} {{ Form::label('active', 'Yes')}}<br />
 		{{ Form::radio('active', 'No') }} {{ Form::label('active', 'No')}}
  	</div>
@@ -133,38 +149,101 @@
 {{--	{{Form::label('tNameOne', 'Full Name:')}}
 			{{Form::select('tNameTwo', ['Mr.' => 'Mr.', 'Ms.' => 'Ms.', 'Mrs.' => 'Mrs.'])}} --}}
 			{{Form::label('fNameTwo', 'Enter Full Name:')}}
+				@if($errors->has('fNameTwo') || $errors->has('lNameTwo') )
+		    	<ul class="err">
+	    		<li class="err">Please Enter Spouse's Full Name</li>
+				</ul>
+				@endif
+				{{Form::select('tNameTwo', [NULL => '-please select-', 'Mr.' => 'Mr.', 'Mrs.' => 'Mrs.', 'Miss.' => 'Miss.'])}}<br/>
 			{{Form::text('fNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
 			{{Form::text('mNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Middle Name'])}}
 			{{Form::text('lNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('perferedNameTwo', 'Name you preferred to be called:')}}
-			{{Form::text('perferedNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Preferred Name'])}}
+				@if($errors->has('perferedNameTwo'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Name You Prefer to be Called</li>
+				</ul>
+				@endif
+			{{Form::text('perferedNameTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Name You Prefer to be Called'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('dobTwo', 'Date of Birth:')}}
+				@if($errors->has('dobTwo'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Spouse's Date of Birth</li>
+				</ul>
+				@endif
 			{{Form::text('dobTwo', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
 		</div>	
 		<div class="form-group">
 			{{Form::label('cellPhoneTwo', 'Cell Phone:')}}
+				@if($errors->has('cellPhoneTwo'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Spouse's Cell Phone</li>
+				</ul>
+				@endif
 			{{Form::text('cellPhoneTwo', null, ['class' => 'form-control', 'placeholder' => '(###) ###-####'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('emailTwo', 'Primary Email Address:')}}
+				@if($errors->has('emailTwo'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Spouse's Primary Email Address</li>
+				</ul>
+				@endif
 			{{Form::text('emailTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Email Address'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('careerTwo', 'Career Type:')}}
+				@if($errors->has('careerTwo'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Spouse's Career Type</li>
+				</ul>
+				@endif
 			{{Form::text('careerTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Career Type'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('workPhoneTwo', 'Work Phone:')}}
+				@if($errors->has('workPhoneTwo'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Spouse's Work Phone</li>
+				</ul>
+				@endif
 			{{Form::text('workPhoneTwo', null, ['class' => 'form-control', 'placeholder' => '(###) ###-####'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('employmentTwo', 'Place of Employment:')}}
+				@if($errors->has('employmentTwo'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Spouse's Place of Employment</li>
+				</ul>
+				@endif
 			{{Form::text('employmentTwo', null, ['class' => 'form-control', 'placeholder' => 'Enter Place of Employment'])}}
 		</div>	
+		<div class="form-group">
+		{{Form::label('contact', 'Best Way to Contact You:')}}<br>
+				@if($errors->has('contact'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter the Best Way to Contact You</li>
+				</ul>
+				@endif
+    	{{ Form::radio('contact', 'Home Phone') }} {{ Form::label('contact', 'Home Phone')}}<br />
+		{{ Form::radio('contact', 'Cell Phone') }} {{ Form::label('contact', 'Cell Phone')}}
+ 		</div>
+ 		<div class="form-group">
+		{{Form::label('stewardship', 'Please Indicate Your Preference for Stewardship:')}}<br>
+				@if($errors->has('stewardship'))
+		    	<ul class="err">
+	    		<li class="err">Please Indicate Your Preference for Stewardship</li>
+				</ul>
+				@endif
+    	{{ Form::radio('stewardship', 'Envelopes') }} {{ Form::label('stewardship', 'Envelopes')}}<br />
+		{{ Form::radio('stewardship', 'Bank Draft') }} {{ Form::label('stewardship', 'Bank Draft')}}
+ 		</div>
+
+
 		<div class='pull-right'>
 		<div class="form-group">
 			{{Form::submit('Submit', ['class' => 'btn btn-primary'])}}

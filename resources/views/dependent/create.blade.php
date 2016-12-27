@@ -32,7 +32,7 @@
 		</div>
 		<div class="form-group">
 			{{Form::label('dob', 'Date of Birth:')}}
-			{{Form::input('date', 'dob', null, ['class' => 'form-control'])}}
+			{{Form::text('dob', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('cellPhone', 'Cell Phone:')}}
@@ -60,7 +60,7 @@
 		</div>
 		<div class="form-group">
 			{{Form::label('badDate', 'Date of Baptism:')}}
-			{{Form::input('date', 'bapDate', null, ['class' => 'form-control'])}}
+			{{Form::text('bapDate', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('bapParish', 'Name of Parish:')}}
@@ -72,7 +72,7 @@
 		</div>
 		<div class="form-group">
 			{{Form::label('recDate', 'Date of First Reconciliation:')}}
-			{{Form::input('date', 'recDate', null, ['class' => 'form-control'])}}
+			{{Form::text('recDate', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('recParish', 'Name of Parish:')}}
@@ -84,7 +84,7 @@
 		</div>
 		<div class="form-group">
 			{{Form::label('commDate', 'Date of Communion:')}}
-			{{Form::input('date', 'commDate', null, ['class' => 'form-control'])}}
+			{{Form::text('commDate', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('commParish', 'Name of Parish:')}}
@@ -95,8 +95,8 @@
 			{{Form::text('commPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
 		<div class="form-group">
-			{{Form::label('confirmDate', 'Date of First Confirmation:')}}
-			{{Form::input('date', 'confirmDate', null, ['class' => 'form-control'])}}
+			{{Form::label('confirmDate', 'Date of Confirmation:')}}
+			{{Form::text('confirmDate', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
 		</div>
 		<div class="form-group">
 			{{Form::label('confirmParish', 'Name of Parish:')}}
@@ -106,10 +106,15 @@
 			{{Form::label('confirmPlace', 'Location:')}}
 			{{Form::text('confirmPlace', null, ['class' => 'form-control', 'placeholder' => 'City, State'])}}
 		</div>
+		<div class='pull-right'>
 		<div class="form-group">
-			{{Form::submit('Add Member', ['class' => 'btn btn-primary form-control'])}}
+			{{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+			{{Form::close()}}
 		</div>
-{{Form::close()}}
+
+		</div>
+	<a href="{{URL::previous()}}"><button class="pull-right btn btn-secondary">Cancel</button></a>
+
 </div>
 
 

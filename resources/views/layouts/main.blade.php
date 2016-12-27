@@ -93,7 +93,7 @@
                             <a href="{{url('/event/')}}">Calendar</a>
                     </li>
                     <li>
-                        <a href="{{url('/contact/1')}}">Contact Us</a>
+                        <a href="{{url('/staff')}}">Contact Us</a>
                     </li>
 
     @if(\Auth::Check())
