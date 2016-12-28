@@ -35,11 +35,17 @@ class DependentsController extends Controller
 
     public function store(Request $request){
 
+
+            $this->validate($request,[
+                'firstName' => 'required',
+                'lastName' => 'required',
+                'sex' => 'required',
+                'dob' => 'required',
+                ]);
+
             $dependent = new Dependent;
             $dependent->fill($request->all());
             $dependent->save();
-
-      \Session::flash('success_message', 'Successfully saved!');
 
             return redirect('member/'.$dependent->member_id);
     }

@@ -13,6 +13,7 @@ class Dependent extends Model
             'middleName',
 			'lastName',
             'sex',
+            'dob',
             'perferedName',
             'cellPhone',
             'email',

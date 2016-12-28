@@ -83,17 +83,18 @@ class MembersController extends Controller
                 'careerOne' => 'required',
                 'workPhoneOne' => 'required',
                 'employmentOne' => 'required',
-                'active' => 'required',
-                'fNameTwo' => 'required',
-                'perferedNameTwo' => 'required',
-                'dobTwo' => 'required',
-                'cellPhoneTwo' => 'required',
-                'emailTwo' => 'required',
-                'careerTwo' => 'required',
-                'workPhoneTwo' => 'required',
-                'employmentTwo' => 'required',
                 'contact' => 'required',
                 'stewardship' => 'required',
+                // 'active' => 'required',
+                // 'fNameTwo' => 'required',
+                // 'perferedNameTwo' => 'required',
+                // 'dobTwo' => 'required',
+                // 'cellPhoneTwo' => 'required',
+                // 'emailTwo' => 'required',
+                // 'careerTwo' => 'required',
+                // 'workPhoneTwo' => 'required',
+                // 'employmentTwo' => 'required',
+
                 ]);
 
 

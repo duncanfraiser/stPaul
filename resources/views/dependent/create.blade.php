@@ -1,15 +1,6 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2">
-<div class="col-md-12">
-    @if (count($errors))
-    <ul class="err">
-    @foreach($errors->all() as $error)
-    <li class="err">{{$error}}</li>
-    @endforeach
-    </ul>
-    @endif
-</div>
 
 		<center><h2>Dependent Currently Living in Household</h2></center>
 	
@@ -17,14 +8,24 @@
 		{{Form::hidden('member_id', $id)}}
 		<div class="form-group">
 			{{Form::label('firstName', 'Full Name:')}}
+				@if($errors->has('firstName') || $errors->has('lastName') )
+		    	<ul class="err">
+	    		<li class="err">Please Enter Full Name</li>
+				</ul>
+				@endif
 			{{Form::text('firstName', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
 			{{Form::text('middleName', null, ['class' => 'form-control', 'placeholder' => 'Enter Middle Name'])}}
 			{{Form::text('lastName', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
 		</div>
 		<div class="form-group">
-			{{Form::label('sex', 'Gender:')}}
-			{{Form::select('sex', ['' => '-Please Select-', 'Male' => 'Male', 'Female' => 'Female'])}}
-
+			{{Form::label('sex', 'Gender:')}}<br/>
+				@if($errors->has('sex'))
+		    	<ul class="err">
+	    		<li class="err">Please Select Gender</li>
+				</ul>
+				@endif
+		{{Form::radio('sex', 'male') }} {{ Form::label('sex', 'Male')}}<br />
+		{{Form::radio('sex', 'female') }} {{ Form::label('sex', 'Female')}}
 		</div>		
 		<div class="form-group">
 			{{Form::label('perferedName', 'Preferred Name:')}}
@@ -32,6 +33,11 @@
 		</div>
 		<div class="form-group">
 			{{Form::label('dob', 'Date of Birth:')}}
+				@if($errors->has('dob'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Date of Birth</li>
+				</ul>
+				@endif
 			{{Form::text('dob', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
 		</div>
 		<div class="form-group">
@@ -51,9 +57,10 @@
 			{{Form::select('grade', ['NULL' => '-Please Select-','3yr' => '3yr old','4yr' => '4 yr old','kindergarten' => 'kindergarten', '1' => '1st','2' => '2nd','3' => '3rd', '4' => '4th', '5' => '5th', '6' => '6th','7' => '7th','8' => '8th','9' => '9th','10' => '10th','11' => '11th','12' => '12th'])}}
 		</div>
 		<div class="form-group">
-			{{Form::label('active', 'Active Catholic:')}}
-			{{Form::select('active', ['Yes' => 'Yes', 'No' => 'No'])}}
-				</div>
+			{{Form::label('active', 'Active Catholic:')}}<br/>
+			{{Form::radio('active', 'yes') }} {{ Form::label('active', 'Yes')}}<br />
+			{{Form::radio('active', 'no') }} {{ Form::label('active', 'No')}}
+		</div>
 		<div class="form-group">
 			{{Form::label('ifNo', 'If no, list religion:')}}
 			{{Form::text('ifNo', null, ['class' => 'form-control', 'placeholder' => 'Enter Religion'])}}

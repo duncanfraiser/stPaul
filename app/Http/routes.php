@@ -56,9 +56,14 @@ Route::get('/RCIA/{id}/thanks', 'CatechumensController@thanks');
 
 //Route::resource('RCIA', 'RciaController');
 
-
+Route::get('volunteer/changes', 'VolunteerController@changes');
 Route::resource('volunteer', 'VolunteerController');
 Route::get('volunteer/{id}/thanks', 'VolunteerController@thanks');
+
+
+
+
+
 Route::resource('fileuploads', 'FileuploadController');
 Route::resource('announcement', 'AnnouncementsController');
 Route::resource('welcome', 'WelcomeController');

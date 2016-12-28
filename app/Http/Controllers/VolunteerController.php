@@ -9,6 +9,7 @@ use App\Suggested_Prayer;
 use App\Divina;
 use App\Contemplative;
 use App\Volunteer;
+use Carbon\Carbon;
 
 
 class VolunteerController extends Controller
@@ -138,5 +139,11 @@ class VolunteerController extends Controller
     {
         $volunteer = Volunteer::findOrFail($id);
         return view('volunteer.thanks', compact('volunteer'));
+    }
+
+    public function changes(){
+      
+        $changes = Volunteer::where('updated_at', '>=', Carbon::now()->subDays(30))->orderBy('updated_at', 'desc')->get();
+        dd($changes);
     }
 }

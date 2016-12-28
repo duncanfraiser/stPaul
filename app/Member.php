@@ -46,7 +46,7 @@ class Member extends Model
             'contact',
             'okPhone',
             'okAddress',
-            'okEmail'
+            'okEmail',
             'stewardship'
 
    ];
