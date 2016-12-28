@@ -10,6 +10,7 @@ use App\Prayer;
 use App\Suggested_Prayer;
 use App\Divina;
 use App\Contemplative;
+use Carbon\Carbon;
 
 
 class EducationController extends Controller
@@ -72,6 +73,9 @@ class EducationController extends Controller
 
     public function index(){
         $eds = Education::orderBy('father_last_name', 'asc')->get();
+
+     
+
         return view('education.index', compact('eds'));
     }
 
@@ -110,6 +114,16 @@ class EducationController extends Controller
         $emails = Student::where('email','!=','')->where('email','!=','none')->where('email','!=','n/a')->lists('email');
         return view('education.studentEmail', compact('emails'));
     }
+
+        public function changes(){
+      
+        $changes = Education::where('updated_at', '>=', Carbon::now()->subDays(30))->orderBy('updated_at', 'desc')->get();
+        $students = Student::where('updated_at', '>=', Carbon::now()->subDays(30))->orderBy('updated_at', 'desc')->get();
+        
+            return view('education.changes', compact('changes', 'students'));
+    }
+
+
 
 
 }
