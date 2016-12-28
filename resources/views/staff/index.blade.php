@@ -21,7 +21,7 @@
 	<h3><u>St. Paul Learning Center</u></h3>
 	<p>
 	Phone:  601-992-2876<br/>
-	Email: <a href="mailto: stpaullearningcenter@gmail.com"> stpaullearningcenter@gmail.com</a><br/>
+	Email: <a href="mailto:stpaullearningcenter@gmail.com">stpaullearningcenter@gmail.com</a><br/>
 	Website: <a target="blank" href="http://saintpaullearningcenter.com">saintpaullearningcenter.com</a>
 <br/>
 	Address: 5969 Hwy 25, Flowood Ms. 39232
