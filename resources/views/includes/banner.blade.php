@@ -40,7 +40,7 @@
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
       <li data-target="#myCarousel" data-slide-to="4"></li>
-      <li data-target="#myCarousel" data-slide-to="5"></li>
+
 
     </ol>
 
@@ -67,9 +67,7 @@
         <img src="{{url('banners/St.-Paul-Banners40.png')}}" alt="Kenny Kens & The Brown Bottle Boys">
       </div> 
 
-      <div class="item">
-        <img src="{{url('banners/St. Paul Banners82.png')}}" alt="Kenny Kens & The Brown Bottle Boys">
-      </div> 
+
 
 
          
