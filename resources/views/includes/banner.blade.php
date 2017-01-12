@@ -48,23 +48,27 @@
     <div class="carousel-inner" role="listbox">
    
       <div class="item active">
-        <img src="{{url('banners/churchView.png/')}}" alt="Kenny Kens & The Brown Bottle Boys">
+        <img src="{{url('banners/GreenCrucifix.png/')}}" alt="St Paul Cathloic Church">
       </div>
+
+     <div class="item">
+        <a href="{{url('/ChristLife/create')}}"><img src="{{url('/banners/Discovering-Christ-logoClick.png/')}}" alt="St Paul Cathloic Church"></a>
+      </div>
+
+
     
       <div class="item">
-        <img src="{{url('banners/St.-Paul-Banners10.png')}}" alt="Kenny Kens & The Brown Bottle Boys">
+        <img src="{{url('banners/St.-Paul-Banners10.png')}}" alt="St Paul Cathloic Church">
       </div> 
 
-      <div class="item">
-        <img src="{{url('/banners/Discovering-Christ-logo.png/')}}" alt="Kenny Kens & The Brown Bottle Boys">
-      </div> 
+ 
 
       <div class="item">
-        <img src="{{url('banners/St.-Paul-Banners30.png')}}" alt="Kenny Kens & The Brown Bottle Boys">
+        <img src="{{url('banners//churchView.png' )}}" alt="St Paul Cathloic Church">
       </div> 
    
       <div class="item">
-        <img src="{{url('banners/St.-Paul-Banners40.png')}}" alt="Kenny Kens & The Brown Bottle Boys">
+        <img src="{{url('banners/St.-Paul-Banners40.png')}}" alt="St Paul Cathloic Church">
       </div> 
 
 
