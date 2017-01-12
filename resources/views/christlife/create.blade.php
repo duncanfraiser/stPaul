@@ -23,7 +23,7 @@
 <div class="col-md-8 col-md-offset-2">
 
 		<center><img width='100%' src="{{url('/img/Following Christ masthead.png/')}}"><h1>Registration</h1></center>
-		<p style="font-size: 150%">We are offering night sessions, 7:00-9:00 pm sessions on Thursdays, March 30 through May 18, 2017. Saturday Retreat will be May 6th, 8:30 am - 4:00 pm.<p/><br/>
+		<p style="font-size: 150%">We are offering night sessions, 7:00-9:00 pm on Thursdays March 30th, April 6th, 20th, 27th, May 4th, 11th & 18th. We will skip April 13th as that is Holy Thursday. The Retreat will be Saturday, May 6th 8:30 am - 4:00 pm.<p/><br/>
 
 		@if($counttuesdays > 150 && $countthursdays >150)
 		<center><h2>We're Sorry, Following Christ Registration is Full!</h2></center><br>
