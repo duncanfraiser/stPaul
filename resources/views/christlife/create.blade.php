@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('content')
+{{-- @section('content')
 <div class="col-md-8 col-md-offset-2">
 		<center><h1>Following Christ Registration</h1></center><br>
 		<h3>
@@ -8,7 +8,7 @@
 		</h3>
 </div>
 
-@stop
+@stop --}}
 
 
 
@@ -19,31 +19,23 @@
 
 
 
-{{-- @section('content')
+@section('content')
 <div class="col-md-8 col-md-offset-2">
-<div class="col-md-12">
-    @if (count($errors))
-    <ul class="err">
-    @foreach($errors->all() as $error)
-    <li class="err">{{$error}}</li>
-    @endforeach
-    </ul>
-    @endif
-</div>
-		<center><h1>Following Christ Registration</h1></center><br>
-		<p>We are offering night sessions, 7:00-9:00 pm sessions on Thursdays, January 12 through February 23, 2017. Saturday Retreat will be February 11,  8:30 am - 4:00 pm.<p/><p>We will offer a daytime session if there are sufficient numbers who cannot attend the night sessions. Please email <span style="color: #337ab7">office@saintpaulcatholicchurch.com</span> if you are interested in a day time session, 10:00 am to 12 noon on those same Thursdays January 12 through February 23, 2017. Same Saturday Retreat on February 11,  8:30 am - 4:00 pm.</p><br/>
+
+		<center><img width='100%' src="{{url('/img/Following Christ masthead.png/')}}"><h1>Registration</h1></center>
+		<p style="font-size: 150%">We are offering night sessions, 7:00-9:00 pm sessions on Thursdays, March 30 through May 18, 2017. Saturday Retreat will be May 6th, 8:30 am - 4:00 pm.<p/><br/>
 
 		@if($counttuesdays > 150 && $countthursdays >150)
 		<center><h2>We're Sorry, Following Christ Registration is Full!</h2></center><br>
 		@else
 
 {{Form::open(['method' => 'POST', 'action' => 'ChristLifeController@store'])}}
-    <div class="checkbox">
+{{--     <div class="checkbox">
     {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I completed the 7-week Discovering Christ Series. I commit to attend all seven evening sessions and the Saturday Retreat.')}}		       
     </div>
+ --}}
 
-
- 	<div class="form-group">
+{{--  	<div class="form-group">
 		{{ Form::label('day', 'Select Session Day:')}}<br />
 		@if($counttuesdays > 150)
 		{{ Form::label('day', 'Tuesday Session is Full')}}<br />
@@ -55,22 +47,38 @@
 		@else
 		{{ Form::radio('day', 'Thursday') }} {{ Form::label('day', 'Thursday')}}<br />
 		@endif
- 	</div>
+ 	</div> --}}
 
 
     
 	<div class="form-group">
 		{{Form::label('firstName', 'Full Name:')}}
+				@if($errors->has('firstName') || $errors->has('lastName') )
+		    	<ul class="err">
+	    		<li class="err">Please Enter Full Name</li>
+				</ul>
+				@endif
 		{{Form::text('firstName', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
-		{{Form::text('lastName', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
+		{{Form::text('lastName', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}	
+
 	</div>
 	<div class="form-group">
 		{{Form::label('age', 'Age:')}}
+				@if($errors->has('age'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Age</li>
+				</ul>
+				@endif
 		{{Form::text('age', null, ['class' => 'form-control'])}}
 	</div>
 
 	 <div class="form-group">
 		{{ Form::label('gender', 'Select Gender:')}}<br />
+				@if($errors->has('gender'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Gender</li>
+				</ul>
+				@endif
     	{{ Form::radio('gender', 'Male') }} {{ Form::label('gender', 'Male')}}<br />
 		{{ Form::radio('gender', 'Female') }} {{ Form::label('gender', 'Female')}}
  	</div>
@@ -80,6 +88,11 @@
 
 	<div class="form-group">
 		{{Form::label('phone', 'Phone Number:')}}
+				@if($errors->has('phone'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Phone Number</li>
+				</ul>
+				@endif		
 		{{Form::text('phone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone Number'])}}
 	</div>
 
@@ -97,9 +110,29 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('street', 'Address:')}}
+				@if($errors->has('street'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Street</li>
+				</ul>
+				@endif		
 		{{Form::text('street', null, ['class' => 'form-control', 'placeholder' => 'Enter Street'])}}
+				@if($errors->has('city'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter City</li>
+				</ul>
+				@endif		
 		{{Form::text('city', null, ['class' => 'form-control', 'placeholder' => 'Enter City'])}}
+				@if($errors->has('state'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter State</li>
+				</ul>
+				@endif		
 		{{Form::text('state', null, ['class' => 'form-control', 'placeholder' => 'Enter State'])}}
+				@if($errors->has('zip'))
+		    	<ul class="err">
+	    		<li class="err">Please Enter Zip Code</li>
+				</ul>
+				@endif		
 		{{Form::text('zip', null, ['class' => 'form-control', 'placeholder' => 'Enter Zip Code'])}}
 	</div>
 
@@ -147,4 +180,4 @@
 {{Form::close()}}
 </div>
 @endif
-@stop --}}
+@stop
