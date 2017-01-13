@@ -6,7 +6,7 @@
 <div class="row">
 <div class="col-md-12">
 <div class="col-md-4">
-	<center><h1>{{$announcement->heading}}</h1></center>
+	<center><a href="{{ url('/announcement/'.$announcement->id)}}"><h1>{{$announcement->heading}}</h1></a></center>
 	<strong>{{$announcement->title}}</strong>
 	@if(\Auth::check())
 	@if(\Auth::user()->isAdmin())
@@ -21,7 +21,7 @@
 	</p>
 </div>
 <div class="col-md-4">
-	<center><h1>{{$masstime->heading}}</h1></center>
+	<center><a href="{{ url('/masstime/'.$masstime->id)}}"><h1>{{$masstime->heading}}</h1></a></center>
 	<strong>{{$masstime->title}}</strong>
 	@if(\Auth::check())
 	@if(\Auth::user()->isAdmin())
@@ -36,7 +36,7 @@
 	</p>
 </div>
 <div class="col-md-4">
-	<center><h1>{{$youth->heading}}</h1></center>
+	<center><a href="{{ url('/youth/'.$youth->id)}}"><h1>{{$youth->heading}}</h1></a></center>
 	<strong>{{$youth->title}}</strong>
 	@if(\Auth::check())
 	@if(\Auth::user()->isAdmin() || \Auth::user()->isYouth())
@@ -56,7 +56,7 @@
 <div class="row">
 <div class="col-md-12">
 <div class="col-md-5 col-md-offset-1">
-	<center><h1>{{$homily->heading}}</h1></center>
+	<center><a href="{{ url('/homily/'.$homily->id)}}"><h1>{{$homily->heading}}</h1></a></center>
 	<strong>{{$homily->title}}</strong>
 	@if(\Auth::check())
 	@if(\Auth::user()->isAdmin())
@@ -73,7 +73,7 @@
 <div class="col-md-5">
 <div class="col-md-12">
 <div class="col-md-6">
-	<center><h1>{{$bulletin->heading}}</h1></center>
+	<center><a href="{{ url('/bulletin/'.$bulletin->id)}}"><h1>{{$bulletin->heading}}</h1></a></center>
 	<strong>{{$bulletin->title}}</strong>
 	@if(\Auth::check())
 	@if(\Auth::user()->isAdmin() || \Auth::user()->isBulletin())
@@ -88,7 +88,7 @@
 	</p>
 </div>
 <div class="col-md-6">
-	<center><h1>{{$ministry->heading}}</h1></center>
+	<center><a href="{{ url('/ministry/'.$ministry->id)}}"><h1>{{$ministry->heading}}</h1></a></center>
 	<strong>{{$ministry->title}}</strong>
 	@if(\Auth::check())
 	@if(\Auth::user()->isAdmin())

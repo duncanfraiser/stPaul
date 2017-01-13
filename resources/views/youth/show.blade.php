@@ -9,7 +9,7 @@
 
 <a target="BLANK" title="Twitter" href="https://twitter.com/st_paul_brandon"><img src="/img/Twitter.png" width="35" height="35" /></a>
 
-<a target="BLANK" title="Remind 101" href="https://www.remind.com/"><img src="/img/1011.png" width="35" height="35" /></a>
+
 
 <a target="BLANK" title="Instagram" href="https://www.instagram.com/st_paul_brandon/"><img src="/img/instagram.png" width="35" height="35" /></a>
 
