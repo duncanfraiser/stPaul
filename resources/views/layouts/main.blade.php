@@ -28,7 +28,14 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+    <!-- jQuery -->
+    <script src="{{asset('js/jquery-2.2.1.min.js')}}"></script>
+ 
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+    @include('includes._froala-js')
 
     @include('includes._froala-css')
     <!--google font ovo-->
@@ -83,7 +90,7 @@
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                         <li><a href="{{url('/flower')}}">Altar Flowers</a></li>
-    {{--                     <li><a href="{{url('/ChristLife/create')}}">Christ Life</a></li> --}}
+                        <li><a href="{{url('/ChristLife/create')}}">Christ Life</a></li>
                         <li><a href="{{url('/education/create')}}">Religious Education</a></li>
                         <li><a href="{{url('/RCIA/create')}}">RCIA</a></li>
                         <li><a href="{{url('/volunteer/create')}}">Volunteer</a></li>
@@ -156,14 +163,7 @@
 
     <!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="{{asset('js/jquery-2.2.1.min.js')}}"></script>
- 
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-
-    @include('includes._froala-js')
 
  
     @yield('scripts')

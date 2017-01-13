@@ -3,7 +3,22 @@
 <div class="col-md-12">
 <div class="col-md-8 col-md-offset-2">
 <center><h1>{{$heading->heading}}</h1></center>
-<center><a  href="Fubar">Fubar</a></center>
+<center>
+
+<a target="BLANK" title="Facebook" href="https://www.facebook.com/groups/314270952253518"><img src="/img/facebook.png" width="35" height="35" /></a>
+
+
+
+<a target="BLANK" title="Twitter" href="https://www.facebook.com/groups/314270952253518"><img src="/img/Twitter.png" width="35" height="35" /></a>
+
+<a target="BLANK" title="Remind 101" href="https://www.remind.com/"><img src="/img/1011.png" width="35" height="35" /></a>
+
+<a target="BLANK" title="Instagram" href="https://www.instagram.com/st_paul_brandon/"><img src="/img/instagram.png" width="35" height="35" /></a>
+
+
+
+
+</center>
 @if(\Auth::check())
 @if(\Auth::user()->isAdmin() || \Auth::user()->isYouth())
 <span class="pull-right">

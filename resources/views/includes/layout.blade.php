@@ -1,18 +1,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>St. Paul</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('css/dfCSS.css') }}?1">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="{{ asset('js/jquery-2.2.1.min.js') }}"></script>
+
+
     <!-- CKEditor -->
     <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
   	<!-- <script src="//cdn.ckeditor.com/4.5.8/standard/ckeditor.js"></script> -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/dfCSS.css') }}?1">
 </head>
 <body>
 <span id="messages">
@@ -39,17 +44,11 @@
 @include('includes.nav')
 <!-- PAGE BODY -->
 <div class="body">
-    <div class="slider">
-    <div class="col-lg-12 nospace">
-    <!-- Yield the slider if there is one -->
-    @yield('slider')
-    </div>
-    </div>
+
     @yield('content')
     <div class="content">
     <div class="col-lg-12 content-blocks">
-    <!-- Yield the content blocks if they exist -->
-    @yield('content-blocks')
+
     </div>
     </div>
 </div>
@@ -61,12 +60,11 @@
     </div>
 </div>
 <!-- SCRIPTS -->
-<!-- Latest compiled and minified JavaScript -->
-<script src="{{ asset('js/jquery-2.2.1.min.js') }}"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<script type="text/javascript">
+<!-- Latest compiled and minified JavaScript -->
+{{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> --}}
+
+{{-- <script type="text/javascript">
 	
 	/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
@@ -188,6 +186,6 @@ $(document).ready(function() {
 })(jQuery);
 
 
-</script>
+</script> --}}
   @yield('scripts')</body>
 </html>

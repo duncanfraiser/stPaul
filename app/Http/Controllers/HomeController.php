@@ -44,7 +44,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $banners = Banner::get();
+        // $banners = Banner::get();
         $announcement = Announcement::latest()->first();
         $masstime = Masstime::latest()->first();
         $bulletin = Bulletin::latest()->first();
@@ -53,6 +53,6 @@ class HomeController extends Controller
         $ministry = Ministry::latest()->first();
 
 
-        return view('home.index', compact('banners', 'announcement', 'masstime', 'bulletin', 'homily', 'youth', 'ministry'));
+        return view('home.index', compact('announcement', 'masstime', 'bulletin', 'homily', 'youth', 'ministry'));
     }
 }
