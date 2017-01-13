@@ -7,9 +7,7 @@
 
 <a target="BLANK" title="Facebook" href="https://www.facebook.com/groups/314270952253518"><img src="/img/facebook.png" width="35" height="35" /></a>
 
-
-
-<a target="BLANK" title="Twitter" href="https://www.facebook.com/groups/314270952253518"><img src="/img/Twitter.png" width="35" height="35" /></a>
+<a target="BLANK" title="Twitter" href="https://twitter.com/st_paul_brandon"><img src="/img/Twitter.png" width="35" height="35" /></a>
 
 <a target="BLANK" title="Remind 101" href="https://www.remind.com/"><img src="/img/1011.png" width="35" height="35" /></a>
 
