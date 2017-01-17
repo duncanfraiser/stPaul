@@ -6,6 +6,7 @@
 <button class=" dropdown-toggle" style="padding: 0px 0px 0px 0px" data-toggle="dropdown">Index Options
 <span class="caret"></span></button>
 <ul class="dropdown-menu">
+<li><a href="{{url('/ChristLife/changes')}}">Change Report</a></li>
 <li><a href="{{url('/ChristLife/')}}">Christ Life Index</a></li>
 <li><a href="{{url('/ChristLife/allergies')}}">Allergies</a></li>
 <li><a href="{{url('/ChristLife/childCare')}}">Child Care</a></li>
