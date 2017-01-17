@@ -14,7 +14,7 @@
 </ul></div></small></h2>
 
 <div class="col-md-5">
-<h2><u>Following Christ Session</u></h3> 
+<h2><u>Christ Life Session</u></h3> 
 <ul>                   
 	@foreach($comments as $comment)
 	

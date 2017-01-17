@@ -33,7 +33,7 @@ Route::get('flower/{id}/thanks', 'FlowerController@thanks');
 
 
 
-
+Route::get('ChristLife/changes', 'ChristLifeController@changes');
 Route::get('/ChristLife/email', 'ChristLifeController@email');
 Route::get('/ChristLife/childCare', 'ChristLifeController@childCare');
 Route::get('/ChristLife/childCareEmail', 'ChristLifeController@childCareEmail');

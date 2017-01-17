@@ -8,6 +8,7 @@ use App\Prayer;
 use App\Suggested_Prayer;
 use App\Divina;
 use App\Contemplative;
+use Carbon\Carbon;
 
 class ChristLifeController extends Controller
 {
@@ -186,6 +187,12 @@ class ChristLifeController extends Controller
     }
 
 
+        public function changes(){
+      
+        $changes = ChristLife::where('updated_at', '>=', Carbon::now()->subDays(7))->orderBy('updated_at', 'desc')->get();
+        
+            return view('christlife.changes', compact('changes'));
+    }
 
 
 }
