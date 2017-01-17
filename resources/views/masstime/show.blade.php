@@ -14,17 +14,6 @@
 <h3>{{$masstime->title}}</h3>
 <p>{!!$masstime->body!!}</p>
 
-<div>
-<h3>{{$heading->heading}} Archive</h3>
-<ul>
-@foreach($archives as $archive)
-@if($archive->id == $masstime->id)
-@else
-<li><a href="{{url('/masstime/'.$archive->id)}}">{{$archive->title}}</button></a></li>
-@endif
-@endforeach
-</ul>
-</div>
 
 </div>
 </div>
