@@ -143,7 +143,7 @@ class VolunteerController extends Controller
 
     public function changes(){
       
-        $changes = Volunteer::where('updated_at', '>=', Carbon::now()->subDays(30))->orderBy('updated_at', 'desc')->get();
-        dd($changes);
+        $changes = Volunteer::where('updated_at', '>=', Carbon::now()->subDays(7))->orderBy('updated_at', 'desc')->get();
+        return view('volunteer.changes', compact('changes'));
     }
 }

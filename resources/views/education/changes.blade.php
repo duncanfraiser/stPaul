@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
 <h1>Religious Education Change Report</h1>
-<p>The following have been added or updated within the past 30 days.</p>
+<p>The following have been added or updated within the past 7 days.</p>
 <h3><u>Family Information Updated</u></h3>
 @foreach($changes as $change)
 	<ul>

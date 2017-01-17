@@ -117,8 +117,8 @@ class EducationController extends Controller
 
         public function changes(){
       
-        $changes = Education::where('updated_at', '>=', Carbon::now()->subDays(30))->orderBy('updated_at', 'desc')->get();
-        $students = Student::where('updated_at', '>=', Carbon::now()->subDays(30))->orderBy('updated_at', 'desc')->get();
+        $changes = Education::where('updated_at', '>=', Carbon::now()->subDays(7))->orderBy('updated_at', 'desc')->get();
+        $students = Student::where('updated_at', '>=', Carbon::now()->subDays(7))->orderBy('updated_at', 'desc')->get();
         
             return view('education.changes', compact('changes', 'students'));
     }

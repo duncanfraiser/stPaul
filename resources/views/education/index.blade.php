@@ -6,10 +6,11 @@
 <button class=" dropdown-toggle" style="padding: 0px 0px 0px 0px" data-toggle="dropdown">Index Options
 <span class="caret"></span></button>
 <ul class="dropdown-menu">
+<li><a href="{{url('/education/changes')}}">Change Report</a></li>
 <li><a href="{{url('/education/grade')}}">Sort by Grade</a></li>
 <li><a href="{{url('/education/familyEmail')}}">Family Email List</a></li>
 <li><a href="{{url('/education/studentEmail')}}">Student Email List</a></li>
-<li><a href="{{url('/education/changes')}}">30 Day Change Report</a></li>
+
 </ul></div></small></h2>
  <div class="col-md-5">                   
 	@foreach($eds as $key=>$ed)
