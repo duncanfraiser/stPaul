@@ -3,7 +3,7 @@
 <div class="col-md-10 col-md-offset-1">
 <h2>Christ Life Transportation</h2>
 
-<h3><u>Following Christ Session</u></h3>
+<h3><u>Christ Life Session</u></h3>
 <p>
 <h3>Need a Ride Email List</h3>
 @foreach($needs as $need)

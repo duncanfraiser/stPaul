@@ -14,7 +14,7 @@
 </ul></div></small></h2>
 
 <div class="col-md-5">
-<h2><u>Following Christ</u></h3>
+<h2><u>Discovering Christ</u></h3>
                     
 	@foreach($christlife as $key=>$cl)
 	{{++$key}}.

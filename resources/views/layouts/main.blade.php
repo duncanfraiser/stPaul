@@ -90,7 +90,7 @@
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                         <li><a href="{{url('/flower')}}">Altar Flowers</a></li>
-                        <li><a href="{{url('/ChristLife/create')}}">Christ Life</a></li>
+                        <li><a href="{{url('/ChristLife/create')}}">Discovering Christ</a></li>
                         <li><a href="{{url('/education/create')}}">Religious Education</a></li>
                         <li><a href="{{url('/RCIA/create')}}">RCIA</a></li>
                         <li><a href="{{url('/volunteer/create')}}">Volunteer</a></li>
@@ -110,7 +110,7 @@
                         <button class=" dropdown-toggle" data-toggle="dropdown">Administration<span class="caret"></span></button>
                         <ul class="dropdown-menu">
                         @if(\Auth::user()->isAdmin() || \Auth::User()->isChristlife())
-                        <li><a href="{{url('/ChristLife/')}}">Christ Life Index</a></li>
+                        <li><a href="{{url('/ChristLife/')}}">Discovering Christ Index</a></li>
                         @endif
                         @if(\Auth::user()->isAdmin() || \Auth::User()->isEducation())
                         <li><a href="{{url('/education/')}}">Religious Ed Index</a></li>

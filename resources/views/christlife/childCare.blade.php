@@ -11,7 +11,7 @@
 <li><a href="{{url('/ChristLife/ride')}}">Transportation</a></li>
 <li><a href="{{url('/ChristLife/comments')}}">Additional Comments</a></li>
 </ul></div></small></h2>
-<h3><u>Following Christ Session</u></h3>
+<h3><u>Christ Life Session</u></h3>
 
 <p>
 @foreach($childCares as $key=>$childCare)

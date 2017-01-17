@@ -10,7 +10,7 @@
     </ul>
     @endif
 </div>
-		<center><h1>Following Christ Registration</h1></center><br>
+		<center><h1>Christ Life Registration</h1></center><br>
 		
 
 {{Form::model($christlife, ['method' => 'PATCH', 'action' => ['ChristLifeController@update', $christlife->id]])}}

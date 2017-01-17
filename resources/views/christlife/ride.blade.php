@@ -15,7 +15,7 @@
 </ul></div></small></h2>
 
 <div class="col-md-6">
-<h3><u>Following Christ Session</u></h3>
+<h3><u>Christ Life Session</u></h3>
 
 <p>
 <h3>Need a Ride</h3>
