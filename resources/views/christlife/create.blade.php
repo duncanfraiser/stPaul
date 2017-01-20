@@ -1,24 +1,4 @@
 @extends('layouts.main')
-
-{{-- @section('content')
-<div class="col-md-8 col-md-offset-2">
-		<center><h1>Following Christ Registration</h1></center><br>
-		<h3>
-			Due to insufficient numbers we will not be holding Following Christ in January 2017. We will contact you when the next one is scheduled after we complete the next Discovering Christ Session.<br/><br/> Thank you.
-		</h3>
-</div>
-
-@stop --}}
-
-
-
-
-
-
-
-
-
-
 @section('content')
 <div class="col-md-8 col-md-offset-2">
 
