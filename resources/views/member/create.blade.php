@@ -153,7 +153,8 @@
 				</ul>
 				@endif
     	{{ Form::radio('stewardship', 'Envelopes') }} {{ Form::label('stewardship', 'Envelopes')}}<br />
-		{{ Form::radio('stewardship', 'Bank Draft') }} {{ Form::label('stewardship', 'Bank Draft')}}
+		{{ Form::radio('stewardship', 'Bank Draft') }} {{ Form::label('stewardship', 'Bank Draft')}}<br/>
+		{{ Form::radio('stewardship', 'Other') }} {{ Form::label('stewardship', 'Other')}}
  		</div>
 
 	<div class="form-group">

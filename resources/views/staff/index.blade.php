@@ -14,7 +14,7 @@
 	Phone: 601-992-9547<br/>
 	Fax: 601-992-9972<br/>
 	Email: <a href="mailto:office@saintpaulcatholicchurch.com">office@saintpaulcatholicchurch.com</a><br/>
-	Address: 5917 Hwy 25, Flowood Ms. 39232
+	Address: 5971 Hwy 25, Flowood Ms. 39232
 	</p>
 	</div>
 	<div class="col-md-6">
