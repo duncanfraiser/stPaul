@@ -18,6 +18,28 @@
   	<!-- <script src="//cdn.ckeditor.com/4.5.8/standard/ckeditor.js"></script> -->
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/dfCSS.css') }}?1">
+        <!-- APPLE IOS WEB APP NECESSITIES -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="St. Paul">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link rel="apple-touch-startup-image" href="/apple-touch-icon.png">
+        <!-- By Default, Links open externally (in safari) on the IOS Web App after 'download'. This prevents internal links from opening externally. It still allows external links to open externally, though. -->
+        <script type="text/javascript">
+            if(("standalone" in window.navigator) && window.navigator.standalone){
+                var noddy, remotes = false;
+                document.addEventListener('click', function(event) {
+                    noddy = event.target;
+                    while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+                    noddy = noddy.parentNode;
+                    }
+                    if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
+                    {
+                    event.preventDefault();
+                    document.location.href = noddy.href;
+                    }
+                },false);
+            }
+        </script>
 </head>
 <body>
 <span id="messages">
