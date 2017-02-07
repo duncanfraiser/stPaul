@@ -1,8 +1,8 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2">
-		<center><img width='100%' src="{{url('/banners/member_header.png/')}}"><h1>
-		<h2>Member Registration</h2></center><br>
+		<img width='100%' src="{{url('/banners/member_header.png/')}}">
+		<center><h2>Member Registration</h2></center>
 		{{Form::open(['method' => 'POST', 'action' => 'MembersController@store'])}}
 		<div class="form-group">
 			{{Form::label('familyName', 'Family Name:')}}

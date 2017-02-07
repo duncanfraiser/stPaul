@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-md-12">
 <div class="col-md-8 col-md-offset-2">
-<center><h1>{{$heading->heading}}</h1></center>
+<img width='100%' src="{{url('/img/announcements.png/')}}">
 @if(\Auth::check())
 @if(\Auth::user()->isAdmin())
 <span class="pull-right">

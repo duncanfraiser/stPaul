@@ -5,6 +5,7 @@ Route::resource('/', 'HomeController');
 // Member Routs
 Route::resource('member', 'MembersController');
 Route::get('member/{member}/thanks', 'MembersController@thanks');
+Route::get('member/{member}/info', 'MembersController@info');
 Route::resource('member/{member}/dependents', 'DependentsController');
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Dependent;
+use App\Member;
 use App\Prayer;
 use App\Suggested_Prayer;
 use App\Divina;
@@ -49,4 +50,11 @@ class DependentsController extends Controller
 
             return redirect('member/'.$dependent->member_id);
     }
+
+    public function show($member, $id){
+        $member=Member::findOrFail($member);
+        $dependent=Dependent::findOrFail($id);
+        return view('dependent.show',compact('member','dependent'));
+    }
+
 }

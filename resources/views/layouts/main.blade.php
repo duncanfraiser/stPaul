@@ -113,6 +113,9 @@
                         @if(\Auth::user()->isAdmin() || \Auth::User()->isChristlife())
                         <li><a href="{{url('/ChristLife/')}}">Discovering Christ Index</a></li>
                         @endif
+                        @if(\Auth::user()->isAdmin())
+                        <li><a href="{{url('/member/')}}">Parish Member Index</a></li>
+                        @endif
                         @if(\Auth::user()->isAdmin() || \Auth::User()->isEducation())
                         <li><a href="{{url('/education/')}}">Religious Ed Index</a></li>
                         @endif

@@ -45,12 +45,17 @@ class MembersController extends Controller
 
 
 	public function index(){
-
-		$member = Member::findOrFail(1);
+        $members=Member::orderBy('familyName','asc')->get();
+		return view('member.index',compact('members'));
 
 	}
 
+    public function info($id){
+        $member=Member::findOrFail($id);
 
+        return view('member.info',compact('member'));
+        
+    }
 
     public function create(){
 

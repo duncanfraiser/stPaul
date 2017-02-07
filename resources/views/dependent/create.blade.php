@@ -2,7 +2,9 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2">
 
-		<center><h2>Dependent Currently Living in Household</h2></center>
+		<img width='100%' src="{{url('/banners/member_header.png/')}}">
+		<center<h2>Dependent Currently Living in Household</h2></center>
+
 	
 	{{Form::open(['method' => 'POST', 'action' => ['DependentsController@store', $id]])}}
 		{{Form::hidden('member_id', $id)}}
