@@ -9,8 +9,7 @@
 <h2><u>Parish Members</u></h2>
                     
 	@foreach($members as $key=>$member)
-	<p>{{++$key}}.
-	<a href="{{url('/member/'.$member->id.'/info')}}">{{$member->familyName}} Family </a><p/><br />
+	{{++$key}}.	<a href="{{url('/member/'.$member->id.'/info')}}">{{$member->familyName}} Family </a><br/>
 	@endforeach
 </div>
 	
