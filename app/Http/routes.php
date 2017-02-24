@@ -30,7 +30,7 @@ Route::get('flower/{id}/altar', 'FlowerController@altar');
 Route::get('flower/{id}/blessedmother', 'FlowerController@blessedmother');
 Route::get('flower/{id}/thanks', 'FlowerController@thanks');
 
-
+Route::resource('reflection', 'ReflectionController');
 
 
 

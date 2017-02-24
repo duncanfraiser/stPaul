@@ -1,4 +1,4 @@
-<html lang="en">
+{{-- <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
   	<!-- <script src="//cdn.ckeditor.com/4.5.8/standard/ckeditor.js"></script> -->
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('css/dfCSS.css') }}?1">
+    <link rel="stylesheet" href="{{ asset('css/dfCSS.css') }}?2">
         <!-- APPLE IOS WEB APP NECESSITIES -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-title" content="St. Paul">
@@ -80,7 +80,7 @@
     <!-- Yield the slider if there is one -->
     <p class="fright">&copy; 2016 St. Paul Catholic Church</p>
     </div>
-</div>
+</div> --}}
 <!-- SCRIPTS -->
 
 <!-- Latest compiled and minified JavaScript -->

@@ -8,45 +8,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-     <link rel="icon" href="{{url('/img/logo.png')}}">
-
+    <link rel="icon" href="{{url('/img/logo.png')}}">
+    <title>St. Paul</title>
    
     {{-- FONT AWESOME --}}
     <script src="https://use.fontawesome.com/80936d74be.js"></script>
-
-    <title>St. Paul</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
-
-
-        {{-- Full Calendar Links --}}
-         <link rel="stylesheet" href="{{ asset('css/fullcalendar.css') }}">
-                  <script src="{{ asset('js/jquery.min.js') }}"></script>
-                           <script src="{{ asset('js/moment.min.js') }}"></script>
-                             <script src="{{ asset('js/fullcalendar.js') }}"></script>
-
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- jQuery -->
-    <script src="{{asset('js/jquery-2.2.1.min.js')}}"></script>
- 
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-
-    @include('includes._froala-js')
-
-    @include('includes._froala-css')
     <!--google font ovo-->
     <link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
-    
-    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?1">
 
-@yield('customStyle')
+
+
+    <!-- Bootstrap Core CSS -->
+{{--     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet"> --}}
+    <!-- jQuery -->
+    <script src="{{asset('js/jquery-2.2.1.min.js')}}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
     
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    {{-- Full Calendar Links --}}
+    <link rel="stylesheet" href="{{ asset('css/fullcalendar.css') }}">
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/moment.min.js') }}"></script>
+    <script src="{{ asset('js/fullcalendar.js') }}"></script>
+
+
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?12">
+
+
+
  
+
+
+
+    @include('includes._froala-js')
+    @include('includes._froala-css')
+    @include('includes._froalaOptions')
+
+    
+
+
+    @yield('customStyle')
+    
+         <!-- APPLE IOS WEB APP NECESSITIES -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="St. Paul">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link rel="apple-touch-startup-image" href="/apple-touch-icon.png">
+        <!-- By Default, Links open externally (in safari) on the IOS Web App after 'download'. This prevents internal links from opening externally. It still allows external links to open externally, though. -->
+        <script type="text/javascript">
+            if(("standalone" in window.navigator) && window.navigator.standalone){
+                var noddy, remotes = false;
+                document.addEventListener('click', function(event) {
+                    noddy = event.target;
+                    while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+                    noddy = noddy.parentNode;
+                    }
+                    if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
+                    {
+                    event.preventDefault();
+                    document.location.href = noddy.href;
+                    }
+                },false);
+            }
+        </script>
 </head>
 
 

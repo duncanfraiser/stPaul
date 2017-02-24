@@ -15,6 +15,7 @@ use App\Prayer;
 use App\Suggested_Prayer;
 use App\Divina;
 use App\Contemplative;
+use App\Reflection;
 
 class HomeController extends Controller
 {
@@ -51,8 +52,9 @@ class HomeController extends Controller
         $homily = Homily::latest()->first();
         $youth = Youth::latest()->first();
         $ministry = Ministry::latest()->first();
+        $reflection = Reflection::latest()->first();
 
 
-        return view('home.index', compact('announcement', 'masstime', 'bulletin', 'homily', 'youth', 'ministry'));
+        return view('home.index', compact('announcement', 'masstime', 'bulletin', 'homily', 'youth', 'ministry', 'reflection'));
     }
 }

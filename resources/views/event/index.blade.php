@@ -62,7 +62,6 @@
             title  : '{{$event->title}}',
             dow: [ {{$event->sunday}},{{$event->monday}},{{$event->tuesday}},{{$event->wednesday}},{{$event->thursday}},{{$event->friday}},{{$event->saturday}}],
             start  : '{{$event->start_time}}',
-
             @else
             title  : '{{$event->title}}',
             start  : '{{$event->start_date}} {{$event->start_time}}',
