@@ -29,7 +29,11 @@ body {
     /* border-bottom:1px solid #333; */
     box-shadow: 0px 2px 10px #999;
 }
-
+      @media only screen and (max-width: 770px) {
+        .navbar-fixed-top{
+    box-shadow: none;
+        }
+      }
 .navbar-fixed-top .nav {
     padding: 12px 0;
     background-color: #fff;
@@ -73,11 +77,7 @@ ul.err {
     }
 }*/
 
-.homediv{
-      box-shadow: 0px 2px 10px #999;
-      margin: 1em 0em;
-      min-height: 25em;
-}
+
 
 .formdiv{
     box-shadow: 0px 2px 10px #999;
@@ -86,12 +86,17 @@ ul.err {
 }
 
 .lintbar{
-      margin: 1em 0em;
+      margin: 1em 0em 0em 0em;
     box-shadow: 0px 2px 10px #999;
     background-color: rgb(108, 62, 123);
     color: #fff;
     padding: 1em;
 }
+      @media only screen and (max-width: 770px) {
+        .lintbar{
+       margin-top: -1.2em;
+        }
+      }
 
 .catbtn{
         background-color: #fff;
@@ -166,3 +171,106 @@ ul.err {
         color: red;
       }
 
+
+/*div {
+  height: 200px;
+  line-height: 200px;
+
+  text-align: center;
+  border: 2px dashed #f69c55;
+}
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}*/
+
+
+.homecol{
+    box-shadow: 0px 2px 10px #999;
+     padding: 0;
+}
+      @media only screen and (max-width: 770px) {
+        .homecol{
+          box-shadow: none;
+          border-style: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+.homediv{
+    padding-top: .5em;
+      margin: 0em 0em 1em 0em;
+      min-height: 22em;
+}
+
+.headdiv{
+
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 3em;
+}
+
+
+.box
+{ 
+    height: 3em;
+    font-size: 36px;
+    color: #FFF;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+      @media only screen and (max-width: 770px) {
+        .mobile{
+          border-style: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+.editbtn{
+    background-color: #fff;
+    color: #BF3D3F;
+    border:1px solid #BF3D3F; 
+    border-radius: 15px;
+    font-size: 14px;
+    float: right;
+    padding: 0px 3px;
+    margin: 0px 1.5px;
+    }
+    .editbtn:hover{
+      color: #fff;
+      background-color: #BF3D3F;
+      border:1px solid #fff; 
+      }
+
+      @media screen and (max-width: 600px) {
+        #slidder {
+          visibility: hidden;
+          clear: both;
+          float: left;
+          margin: 10px auto 5px 20px;
+          width: 28%;
+          display: none;
+        }
+       }
+
+.slidderdiv{
+    padding: 0;
+}
+
+.yo{
+   margin-top: 3em;
+}
+      @media only screen and (max-width: 770px) {
+        .yo{
+       margin-top: 0em;
+        }
+      }

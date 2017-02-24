@@ -31,6 +31,7 @@
 			@endforeach
 		  </div>
 		</div> <!-- Carousel --> --}}
+<div id="slidder" class="col-md-12 slidderdiv">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     <!-- Indicators -->
@@ -45,7 +46,7 @@
     </ol> --}}
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+    <div  class="carousel-inner" role="listbox">
    
       <div class="item active">
         <a href="{{url('/ChristLife/create')}}"><img src="{{url('/banners/lent.png/')}}" alt="St Paul Cathloic Church"></a>
@@ -97,4 +98,5 @@
     </a>
 
     
+</div>
 </div>
