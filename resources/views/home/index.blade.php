@@ -23,7 +23,7 @@
   <div class="col-md-4 mobile" >
     <div class="col-md-12 homecol" >
       <div class="box" style="background-color: #3e95d1">
-        {{$announcement->heading}} 
+        Announcements 
 	  </div>
       <div class="col-md-12 homediv">
 
@@ -33,7 +33,7 @@
 	    <a href="{{ url('/announcement/create/')}}"><button class='editbtn'>New</button></a>	    
 	    @endif
 	    @endif
-	     <h4>{{$announcement->title}}</h4>
+	    <h4>{{$announcement->title}}</h4>
 	    <p>{!!$announcement->excerpt!!}
 	    <a href="{{ url('/announcement/'.$announcement->id)}}"><button class="catbtn">Read More</button></a>
 	    </p>
@@ -45,7 +45,7 @@
   <div class="col-md-4 mobile">
     <div class="col-md-12 homecol" >
       <div class="box" style="background-color: #e8c562">
-        {{$masstime->heading}} 
+        Mass Times 
 	  </div>
       <div class="col-md-12 homediv">
 	    @if(\Auth::check())
@@ -65,7 +65,7 @@
   <div class="col-md-4 mobile">
     <div class="col-md-12 homecol" >
       <div class="box" style="background-color: #bf202f">
-        {{$youth->heading}} 
+        Religious Ed & Youth 
 	  </div>
       <div class="col-md-12 homediv">
 	    @if(\Auth::check())
@@ -90,7 +90,7 @@
   <div class="col-md-5 col-md-offset-1 mobile" >
     <div class="col-md-12 homecol">
       <div class="box" style="background-color: #509543">
-        {{$homily->heading}} 
+        Fr. Gerry's Weekly Homily 
 	  </div>
       <div class="col-md-12 homediv">
 	    @if(\Auth::check())
@@ -111,7 +111,7 @@
     <div class="col-md-12 homecol">
       <div class="col-md-6" style="padding: 0">
         <div class="box" style="background-color: #3e95d1">
-        {{$bulletin->heading}}
+        Bulletins
         </div>
         <div class="col-md-12 homediv">
 
@@ -132,7 +132,7 @@
 
       <div class="col-md-6" style="padding: 0">
         <div class="box" style="background-color: #3e95d1">
-        {{$ministry->heading}}
+        Ministries
         </div>
         <div class="col-md-12 homediv">    
 	      @if(\Auth::check())

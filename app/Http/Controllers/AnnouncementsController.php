@@ -44,7 +44,7 @@ class AnnouncementsController extends Controller
 
     public function show($id){
     	$announcement = Announcement::findOrFail($id);   
-         $archives = Announcement::orderBy('created_at', 'desc')->get();      
+         $archives = Announcement::orderBy('created_at', 'desc')->take(6)->get();
 		return view('announcement.show', compact('announcement', 'archives'));
         }
 

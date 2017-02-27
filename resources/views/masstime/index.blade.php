@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-md-12">
 <div class="col-md-8 col-md-offset-2">
-<center><h1>{{$heading->heading}} Archive</h1></center>
+<center><h1> Archive</h1></center>
 @foreach($masstimes as $masstime)
 <li><a href="{{url('/masstime/'.$masstime->id)}}">{{$masstime->title}}</button></a></li>
 @endforeach

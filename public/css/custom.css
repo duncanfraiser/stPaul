@@ -115,7 +115,6 @@ ul.err {
           color: #fff;
           background-color: #337ab7;
           border:1px solid #fff; 
-
       }
 
 
@@ -134,6 +133,20 @@ ul.err {
           border:1px solid #fff; 
       }
 
+.blackbtn{
+        background-color: #fff;
+        color: #000;
+        border:1px solid #000; 
+        border-radius: 13px;
+        font-size: 14px;
+        padding: .25em 1em;
+        margin-right: .25em;
+      }
+      .blackbtn:hover{
+          color: #fff;
+          background-color: #000;
+          border:1px solid #fff; 
+      }
 
 .redbtn{
         background-color: #fff;

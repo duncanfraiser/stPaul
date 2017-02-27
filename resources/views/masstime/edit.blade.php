@@ -1,36 +1,38 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2"><br />
-{{Form::model($masstime, ['method' => 'PATCH', 'action' => ['MasstimeController@update', $masstime->id]])}}
-	<div class="form-group">
-		{{Form::label('heading', 'Heading:')}}
-		{{Form::text('heading', null, ['class' => 'form-control', 'placeholder' => 'Enter Heading'])}}
-		{{Form::label('title', 'Title:')}}
-		{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Title'])}}
-		{{Form::label('excerpt', 'Excerpt:')}}
-		{{Form::textarea('excerpt', null, ['class' => 'form-control'])}}
-		{{Form::label('body', 'Body:')}}
-		{{Form::textarea('body', null, ['class' => 'form-control'])}}
-	</div>
-	<div class='pull-right'>
-		<div class="form-group">
-		{{Form::submit('Update', ['class' => 'btn btn-primary'])}}
-		{{Form::close()}}		
-		</div>
-	</div>
-	<div class='pull-right'>
-	<a href="{{url('/')}}"><button class="btn btn-secondary">Cancel</button></a>
-	</div>
-    <div class="pull-right">
-       	<div class="form-group">
-        {{Form::open(['method' => 'DELETE', 'route' => ['masstime.destroy', $masstime->id], 'class' => 'delete'])}}
-        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-        {{Form::close()}}
-    	</div>
+<div class="row yo" >
+  <div class="col-md-8 col-md-offset-2 homecol">
+    <div class="box" style="background-color: #e8c562">
+      Edit Mass Time 
     </div>
-</div>
+	<div class="col-md-12 homediv">
+		{{Form::model($masstime, ['method' => 'PATCH', 'action' => ['MasstimeController@update', $masstime->id]])}}
+		<div class="form-group">
+		  {{Form::label('title', 'Title:')}}
+		  {{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Mass Time Title'])}}
+		</div>
+		<div class="form-group">
+		  {{Form::label('excerpt', 'Excerpt:')}}
+		  {{Form::textarea('excerpt', null, ['class' => 'form-control', 'placeholder' => 'Enter Mass Time Excerpt'])}}
+		</div>
+		<div class="form-group">
+		  {{Form::label('body', 'Body:')}}
+		  {{Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Enter Mass Time Body'])}}
+	    </div>
+	    <div class="form-group" style="float: right">
+          {{Form::submit('Update', ['class' => 'bluebtn'])}}
+        </div>
+      {{Form::close()}}
+          <a style='float:right' href="{{url('/')}}"><button class="blackbtn">Cancel</button></a>
+      <div class="form-group" style="float:right">
+        {{Form::open(['method' => 'DELETE', 'route' => ['masstime.destroy', $masstime->id], 'class' => 'delete'])}}
+        {{Form::submit('Delete', ['class' => 'redbtn'])}}
+        {{Form::close()}}
+      </div>
+    </div>
+  </div>	
+</div>	
 @stop
-
 @section('scripts')
 @include('includes._froalaOptions')
 <script>

@@ -49,7 +49,7 @@ class YouthController extends Controller
 
     public function show($id){
     	$youth = Youth::findOrFail($id);
-        $archives = Youth::orderBy('created_at', 'desc')->get();  
+            $archives = Youth::orderBy('created_at', 'desc')->take(6)->get();  
 
 		return view('youth.show', compact('youth', 'archives'));
     }

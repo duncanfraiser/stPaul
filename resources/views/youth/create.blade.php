@@ -1,27 +1,34 @@
+
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2"><br />
-{{Form::open(['method' => 'POST', 'action' => 'YouthController@store'])}}
-	<div class="form-group">
-		{{Form::label('heading', 'Heading:')}}
-		{{Form::text('heading', null, ['class' => 'form-control', 'placeholder' => 'Enter Heading'])}}
-		{{Form::label('title', 'Title:')}}
-		{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Title'])}}
-		{{Form::label('excerpt', 'Excerpt:')}}
-		{{Form::textarea('excerpt', null, ['class' => 'form-control', 'placeholder' => 'Enter Excerpt'])}}
-		{{Form::label('body', 'Body:')}}
-		{{Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Enter Body'])}}
-	</div>
-	<div class='pull-right'>
+<div class="row yo" >
+  <div class="col-md-8 col-md-offset-2 homecol">
+    <div class="box" style="background-color: #bf202f">
+      Create Religious Ed & Youth Announcement 
+    </div>
+	<div class="col-md-12 homediv">
+      {{Form::open(['method' => 'POST', 'action' => 'YouthController@store'])}}
 		<div class="form-group">
-		{{Form::submit('Create Youth List', ['class' => 'btn btn-primary'])}}
-		{{Form::close()}}		
+		  {{Form::label('title', 'Title:')}}
+		  {{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Title'])}}
 		</div>
+		<div class="form-group">
+		  {{Form::label('excerpt', 'Excerpt:')}}
+		  {{Form::textarea('excerpt', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Excerpt'])}}
+		</div>
+		<div class="form-group">
+		  {{Form::label('body', 'Body:')}}
+		  {{Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Body'])}}
+	    </div>
+	    <div class="form-group" style="float:right">
+		  {{Form::submit('Create', ['class' => 'bluebtn'])}}		
+		</div>
+	  {{Form::close()}}	
+    	<a style='float:right' href="{{url('/')}}"><button class="blackbtn">Cancel</button></a>
 	</div>
-	<a href="{{url('/')}}"><button class="pull-right btn btn-secondary">Cancel</button></a>
-</div>		
+  </div>	
+</div>	
 @stop
-
 @section('scripts')
 @include('includes._froalaOptions')
 @stop

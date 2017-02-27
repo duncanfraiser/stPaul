@@ -5,6 +5,7 @@
       toolbarButtons: ['undo', 'redo', 'html', '-', 'fontSize', 'paragraphFormat', 'align', 'quote', '|', 'formatOL', 'formatUL', '|', 'bold', 'italic', 'underline', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable'],
       heightMin: 300,
       imageMove: true,
+      toolbarSticky: false,
       imageUploadParam: 'image',
       imageUploadMethod: 'post',
       // Set the image upload URL.

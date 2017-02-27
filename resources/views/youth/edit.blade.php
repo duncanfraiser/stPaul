@@ -1,34 +1,37 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2"><br />
-{{Form::model($youth, ['method' => 'PATCH', 'action' => ['YouthController@update', $youth->id]])}}
-	<div class="form-group">
-		{{Form::label('heading', 'Heading:')}}
-		{{Form::text('heading', null, ['class' => 'form-control', 'placeholder' => 'Enter Heading'])}}
-		{{Form::label('title', 'Title:')}}
-		{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Title'])}}
-		{{Form::label('excerpt', 'Excerpt:')}}
-		{{Form::textarea('excerpt', null, ['class' => 'form-control', 'placeholder' => 'Enter Excerpt'])}}
-		{{Form::label('body', 'Body:')}}
-		{{Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Enter Body'])}}
-	</div>
- 	<div class='pull-right'>
-		<div class="form-group">
-		{{Form::submit('Update', ['class' => 'btn btn-primary'])}}
-		{{Form::close()}}		
-		</div>
-	</div>
-	<div class='pull-right'>
-	<a href="{{url('/')}}"><button class="btn btn-secondary">Cancel</button></a>
-	</div>
-    <div class="pull-right">
-       	<div class="form-group">
-        {{Form::open(['method' => 'DELETE', 'route' => ['youth.destroy', $youth->id], 'class' => 'delete'])}}
-        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-        {{Form::close()}}
-    	</div>
+<div class="row yo" >
+  <div class="col-md-8 col-md-offset-2 homecol">
+    <div class="box" style="background-color: #bf202f">
+      Edit Religious Ed & Youth Announcement 
     </div>
-</div>
+	<div class="col-md-12 homediv">
+      {{Form::model($youth, ['method' => 'PATCH', 'action' => ['YouthController@update', $youth->id]])}}
+		<div class="form-group">
+		  {{Form::label('title', 'Title:')}}
+		  {{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Title'])}}
+		</div>
+		<div class="form-group">
+		  {{Form::label('excerpt', 'Excerpt:')}}
+		  {{Form::textarea('excerpt', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Excerpt'])}}
+		</div>
+		<div class="form-group">
+		  {{Form::label('body', 'Body:')}}
+		  {{Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Body'])}}
+	    </div>
+	    <div class="form-group" style="float: right">
+          {{Form::submit('Update', ['class' => 'bluebtn'])}}
+        </div>
+      {{Form::close()}}
+          <a style='float:right' href="{{url('/')}}"><button class="blackbtn">Cancel</button></a>
+      <div class="form-group" style="float:right">
+        {{Form::open(['method' => 'DELETE', 'route' => ['announcement.destroy', $youth->id], 'class' => 'delete'])}}
+        {{Form::submit('Delete', ['class' => 'redbtn'])}}
+        {{Form::close()}}
+      </div>
+    </div>
+  </div>	
+</div>	
 @stop
 @section('scripts')
 @include('includes._froalaOptions')

@@ -35,7 +35,7 @@
     <script src="{{ asset('js/fullcalendar.js') }}"></script>
 
 
-    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?26">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?28">
 
 
 
@@ -181,7 +181,7 @@
     </div>
    
     <!-- PAGE FOOTER -->
-<div class="footer pull-right">
+<div class="footer pull-right" style="margin-top: 2em">
     <div class="col-lg-12">
     <!-- Yield the slider if there is one -->
     <p align="right ">Follow us on: 
