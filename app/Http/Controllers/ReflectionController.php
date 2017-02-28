@@ -38,7 +38,7 @@ class ReflectionController extends Controller
      */
     public function index()
     {
-        $reflections = Reflection::paginate(9);
+        $reflections = Reflection::orderBy('created_at', 'desc')->paginate(9);
         return view('reflection.index', compact('reflections'));
     }
 
@@ -91,7 +91,8 @@ class ReflectionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $reflection = Reflection::findOrFail($id);
+        return view('reflection.edit', compact('reflection'));
     }
 
     /**
@@ -103,7 +104,10 @@ class ReflectionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $reflection = Reflection::findOrFail($id);
+        $reflection->fill($request->all());
+        $reflection->save();
+        return redirect('/');
     }
 
     /**
@@ -114,6 +118,8 @@ class ReflectionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $reflection = Reflection::findOrFail($id);
+        $reflection->delete();
+        return redirect('/');
     }
 }

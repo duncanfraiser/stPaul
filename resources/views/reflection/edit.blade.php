@@ -6,7 +6,7 @@
       Create Reflection Video
     </div>
     <div class="col-md-12 homediv">
-    {{Form::open(['method' => 'POST', 'action' => 'ReflectionController@store'])}}
+    {{Form::model($reflection, ['method' => 'PATCH', 'action' => ['ReflectionController@update', $reflection->id]])}}
 	  <div class="form-group">
 	    @if($errors->has('title'))		    	
 	      {{Form::label('title', 'Please Enter Reflection Title:', ['class' => 'errs'])}}<br/>
@@ -24,10 +24,15 @@
 	      {{Form::text('embed', null, ['class' => 'form-control', 'placeholder' => 'Example:   src="https://www.youtube.com/embed/279vLNfhcQo" '])}}
 	  </div>
       <div class="form-group" style="float: right">
-          {{Form::submit('Create', ['class' => 'bluebtn'])}}
+          {{Form::submit('Update', ['class' => 'bluebtn'])}}
         </div>
       {{Form::close()}}
           <a style='float:right' href="{{url('/')}}"><button class="blackbtn">Cancel</button></a>
+      <div class="form-group" style="float:right">
+        {{Form::open(['method' => 'DELETE', 'route' => ['reflection.destroy', $reflection->id], 'class' => 'delete'])}}
+        {{Form::submit('Delete', ['class' => 'redbtn'])}}
+        {{Form::close()}}
+      </div>
     </div>
   </div>
 </div>  

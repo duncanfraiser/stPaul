@@ -9,8 +9,8 @@
 	  @if(\Auth::check())
 	  @if(\Auth::user()->isAdmin())
       <span class="pull-right">
-      <a href="{{ url('/announcement/create/')}}"><button class ='editbtn'>New</button></a>
       <a href="{{ url('/announcement/'.$announcement->id.'/edit/')}}"><button class ='editbtn'>Edit</button></a>
+      <a href="{{ url('/announcement/create/')}}"><button class ='editbtn'>New</button></a>
       </span>
       @endif
       @endif

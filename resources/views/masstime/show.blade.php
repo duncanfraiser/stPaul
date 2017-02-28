@@ -9,8 +9,8 @@
 	  @if(\Auth::check())
 	  @if(\Auth::user()->isAdmin())
       <span class="pull-right">
-      <a href="{{ url('/masstime/create/')}}"><button class ='editbtn'>New</button></a>
       <a href="{{ url('/masstime/'.$masstime->id.'/edit/')}}"><button class ='editbtn'>Edit</button></a>
+      <a href="{{ url('/masstime/create/')}}"><button class ='editbtn'>New</button></a>
       </span>
       @endif
       @endif

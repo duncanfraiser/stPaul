@@ -7,7 +7,8 @@
 	<div class="col-md-12 lintbar">
 		@if(\Auth::check())
 	    @if(\Auth::user()->isAdmin())
-	    <a href="{{ url('/reflection/create/')}}"><button class='editbtn'>New</button></a>	    
+	    <a href="{{ url('/reflection/'.$reflection->id.'/edit/')}}"><button class='editbtn'>Edit</button></a>	    
+	    <a href="{{ url('/reflection/create/')}}"><button class='editbtn'>New</button></a>	   
 	    @endif
 	    @endif
 		<center><h4> "You Got A Minute?" Daily Lenten Video Reflection by: {{$reflection->title}} <a style="margin-left: .5em" href="{{url('reflection/'.$reflection->id)}}"><button class="redwhitebtn">Click Here</button></a></h4></center>
@@ -100,7 +101,7 @@
 	    @endif
 	    @endif
 	    <h4>{{$homily->title}}</h4>
-	    <p>{!!$homily->body!!}
+	    <p>{!!$homily->excerpt!!}
 	    <a href="{{ url('/homily/'.$homily->id)}}"><button class="catbtn">Read More</button></a>
 	    </p>
       </div>
@@ -122,7 +123,7 @@
 	      @endif
 	      @endif
 	      <h4>{{$bulletin->title}}</h4>
-	      <p>{!!$bulletin->body!!}
+	      <p>{!!$bulletin->excerpt!!}
 	      <a href="{{ url('/bulletin/'.$bulletin->id)}}"><button class="catbtn">Read More</button></a>
 	      </p>
         </div>
@@ -143,7 +144,7 @@
 	      @endif
 	      @endif
 	      <h4>{{$ministry->title}}</h4>
-	      <p>{!!$ministry->body!!}
+	      <p>{!!$ministry->excerpt!!}
 	      <a href="{{ url('/ministry/'.$ministry->id)}}"><button class="catbtn">Read More</button></a>
 	      </p>
         </div>

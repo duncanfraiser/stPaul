@@ -9,15 +9,15 @@
 	  @if(\Auth::check())
 	  @if(\Auth::user()->isAdmin())
       <span class="pull-right">
-      <a href="{{ url('/youth/create/')}}"><button class ='editbtn'>New</button></a>
       <a href="{{ url('/youth/'.$youth->id.'/edit/')}}"><button class ='editbtn'>Edit</button></a>
+      <a href="{{ url('/youth/create/')}}"><button class ='editbtn'>New</button></a>
       </span>
       @endif
       @endif
 	  <h3>{{$youth->title}}</h3>
 	  <p>{!!$youth->body!!}</p>
 	  <div style="padding-bottom: 2em">
-		<h3>{{$heading->heading}} Archive</h3>
+		<h3>Religious Ed & Youth Archive</h3>
      	<ul>
 		  @foreach($archives as $archive)
 		  @if($archive->id == $youth->id)
