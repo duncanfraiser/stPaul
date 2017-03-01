@@ -62,14 +62,14 @@
         <a href="{{url('/member/create')}}"><img src="{{url('banners/member.png/')}}" alt="St Paul Cathloic Church"></a>
       </div>
 
-
+{{-- 
       <div class="item">
         <img src="{{url('banners/GreenCrucifix.png/')}}" alt="St Paul Cathloic Church">
       </div>
     
       <div class="item">
         <img src="{{url('banners/St.-Paul-Banners10.png')}}" alt="St Paul Cathloic Church">
-      </div> 
+      </div>  --}}
 
  
 
