@@ -226,7 +226,6 @@ span {
     min-height: 3em;
 }
 
-
 .box
 { 
     height: 3em;
@@ -239,6 +238,28 @@ span {
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
 }
+
+.boxb
+{ 
+    height: 3em;
+    font-size: 36px;
+    color: #FFF;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+      @media only screen and (max-width: 770px) {
+        .boxb{
+            height: 5em;
+          font-size: 20px;
+
+        }
+      }
+
+
 
       @media only screen and (max-width: 770px) {
         .mobile{

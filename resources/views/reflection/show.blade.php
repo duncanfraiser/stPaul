@@ -2,7 +2,7 @@
 @section('content')
 <div class="row yo" >
   <div class="col-md-8 col-md-offset-2 homecol">
-    <div class="box" style="background-color: #6C3E7B">
+    <div class="boxb mobil" style="background-color: #6C3E7B">
       Daily Lenten Video Reflection by: {{$reflection->title}}
     </div>
 	<div class="col-md-12 homediv text-center">
