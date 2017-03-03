@@ -180,6 +180,12 @@ ul.err {
             border:1px solid #BF3D3F; 
       }
 
+      @media only screen and (max-width: 770px) {
+        .redwhitebtn{
+          margin-top: 1em;
+        }
+      }
+
 .errs{
         color: red;
       }
