@@ -70,7 +70,7 @@
 	  </div>
       <div class="col-md-12 homediv">
 	    @if(\Auth::check())
-	    @if(\Auth::user()->isAdmin())
+	    @if(\Auth::user()->isAdmin() || \Auth::user()->isYouth())
 	    <a href="{{ url('/youth/'.$youth->id.'/edit/')}}"><button class="editbtn">Edit</button></a>
 	    <a href="{{ url('/youth/create/')}}"><button class="editbtn">New</button></a>
 	    @endif
