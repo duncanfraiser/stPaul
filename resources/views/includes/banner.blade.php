@@ -49,14 +49,17 @@
     <div  class="carousel-inner" role="listbox">
    
       <div class="item active">
-        <a href="{{url('/ChristLife/create')}}"><img src="{{url('/banners/lent.png/')}}" alt="St Paul Cathloic Church"></a>
+        <a href=""><img src="{{url('/banners/lent.png/')}}" alt="St Paul Cathloic Church"></a>
       </div>
 
 
       <div class="item">
-        <a href="{{url('/ChristLife/create')}}"><img src="{{url('/banners/Discovering-Christ-logoClick.png/')}}" alt="St Paul Cathloic Church"></a>
+        <a href=""><img src="{{url('/banners/lent_crucifix.png/')}}" alt="St Paul Cathloic Church"></a>
       </div>
 
+      <div class="item">
+        <a href="{{url('/ChristLife/create')}}"><img src="{{url('/banners/Discovering-Christ-logoClick.png/')}}" alt="St Paul Cathloic Church"></a>
+      </div>
 
       <div class="item">
         <a href="{{url('/member/create')}}"><img src="{{url('banners/member.png/')}}" alt="St Paul Cathloic Church"></a>

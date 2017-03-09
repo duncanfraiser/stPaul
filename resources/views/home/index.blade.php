@@ -16,8 +16,6 @@
 </div>
 </div>
 
-
-
 <div class="row yo" >
 
 
