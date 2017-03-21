@@ -35,7 +35,7 @@
     <script src="{{ asset('js/fullcalendar.js') }}"></script>
 
 
-    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?34">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?35">
 
 
 
