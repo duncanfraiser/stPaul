@@ -196,7 +196,7 @@
 
     <!-- /.container -->
 
-
+  @yield('scripts')
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(window).load(function() {
@@ -204,7 +204,7 @@ $(window).load(function() {
 })
 </script>
  
-    @yield('scripts')
+  
 
 </body>
 
