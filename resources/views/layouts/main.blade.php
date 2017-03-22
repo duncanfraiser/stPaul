@@ -38,14 +38,6 @@
  
 
 
-
-    @include('includes._froala-js')
-    @include('includes._froala-css')
-    @include('includes._froalaOptions')
-
-    
-
-
     @yield('customStyle')
     
          <!-- APPLE IOS WEB APP NECESSITIES -->
@@ -193,15 +185,6 @@
 </div>
 
 
-@if($_SERVER["REQUEST_URI"]!="/event")
-@yield('scripts')
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(window).load(function() {
-    $(".loader").fadeOut("slow");
-})
-</script>
-@else
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -209,9 +192,12 @@ $(window).load(function() {
     $(".loader").fadeOut("slow");
 })
 </script>
+
 @yield('scripts')
-@endif
-    <!-- /.container -->
+
+
+
+
 
 
 

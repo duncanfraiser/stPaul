@@ -20,5 +20,7 @@
 @stop
 
 @section('scripts')
+@include('includes._froala-js')
+@include('includes._froala-css')
 @include('includes._froalaOptions')
 @stop

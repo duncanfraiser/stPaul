@@ -47,7 +47,7 @@
 
 <!--         {{-- Full Calendar Links --}} -->
         <link rel="stylesheet" href="{{ asset('css/fullcalendar.css') }}">
-        <script src="{{ asset('js/jquery.min.js') }}"></script>
+
         <script src="{{ asset('js/moment.min.js') }}"></script>
         <script src="{{ asset('js/fullcalendar.js') }}"></script>
 
