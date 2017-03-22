@@ -28,11 +28,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    {{-- Full Calendar Links --}}
-    <link rel="stylesheet" href="{{ asset('css/fullcalendar.css') }}">
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/moment.min.js') }}"></script>
-    <script src="{{ asset('js/fullcalendar.js') }}"></script>
+  
 
 
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}?35">
@@ -177,6 +173,8 @@
 
 
 
+ 
+
         @yield('content')
 
     </div>
@@ -194,16 +192,30 @@
     </div>
 </div>
 
-    <!-- /.container -->
 
-  @yield('scripts')
+@if($_SERVER["REQUEST_URI"]!="/event")
+@yield('scripts')
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(window).load(function() {
     $(".loader").fadeOut("slow");
 })
 </script>
- 
+@else
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+})
+</script>
+@yield('scripts')
+@endif
+    <!-- /.container -->
+
+
+
+
   
 
 </body>
