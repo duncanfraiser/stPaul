@@ -1,14 +1,9 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2">
-
-
-	<center><img width='100%' src="{{url('/banners/Discovering-Christ-logo.png/')}}"><h1>Online registration for Discovering Christ is now closed.</h1></center>
-		<p style="font-size: 120%">
-Please contact the Church office @ 601-992-9547 if you are still interested in participating in this ChristLife Series.
-Thank you!</span><p/><br/>
-
-{{-- 		
+		@if(\Auth::check())
+	    @if(\Auth::user()->isAdmin())
+ 		
 		<center><img width='100%' src="{{url('/banners/Discovering-Christ-logo.png/')}}"><h1>Registration</h1></center>
 		<p style="font-size: 120%">We are offering night sessions, 6:30 - 9:00 pm on Thursdays March 30th, April 6th, 20th, 27th, May 4th, 11th & 18th. "We will not meet on April 13th so all may participate in our Holy Thursday Services." The Retreat will be Saturday, May 6th 8:30 am - 4:00 pm.<br/><br/><span style="font-style: italic; font-weight: 5">*This is a repeat of the first ChristLife Series, and is being offered for those who have not yet completed the Discovering Christ Sessions.</span><p/><br/>
 
@@ -155,5 +150,20 @@ Thank you!</span><p/><br/>
 	</div>
 {{Form::close()}}
 </div> 
-@endif--}}
+@endif
+
+
+
+@endif
+@endif
+
+		
+	    @if(\Auth::guest())
+
+	<center><img width='100%' src="{{url('/banners/Discovering-Christ-logo.png/')}}"><h1>Online registration for Discovering Christ is now closed.</h1></center>
+		<p style="font-size: 120%">
+Please contact the Church office @ 601-992-9547 if you are still interested in participating in this ChristLife Series.
+Thank you!</span><p/><br/>
+@endif
+
 @stop
