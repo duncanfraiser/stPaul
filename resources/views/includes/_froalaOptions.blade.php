@@ -19,7 +19,7 @@
       // Set the image upload URL.
       fileUploadURL: '/fileuploads',
       // Set max file size to 50MB.
-      fileMaxSize: 50 * 1024 * 1024,
+      fileMaxSize: 100 * 1024 * 1024,
       
       fileUploadParams: {
       froala: 'true', // This allows us to distinguish between Froala or a regular file upload.
