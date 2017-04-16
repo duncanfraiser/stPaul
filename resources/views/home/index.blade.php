@@ -11,7 +11,7 @@
 	    <a href="{{ url('/reflection/create/')}}"><button class='editbtn'>New</button></a>	   
 	    @endif
 	    @endif
-		<center><h4> "You Got A Minute?" Daily Lenten Video Reflection by: {{$reflection->title}} <a style="margin-left: .5em" href="{{url('reflection/'.$reflection->id)}}"><button class="redwhitebtn">Click Here</button></a></h4></center>
+		<center><h4> "You Got A Minute?" {{-- Daily Lenten Video Reflection by: {{$reflection->title}} --}} <a style="margin-left: .5em" href="{{url('reflection/')}}"><button class="redwhitebtn">Click Here</button></a></h4></center>
 	</div>
 </div>
 </div>
