@@ -18,7 +18,7 @@
       fileUploadMethod: 'post',
       // Set the image upload URL.
       fileUploadURL: '/fileuploads',
-      // Set max file size to 50MB.
+      // Set max file size to 100MB.
       fileMaxSize: 100 * 1024 * 1024,
       
       fileUploadParams: {
