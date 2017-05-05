@@ -98,6 +98,21 @@ ul.err {
         }
       }
 
+
+.followbar{
+      margin: 1em 0em 0em 0em;
+    box-shadow: 0px 2px 10px #999;
+    background-color: rgb(99, 146, 62);
+    color: #fff;
+    padding: 1em;
+}
+      @media only screen and (max-width: 770px) {
+        .followbar{
+       margin-top: -1.2em;
+        }
+      }
+
+
 .catbtn{
         background-color: #fff;
         color: #337ab7;

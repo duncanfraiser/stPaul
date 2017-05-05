@@ -11,7 +11,7 @@
 
 {{Form::open(['method' => 'POST', 'action' => 'ChristLifeController@store'])}}
     <div class="checkbox">
-    {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I commit to attend all seven Tuesday evening sessions and the Saturday Retreat.')}}	
+    {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I have completed the Discovering Christ Sessions, and I commit to attend all seven sessions of Following Christ plus the Saturday Retreat.')}}	
         			@if($errors->has('completed'))
 		    	<ul class="err">
 	    		<li class="err">Please Check Commit Box</li>
