@@ -2,11 +2,17 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2">
 
-		<center><img width='100%' src="{{url('/banners/greenChristLife.png/')}}"><h1>Registration</h1></center>
+
+
+<center><img width='100%' src="{{url('/banners/greenChristLife.png/')}}"><h1>Registration for Following Christ sessions beginning on June 6th has closed.</h1></center>
+
+
+
+{{-- 		<center><img width='100%' src="{{url('/banners/greenChristLife.png/')}}"><h1>Registration</h1></center>
 		<p style="font-size: 120%">We are offering night sessions, 6:30 - 9:00 pm on Tuesdays June 6, 13, 20, 27, July 11, 18, 25 (will not meet July 4) Saturday Retreat July 15 8:30 am - 4:00 pm.<br/><br/><span style="font-style: italic; font-weight: 5">*To Register you must have completed Discovering Christ; seven weekly sessions with an all-day Saturday Retreat.</span><p/><br/>
+--}}
 
-
-
+@if(\Auth::check())
 
 
 {{Form::open(['method' => 'POST', 'action' => 'ChristLifeController@store'])}}
@@ -141,7 +147,11 @@
 	<div class="form-group">
 		{{Form::submit('Sign Up', ['class' => 'btn btn-primary form-control'])}}
 	</div>
-{{Form::close()}}
+{{Form::close()}} 
+
+
+
+@endif
 </div> 
 
 
