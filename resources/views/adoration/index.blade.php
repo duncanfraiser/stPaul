@@ -22,6 +22,17 @@ tr:nth-child(even) {
 
 	width:90%;
 }
+
+   @media (max-width: 764px) {
+        .container {
+	width:100%;
+	padding: 2px;
+        }
+    }
+
+
+
+
 a { cursor: pointer; cursor: hand; }
 </style>
 
@@ -29,13 +40,13 @@ a { cursor: pointer; cursor: hand; }
 
 
 @section('content')
-<div class="col-md-12">
+<div class="col-md-12" style="padding:0px">
 
 	<div class="col-md-10 col-md-offset-1" style="margin-bottom:25px">
 		<h2><center>
 		  <span style="font-size: 90%">Please sign up to make one Holy Hour of Adoration<br/>
-		  during our<br/>
-		  St. Paul “40 Hours of Adoration” June 16-18, 2017.<br/>
+		  in room 107 of the family life center.<br/>
+		  St. Paul “40 Hours of Adoration” June 16-18, 2017<br/>
 		  </span>
 		  <span style="color: #337ab7; font-size: 125%"> Sit with Him, Adore Him, Listen to Him<br/></span>
 		  <span style="font-size: 75%; background-color: yellow">We would like to have 5 people sign up per hour.<br/></span>
@@ -71,7 +82,7 @@ a { cursor: pointer; cursor: hand; }
 	        			  	@endif
 	        		    
 	        		    @else
-	        		      <td><center><a href="{{url('/adoration/'.$add->id.'/edit')}}">Avaliable</a></center></td>
+	        		      <td><center><a href="{{url('/adoration/'.$add->id.'/edit')}}">Available</a></center></td>
 	        		  @endif
 
 
