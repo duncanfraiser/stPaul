@@ -2,28 +2,16 @@
 @section('content')
 @include('includes.banner')
 
-{{-- <div class='row yo'>
-<div class="col-md-12 mobile">
-	<div class="col-md-12 followbar">
-		<center><h4>Following Christ Registration<a style="margin-left: .5em" href="{{url('/ChristLife/create')}}"><button class="redwhitebtn">Click Here</button></a></h4></center>
-	</div>
-</div>
-</div> --}}
-
-
 <div class='row yo'>
 <div class="col-md-12 mobile">
-	<div class="col-md-12 lintbar">
-		@if(\Auth::check())
-	    @if(\Auth::user()->isAdmin())
-	    <a href="{{ url('/reflection/'.$reflection->id.'/edit/')}}"><button class='editbtn'>Edit</button></a>	    
-	    <a href="{{ url('/reflection/create/')}}"><button class='editbtn'>New</button></a>	   
-	    @endif
-	    @endif
-		<center><h4> "You Got A Minute?" {{-- Daily Lenten Video Reflection by: {{$reflection->title}} --}} <a style="margin-left: .5em" href="{{url('reflection/')}}"><button class="redwhitebtn">Click Here</button></a></h4></center>
+	<div class="col-md-12 adbar">
+		<center><h4>40 Hours of Adoration<a style="margin-left: .5em" href="{{url('/adoration')}}"><button class="adbtn">Click Here</button></a></h4></center>
 	</div>
 </div>
 </div>
+
+
+
 
 
 <div class="row yo" >
@@ -163,6 +151,20 @@
 
     </div>
   </div>
+
+  <div class='row yo'>
+<div class="col-md-12 mobile">
+	<div class="col-md-12 lintbar">
+		@if(\Auth::check())
+	    @if(\Auth::user()->isAdmin())
+	    <a href="{{ url('/reflection/'.$reflection->id.'/edit/')}}"><button class='editbtn'>Edit</button></a>	    
+	    <a href="{{ url('/reflection/create/')}}"><button class='editbtn'>New</button></a>	   
+	    @endif
+	    @endif
+		<center><h4> "You Got A Minute?" {{-- Daily Lenten Video Reflection by: {{$reflection->title}} --}} <a style="margin-left: .5em" href="{{url('reflection/')}}"><button class="redwhitebtn">Click Here</button></a></h4></center>
+	</div>
+</div>
+</div>
 
 </div>
 
