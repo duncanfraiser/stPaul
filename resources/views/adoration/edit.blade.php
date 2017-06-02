@@ -4,7 +4,7 @@
 	<div class="col-md-12" style="margin-bottom:25px">
 		<h2><center>
 		  <span style="font-size: 90%">Please sign up to make one Holy Hour of Adoration<br/>
-		  in room 107 of the family life center.<br/>
+		  in room 107 of the Family Life Center.<br/>
 		  St. Paul “40 Hours of Adoration” June 16-18, 2017<br/>
 		  </span>
 		  <span style="color: #337ab7; font-size: 125%"> Sit with Him, Adore Him, Listen to Him<br/></span>
@@ -24,7 +24,9 @@
 	{{Form::text('num', null, ['class' => 'form-control', 'placeholder' => '(###) ###-####'])}}
 </div>
 	<div class="form-group">
-		{{Form::submit('Sign Up', ['class' => 'btn btn-primary form-control'])}}
+		{{Form::submit('Sign Up', ['class' => 'btn btn-primary', 'style'=>'width:50%'])}}
+
+	<a href="{{url('/adoration')}}"><button class="btn btn-secondary" style="width: 49%">Cancel</button></a>
 	</div>
 
 
