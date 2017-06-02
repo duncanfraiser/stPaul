@@ -22,6 +22,7 @@ Route::get('group/{group}/thanks', 'GroupController@thanks');
 
 // Calendar Events Routes
 Route::resource('event', 'EventController');
+Route::resource('adoration', 'AdorationController');
 
 
 // Calendar Flowers Routes

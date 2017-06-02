@@ -108,6 +108,7 @@
                         <ul class="dropdown-menu">
                         <li><a href="{{url('/flower')}}">Altar Flowers</a></li>
                         <li><a href="{{url('/ChristLife/create')}}">Following Christ</a></li>
+                        <li><a href="{{url('/adoration')}}">Holy Hour of Adoration</a></li>
                         <li><a href="{{url('/member/create')}}">Parish Membership</a></li>
                         <li><a href="{{url('/RCIA/create')}}">RCIA</a></li>
                         <li><a href="{{url('/education/create')}}">Religious Education</a></li>                        
