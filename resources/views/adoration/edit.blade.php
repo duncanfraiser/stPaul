@@ -26,7 +26,7 @@
 	<div class="form-group">
 		{{Form::submit('Sign Up', ['class' => 'btn btn-primary', 'style'=>'width:50%'])}}
 
-	<a href="{{url('/adoration')}}"><button class="btn btn-secondary" style="width: 49%">Cancel</button></a>
+	<a href="{{url('/adoration')}}"><button class="btn btn-danger" style="width: 49%">Cancel</button></a>
 	</div>
 
 
