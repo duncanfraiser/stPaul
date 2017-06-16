@@ -19,7 +19,7 @@
 
   <div class="col-md-4 mobile" >
     <div class="col-md-12 homecol" >
-      <div class="box" style="background-color: #3e95d1">
+      <div class="box blueDiv">
         Announcements 
 	  </div>
       <div class="col-md-12 homediv">
@@ -41,7 +41,7 @@
 
   <div class="col-md-4 mobile">
     <div class="col-md-12 homecol" >
-      <div class="box" style="background-color: #e8c562">
+      <div class="box yellowDiv">
         Mass Times 
 	  </div>
       <div class="col-md-12 homediv">
@@ -61,7 +61,7 @@
 
   <div class="col-md-4 mobile">
     <div class="col-md-12 homecol" >
-      <div class="box" style="background-color: #bf202f">
+      <div class="box redDiv" >
         Religious Ed & Youth 
 	  </div>
       <div class="col-md-12 homediv">
@@ -86,7 +86,7 @@
 <div class="row yo">
   <div class="col-md-5 col-md-offset-1 mobile" >
     <div class="col-md-12 homecol">
-      <div class="box" style="background-color: #509543">
+      <div class="box greenDiv">
         Fr. Gerry's Weekly Homily 
 	  </div>
       <div class="col-md-12 homediv">
@@ -107,7 +107,7 @@
   <div class="col-md-5 mobile">
     <div class="col-md-12 homecol">
       <div class="col-md-6" style="padding: 0">
-        <div class="box" style="background-color: #3e95d1">
+        <div class="box blueDiv">
         Bulletins
         </div>
         <div class="col-md-12 homediv">
@@ -128,7 +128,7 @@
 
 
       <div class="col-md-6" style="padding: 0">
-        <div class="box" style="background-color: #3e95d1">
+        <div class="box blueDiv">
         Ministries
         </div>
         <div class="col-md-12 homediv">    

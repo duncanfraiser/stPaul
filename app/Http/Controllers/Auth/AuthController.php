@@ -7,9 +7,14 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use App\Prayer;
+use App\Suggested_Prayer;
+use App\Divina;
+use App\Contemplative;
 
 class AuthController extends Controller
 {
+
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -38,6 +43,17 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+                $prayer = Prayer::latest()->first();                
+        \View::share('prayer', $prayer);
+
+        $suggestedprayer = Suggested_Prayer::latest()->first();                
+        \View::share('suggestedprayer', $suggestedprayer);
+
+        $divina = Divina::latest()->first();                
+        \View::share('divina', $divina);
+
+        $contemplative = Contemplative::latest()->first();                
+        \View::share('contemplative', $contemplative);
     }
 
     /**

@@ -89,6 +89,7 @@ ul.err {
       margin: 1em 0em 0em 0em;
     box-shadow: 0px 2px 10px #999;
     background-color: rgb(108, 62, 123);
+    background-image: url("/img/redox-01.png");
     color: #fff;
     padding: 1em;
 }
@@ -266,6 +267,27 @@ span {
   line-height: normal;
 }*/
 
+.redDiv{  
+  background-color: #bf202f;
+  background-image: url("/img/redox-01.png");
+
+}
+
+.blueDiv{
+  background-image: url("/img/redox-01.png");
+  background-color: #3e95d1;
+}
+
+.yellowDiv{
+  background-image: url("/img/redox-01.png");
+  background-color:#DBB855;
+  /*background-color: #e8c562;*/
+}
+
+.greenDiv{
+  background-image: url("/img/redox-01.png");
+  background-color: #509543;
+}
 
 .homecol{
     box-shadow: 0px 2px 10px #999;
@@ -298,7 +320,8 @@ span {
 { 
     height: 3em;
     font-size: 36px;
-    color: #FFF;
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-align: center;
     padding: 0 20px;
     margin: 0px;
@@ -386,4 +409,55 @@ span {
     height: 100%;
     z-index: 9999;
     background: url('../img/loadlogo4.png') 50% 50% no-repeat rgb(249,249,249);
+}
+
+
+.foots{
+
+    color: #337ab7;
+    box-shadow: 0px -5px 20px -5px #999;
+    margin-top: 2em;
+    padding: 1em;
+/*a
+    position: absolute;
+    bottom: 0px;*/
+    
+}
+  @media only screen and (max-width: 770px) {
+    .foots{
+    
+    
+      }
+}
+
+.footsleft{
+    position: relative;
+}
+
+.footsleft span {
+   position: absolute;
+   bottom: 8px;
+}
+  @media only screen and (max-width: 770px) {
+    .footsleft span{
+   display: none; 
+    
+      }
+}
+.footsright{
+    position: relative;
+}
+.footsright span {
+   position: absolute;
+   bottom: 8px;
+   right:95px;
+}
+  @media only screen and (max-width: 770px) {
+    .footsright span{
+   display: none; 
+    
+      }
+}
+a {
+ cursor: pointer; 
 }

@@ -2,7 +2,7 @@
 @section('content')
 <div class="row yo" >
   <div class="col-md-10 col-md-offset-1 homecol">
-    <div class="box" style="background-color: #6C3E7B">
+    <div class="box lintbar">
       Reflection Video Gallery
     </div>
     <div class="col-md-12 homediv text-center">

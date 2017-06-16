@@ -82,7 +82,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right" style="margin-right: 1px">
                     <li>
                         <a href="{{url('/')}}">Home</a>
                     </li>
@@ -126,7 +126,7 @@
     @if(\Auth::Check())
                     <li>
                         <div class="dropdown">
-                        <button class=" dropdown-toggle" data-toggle="dropdown">Administration<span class="caret"></span></button>
+                        <button class=" dropdown-toggle" data-toggle="dropdown">Hello, {{ Auth::user()->name }}<span class="caret"></span></button>
                         <ul class="dropdown-menu">
                         @if(\Auth::user()->isAdmin() || \Auth::User()->isChristlife())
                         <li><a href="{{url('/ChristLife/')}}">Following Christ Index</a></li>
@@ -143,9 +143,12 @@
                         @if(\Auth::user()->isAdmin() || \Auth::User()->isVolunteer())
                         <li><a href="{{url('/volunteer/')}}">Volunteer Index</a></li>
                         @endif
+                        <li><a href="{{url('logout')}}">Logout</a></li>
                         </ul>
                         </div>
                     </li>
+    @else
+    <li><a href="{{url('/login')}}">Login</a></li>
     @endif
 
 
@@ -170,20 +173,40 @@
 
         @yield('content')
 
+
+
     </div>
-   
-    <!-- PAGE FOOTER -->
-<div class="footer pull-right" style="margin-top: 2em">
-    <div class="col-lg-12">
-    <!-- Yield the slider if there is one -->
-    <p align="right ">Follow us on: 
+    
+
+<div class="col-md-12 foots">
+  <div class="col-md-6 col-xs-6 footsleft">
+    <p align="left">
+        @if(\Auth::check())
+        <a style="cursor: pointer; " href="{{url('/logout')}}"><img src="{{url('img/footLogo.png')}}"></a>
+        @else
+      <a style="cursor: pointer; " href="{{url('/login')}}"><img src="{{url('img/footLogo.png')}}"></a>
+      @endif
+     <span> &copy; <?php echo date("Y"); ?> St. Paul Catholic Church</span></p>
+    </p>  
+  </div>
+
+
+  <div class="col-md-6 col-xs-6 footsright">
+     <p align="right"><span>Follow us on:</span>
               <a target="BLANK" title="Facebook" href="https://www.facebook.com/StPaulCatholicChurch/">
               <img src="/img/facebook.png" width="35" height="35" /></a>
               <a target="BLANK" title="Youtube" href="https://www.youtube.com/channel/UCHG6kYCxd7QY7-n7_FjxIrw">
               <img src="/img/youtube.png" width="35" height="35" /></a>
-    <br/>&copy; 2016 St. Paul Catholic Church</p>
-    </div>
+    </p>
+
+
+  </div>
 </div>
+    <!-- PAGE FOOTER -->
+
+
+
+
 
 
 

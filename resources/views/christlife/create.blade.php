@@ -4,20 +4,21 @@
 
 
 
-<center><img width='100%' src="{{url('/banners/greenChristLife.png/')}}"><h1>Registration for Following Christ sessions beginning on June 6th has closed.</h1></center>
 
 
 
-{{-- 		<center><img width='100%' src="{{url('/banners/greenChristLife.png/')}}"><h1>Registration</h1></center>
-		<p style="font-size: 120%">We are offering night sessions, 6:30 - 9:00 pm on Tuesdays June 6, 13, 20, 27, July 11, 18, 25 (will not meet July 4) Saturday Retreat July 15 8:30 am - 4:00 pm.<br/><br/><span style="font-style: italic; font-weight: 5">*To Register you must have completed Discovering Christ; seven weekly sessions with an all-day Saturday Retreat.</span><p/><br/>
---}}
 
-@if(\Auth::check())
+ 		<center><img width='100%' src="{{url('/banners/sharingChrist.png/')}}"><h1>Registration for Sharing Christ</h1><h3 style="margin-top: 0px">Sessions begin September 7th</h3>
+
+		<p style="font-size: 120%">Six Thursday nights, 7-9 pm on September 7, 14, 21, 28, October 5, 12 <br/>plus, a Saturday Retreat on October 21<br/><br/><span style="font-style: italic; font-weight: 5">* No meal will be served at these Sessions.</span><p/><br/></center>
+
+
+
 
 
 {{Form::open(['method' => 'POST', 'action' => 'ChristLifeController@store'])}}
     <div class="checkbox">
-    {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I have completed the Discovering Christ Sessions, and I commit to attend all seven sessions of Following Christ plus the Saturday Retreat.')}}	
+    {{ Form::checkbox('completed', 'yes', null, ['style' =>'margin-left:0px']) }}{{ Form::label('completed', 'I have completed the Discovering Christ and Following Christ Sessions, and I commit to attend all the Sharing Christ Sessions plus the Saturday Retreat.')}}	
         			@if($errors->has('completed'))
 		    	<ul class="err">
 	    		<li class="err">Please Check Commit Box</li>
@@ -151,7 +152,7 @@
 
 
 
-@endif
+
 </div> 
 
 

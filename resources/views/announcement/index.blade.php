@@ -2,7 +2,7 @@
 @section('content')
 <div class="row yo" >
   <div class="col-md-8 col-md-offset-2 homecol">
-    <div class="box" style="background-color: #3e95d1">
+    <div class="box blueDiv">
       Announcement Archive
     </div>
     <div class="col-md-12 homediv">
