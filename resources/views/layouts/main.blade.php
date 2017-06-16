@@ -129,7 +129,7 @@
                         <button class=" dropdown-toggle" data-toggle="dropdown">Hello, {{ Auth::user()->name }}<span class="caret"></span></button>
                         <ul class="dropdown-menu">
                         @if(\Auth::user()->isAdmin() || \Auth::User()->isChristlife())
-                        <li><a href="{{url('/ChristLife/')}}">Following Christ Index</a></li>
+                        <li><a href="{{url('/ChristLife/')}}">Sharing Christ Index</a></li>
                         @endif
                         @if(\Auth::user()->isAdmin())
                         <li><a href="{{url('/member/')}}">Parish Member Index</a></li>
