@@ -107,7 +107,7 @@
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                         <li><a href="{{url('/flower')}}">Altar Flowers</a></li>
-                        <li><a href="{{url('/ChristLife/create')}}">Following Christ</a></li>
+                        <li><a href="{{url('/ChristLife/create')}}">Sharing Christ</a></li>
                         <li><a href="{{url('/adoration')}}">40 Hours of Adoration</a></li>
                         <li><a href="{{url('/member/create')}}">Parish Membership</a></li>
                         <li><a href="{{url('/RCIA/create')}}">RCIA</a></li>
