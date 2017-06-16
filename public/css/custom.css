@@ -269,17 +269,20 @@ span {
 
 .redDiv{  
   background-color: #bf202f;
-  background-image: url("/img/redox-01.png");
+  background-image: url("/img/nami.png");
 
 }
 
 .blueDiv{
-  background-image: url("/img/redox-01.png");
+  background-image: url("/img/xv.png");
   background-color: #3e95d1;
 }
-
+.blueDiv2{
+  background-image: url("/img/natural-paper.png");
+  background-color: #3e95d1;
+}
 .yellowDiv{
-  background-image: url("/img/redox-01.png");
+  background-image: url("/img/padded.png");
   background-color:#DBB855;
   /*background-color: #e8c562;*/
 }

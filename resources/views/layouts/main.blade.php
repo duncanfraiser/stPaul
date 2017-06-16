@@ -31,7 +31,7 @@
   
 
 
-    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?40">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?41">
 
 
 

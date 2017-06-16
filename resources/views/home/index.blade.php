@@ -107,7 +107,7 @@
   <div class="col-md-5 mobile">
     <div class="col-md-12 homecol">
       <div class="col-md-6" style="padding: 0">
-        <div class="box blueDiv">
+        <div class="box blueDiv2">
         Bulletins
         </div>
         <div class="col-md-12 homediv">
@@ -128,7 +128,7 @@
 
 
       <div class="col-md-6" style="padding: 0">
-        <div class="box blueDiv">
+        <div class="box blueDiv2">
         Ministries
         </div>
         <div class="col-md-12 homediv">    
