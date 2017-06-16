@@ -8,8 +8,14 @@
 	<div class="col-md-12 homediv">
       {{Form::open(['method' => 'POST', 'action' => 'AnnouncementsController@store'])}}
 		<div class="form-group">
+		  @if($errors->has('title'))	
+		  {{Form::label('title', 'Please Enter Title:',['class' => 'errs'])}}
+		  {{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Title'])}}
+		  @else
+
 		  {{Form::label('title', 'Title:')}}
 		  {{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Announcement Title'])}}
+		  @endif
 		</div>
 		<div class="form-group">
 		  {{Form::label('excerpt', 'Excerpt:')}}

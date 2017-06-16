@@ -266,6 +266,10 @@ span {
   vertical-align: middle;
   line-height: normal;
 }*/
+.errs{
+    color: red;
+}
+
 
 .redDiv{  
   background-color: #bf202f;

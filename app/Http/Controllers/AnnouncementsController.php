@@ -35,6 +35,12 @@ class AnnouncementsController extends Controller
         }
 
     public function store(Request $request){
+            
+            $this->validate($request,[
+            'title' => 'required',
+
+        ]);
+
         $announcement = new Announcement;
 		$announcement->fill($request->all());
 		$announcement->save();

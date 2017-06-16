@@ -10,7 +10,7 @@
 
  		<center><img width='100%' src="{{url('/banners/sharingChrist.png/')}}"><h1>Registration for Sharing Christ</h1><h3 style="margin-top: 0px">Sessions begin September 7th</h3>
 
-		<p style="font-size: 120%">Six Thursday nights, 7-9 pm on September 7, 14, 21, 28, October 5, 12 <br/>plus, a Saturday Retreat on October 21<br/><br/><span style="font-style: italic; font-weight: 5">* No meal will be served at these Sessions.</span><p/><br/></center>
+		<p style="font-size: 120%">Six Thursday nights, 7-9 pm on September 7, 14, 21, 28, October 5, 12 <br/>plus, a Saturday Retreat on October 21<br/><br/><span style="font-style: italic; font-weight: 5">* Meals will be served at the Saturday Retreat.</span><p/><br/></center>
 
 
 
