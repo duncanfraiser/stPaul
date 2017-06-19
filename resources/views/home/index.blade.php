@@ -4,12 +4,11 @@
 
 <div class='row yo'>
 <div class="col-md-12 mobile">
-	<div class="col-md-12 adbar">
-		<center><h4>40 Hours of Adoration<a style="margin-left: .5em" href="{{url('/adoration')}}"><button class="adbtn">Click Here</button></a></h4></center>
+	<div class="col-md-12 lintbar">
+		<center><h4>Sharing Christ Registration<a style="margin-left: .5em" href="{{url('/ChristLife/create')}}"><button class="redwhitebtn">Click Here</button></a></h4></center>
 	</div>
 </div>
 </div>
-
 
 
 
