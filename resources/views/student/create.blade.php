@@ -2,7 +2,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br />
-<h1>Student Registration for Religious Education Classes</h1>
+<center><h1>Religious Education Classes<br/>Student Registration</h1></center>
 <div class="col-md-12">
     @if (count($errors))
     <ul class="err">

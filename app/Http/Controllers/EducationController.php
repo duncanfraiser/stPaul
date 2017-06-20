@@ -123,7 +123,16 @@ class EducationController extends Controller
             return view('education.changes', compact('changes', 'students'));
     }
 
+    public function menu(){
+        return view('education.menu');
+    }
 
+    public function addNew(){
+        $fams=Education::orderBy('father_last_name')->get();
+        $total=Education::count();
+        $colTot=$total/2;
 
+        return view('education.addNew', compact('fams', 'colTot'));
+    }
 
 }
