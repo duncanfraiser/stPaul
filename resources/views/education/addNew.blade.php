@@ -1,9 +1,9 @@
 @extends('layouts.main')
 @section('content')
 
-<div class="col-md-8 col-md-offset-2">
-  <h2>Religious Education</h2>
-  <h4>Please Select Family</h4>
+<div class="col-md-8 col-md-offset-2"><br/>
+<img width='100%' src="{{url('/banners/relEd.png/')}}">  
+  <h3 style="margin-left: 1.5em">Please Select Family</h3>
   <div class="col-md-6">
     <ul>
       @foreach($fams as $key=>$fam)

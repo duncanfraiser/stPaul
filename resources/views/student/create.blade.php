@@ -1,8 +1,8 @@
-
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2"><br />
-<center><h1>Religious Education Classes<br/>Student Registration</h1></center>
+<div class="col-md-8 col-md-offset-2"><br/>
+<img width='100%' src="{{url('/banners/relEd.png/')}}"> 
+<center><h1>Student Registration</h1></center>
 <div class="col-md-12">
     @if (count($errors))
     <ul class="err">
