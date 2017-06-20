@@ -1,7 +1,6 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
-
 <img width='100%' src="{{url('/banners/relEd.png/')}}">
 <center><h1>Registration</h1></center>
 

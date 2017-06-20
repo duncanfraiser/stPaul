@@ -1,12 +1,13 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2"><br />
+<div class="col-md-8 col-md-offset-2"><br/>
+<img width='100%' src="{{url('/banners/relEd.png/')}}">
 	<h3> Thank you for registering the following student or students for Religious Education Classes.</h3>
 	<ul>
     @foreach($parent->student as $stud)
     <li><h4>{{$stud->firstName}} {{$stud->middleName}} {{$stud->lastName}}</h4></li>
     @endforeach                      
- 	</ul><br /><br />
+ 	</ul><br/>
 
  	<div><p>
  		Please complete and submit the <a target="blank" href="{{url('/files/Parent Consent, Photo Release, Medical Release Form.pdf')}}">Parental Consent, Photo Release, Medical Release Form</a> for all registered children. (One form per family) and payment before classes begin on September 11. You may place it in a sealed envelope marked "Religious Ed" and drop it in the collection basket at Mass. Thank you! 

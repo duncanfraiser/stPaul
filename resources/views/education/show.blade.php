@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2"><br />
-
+<div class="col-md-8 col-md-offset-2"><br/>
+<img width='100%' src="{{url('/banners/relEd.png/')}}">
 <h3>ELDEST CHILD being registered for Religious Education Classes</h3>
 <div class="col-md-12">
     @if (count($errors))
