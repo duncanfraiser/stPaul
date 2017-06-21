@@ -33,7 +33,7 @@
     </ul>	
   </div>
   <div class="col-md-12">
-  <button class="greenBtn" style="float:right">Back to Menu</button>
+  <a href="{{url('/education/menu')}}"><button class="greenBtn" style="float:right">Back to Menu</button></a>
   </div>
 </div>
 
