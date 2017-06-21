@@ -25,8 +25,8 @@
       <div class="col-md-12 homediv">
 	    @if(\Auth::check())
     	  @if(\Auth::user()->isAdmin())
-	   	    <a href="{{ url('/announcement/'.$announcement->id.'/edit/')}}"><button class='editbtn'>Edit</button></a> 
-	        <a href="{{ url('/announcement/create/')}}"><button class='editbtn'>New</button></a>	    
+	   	    <a href="{{ url('/announcement/'.$announcement->id.'/edit/')}}"><button class='smallRedBtn'>Edit</button></a> 
+	        <a href="{{ url('/announcement/create/')}}"><button class='smallBlueBtn'>New</button></a>	    
 	      @endif
 	    @endif
 	    <h4>{{$announcement->title}}</h4>
@@ -47,8 +47,8 @@
       <div class="col-md-12 homediv">
 	    @if(\Auth::check())
 	      @if(\Auth::user()->isAdmin())
-	        <a href="{{ url('/masstime/'.$masstime->id.'/edit/')}}"><button class="editbtn">Edit</button></a>
-	        <a href="{{ url('/masstime/create/')}}"><button class="editbtn">New</button></a> 
+	        <a href="{{ url('/masstime/'.$masstime->id.'/edit/')}}"><button class="smallRedBtn">Edit</button></a>
+	        <a href="{{ url('/masstime/create/')}}"><button class="smallBlueBtn">New</button></a> 
 	      @endif
 	    @endif
 	    <h4>{{$masstime->title}}</h4>
@@ -68,8 +68,8 @@
       <div class="col-md-12 homediv">
 	    @if(\Auth::check())
 	    @if(\Auth::user()->isAdmin() || \Auth::user()->isYouth())
-	    <a href="{{ url('/youth/'.$youth->id.'/edit/')}}"><button class="editbtn">Edit</button></a>
-	    <a href="{{ url('/youth/create/')}}"><button class="editbtn">New</button></a>
+	    <a href="{{ url('/youth/'.$youth->id.'/edit/')}}"><button class="smallRedBtn">Edit</button></a>
+	    <a href="{{ url('/youth/create/')}}"><button class="smallBlueBtn">New</button></a>
 	    @endif
 	    @endif
 	    <h4>{{$youth->title}}</h4>
@@ -94,8 +94,8 @@
       <div class="col-md-12 homediv">
 	    @if(\Auth::check())
 	      @if(\Auth::user()->isAdmin())
-	        <a href="{{ url('/homily/'.$homily->id.'/edit/')}}"><button class="editbtn">Edit</button></a>
-	        <a href="{{ url('/homily/create/')}}"><button class="editbtn">New</button></a>
+	        <a href="{{ url('/homily/'.$homily->id.'/edit/')}}"><button class="smallRedBtn">Edit</button></a>
+	        <a href="{{ url('/homily/create/')}}"><button class="smallBlueBtn">New</button></a>
 	      @endif
 	    @endif
 	    <h4>{{$homily->title}}</h4>
@@ -116,8 +116,8 @@
         <div class="col-md-12 homediv">
 	      @if(\Auth::check())
     	    @if(\Auth::user()->isAdmin() || \Auth::user()->isBulletin())
-	          <a href="{{ url('/bulletin/'.$bulletin->id.'/edit/')}}"><button class='editbtn'>Edit</button></a>
-	          <a href="{{ url('/bulletin/create/')}}"><button class='editbtn'>New</button></a>
+	          <a href="{{ url('/bulletin/'.$bulletin->id.'/edit/')}}"><button class='smallRedBtn'>Edit</button></a>
+	          <a href="{{ url('/bulletin/create/')}}"><button class='smallBlueBtn'>New</button></a>
 	        @endif
 	      @endif
 	      <h4>{{$bulletin->title}}</h4>
@@ -137,8 +137,8 @@
         <div class="col-md-12 homediv">    
 	      @if(\Auth::check())
 	        @if(\Auth::user()->isAdmin())
-	          <a href="{{ url('/ministry/'.$ministry->id.'/edit/')}}"><button class='editbtn'>Edit</button></a>
-	          <a href="{{ url('/ministry/create/')}}"><button class='editbtn'>New</button></a> 
+	          <a href="{{ url('/ministry/'.$ministry->id.'/edit/')}}"><button class='smallRedBtn'>Edit</button></a>
+	          <a href="{{ url('/ministry/create/')}}"><button class='smallBlueBtn'>New</button></a> 
 	        @endif
 	      @endif
 	      <h4>{{$ministry->title}}</h4>
@@ -162,8 +162,8 @@
 	<div class="col-md-12 lintbar">
 	  @if(\Auth::check())
 	    @if(\Auth::user()->isAdmin())
-	      <a href="{{ url('/reflection/'.$reflection->id.'/edit/')}}"><button class='editbtn'>Edit</button></a>	    
-	      <a href="{{ url('/reflection/create/')}}"><button class='editbtn'>New</button></a>	   
+	      <a href="{{ url('/reflection/'.$reflection->id.'/edit/')}}"><button class='smallRedBtn'>Edit</button></a>	    
+	      <a href="{{ url('/reflection/create/')}}"><button class='smallBlueBtn'>New</button></a>	   
 	    @endif
 	  @endif
 	  <center><span style="font-size: 125%">"You Got A Minute?" </span>

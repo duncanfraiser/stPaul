@@ -540,7 +540,11 @@ padding: 15px;
   margin-bottom: 25px;
 }
 
-
+.homeBtnDiv{
+  position: absolute;
+  bottom: 15px;
+  text-align:center;
+}
 
 
 /*BIG BUTTONS*/
@@ -682,6 +686,8 @@ padding: 15px;
     outline: none;
 }
 
+
+/*RED*/
 .redBtn{
   background-color: #bf202f;
   color: #fff;
@@ -697,6 +703,8 @@ padding: 15px;
     outline: none;
 }
 
+
+/*YELLOW*/
 .yellowBtn{
   background-color: #DBB855;
   color: #fff;
@@ -735,7 +743,7 @@ padding: 15px;
 
 
 
-
+/*GREEN*/
 .smallGreenBtn{
   font-size: 90%;
   background-color: #509543;
@@ -753,21 +761,54 @@ padding: 15px;
 }
 
 
-.homeBtnDiv{
-  position: absolute;
-  bottom: 15px;
-  text-align:center;
+
+/*BLUE*/
+.smallBlueBtn{
+  font-size: 90%;
+  background-color: #3e95d1;
+  color: #fff;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 0px 1px;
+  float: right;
+}
+.smallBlueBtn:hover{
+  background-color: #0076d1;
+  box-shadow: 0px 1px 0px 0px;
+}
+.smallBlueBtn:focus {
+    outline: none;
 }
 
 
+/*RED*/
+.smallRedBtn{
+  font-size: 90%;
+  background-color: #bf202f;
+  color: #fff;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 0px 1px;
+  float: right;
+}
+.smallRedBtn:hover{
+  background-color: #991c22;
+  box-shadow: 0px 1px 0px 0px;
+}
+.smallRedBtn:focus {
+    outline: none;
+}
+
+
+/*BACK BUTTON*/
 
 .backBtn{
 
- border-width: 2px;
+  border-width: 2px;
   border-style: outset;
-     border-color: buttonface;
-        border-image: initial;
-    cursor: pointer;
+  border-color: buttonface;
+  border-image: initial;
+  cursor: pointer;
   background-color: #bf202f;
   color: #fff;
   border-radius: 10px;
