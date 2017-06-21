@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
-<img width='100%' src="{{url('/banners/relEd.png/')}}">
+<img class="banner" src="{{url('/banners/relEd.png/')}}">
 </div>
   <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 text-center">
 	  <div class="row">

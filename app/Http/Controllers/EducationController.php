@@ -40,7 +40,9 @@ class EducationController extends Controller
     public function store(Request $request){
 
             $this->validate($request,[
-                'address' => 'required'
+                // 'father_first_name' => 'required',
+                // 'father_last_name' => 'required',
+                'address' => 'required',
                 ]);
 
 

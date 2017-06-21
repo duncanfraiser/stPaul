@@ -292,8 +292,21 @@ ul.err {
 
 .errs{
         color: red;
-      }
 
+}
+
+.errsInput{
+          color: red;
+   border: 1px solid red;
+
+}      
+.errsInput::placeholder {
+  color: red;
+}
+
+.inputSpace{
+  margin-bottom: 5px;
+}
 
 /*div {
   height: 200px;
@@ -510,9 +523,28 @@ a {
  cursor: pointer; 
 }
 
+
+
+
+
+/*BUTTON DIVS*/
+
+
 .bigBtnDiv{
 padding: 15px;
 }
+
+.rightBtn{
+  float:right;
+  margin-top:25px;
+  margin-bottom: 25px;
+}
+
+
+
+
+/*BIG BUTTONS*/
+
 
 .bigBlueBtn{
   background-color: #3e95d1;
@@ -632,32 +664,132 @@ padding: 15px;
 
 
 
+/*REGULAR SIZE BUTTONS*/
+
+
+.blueBtn{
+  background-color: #3e95d1;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0px;
+}
+.blueBtn:hover{
+  background-color: #0076d1;
+  box-shadow: 0px 1px 0px 0px;
+}
+.blueBtn:focus {
+    outline: none;
+}
+
+.redBtn{
+  background-color: #bf202f;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0px;
+}
+.redBtn:hover{
+  background-color: #991c22;
+  box-shadow: 0px 1px 0px 0px;
+}
+.redBtn:focus {
+    outline: none;
+}
+
+.yellowBtn{
+  background-color: #DBB855;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0px;
+}
+.yellowBtn:hover{
+  background-color: #dba800;
+  box-shadow: 0px 1px 0px 0px;
+}
+.yellowBtn:focus {
+    outline: none;
+}
+
+.greenBtn{
+  background-color: #509543;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0px;
+
+}
+.greenBtn:hover{
+  background-color: #149400;
+  box-shadow: 0px 1px 0px 0px;
+}
+.greenBtn:focus {
+    outline: none;
+}
+
+
+
+/*SMALL BUTTONS*/
 
 
 
 
 
+.smallGreenBtn{
+  font-size: 90%;
+  background-color: #509543;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0px;
+}
+.smallGreenBtn:hover{
+  background-color: #149400;
+  box-shadow: 0px 1px 0px 0px;
+}
+.smallGreenBtn:focus {
+    outline: none;
+}
+
+
+.homeBtnDiv{
+  position: absolute;
+  bottom: 15px;
+  text-align:center;
+}
 
 
 
+.backBtn{
+
+ border-width: 2px;
+  border-style: outset;
+     border-color: buttonface;
+        border-image: initial;
+    cursor: pointer;
+  background-color: #bf202f;
+  color: #fff;
+  border-radius: 10px;
+  padding: 11px;
+  margin: 0px;
+}
+.backBtn:hover{
+    color: #fff;
+     text-decoration:none;
+  background-color: #991c22;
+  box-shadow: 0px 1px 0px 0px;
+}
+.backBtn:focus {
+
+    outline: none;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.banner{
+  box-shadow: 0px 2px 25px #000;
+  width:100%;
+}
 
 
 

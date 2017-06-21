@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
-<img width='100%' src="{{url('/banners/relEd.png/')}}">
+<img class="banner" src="{{url('/banners/relEd.png/')}}">
 <center><h1>Registration</h1></center>
 
 <p>Complete the Registration form (below) for children to be enrolled in the St. Paul Religious Education Program, ages 3 years through 12th Grade. This form is to be completed and submitted online.</p>
@@ -15,31 +15,34 @@
 </ul></p>
 
 <h3>Registration Form</h3>
-<div class="col-md-12">
-    @if (count($errors))
-    <ul class="err">
-    @foreach($errors->all() as $error)
-    <li class="err">{{$error}}</li>
-    @endforeach
-    </ul>
-    @endif
-</div>
+
 {{Form::open(['method' => 'POST', 'action' => 'EducationController@store'])}}
-	<div class="form-group">
-		{{Form::label('father_first_name', 'Father&rsquo;s Full Name:')}}<br>
-		{{Form::text('father_first_name', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
-		{{Form::text('father_middle_name', null, ['class' => 'form-control', 'placeholder' => 'Enter Middle Name'])}}
-		{{Form::text('father_last_name', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
+
+ 	  <div class="form-group">
+{{--         @if($errors->has('father_first_name') || $errors->has('father_last_name'))
+          {{Form::label('father_first_name', 'Father&rsquo;s Full Name:', ['class' => 'errs'])}}
+		  {{Form::text('father_first_name', null, ['class' => 'form-control errsInput inputSpace', 'placeholder' => 'Enter First Name'])}}
+		  {{Form::text('father_middle_name', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Middle Name'])}}
+		  {{Form::text('father_last_name', null, ['class' => 'form-control errsInput inputSpace', 'placeholder' => 'Enter Last Name'])}}
+		@else --}}
+		  {{Form::label('father_first_name', 'Father&rsquo;s Full Name:')}}<br>
+		  {{Form::text('father_first_name', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter First Name'])}}
+		  {{Form::text('father_middle_name', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Middle Name'])}}
+		  {{Form::text('father_last_name', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Last Name'])}}
+{{-- 		@endif --}}	
 	</div>
+
+
+
 	<div class="form-group">
 		{{Form::label('father_dob', 'Father&rsquo;s Date of Birth:')}}<br>
 		{{Form::text('father_dob', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('mother_first_name', 'Mother&rsquo;s Full Name:')}}<br>
-		{{Form::text('mother_first_name', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
-		{{Form::text('mother_middle_name', null, ['class' => 'form-control', 'placeholder' => 'Enter Middle Name'])}}
-		{{Form::text('mother_last_name', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
+		{{Form::text('mother_first_name', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter First Name'])}}
+		{{Form::text('mother_middle_name', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Middle Name'])}}
+		{{Form::text('mother_last_name', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Last Name'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('mother_dob', 'Mother&rsquo;s Date of Birth:')}}<br>
@@ -53,13 +56,21 @@
 		{{Form::label('reside_with', 'Child(ren) reside with:') }}
         {{Form::select('reside_with', [NULL => 'Please Select' ,'Both' => 'Both', 'Mother' => 'Mother', 'Father' => 'Father', 'Other' => 'Other'])}}
     </div>
-        <br /><h3>Family Information</h3>
+    <br/><h3>Family Information</h3>
     <div class="form-group">
-		{{Form::label('address', 'Home Address:')}}
-		{{Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Enter Street Address'])}}
-		{{Form::text('city', null, ['class' => 'form-control', 'placeholder' => 'Enter City'])}}
-		{{Form::text('state', null, ['class' => 'form-control', 'placeholder' => 'Enter State'])}}
-		{{Form::text('zip', null, ['class' => 'form-control', 'placeholder' => 'Enter Zip'])}}
+        @if($errors->has('address'))
+          {{Form::label('address', 'Home Address:', ['class' => 'errs'])}}
+          {{Form::text('address', null, ['class' => 'form-control errsInput inputSpace', 'placeholder' => 'Enter Street Address' ])}}
+		  {{Form::text('city', null, ['class' => 'form-control errsInput inputSpace', 'placeholder' => 'Enter City'])}}
+		  {{Form::text('state', null, ['class' => 'form-control errsInput inputSpace', 'placeholder' => 'Enter State'])}}
+		  {{Form::text('zip', null, ['class' => 'form-control errsInput inputSpace', 'placeholder' => 'Enter Zip'])}}
+		@else
+		  {{Form::label('address', 'Home Address:')}}
+		  {{Form::text('address', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Street Address' ])}}
+		  {{Form::text('city', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter City'])}}
+		  {{Form::text('state', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter State'])}}
+		  {{Form::text('zip', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Zip'])}}
+		@endif	
 	</div>
     <div class="form-group">
 		{{Form::label('phone', 'Home Phone:')}}
@@ -115,9 +126,11 @@
 		{{Form::label('contact_two_phone', 'Phone:')}}<br>
 		{{Form::text('contact_two_phone', null, ['class' => 'form-control', 'placeholder' => '(###) ###-#####'])}}
 	</div>
-	<div class="form-group">
-		{{Form::submit('Continue With Student Information' , ['class' => 'btn btn-primary form-control'])}}
+	<div class="rightBtn">
+		<a class="backBtn" href="{{URL::previous()}}">Cancel</a>
+		{{Form::submit('Continue With Student Information' , ['class' => 'blueBtn'])}}
 	</div>
+{{Form::close()}}
 
 </div>	
 @stop

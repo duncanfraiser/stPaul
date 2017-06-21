@@ -8,11 +8,10 @@
 		{{Form::label('info', 'Please enter updated information:')}}<br>
 		{{Form::textarea('info', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Information'])}}
 	</div>
-	<div class='pull-right'>
-		<div class="form-group">
-		{{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
-		{{Form::close()}}		
-		</div>
+	<div class="rightBtn">
+		<a class="backBtn" href="{{URL::previous()}}">Cancel</a>
+		{{Form::submit('Submit' , ['class' => 'blueBtn'])}}
 	</div>
+{{Form::close()}}
 </div>
 @stop

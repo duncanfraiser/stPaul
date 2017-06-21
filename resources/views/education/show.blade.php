@@ -1,25 +1,26 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
-<img width='100%' src="{{url('/banners/relEd.png/')}}">
+<img class="banner" src="{{url('/banners/relEd.png/')}}">
 <h3>ELDEST CHILD being registered for Religious Education Classes</h3>
-<div class="col-md-12">
-    @if (count($errors))
-    <ul class="err">
-    @foreach($errors->all() as $error)
-    <li class="err">{{$error}}</li>
-    @endforeach
-    </ul>
-    @endif
-</div>
+
 {{Form::open(['method' => 'POST', 'action' => ['StudentController@store', Request::route()->education]])}}
-	<div class="form-group">
-		{{Form::hidden('education_id', Request::route()->education)}}
-		{{Form::label('firstName', 'Full Name:')}}
-		{{Form::text('firstName', null, ['class' => 'form-control', 'placeholder' => 'First Name'])}}
-		{{Form::text('middleName', null, ['class' => 'form-control', 'placeholder' => 'Middle Name'])}}
-		{{Form::text('lastName', null, ['class' => 'form-control', 'placeholder' => 'Last Name'])}}
+	{{Form::hidden('education_id', Request::route()->education)}}
+ 	<div class="form-group">
+        @if($errors->has('firstName') || $errors->has('lastName'))
+          {{Form::label('firstName', 'Full Name:', ['class' => 'errs'])}}
+		  {{Form::text('firstName', null, ['class' => 'form-control errsInput inputSpace', 'placeholder' => 'Enter First Name'])}}
+		  {{Form::text('middleName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Middle Name'])}}
+		  {{Form::text('lastName', null, ['class' => 'form-control errsInput inputSpace', 'placeholder' => 'Enter Last Name'])}}
+		@else
+		  {{Form::label('firstName', 'Full Name:')}}<br>
+		  {{Form::text('firstName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter First Name'])}}
+		  {{Form::text('middleName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Middle Name'])}}
+		  {{Form::text('lastName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Last Name'])}}
+		@endif	
 	</div>
+
+
 	<div class="form-group">
 		{{Form::label('dob', 'Date of Birth:')}}<br>
 		{{Form::text('dob', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
@@ -77,13 +78,11 @@
 		{{Form::textarea('needs', null, ['class' => 'form-control', 'placeholder' => 'Enter Special Needs/Allergies'])}}
 	</div>
 
-	<div class='pull-right'>
-		<div class="form-group">
-		{{Form::submit('Enter', ['class' => 'btn btn-primary'])}}
-		{{Form::close()}}		
-		</div>
+	<div class="rightBtn">
+		<a class="backBtn" href="{{url('/education/menu')}}">Cancel</a>
+		{{Form::submit('Submit' , ['class' => 'blueBtn'])}}
 	</div>
-	<a href="{{url('/')}}"><button class="pull-right btn btn-secondary">Cancel</button></a>
+{{Form::close()}}
 </div>
 
 @stop
