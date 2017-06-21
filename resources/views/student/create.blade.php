@@ -78,7 +78,8 @@
 		<a class="backBtn" href="{{URL::previous()}}">Cancel</a>
 		{{Form::submit('Submit' , ['class' => 'blueBtn'])}}
 	</div>
-{{Form::close()}}		
+{{Form::close()}}	
+</div>	
 @stop
 
 @section('scripts')

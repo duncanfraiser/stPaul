@@ -127,7 +127,7 @@
 		{{Form::text('contact_two_phone', null, ['class' => 'form-control', 'placeholder' => '(###) ###-#####'])}}
 	</div>
 	<div class="rightBtn">
-		<a class="backBtn" href="{{URL::previous()}}">Cancel</a>
+		<p><a class="backBtn" href="{{URL::previous()}}">Cancel</a></p>
 		{{Form::submit('Continue With Student Information' , ['class' => 'blueBtn'])}}
 	</div>
 {{Form::close()}}

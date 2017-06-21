@@ -32,5 +32,9 @@
       @endforeach
     </ul>	
   </div>
+  <div class="col-md-12">
+  <button class="greenBtn" style="float:right">Back to Menu</button>
+  </div>
 </div>
+
 @stop
