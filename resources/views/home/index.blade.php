@@ -167,7 +167,7 @@
 	    @endif
 	  @endif
 	  <center><span style="font-size: 125%">"You Got A Minute?" </span>
-	  <a href="{{url('reflection/')}}"><button class="greenBtn">Click Here</button></a></center>
+	  <a href="{{url('reflection/')}}"><button class="yellowBtn">Click Here</button></a></center>
 	</div>
   </div>
 </div>
