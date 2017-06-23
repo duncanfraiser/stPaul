@@ -104,17 +104,17 @@
 	</div>
 <div class='pull-right'>
 		<div class="form-group">
-		{{Form::submit('Update', ['class' => 'btn btn-primary'])}}
+		{{Form::submit('Update', ['class' => 'blueBtn'])}}
 		{{Form::close()}}		
 		</div>
 	</div>
 	<div class='pull-right'>
-	<a href="{{url('/education')}}"><button class="btn btn-secondary">Cancel</button></a>
+	<a href="{{url('/education')}}"><button class="greenBtn">Cancel</button></a>
 	</div>
     <div class="pull-right">
     {{Form::close()}}
         {{Form::open(['method' => 'DELETE', 'route' => ['education.destroy', $education->id], 'class' => 'delete'])}}
-        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+        {{Form::submit('Delete', ['class' => 'redBtn'])}}
         {{Form::close()}}
 </div>
       
@@ -122,7 +122,7 @@
     
 
 <div>
-		 <a href="{{url('/education/'.Request::route()->education.'/student/create')}}"><button class=" btn btn-primary">Register Additional Student</button></a>
+		 <a href="{{url('/education/'.Request::route()->education.'/student/create')}}"><button class="yellowBtn">Register Additional Student</button></a>
 </div>
 </div>
 

@@ -298,8 +298,11 @@ ul.err {
 .errsInput{
           color: red;
    border: 1px solid red;
-
 }      
+
+
+
+
 .errsInput::placeholder {
   color: red;
 }
@@ -849,6 +852,65 @@ padding: 15px;
 
 
 
+/*Table Styles*/
+
+table {
+  box-shadow: 10px 10px 5px #888888;
+  width: 100%;
+  table-layout:fixed;
+}
+
+td, th {
+    border: 1px solid #000;
+    text-align: left;
+    padding: 8px;
+
+}
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.thHead{
+  color: #000;
+      background-color:  #fff;
+      font-size: 125%;
+      font-weight: 900;
+}
+
+
+.thBlue{
+  background-color:#3e95d1;
+  color: #fff;
+  font-size: 125%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.thYellow{
+  background-color:#DBB855;
+  color: #fff;
+  font-size: 125%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.thGreen{
+  background-color:#509543;
+  color: #fff;
+  font-size: 125%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
 
 
+.thRed{
+  background-color:#bf202f; 
+  color: #fff;
+  font-size: 125%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.tdBlue{
+  color: #337ab7;
+}
+
+.tdCash{
+  color: green;
+}

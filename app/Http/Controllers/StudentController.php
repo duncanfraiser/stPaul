@@ -30,6 +30,7 @@ class StudentController extends Controller
     }
 
     public function create(){
+
         return view('student.create');
         }
 
@@ -38,8 +39,23 @@ class StudentController extends Controller
             $this->validate($request,[
                 'firstName' => 'required',
                 'lastName' => 'required',
-                ]);
+                'dob' => 'required',
+                'gender' => 'required',
+                'age' => 'required',
+                'grade' => 'required',
+                'school' => 'required',
+                'Date_of_Baptism' => 'required',
+                'Baptism_Church' => 'required',
+                'Church_Address' => 'required',
+                'Communion_Church' => 'required',
+                'Communion' => 'required',
+                'Confirmation' => 'required',
+                'Confirmation_Church' => 'required',
+                'email' => 'required',
+                'cell' => 'required',
+                'needs' => 'required',
 
+                ]);
 
 
         $student = new Student;
@@ -60,7 +76,8 @@ class StudentController extends Controller
         }
 
     public function update($familyId, $studentId, Request $request){
-         
+
+
 		$input = $request->all();
     	$student = Student::findOrFail($studentId);
     	$student->fill($request->all());

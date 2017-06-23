@@ -1,32 +1,91 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2">
-<h2>{{$student->firstName}} {{$student->middleName}} {{$student->lastName}} <small><a style="color:xred" href="{{url('/education/'.$student->education_id.'/student/'.$student->id.'/edit')}}">edit|delete</a></small></h2>
+<div class="col-md-8 col-md-offset-2" style="margin-top: 50px">
 
 
-<ul>
-<li>Date of Birth: <span style="color:#337ab7">{{$student->dob}}</span></li>
-<li>Age: <span style="color:#337ab7">{{$student->age}}</span></li>
-<li>Grade: <span style="color:#337ab7">{{$student->grade}}</span></li>
-<li>School: <span style="color:#337ab7">{{$student->school}}</span></li>
-<li>Date of Baptism: <span style="color:#337ab7">{{$student->Date_of_Baptism}}</span></li>
-<li>Church Name: <span style="color:#337ab7">{{$student->Baptism_Church}}</span></li>
-<li>Church Mailing Address: <span style="color:#337ab7">{{$student->Church_Address}}</span></li>
-<li>Date of First Holy Communion: <span style="color:#337ab7">{{$student->Communion}}</span></li>
-<li>Church Name: <span style="color:#337ab7">{{$student->Communion_Church}}</span></li>
-<li>Date of Confirmation: <span style="color:#337ab7">{{$student->Communion_Confirmation}}</span></li>
-<li>Church Name: <span style="color:#337ab7">{{$student->Confirmation_Church}}</span></li>
-<li>Child's Email: <span style="color:#337ab7">{{$student->email}}</span></li>
-<li>Cell Phone: <span style="color:#337ab7">{{$student->cell}}</span></li>
-<li>Special Needs: <span style="color:#337ab7">{{$student->needs}}</span></li>
+<table>
+    <tr>
+      <th class="thHead" colspan="2"><center><h2>{{$student->firstName}} {{$student->middleName}} {{$student->lastName}}</h2></center></th>
+    </tr>
+    <tr>
+      <th class="thBlue" colspan="2"><center>General Infromation</center></hd>
+    </tr>
+    <tr>
+      <td>Date of Birth:</td>
+      <td class="tdBlue">{{$student->dob}}</td>
+    </tr>
+	<tr>
+		<td>Gender:</td>
+		<td class="tdBlue">{{$student->gender}}</td>
+	</tr>
+	<tr>
+		<td>Age:</td>
+		<td class="tdBlue">{{$student->age}}</td>
+	</tr>	
+	<tr>
+		<td>Grade:</td>
+		<td class="tdBlue">{{$student->grade}}</td>
+	</tr>
+	<tr>
+		<td>School:</td>
+		<td class="tdBlue">{{$student->school}}</td>
+	</tr>
+	<tr>
+		<td>Child's Email:</td>
+		<td class="tdBlue">{{$student->email}}</td>
+	</tr>
+	<tr>
+		<td>Cell Phone:</td>
+		<td class="tdBlue">{{$student->cell}}</td>
+	</tr>
+	<tr>
+		<td>Special Needs:</td>
+		<td class="tdBlue">{{$student->needs}}</td>
+	</tr>
+    <tr>
+      <th class="thYellow" colspan="2"><center>Baptism Infromation</center></hd>
+    </tr>
+	<tr>
+		<td>Date of Baptism:</td>
+		<td class="tdBlue">{{$student->Date_of_Baptism}}</td>
+	</tr>
+	<tr>
+		<td>hurch Name:</td>
+		<td class="tdBlue">{{$student->Baptism_Church}}</td>
+	</tr>	
+	<tr>
+		<td>Church Mailing Address:</td>
+		<td class="tdBlue">{{$student->Church_Address}}</td>
+	</tr>
+    <tr>
+      <th class="thRed" colspan="2"><center>Communion Infromation</center></hd>
+    </tr>	
+	<tr>
+		<td>Date of First Holy Communion:</td>
+		<td class="tdBlue">{{$student->Communion}}</td>
+	</tr>	
+	<tr>
+		<td>Church Name:</td>
+		<td class="tdBlue">{{$student->Communion_Church}}</td>
+	</tr>
+    <tr>
+      <th class="thGreen" colspan="2"><center>Confirmation Infromation</center></hd>
+    </tr>
+	<tr>
+		<td>Date of Confirmation:</td>
+		<td class="tdBlue">{{$student->Confirmation}}</td>
+	</tr>
+	<tr>
+		<td>Church Name:</td>
+		<td class="tdBlue">{{$student->Confirmation_Church}}</td>
+	</tr>
+</table>
 
 
 
-</ul>
-
-
-<div class='pull-right'>
-<a href="{{URL::previous()}}"><button class="btn btn-primary">Back</button></a>
+<div class='rightBtn'>
+ <a style="color:xred" href="{{url('/education/'.$student->education_id.'/student/'.$student->id.'/edit')}}"><button class="redBtn">edit|delete</button></a>
+<a href="{{URL::previous()}}"><button class="blueBtn">Back</button></a>
 </div>
 </div>
 @stop

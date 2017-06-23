@@ -9,7 +9,7 @@
     @endforeach                      
  	</ul>
  	<div>
- 	  <p>Please complete and submit the <a target="blank" href="{{url('/files/Parent Consent, Photo Release, Medical Release Form.pdf')}}">Parental Consent, Photo Release, Medical Release Form</a> for all registered children. (One form per family) and payment before classes begin on September 11. You may place it in a sealed envelope marked "Religious Ed" and drop it in the collection basket at Mass. Thank you!</p> 		
+ 	  <p>Please complete and submit the <a target="blank" href="{{url('/files/photoReleaseForm.docx')}}">Parental Consent, Photo Release, Medical Release Form</a> for all registered children. (One form per family) and payment before classes begin on September 11. You may place it in a sealed envelope marked "Religious Ed" and drop it in the collection basket at Mass. Thank you!</p> 		
  	</div>
 	<div class="rightBtn">
 	      <p><a href="{{url('/education/menu')}}"><button class="redBtn">Return To Menu</button></a></p>
