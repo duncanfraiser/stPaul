@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2" style="margin-top: 50px">
+<div class="col-md-10 col-md-offset-1" style="margin-top: 50px">
   <h2>Religious Education Registration Index
   <small><div class="dropdown" style="padding: 0px 0px 10px 0px">
   <button class=" dropdown-toggle" style="padding: 0px 0px 0px 0px" data-toggle="dropdown">Index Options
