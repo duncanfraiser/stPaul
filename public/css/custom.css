@@ -914,3 +914,12 @@ tr:nth-child(even) {
 .tdCash{
   color: green;
 }
+
+.tdRed{
+  color: red;
+}
+
+.tdBlack{
+  color: #000;
+}
+
