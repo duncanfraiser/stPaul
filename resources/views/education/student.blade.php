@@ -50,7 +50,7 @@
 		<td class="tdBlue">{{$student->Date_of_Baptism}}</td>
 	</tr>
 	<tr>
-		<td>hurch Name:</td>
+		<td>Church Name:</td>
 		<td class="tdBlue">{{$student->Baptism_Church}}</td>
 	</tr>	
 	<tr>
