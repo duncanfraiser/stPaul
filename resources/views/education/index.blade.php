@@ -1,23 +1,17 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-10 col-md-offset-1" style="margin-top: 50px">
-  <h2>Religious Education Registration Index
-  <small><div class="dropdown" style="padding: 0px 0px 10px 0px">
-  <button class=" dropdown-toggle" style="padding: 0px 0px 0px 0px" data-toggle="dropdown">Index Options
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="{{url('/education/changes')}}">Change Report</a></li>
-    <li><a href="{{url('/education/grade')}}">Sort by Grade</a></li>
-    <li><a href="{{url('/education/familyEmail')}}">Family Email List</a></li>
-    <li><a href="{{url('/education/studentEmail')}}">Student Email List</a></li>
- </ul></div></small></h2>
-
-
 <table>
+  <tr>
+    <th class="thHead" colspan="3">
+      <h2>Religious Education Sort By Family</h2>
+      @include('includes.educationIndex')
+    </th>
+</tr>	
 	<tr>
 	  <th class="thBlue"><center>Family</center></th>
-	  <th class="thBlue"><center>Enrolled Children</center></th>
-	  <th class="thBlue"><center>Payment Status</center></th>
+	  <th class="thYellow"><center>Enrolled Children</center></th>
+	  <th class="thRed"><center>Payment Status</center></th>
 	</tr>  
 	@foreach($eds as $ed)
 	  <tr>

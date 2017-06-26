@@ -95,8 +95,10 @@ Route::get('education/{education}/family', 'EducationController@family');
 Route::get('education/{education}/family/{student}', 'EducationController@student');
 Route::resource('education', 'EducationController');
 Route::resource('education/{education}/student', 'StudentController');
+
 Route::resource('studentUpdate', 'StudentUpdateController');
 
+Route::get('/studentUpdate/{id}/thanks', 'StudentUpdateController@thanks');
 
 
 

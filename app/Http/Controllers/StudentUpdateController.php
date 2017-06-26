@@ -35,7 +35,9 @@ class StudentUpdateController extends Controller
      */
     public function index()
     {
-        //
+        $updates=StudentUpdate::orderBy('created_at', 'asc')->get();
+        return view('studentUpdate.index', compact('updates'));
+        
     }
 
     /**
@@ -57,8 +59,10 @@ class StudentUpdateController extends Controller
     public function store(Request $request)
     {
         $studentUpdate = new StudentUpdate;
-        $studentUpdate->info = $request->info;
+        $studentUpdate->fill($request->all());
         $studentUpdate->save();
+
+        return redirect('/studentUpdate/'.$studentUpdate->id.'/thanks');
     }
 
     /**
@@ -103,6 +107,17 @@ class StudentUpdateController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $studentUpdate = StudentUpdate::findOrFail($id);
+        $studentUpdate->delete();
+        return redirect('/studentUpdate');
     }
+
+
+    public function thanks($id)
+    {
+        $studentUpdate=StudentUpdate::findOrFail($id);
+        return view('studentUpdate.thanks', compact('studentUpdate'));
+    }
+
+
 }

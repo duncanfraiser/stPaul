@@ -1,14 +1,23 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-10 col-md-offset-1">
-<h2><u>Religious Education Student Email List</u></h2>
-<p>
-@foreach($emails as $email)
+<div class="col-md-10 col-md-offset-1" style="margin-top: 50px;">
+
+
+
+<table>
+  <tr>
+    <th class="thHead">
+      <h2><center>Religious Education Student Email List</center></h2>
+      @include('includes.educationIndex')
+    </th>
+  </tr>
+  <tr>	
+    <td>
+    @foreach($emails as $email)
 {{$email}}, 
 @endforeach
-</p>
-<div class='pull-right'>
-<a href="{{URL::previous()}}"><button class="btn btn-primary">Back</button></a>
-</div>
+    </td>
+  </tr>
+</table>
 </div>
 @stop

@@ -1,152 +1,260 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-11 col-md-offset-1">
-<h2>Religious Education Grade Index
-<small><div class="dropdown" style="padding: 0px 0px 10px 0px">
-<button class=" dropdown-toggle" style="padding: 0px 0px 0px 0px" data-toggle="dropdown">Index Options
-<span class="caret"></span></button>
-<ul class="dropdown-menu">
-<li><a href="{{url('/education/changes')}}">Change Report</a></li>
-<li><a href="{{url('/education/')}}">Sort by Family</a></li>
-<li><a href="{{url('/education/familyEmail')}}">Family Email List</a></li>
-<li><a href="{{url('/education/studentEmail')}}">Student Email List</a></li>
-</ul></div></small></h2>
- <div class="col-md-6"> 
 
- <h4><u>3 Year Old Pre-school</u></h4>
-	<ol>	
+<div class="col-md-8 col-md-offset-2" style="margin-top: 50px;">
+
+
+
+<table>
+  <tr>
+    <th class="thHead" colspan="2">
+      <h2><center>Religious Education Sort By Grade</center></h2>
+      @include('includes.educationIndex')
+    </th>
+  </tr>	
+    <tr>
+    <td colspan="2" class="thBlue"><center>3 Year Old Pre-school</center></td>
+  </tr>
+  <tr>
+  	<th class="thYellow">Student</th>
+   	<th class="thRed">Family</th>
+  </tr>
+
+{{-- 3 Year Old Pre-school --}}
+
+	<?php $num=0; ?>
 	@foreach($students as $key=>$student)
-	@if($student->grade == '3yr')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+	  @if($student->grade == '3yr')	
+	    <?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>4 Year Old Pre-school</u></h4>
-		<ol>	
+{{-- 4 Year Old Pre-school --}}
+  <tr>
+    <td colspan="2" class="thGreen"><center>4 Year Old Pre-school</center></td>
+  </tr>
+	<?php $num=0; ?>
 	@foreach($students as $key=>$student)
-	@if($student->grade == '4yr')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+	  @if($student->grade == '4yr')	
+	  	<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>Kindergarten</u></h4>
-		<ol>	
+
+
+{{-- Kindergarten --}}
+  <tr>
+    <td colspan="2" class="thBlue"><center>Kindergarten</center></td>
+  </tr>
+  	<?php $num=0; ?>
 	@foreach($students as $key=>$student)
-	@if($student->grade == 'kindergarten')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+	  @if($student->grade == 'kindergarten')
+	    <?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>1st Grade</u></h4>
-		<ol>	
+
+{{-- 1st Grade --}}
+  <tr>
+    <td colspan="2" class="thYellow"><center>1st Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
-	@if($student->grade == '1')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+	  @if($student->grade == '1')
+	  <?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>2nd Grade</u></h4>
-		<ol>	
+
+
+{{-- 2nd Grade --}}
+  <tr>
+    <td colspan="2" class="thRed"><center>2nd Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '2')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>3rd Grade</u></h4>
-		<ol>	
+{{-- 3rd Grade --}}
+  <tr>
+    <td colspan="2" class="thGreen"><center>3rd Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '3')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>4th Grade</u></h4>
-		<ol>	
+{{-- 4th Grade --}}
+  <tr>
+    <td colspan="2" class="thBlue"><center>4th Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '4')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>5th Grade</u></h4>
-		<ol>	
+
+{{-- 5th Grade --}}
+  <tr>
+    <td colspan="2" class="thYellow"><center>5th Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '5')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>6th Grade</u></h4>
-		<ol>	
+
+
+{{-- 6th Grade --}}
+  <tr>
+    <td colspan="2" class="thRed"><center>6th Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '6')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>7th Grade</u></h4>
-		<ol>	
+{{-- 7th Grade --}}
+  <tr>
+    <td colspan="2" class="thGreen"><center>7th Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '7')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>8th Grade</u></h4>
-		<ol>	
+{{-- 8th Grade --}}
+  <tr>
+    <td colspan="2" class="thBlue"><center>8th Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '8')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>9th Grade</u></h4>
-		<ol>	
+
+{{-- 9th Grade --}}
+  <tr>
+    <td colspan="2" class="thYellow"><center>9th Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '9')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>10th Grade</u></h4>
-		<ol>	
+{{-- 10th Grade --}}
+  <tr>
+    <td colspan="2" class="thRed"><center>10th Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '10')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>11th Grade</u></h4>
-		<ol>	
+{{-- 11th Grade --}}
+  <tr>
+    <td colspan="2" class="thGreen"><center>11th Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '11')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
 
-<h4><u>12th Grade</u></h4>
-		<ol>	
+{{-- 12th Grade --}}
+  <tr>
+    <td colspan="2" class="thBlue"><center>12th Grade</center></td>
+  </tr>
+    <?php $num=0; ?>
 	@foreach($students as $key=>$student)
 	@if($student->grade == '12')
-	<li><a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}} </a></li>
-	@endif
+		<?php $num++; ?>
+	    <tr>
+	      <td>{{$num}}. <a href="{{url('/education/'.$student->education_id.'/family/'.$student->id)}}">{{$student->lastName}}, {{$student->firstName}}</a></td>
+	      <td><a href="{{url('/education/'.$student->education_id.'/family/')}}">{{$student->lastName}} Family</a></td>
+	    </tr>
+	  @endif
 	@endforeach
-	</ol>
+
+</table>
+
+
 </div>
-</div>
+
 @stop

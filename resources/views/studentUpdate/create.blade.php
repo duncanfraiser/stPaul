@@ -5,7 +5,19 @@
 <center><h1>Update Existing Student</h1></center>
 {{Form::open(['method' => 'POST', 'action' => ['StudentUpdateController@store']])}}
 	<div class="form-group">
-		{{Form::label('info', 'Please enter updated information:')}}<br>
+		{{Form::label('name', "Please enter student's full name:")}}<br>
+		{{Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Information'])}}
+	</div>
+	<div class="form-group">
+		{{Form::label('father', "Please enter father's full name")}}<br>
+		{{Form::text('father', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Information'])}}
+	</div>
+	<div class="form-group">
+		{{Form::label('mother', "Please enter mother's full name")}}<br>
+		{{Form::text('mother', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Information'])}}
+	</div>	
+	<div class="form-group">
+		{{Form::label('info', 'Please enter information to be updated:')}}<br>
 		{{Form::textarea('info', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Information'])}}
 	</div>
 	<div class="rightBtn">

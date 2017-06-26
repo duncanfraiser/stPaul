@@ -11,6 +11,9 @@ class studentUpdate extends Model
 		protected $table = 'studentUpdates';
           use SoftDeletes;
 	      protected $fillable = [
+            'name',
+            'father',
+            'mother',
             'info'
             ];
 }

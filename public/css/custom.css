@@ -91,9 +91,14 @@ body {
 .dropdown > button{
     background: none;
     border: none;
-
     padding: 15px;
     color: #337ab7;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
 /*errors*/
@@ -815,7 +820,22 @@ padding: 15px;
     outline: none;
 }
 
-
+/*RED no float right*/
+.smRedBtn{
+  font-size: 90%;
+  background-color: #bf202f;
+  color: #fff;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 0px 1px;
+}
+.smallRedBtn:hover{
+  background-color: #991c22;
+  box-shadow: 0px 1px 0px 0px;
+}
+.smallRedBtn:focus {
+    outline: none;
+}
 /*BACK BUTTON*/
 
 .backBtn{
@@ -875,6 +895,7 @@ tr:nth-child(even) {
       background-color:  #fff;
       font-size: 125%;
       font-weight: 900;
+      text-align: center;
 }
 
 
@@ -922,4 +943,5 @@ tr:nth-child(even) {
 .tdBlack{
   color: #000;
 }
+
 
