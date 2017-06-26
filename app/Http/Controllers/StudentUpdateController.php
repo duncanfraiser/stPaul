@@ -7,7 +7,7 @@ use App\Prayer;
 use App\Suggested_Prayer;
 use App\Divina;
 use App\Contemplative;
-use App\StudentUpdate;
+use App\studentUpdate;
 
 
 class StudentUpdateController extends Controller

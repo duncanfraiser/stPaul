@@ -9,16 +9,16 @@
 		{{Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Information'])}}
 	</div>
 	<div class="form-group">
-		{{Form::label('father', "Please enter father's full name")}}<br>
-		{{Form::text('father', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Information'])}}
+		{{Form::label('father', "Please enter father's full name:")}}<br>
+		{{Form::text('father', null, ['class' => 'form-control', 'placeholder' => "Enter Father's Full Name"])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('mother', "Please enter mother's full name")}}<br>
-		{{Form::text('mother', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Information'])}}
+		{{Form::text('mother', null, ['class' => 'form-control', 'placeholder' => "Enter Mother's Full Name"])}}
 	</div>	
 	<div class="form-group">
 		{{Form::label('info', 'Please enter information to be updated:')}}<br>
-		{{Form::textarea('info', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Information'])}}
+		{{Form::textarea('info', null, ['class' => 'form-control', 'placeholder' => "Enter Student's Updated Information"])}}
 	</div>
 	<div class="rightBtn">
 		<a class="backBtn" href="{{URL::previous()}}">Cancel</a>
