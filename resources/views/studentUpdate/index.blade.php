@@ -37,7 +37,9 @@
 		{{$update->mother}}
 		</td>
 		<td>
-		{{$update->info}}
+		Grade: <span class="tdBlue">{{$update->grade}}</span><br>
+		School: <span class="tdBlue">{{$update->school}}</span><br>
+		Updates: <span class="tdBlue">{{$update->info}}</span>
 		</td>
 		<td>
 		  <center>

@@ -14,6 +14,8 @@ class studentUpdate extends Model
             'name',
             'father',
             'mother',
+            'grade',
+            'school',
             'info'
             ];
 }

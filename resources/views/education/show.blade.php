@@ -3,6 +3,7 @@
 <div class="col-md-8 col-md-offset-2"><br/>
 <img class="banner" src="{{url('/banners/relEd.png/')}}">
 <h3>ELDEST CHILD being registered for Religious Education Classes</h3>
+<p>All fields required, type "none" if not applicable</p>
 
 {{Form::open(['method' => 'POST', 'action' => ['StudentController@store', Request::route()->education]])}}
 	{{Form::hidden('education_id', Request::route()->education)}}

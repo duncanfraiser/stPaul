@@ -17,8 +17,21 @@
 		{{Form::text('mother', null, ['class' => 'form-control', 'placeholder' => "Enter Mother's Full Name"])}}
 	</div>	
 	<div class="form-group">
-		{{Form::label('info', 'Please enter information to be updated:')}}<br>
-		{{Form::textarea('info', null, ['class' => 'form-control', 'placeholder' => "Enter Student's Updated Information"])}}
+		{{Form::label('grade', "Please enter grade 2017-18")}}<br>
+		{{Form::text('grade', null, ['class' => 'form-control', 'placeholder' => "Enter grade 2017-18"])}}
+	</div>
+	<div class="form-group">
+        @if($errors->has('school'))
+          {{Form::label('school', 'School Attending:', ['class' => 'errs'])}}
+		  {{Form::select('school', ['' => '-Please Select-','public' => 'public','private' => 'private','Catholic' => 'Catholic', 'homeschool' => 'homeschool'], null, ['class' => 'form-control errsInput'])}}
+		@else
+		  {{Form::label('school', 'School Attending:')}}
+		  {{Form::select('school', ['' => '-Please Select-','public' => 'public','private' => 'private','Catholic' => 'Catholic', 'homeschool' => 'homeschool'], null,  ['class' => 'form-control'])}}
+		@endif	
+	</div>
+	<div class="form-group">
+		{{Form::label('info', 'Please enter contact information that needs to be updated:')}}<br>
+		{{Form::textarea('info', null, ['class' => 'form-control', 'placeholder' => "Please enter contact information that needs to be updated."])}}
 	</div>
 	<div class="rightBtn">
 		<a class="backBtn" href="{{URL::previous()}}">Cancel</a>
