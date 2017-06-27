@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
-<img class="banner" src="{{url('/banners/relEd.png/')}}"> 
+<img class="banner" src="{{url('/banners/ReligiousEdBanner.png/')}}"> 
 <center><h1>Student Registration</h1></center>
 {{Form::open(['method' => 'POST', 'action' => ['StudentController@store', Request::route()->education]])}}
   {{Form::hidden('education_id', Request::route()->education)}}

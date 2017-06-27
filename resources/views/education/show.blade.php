@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
-<img class="banner" src="{{url('/banners/relEd.png/')}}">
+<img class="banner" src="{{url('/banners/ReligiousEdBanner.png/')}}">
 <h3>ELDEST CHILD being registered for Religious Education Classes</h3>
 <p>All fields required, type "none" if not applicable</p>
 
@@ -165,7 +165,7 @@
 
 
 	<div class="rightBtn">
-		<a class="backBtn" href="{{URL::previous()}}">Cancel</a>
+		<a class="backBtn" href="{{url('/education/menu')}}">Cancel</a>
 		{{Form::submit('Submit' , ['class' => 'blueBtn'])}}
 	</div>
 {{Form::close()}}

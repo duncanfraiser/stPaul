@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
-  <img width='100%' src="{{url('/banners/relEd.png/')}}"> 
+  <img class="banner" src="{{url('/banners/ReligiousEdBanner.png/')}}"> 
   <h3>Thank you for updating  <span class="tdBlue">{{$studentUpdate->name}}'s</span> infomation</h3>
   <p>Please check the information below:</p>
   <ul>

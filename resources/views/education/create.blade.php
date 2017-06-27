@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
-<img class="banner" src="{{url('/banners/relEd.png/')}}">
+<img class="banner" src="{{url('/banners/ReligiousEdBanner.png/')}}">
 <center><h1>Registration</h1></center>
 
 <p>Complete the Registration form (below) for children to be enrolled in the St. Paul Religious Education Program, ages 3 years through 12th Grade. This form is to be completed and submitted online.</p>

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
-<img class="banner" src="{{url('/banners/relEd.png/')}}">
+<img class="banner" src="{{url('/banners/ReligiousEdBanner.png/')}}">
 	<h3> Thank you for registering the following student or students for Religious Education Classes.</h3>
 	<ul>
     @foreach($parent->student as $stud)

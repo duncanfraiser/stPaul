@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
-<img width='100%' src="{{url('/banners/relEd.png/')}}"> 
+<img width='100%' src="{{url('/banners/ReligiousEdBanner.png/')}}"> 
 <center><h1>Update Existing Student</h1></center>
 {{Form::open(['method' => 'POST', 'action' => ['StudentUpdateController@store']])}}
 	<div class="form-group">
