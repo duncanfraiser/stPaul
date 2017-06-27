@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
   <img class="banner" src="{{url('/banners/ReligiousEdBanner.png/')}}"> 
-  <h3>Thank you for updating  <span class="tdBlue">{{$studentUpdate->name}}'s</span> infomation</h3>
+  <h3>Thank you for updating  <span class="tdBlue">{{$studentUpdate->name}}'s</span> information</h3>
   <p>Please check the information below:</p>
   <ul>
 	<li>Father's name: <span class="tdBlue">{{$studentUpdate->father}}</span></li>

@@ -29,7 +29,7 @@
 	    @if($ed->paid != "")
 	      <td class="tdCash">{{$ed->paid}}</td>
 	    @else
-	      <td class="tdRed">No Payment Recived</td>
+	      <td class="tdRed">No Payment Received</td>
 	    @endif
 	  </tr>
 	@endforeach
