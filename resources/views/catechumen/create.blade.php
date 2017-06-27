@@ -1,27 +1,27 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2"><br/>
+<img class="banner" src="{{url('/banners/rcia.png/')}}">
 <div class="col-md-12">
 		<center><h1>The Rite of Christian Initiation of Adults (RCIA) Registration</h1></center>
 		<center><h3>Class meets on Tuesday nights at 6:30 pm beginning<br>September 27, 2016</h3></center><br>
-<div class="col-md-12">
-    @if (count($errors))
-    <ul class="err">
-    @foreach($errors->all() as $error)
-    <li class="err">{{$error}}</li>
-    @endforeach
-    </ul>
-    @endif
-</div>
 {{Form::open(['method' => 'POST', 'action' => 'CatechumensController@store'])}}
-	<div class="form-group">
-		{{Form::label('firstName', 'Full Name:')}}
-		{{Form::text('firstName', null, ['class' => 'form-control', 'placeholder' => 'Enter First Name'])}}
-		{{Form::text('middleName', null, ['class' => 'form-control', 'placeholder' => 'Enter Middle Name'])}}
-		{{Form::text('lastName', null, ['class' => 'form-control', 'placeholder' => 'Enter Last Name'])}}
-		{{Form::text('maidenName', null, ['class' => 'form-control', 'placeholder' => 'Enter Maiden Name'])}}
+    <div class="form-group">
+        @if($errors->has('firstName') || $errors->has('lastName'))
+          {{Form::label('firstName', 'Full Name:', ['class' => 'errs'])}}
+          {{Form::text('firstName', null, ['class' => 'form-control errsInput inputSpace', 'placeholder' => 'Full Name:' ])}}
+		  {{Form::text('middleName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Middle Name'])}}
+		  {{Form::text('lastName', null, ['class' => 'form-control errsInput inputSpace', 'placeholder' => 'Enter Last Name'])}}
+		  {{Form::text('zip', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Zip'])}}
+		@else
+		  {{Form::label('firstName', 'Full Name:')}}
+		  {{Form::text('firstName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Full Name:' ])}}
+		  {{Form::text('middleName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Middle Name'])}}
+		  {{Form::text('lastName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Last Name'])}}
+		  {{Form::text('maidenName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'maidenName'])}}
+		@endif	
 	</div>
-		<div class="form-group">
+	<div class="form-group">
 		{{Form::label('homePhone', 'Home Phone Number:')}}
 		{{Form::text('homePhone', null, ['class' => 'form-control', 'placeholder' => '(###) ###-####'])}}
 	</div>
@@ -36,6 +36,10 @@
 	<div class="form-group">
 		{{Form::label('dob', 'Date of Birth:')}}
 		{{Form::text('dob', null, ['class' => 'form-control', 'placeholder' => 'MM/DD/YYYY'])}}
+	</div>
+	<div class="form-group">
+		{{Form::label('pob', 'Place of Birth:')}}
+		{{Form::text('pob', null, ['class' => 'form-control', 'placeholder' => 'Enter Place of Birth'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('occupation', 'Occupation:')}}
@@ -59,14 +63,20 @@
 		{{Form::text('childage', null, ['class' => 'form-control', 'placeholder' => 'List Ages of Children'])}}
 	</div>
 	<div class="form-group">
-		{{Form::label('baptized', 'Have you ever been baptized?')}}<br/>
-    	{{ Form::radio('baptized', 'Yes') }} {{ Form::label('baptized', 'Yes')}}<br />
-		{{ Form::radio('baptized', 'No') }} {{ Form::label('baptized', 'No')}}<br/>
+	    @if($errors->has('baptized'))
+		  {{Form::label('baptized', 'Have you ever been baptized?', ['class' => 'errs'])}}<br/>
+    	  {{ Form::radio('baptized', 'Yes') }} {{ Form::label('baptized', 'Yes', ['class' => 'errs'])}}<br />
+		  {{ Form::radio('baptized', 'No') }} {{ Form::label('baptized', 'No', ['class' => 'errs'])}}<br/>
+	    @else
+		  {{Form::label('baptized', 'Have you ever been baptized?')}}<br/>
+    	  {{ Form::radio('baptized', 'Yes') }} {{ Form::label('baptized', 'Yes')}}<br />
+		  {{ Form::radio('baptized', 'No') }} {{ Form::label('baptized', 'No')}}<br/>
+		@endif
 	</div>
 	<div class="form-group">
 		{{Form::label('bapChurch', 'If "Yes," Where?')}}
-		{{Form::text('bapChurch', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Name'])}}
-		{{Form::text('bapChurchAddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Address'])}}
+		{{Form::text('bapChurch', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Church Name'])}}
+		{{Form::text('bapChurchAddress', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Church Address'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('bapDate', 'Date of Baptism:')}}
@@ -83,15 +93,15 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('dadFirstName', 'Father\'s Full Name:')}}
-		{{Form::text('dadFirstName', null, ['class' => 'form-control', 'placeholder' => 'Enter Father\'s First Name'])}}
-		{{Form::text('dadMiddleName', null, ['class' => 'form-control', 'placeholder' => 'Enter Father\'s Middle Name'])}}
-		{{Form::text('dadLastName', null, ['class' => 'form-control', 'placeholder' => 'Enter Father\'s Last Name'])}}
+		{{Form::text('dadFirstName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Father\'s First Name'])}}
+		{{Form::text('dadMiddleName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Father\'s Middle Name'])}}
+		{{Form::text('dadLastName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Father\'s Last Name'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('momFirstName', 'Mother\'s Full Name:')}}
-		{{Form::text('momFirstName', null, ['class' => 'form-control', 'placeholder' => 'Enter Mother\'s First Name'])}}
-		{{Form::text('momMiddleName', null, ['class' => 'form-control', 'placeholder' => 'Enter Mother\'s Middle Name'])}}
-		{{Form::text('momLastName', null, ['class' => 'form-control', 'placeholder' => 'Enter Mother\'s Last Name'])}}
+		{{Form::text('momFirstName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Mother\'s First Name'])}}
+		{{Form::text('momMiddleName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Mother\'s Middle Name'])}}
+		{{Form::text('momLastName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Mother\'s Last Name'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('married', 'Are you presently married?')}}<br />
@@ -105,8 +115,8 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('married_location', 'Where were you married?')}}
-		{{Form::text('married_locationName', null, ['class' => 'form-control', 'placeholder' => 'Enter Venue Name'])}}
-		{{Form::text('married_location', null, ['class' => 'form-control', 'placeholder' => 'Enter Venue Location'])}}
+		{{Form::text('married_locationName', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Venue Name'])}}
+		{{Form::text('married_location', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Venue Location'])}}
 	</div>
 	<div class="form-group">
 		{{Form::label('divorced', 'Have you or your spouse/fianc&eacute;e ever been divorced?')}}<br/>
@@ -130,12 +140,13 @@
 	</div>
 	<div class="form-group">
 		{{Form::label('spouse_faith', 'If "Yes," in what faith tradition and where?')}}
-		{{Form::text('spouse_faith', null, ['class' => 'form-control', 'placeholder' => 'Enter Faith'])}}
-		{{Form::text('spouse_church', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Name'])}}
-		{{Form::text('spouse_church_address', null, ['class' => 'form-control', 'placeholder' => 'Enter Church Address'])}}
+		{{Form::text('spouse_faith', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Faith'])}}
+		{{Form::text('spouse_church', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Church Name'])}}
+		{{Form::text('spouse_church_address', null, ['class' => 'form-control inputSpace', 'placeholder' => 'Enter Church Address'])}}
 	</div>
-	<div class="form-group">
-		{{Form::submit('Sign Up', ['class' => 'btn btn-primary form-control'])}}
+	<div class="rightBtn">
+		<p><a class="backBtn" href="{{url('/')}}">Cancel</a></p>
+		{{Form::submit('Sign Up', ['class' => 'blueBtn'])}}
 	</div>
 {{Form::close()}}
 </div>

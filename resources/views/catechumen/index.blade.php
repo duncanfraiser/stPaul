@@ -1,20 +1,30 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-11 col-md-offset-1">
-<h2>RCIA Registration List
-<small><div class="dropdown" style="padding: 0px 0px 10px 0px">
-<button class=" dropdown-toggle" style="padding: 0px 0px 0px 0px" data-toggle="dropdown">Index Options
-<span class="caret"></span></button>
-<ul class="dropdown-menu">
-<li><a href="{{url('/RCIA/baptized')}}">Baptized List</a></li>
-<li><a href="{{url('/RCIA/annulment')}}">Annulment List</a></li>
-<li><a href="{{url('/RCIA/childCare')}}">Child Care</a></li>
-</ul></div></small></h2>
- <div class="col-md-6">                   
+<div class="col-md-10 col-md-offset-1" style="margin-top: 50px">
+<table>
+  <tr>
+    <th class="thHead" colspan="3">
+      <h2>RCIA Registration List</h2>
+      @include('includes.rciaIndex')      
+    </th>
+  </tr>
+  <tr>
+  	<th class="thBlue">
+  		Name
+  	</th>
+  	<th class="thYellow">
+  		Cell Phone
+  	</th>
+  	<th class="thRed">
+  		Email
+  	</th>
 	@foreach($rcias as $key=>$rcia)
-	{{++$key}}.
-	<a href="{{url('/RCIA/'.$rcia->id)}}">{{$rcia->lastName}}, {{$rcia->firstName}}</a><br />
+	<tr>
+	  <td>{{++$key}}. <a href="{{url('/RCIA/'.$rcia->id)}}">{{$rcia->lastName}}, {{$rcia->firstName}}</a></td>
+	  <td>{{$rcia->cellPhone}}</td>
+	  <td>{{$rcia->email}}</td>
+	<tr>
 	@endforeach
-</div>
+</table>
 </div>
 @stop

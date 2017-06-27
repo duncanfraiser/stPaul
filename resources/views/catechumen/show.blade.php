@@ -1,41 +1,153 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2">
-<h2>{{$rcia->firstName}} {{$rcia->middleName}} {{$rcia->lastName}}  <small><a style="color:xred" href="{{url('/RCIA/'.$rcia->id.'/edit')}}">edit|delete</a></small></h2>
-<ul>
-<li>Maiden Name: <span style="color:#337ab7">{{$rcia->maidenName}}</span></li>
-<li>Home Phone: <span style="color:#337ab7">{{$rcia->homePhone}}</span></li>
-<li>Cell Phone: <span style="color:#337ab7">{{$rcia->cellPhone}}</span></li>
-<li>Home Address: <span style="color:#337ab7">{{$rcia->address}}</span></li>
-<li>Date of Birth: <span style="color:#337ab7">{{$rcia->dob}}</span></li>
-<li>Occupation: <span style="color:#337ab7">{{$rcia->occupation}}</span></li>
-<li>Work Phone: <span style="color:#337ab7">{{$rcia->workPhone}}</span></li>
-<li>Email: <span style="color:#337ab7">{{$rcia->email}}</span></li>
-<li>Child Care Needed: <span style="color:#337ab7">{{$rcia->childcare}}</span></li>
-<li>Age of Children: <span style="color:#337ab7">{{$rcia->childage}}</span></li>
-<li>Baptized: <span style="color:#337ab7">{{$rcia->baptized}}</span></li>
-<li>Baptized Location: <span style="color:#337ab7">{{$rcia->bapChurch}}</span></li>
-<li>Baptized Date: <span style="color:#337ab7">{{$rcia->bapDate}}</span></li>
-<li>If you are baptized Catholic, have you practiced your faith: <span style="color:#337ab7">{{$rcia->practiced}}</span></li>
-<li>Why are you interested in the Catholic Church at this time: <span style="color:#337ab7">{{$rcia->why}}</span></li>
-<li>Father's Full Name: <span style="color:#337ab7">{{$rcia->dadFirstName}} {{$rcia->dadMiddleName}} {{$rcia->dadLastName}}</span></li>
-<li>Mother's Full Name: <span style="color:#337ab7">{{$rcia->momFirstName}} {{$rcia->momMiddleName}} {{$rcia->momLastName}}</span></li>
-<li>Married: <span style="color:#337ab7">{{$rcia->married}}</span></li>
-<li>First Marriage: <span style="color:#337ab7">{{$rcia->married}}</span></li>
-<li>Is this the first marriage for you and your spouse? <span style="color:#337ab7">{{$rcia->firstMarriage}}</span></li>
-<li>Where were you married? <span style="color:#337ab7">{{$rcia->married_location}}</span></li>
-<li>Have you or your spouse/fiancee ever been divorced? <span style="color:#337ab7">{{$rcia->married_divorced}}</span></li>
-<li>If "yes", has there been an annulment granted by the Catholic Church? <span style="color:#337ab7">{{$rcia->annulment_granted}}</span></li>
-<li>Are you or your spouse/fiancee presently seeking an annulment? <span style="color:#337ab7">{{$rcia->annulment_pending}}</span></li>
-<li>Has your spouse/fiancee ever been baptized? <span style="color:#337ab7">{{$rcia->spouse_baptized}}</span></li>
-<li>If "yes", in what faith tradition? <span style="color:#337ab7">{{$rcia->spouse_faith}}</span></li>
-<li>In what church did the baptism take place? <span style="color:#337ab7">{{$rcia->spouse_church}}</span></li>
-<li>Church Address: <span style="color:#337ab7">{{$rcia->spouse_church_address}}</span></li>
+<div class="col-md-8 col-md-offset-2" style="margin-top: 50px">
+<table>
+    <tr>
+      <th class="thHead" colspan="2"><center><h2>{{$rcia->firstName}} {{$rcia->middleName}} {{$rcia->lastName}}</h2></center></th>
+    </tr>
+    <tr>
+      <th class="thBlue" colspan="2"><center>General Infromation</center></th>
+    </tr>	
+    <tr>
+	  <td>Maiden Name:</td>
+	  <td class="tdBlue">{{$rcia->maidenName}}</td>
+	</tr>
 
-	
-</ul>
-<div class='pull-right'>
-<a href="{{URL::previous()}}"><button class="btn btn-primary">Back</button></a>
+    <tr>
+	  <td>Home Phone:</td>
+	  <td class="tdBlue">{{$rcia->homePhone}}</td>
+	</tr>
+    <tr>
+	  <td>Cell Phone:</td>
+	  <td class="tdBlue">{{$rcia->cellPhone}}</td>
+	</tr>
+    <tr>
+	  <td>Home Address:</td>
+	  <td class="tdBlue">{{$rcia->address}}</td>
+	</tr>
+    <tr>
+	  <td>Date of Birth:</td>
+	  <td class="tdBlue">{{$rcia->dob}}</td>
+	</tr>
+    <tr>
+	  <td>Place of Birth:</td>
+	  <td class="tdBlue">{{$rcia->pob}}</td>
+	</tr>
+    <tr>
+	  <td>Occupation:</td>
+	  <td class="tdBlue">{{$rcia->occupation}}</td>
+	</tr>
+    <tr>
+	  <td>Work Phone:</td>
+	  <td class="tdBlue">{{$rcia->workPhone}}</td>
+	</tr>
+    <tr>
+	  <td>Email:</td>
+	  <td class="tdBlue">{{$rcia->email}}</td>
+	</tr>
+	<tr>
+	  <td>Father's Full Name: </td>
+	  <td class="tdBlue">{{$rcia->dadFirstName}} {{$rcia->dadMiddleName}} {{$rcia->dadLastName}}</td>
+	</tr>
+	<tr>
+	  <td>Mother's Full Name:</td>
+	  <td class="tdBlue">{{$rcia->momFirstName}} {{$rcia->momMiddleName}} {{$rcia->momLastName}}</td>
+	</tr>
+	<td>Why are you interested in the Catholic Church at this time:</td>
+	  <td class="tdBlue">{{$rcia->why}}</td>
+	</tr>
+    <tr>
+      <th class="thYellow" colspan="2"><center>Child Care Infromation</center></th>
+    </tr>	
+	<tr>
+	  <td>Child Care Needed:</td>
+	  <td class="tdBlue">{{$rcia->childcare}}</td>
+	</tr>
+	<tr>
+	  <td>Age of Children:</td>
+	  <td class="tdBlue">{{$rcia->childage}}</td>
+	</tr>
+    <tr>
+      <th class="thRed" colspan="2"><center>Baptize Infromation</center></th>
+    </tr>
+
+	<tr>
+	  <td>Baptized:</td>
+	  <td class="tdBlue">{{$rcia->baptized}}</td>
+	</tr>
+	<tr>
+	  <td>Baptized Location:</td>
+	  <td class="tdBlue">{{$rcia->bapChurch}}</td>
+	</tr>
+	<tr>
+	  <td>Baptized Date:</td>
+	  <td class="tdBlue">{{$rcia->bapDate}}</td>
+	</tr>
+	<tr>
+	  <td>If you are baptized Catholic, have you practiced your faith:</td>
+	  <td class="tdBlue">{{$rcia->practiced}}</td>
+	</tr>
+	<tr>
+    <tr>
+      <th class="thGreen" colspan="2"><center>Marital Status</center></th>
+    </tr>	
+	<tr>
+	  <td>Married:</td>
+	  <td class="tdBlue">{{$rcia->married}}</td>
+	</tr>
+	<tr>
+	  <td>First Marriage:</td>
+	  <td class="tdBlue">{{$rcia->married}}</td>
+	</tr>
+	<tr>
+	  <td>Is this the first marriage for you and your spouse?</td>
+	  <td class="tdBlue">{{$rcia->firstMarriage}}</td>
+	</tr>
+	<tr>
+	  <td>Where were you married?</td>
+	  <td class="tdBlue">{{$rcia->married_location}}</td>
+	</tr>
+	<tr>
+	  <td>Have you or your spouse/fiancee ever been divorced?</td>
+	  <td class="tdBlue">{{$rcia->married_divorced}}</td>
+	</tr>
+	<tr>
+	  <td>If "yes", has there been an annulment granted by the Catholic Church?</td>
+	  <td class="tdBlue">{{$rcia->annulment_granted}}</td>
+	</tr>
+	<tr>  
+	  <td>Are you or your spouse/fiancee presently seeking an annulment?</td>
+	  <td class="tdBlue">{{$rcia->annulment_pending}}</td>
+	</tr>
+	<tr>
+	  <td>Has your spouse/fiancee ever been baptized?</td>
+	  <td class="tdBlue">{{$rcia->spouse_baptized}}</td>
+	</tr>
+	<tr>
+	  <td>If "yes", in what faith tradition?</td>
+	  <td class="tdBlue">{{$rcia->spouse_faith}}</td>
+	</tr>
+	<tr>
+	  <td>In what church did the baptism take place?</td>
+	  <td class="tdBlue">{{$rcia->spouse_church}}</td>
+	</tr>
+	<tr>
+	  <td>Church Address:</td>
+	  <td class="tdBlue">{{$rcia->spouse_church_address}}</td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+
+
+<div class='rightBtn'>
+<a href="{{url('/RCIA/'.$rcia->id.'/edit')}}"><button class="redBtn">Edit</button></a>
+<a href="{{URL::previous()}}"><button class="blueBtn">Back</button></a>
 </div>
 </div>
 @stop

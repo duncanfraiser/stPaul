@@ -19,6 +19,7 @@ class Catechumen extends Model
             'childcare',
             'childage',
             'dob',
+            'pob',
             'occupation',
             'workPhone',
             'email',
