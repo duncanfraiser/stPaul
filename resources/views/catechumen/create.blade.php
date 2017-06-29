@@ -4,7 +4,7 @@
 <img class="banner" src="{{url('/banners/rcia.png/')}}">
 <div class="col-md-12">
 		<center><h1>The Rite of Christian Initiation of Adults (RCIA) Registration</h1></center>
-		<center><h3>Class meets on Tuesday nights at 6:30 pm beginning<br>September 27, 2016</h3></center><br>
+		<center><h3>Class meets on Tuesday nights at 6:30 pm beginning<br>September 12, 2017</h3></center><br>
 {{Form::open(['method' => 'POST', 'action' => 'CatechumensController@store'])}}
     <div class="form-group">
         @if($errors->has('firstName') || $errors->has('lastName'))
