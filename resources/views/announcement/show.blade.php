@@ -3,7 +3,7 @@
 <div class="row yo" >
   <div class="col-md-8 col-md-offset-2 homecol">
     <div class="box blueDiv">
-      Announcement 
+      Announcements 
     </div>
 	<div class="col-md-12 homediv">
 	  @if(\Auth::check())
@@ -27,7 +27,7 @@
 		  @endforeach
         </ul>
         <div style="margin-left: 2em">	
-          <a href="{{ url('/announcement/')}}"><button class="bluebtn">View All</button></a>
+          <a href="{{ url('/announcement/')}}"><button class="blueBtn">View All</button></a>
         </div>   	
 	  </div>  
 	</div>
