@@ -3,7 +3,7 @@
     <!-- Wrapper for slides -->
     <div  class="carousel-inner" role="listbox">
       <div class="item active">
-        <a href="{{url('/ChristLife/create')}}"><img src="{{url('banners/sharingChrist.png' )}}" alt="St Paul Cathloic Church"></a>
+               <a href="{{url('/education/menu')}}"><img src="{{url('banners/ReligiousEdBanner.png/')}}" alt="St Paul Cathloic Church"></a>
       </div> 
       <div class="item">
         <img src="{{url('banners/churchView.png' )}}" alt="St Paul Cathloic Church">
@@ -12,7 +12,8 @@
         <a href="{{url('/masstime/14')}}"><img src="{{url('/banners/GreenCrucifix.png')}}" alt="St Paul Cathloic Church"></a>
       </div>
       <div class="item">
-        <a href="{{url('/education/menu')}}"><img src="{{url('banners/ReligiousEdBanner.png/')}}" alt="St Paul Cathloic Church"></a>
+
+         <a href="{{url('/ChristLife/create')}}"><img src="{{url('banners/sharingChrist.png' )}}" alt="St Paul Cathloic Church"></a>
       </div>
       <div class="item">
         <img src="{{url('banners/St.-Paul-Banners40.png')}}" alt="St Paul Cathloic Church">
