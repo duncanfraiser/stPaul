@@ -12,7 +12,7 @@ use App\Suggested_Prayer;
 use App\Divina;
 use App\Contemplative;
 use Carbon\Carbon;
-use App\About;
+use App\about;
 
 class AboutController extends Controller
 {
