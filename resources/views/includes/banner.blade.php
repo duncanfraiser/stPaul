@@ -12,7 +12,7 @@
         <a href="{{url('/masstime/14')}}"><img src="{{url('/banners/GreenCrucifix.png')}}" alt="St Paul Cathloic Church"></a>
       </div>
       <div class="item">
-        <a href="{{url('/member/create')}}"><img src="{{url('banners/member.png/')}}" alt="St Paul Cathloic Church"></a>
+        <a href="{{url('/education/menu')}}"><img src="{{url('banners/ReligiousEdBanner.png/')}}" alt="St Paul Cathloic Church"></a>
       </div>
       <div class="item">
         <img src="{{url('banners/St.-Paul-Banners40.png')}}" alt="St Paul Cathloic Church">
