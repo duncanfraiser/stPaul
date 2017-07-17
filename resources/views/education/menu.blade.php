@@ -15,7 +15,7 @@
 	      <a href="{{url('/education/addNew')}}"><button class="bigGreenBtn">Add New Student to Existing Family</button></a>
 	    </div>
 	    <div class="col-md-6 col-sm-6 col-xs-12 bigBtnDiv">	
-		  <a href=""><button class="bigRedBtn">About Religious Education</button></a>
+		  <a href="{{url('/education/about')}}"><button class="bigRedBtn">About Religious Education</button></a>
 	    </div>
 	  </div>  
   </div>

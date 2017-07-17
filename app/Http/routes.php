@@ -85,6 +85,7 @@ Route::resource('contemplative', 'ContemplativeController');
 
 
 /*education routes*/
+Route::resource('education/about', 'AboutController');
 Route::get('education/menu', 'EducationController@menu');
 Route::get('education/addNew', 'EducationController@addNew');
 Route::get('education/changes', 'EducationController@changes');

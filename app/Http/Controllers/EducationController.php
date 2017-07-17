@@ -11,7 +11,7 @@ use App\Suggested_Prayer;
 use App\Divina;
 use App\Contemplative;
 use Carbon\Carbon;
-
+use App\About;
 
 class EducationController extends Controller
 {
@@ -154,6 +154,11 @@ class EducationController extends Controller
         $colTot=$total/2;
 
         return view('education.addNew', compact('fams', 'colTot'));
+    }
+
+    public function about(){
+        $about=About::findOrFail(1);
+        return view('education.about', compact('about'));
     }
 
 }

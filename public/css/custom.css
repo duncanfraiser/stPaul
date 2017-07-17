@@ -23,7 +23,10 @@ body {
  * NAVIGATION STYLING
 */
 
-
+b, strong{
+  font-weight: 900;
+  color: red;
+}
 
 
 @media (max-width: 764px) {
