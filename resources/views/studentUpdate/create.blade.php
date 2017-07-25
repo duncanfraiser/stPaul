@@ -3,6 +3,20 @@
 <div class="col-md-8 col-md-offset-2"><br/>
 <img width='100%' src="{{url('/banners/ReligiousEdBanner.png/')}}"> 
 <center><h1>Update Existing Student</h1></center>
+
+<p>Complete the Registration form (below) for children to be enrolled in the St. Paul Religious Education Program, ages 3 years through 12th Grade. This form is to be completed and submitted online.</p>
+<p>Once you have registered online, please print, complete and sign the <a href="{{url('/files/photoReleaseForm.docx')}}">"Parental Consent, Photo Release, Medical Release Form"</a> which can be accessed after submitting the Registration Form. You may place this form and payment in a sealed envelope marked, "Religious Ed" and drop it in the collection basket at Mass or mail it to the church office.</p>
+<p>Please note that parents of students in 7th-12th Grades need to print, complete, and sign a  <a target="blank" href="{{url('/files/FormsPermanent2.pdf')}}">Diocesan Youth Form</a>. Thank you.</p>
+
+
+<p><h3>Fees:</h3><ul><li>$30 for one child</li>
+<li>$50 for two children</li>
+<li>$75 for three or more children</li>
+</ul></p>
+
+
+<h3>Registration Form</h3>
+<p><i>* All fields required, type "none" if not applicable</i></p>
 {{Form::open(['method' => 'POST', 'action' => ['StudentUpdateController@store']])}}
 	<div class="form-group">
 		{{Form::label('name', "Please enter student's full name:")}}<br>
