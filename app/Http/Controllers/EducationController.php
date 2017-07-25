@@ -162,13 +162,12 @@ class EducationController extends Controller
     }
 
     public function newfam(){
-        $newfams=Education::where('created_at', '>', '2017-01-01 00:00:00')->get();
-     
+        $newfams=Education::where('created_at', '>', '2017-01-01 00:00:00')->get();     
         $newstudents=Student::where('created_at', '>', '2017-01-01 00:00:00')->get();
         $updatedstudents=Student::where('created_at', '<', '2017-01-01 00:00:00')->where('updated_at', '>', '2017-01-01 00:00:00')->get();
+        $updatedfams=Education::where('created_at', '<', '2017-01-01 00:00:00')->where('updated_at', '>', '2017-01-01 00:00:00')->get();
         
-        
-        return view('education.newfam', compact('newfams','newstudents','updatedstudents'));
+        return view('education.newfam', compact('newfams','newstudents','updatedstudents', 'updatedfams'));
     }
 
 }
