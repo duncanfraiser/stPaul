@@ -4,7 +4,8 @@
       <span class="caret"></span></button>
       <ul class="dropdown-menu">
         <li><a href="{{url('/studentUpdate')}}">Change Request</a></li>
-        <li><a href="{{url('/education/changes')}}">Change Report</a></li>
+        <li><a href="{{url('/education/changes')}}">7 Day Change Report</a></li>
+        <li><a href="{{url('/education/newfam')}}">2017 Change Report</a></li>
         <li><a href="{{url('/education/')}}">Sort by Family</a></li>
         <li><a href="{{url('/education/grade')}}">Sort by Grade</a></li>
         <li><a href="{{url('/education/familyEmail')}}">Family Email List</a></li>
