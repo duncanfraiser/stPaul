@@ -2,11 +2,16 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2"><br/>
 <img class="banner" src="{{url('/banners/RCIADiscoveringChristLogo.png')}}">
+
 <div class="col-md-12">
 		<center><h1>The Rite of Christian Initiation of Adults (RCIA) Registration</h1></center>
 		<center><h3>Class meets on Tuesday nights at 6:30 pm beginning<br>September 12, 2017</h3></center><br>
-		<center><p>Non-Catholics & Catholics are invited to join us for the Period of Inquiry which includes the 7-week Discovering Christ Series -- no commitment to join the Catholic Church.</p></center><br>
-		<center><p><i>* All fields required. Type "none" if not applicable. If registering for Discovering Christ only, please indicate in the box "Why are you interested in the Catholic Church at this time?"</i></p></center><br>
+		<center><p style="margin-bottom: 0px">Non-Catholics & Catholics are invited to join us for the Period of Inquiry which includes the 7-week Discovering Christ Series -- no commitment to join the Catholic Church.</p></center>
+{{-- 		<center><p><i>* All fields required. Type "none" if not applicable. If registering for Discovering Christ only, please indicate in the box "Why are you interested in the Catholic Church at this time?"</i></p></center><br> --}}
+</div>
+<div class="col-md-12" style="margin-bottom: 15px"><br/>
+<img class="minibanner" src="{{url('/banners/minigotGod.png')}}">
+</div>
 {{Form::open(['method' => 'POST', 'action' => 'CatechumensController@store'])}}
     <div class="form-group">
         @if($errors->has('firstName') || $errors->has('lastName'))

@@ -3,7 +3,10 @@
     <!-- Wrapper for slides -->
     <div  class="carousel-inner" role="listbox">
       <div class="item active">
-               <a href="{{url('/education/menu')}}"><img src="{{url('banners/ReligiousEdBanner.png/')}}" alt="St Paul Cathloic Church"></a>
+               <a href="{{url('RCIA/create')}}"><img src="{{url('banners/gotGod.png/')}}" alt="St Paul Cathloic Church"></a>
+      </div> 
+      <div class="item">
+        <a href="{{url('/education/menu')}}"><img src="{{url('banners/ReligiousEdBanner.png/')}}" alt="St Paul Cathloic Church"></a>
       </div> 
       <div class="item">
         <img src="{{url('banners/churchView.png' )}}" alt="St Paul Cathloic Church">

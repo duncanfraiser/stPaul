@@ -39,7 +39,7 @@
                         <li><a href="{{url('/flower')}}">Altar Flowers</a></li>
                         <li><a href="{{url('/ChristLife/create')}}">Sharing Christ</a></li>
                         <li><a href="{{url('/member/create')}}">Parish Membership</a></li>
-                        <li><a href="{{url('/RCIA/create')}}">RCIA</a></li>
+                        <li><a href="{{url('/RCIA/create')}}">RCIA/Discovering Christ</a></li>
                         <li><a href="{{url('/education/menu')}}">Religious Education</a></li>                        
                         <li><a href="{{url('/volunteer/create')}}">Volunteer</a></li>
                         </ul>
