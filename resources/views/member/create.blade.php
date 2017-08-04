@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2">
-		<img width='100%' src="{{url('/banners/member_header.png/')}}">
+<div class="col-md-8 col-md-offset-2"><br/>
+		<img class="banner" width='100%' src="{{url('/banners/member_header.png/')}}">
 		<center><h2>Member Registration</h2></center>
 		{{Form::open(['method' => 'POST', 'action' => 'MembersController@store'])}}
 		<div class="form-group">
