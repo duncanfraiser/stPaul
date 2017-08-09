@@ -12,7 +12,7 @@
 
  		<h1>Registration for Sharing Christ is closed.</h1><br/><h3 style="margin-top: 0px">We hope you can join us for the next offering of Sharing Christ <br/>to be scheduled in 2018.<br/><br/>Please check back to see when the dates have been set.<br/>Thank you!</h3><br/>
 
-		<p style="font-size: 120%; margin-bottom: 150px">Share your experience of ChristLife with others. Invite them to Discovering Christ which begins on September 12th!</span><p/><br/></center>
+		<p style="font-size: 120%; margin-bottom: 150px">Share your experience of ChristLife with others. <br/>Invite them to Discovering Christ which begins on September 12th!</span><p/><br/></center>
 
 {{-- 
 
