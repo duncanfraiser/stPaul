@@ -20,10 +20,10 @@
 
 
 
-
+{{-- 
       <div class="item">
          <a href="{{url('/ChristLife/create')}}"><img src="{{url('banners/sharingChrist.png' )}}" alt="St Paul Cathloic Church"></a>
-      </div>
+      </div> --}}
       <div class="item">
         <a href="{{url('/member/create')}}"><img src="{{url('banners/St.-Paul-Banners40.png')}}" alt="St Paul Cathloic Church"></a>
       </div> 

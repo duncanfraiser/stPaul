@@ -1,18 +1,20 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2" style="margin-top: 15px">
 
 
 
 
 
 
+ {{-- <a href="{{url('RCIA/create')}}"><img src="{{url('banners/gotGod.png/')}}" alt="St Paul Cathloic Church"></a> --}}
+ 		<center> <a href="{{url('RCIA/create')}}"><img width='100%' class="banner" src="{{url('banners/gotGod.png/')}}"></a>
 
- 		<center><img width='100%' src="{{url('/banners/sharingChrist.png/')}}"><h1>Registration for Sharing Christ</h1><h3 style="margin-top: 0px">Sessions begin September 7th</h3>
+ 		<h1>Registration for Sharing Christ is closed.</h1><br/><h3 style="margin-top: 0px">We hope you can join us for the next offering of Sharing Christ to be scheduled in 2018. Please check back to see when the dates have been set. Thank you!</h3><br/>
 
-		<p style="font-size: 120%">Six Thursday nights, 7-9 pm on September 7, 14, 21, 28, October 5, 12 <br/>plus, a Saturday Retreat on October 21<br/><br/><span style="font-style: italic; font-weight: 5">* Meals will be served at the Saturday Retreat.</span><p/><br/></center>
+		<p style="font-size: 120%; margin-bottom: 150px">Share your experience of ChristLife with others. Invite them to Discovering Christ which begins on September 12th!</span><p/><br/></center>
 
-
+{{-- 
 
 
 
@@ -148,7 +150,7 @@
 	<div class="form-group">
 		{{Form::submit('Sign Up', ['class' => 'btn btn-primary form-control'])}}
 	</div>
-{{Form::close()}} 
+{{Form::close()}}  --}}
 
 
 
