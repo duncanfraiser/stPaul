@@ -4,9 +4,9 @@
 
 <div class='row yo'>
   <div class="col-md-12 mobile">
-	<div class="col-md-12 lintbar">
-      <center><span style="font-size: 125%">Sharing Christ Registration </span>
-      <a href="{{url('/ChristLife/create')}}"><button class="smallGreenBtn">Click Here</button></a></center>
+	<div class="col-md-12 rciabar">
+      <center><span style="font-size: 125%">Discovering Christ/RCIA Registration </span>
+      <a href="{{url('/RCIA/create')}}"><button class="smallBlueBtn" style="float:none">Click Here</button></a></center>
 	</div>
   </div>
 </div>
