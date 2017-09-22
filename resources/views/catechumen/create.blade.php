@@ -1,18 +1,37 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-md-8 col-md-offset-2"><br/>
+<div class="col-md-8 col-md-offset-2" style="margin-bottom: 150px"><br/>
 <img class="banner" src="{{url('/banners/RCIADiscoveringChristLogo.png')}}">
 
 <div class="col-md-12">
+<center><h1>Discovering Christ & RCIA registrations are now closed.</h1></center>
+<center><p><i>Please call the Church Office @ 601-992-9547 if you have any questions, or are interested in learning more about the Catholic Faith.</i></p></center>
+<center><p><i>We will be offering another Discovering Christ Session in the future. Dates are yet to be determined. Stay tuned!</i></p></center>
+<center><p><i>RCIA is offered every year, September through Easter.</i></p></center>
+<center><p><i>Thank you!</i></p></center>
+
+{{-- 
 		<center><h1>The Rite of Christian Initiation of Adults (RCIA) Registration</h1></center>
 		<center><h3>Class meets on Tuesday nights at 6:30 pm beginning<br>September 12, 2017</h3></center><br>
-		<center><p style="margin-bottom: 0px">Non-Catholics & Catholics are invited to join us for the Period of Inquiry which includes the 7-week Discovering Christ Series -- no commitment to join the Catholic Church.</p></center>
+		<center><p style="margin-bottom: 0px">Non-Catholics & Catholics are invited to join us for the Period of Inquiry which includes the 7-week Discovering Christ Series -- no commitment to join the Catholic Church.</p></center> --}}
 {{-- 		<center><p><i>* All fields required. Type "none" if not applicable. If registering for Discovering Christ only, please indicate in the box "Why are you interested in the Catholic Church at this time?"</i></p></center><br> --}}
-</div>
+{{-- </div>
 <div class="col-md-12" style="margin-bottom: 15px"><br/>
 <img class="minibanner" src="{{url('/banners/minigotGod.png')}}">
+</div> --}}
+
+
 </div>
-{{Form::open(['method' => 'POST', 'action' => 'CatechumensController@store'])}}
+
+</div>
+@stop
+
+
+
+
+
+
+{{-- {{Form::open(['method' => 'POST', 'action' => 'CatechumensController@store'])}}
     <div class="form-group">
         @if($errors->has('firstName') || $errors->has('lastName'))
           {{Form::label('firstName', 'Full Name:', ['class' => 'errs'])}}
@@ -278,3 +297,4 @@
 </div>
 </div>
 @stop
+ --}}
