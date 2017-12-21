@@ -23,7 +23,7 @@ tr:nth-child(even) {
 @section('content')
 <div class="col-md-12">
 <div class="col-md-10 col-md-offset-1">
-<h2>2017 Flower Chart</h2>
+<h2>2018 Flower Chart</h2>
 <h3>Altar Flowers - Cost $70<br/>
 Blessed Mother Flowers - Cost $40</h3>
 <p>You may mail your payment or drop it in the Weekend Offertory. Please make checks payable to St. Paul Catholic Church, and indicate payment is for Altar Flowers or Blessed Mother Flowers with the designated date. The Church will order the flowers and have them delivered on your specific date (select date below).</p>
