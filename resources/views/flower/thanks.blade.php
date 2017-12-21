@@ -25,7 +25,7 @@ Blessed Mother Flowers - Cost $40</h3>
 
 	<div class='pull-right'>
 
-	<a href="{{ url('/flower') }}"><button class="pull-right btn btn-primary">Return to 2017 Flower Chart</button></a>
+	<a href="{{ url('/flower') }}"><button class="pull-right btn btn-primary">Return to Flower Chart</button></a>
 	</div>
 </div>
 
