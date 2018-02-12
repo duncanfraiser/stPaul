@@ -156,7 +156,7 @@
   </div>
 </div>
 
-
+{{-- 
 <div class='row yo'>
   <div class="col-md-12 mobile">
 	<div class="col-md-12 lintbar">
@@ -170,7 +170,7 @@
 	  <a href="{{url('reflection/')}}"><button class="yellowBtn">Click Here</button></a></center>
 	</div>
   </div>
-</div>
+</div> --}}
 
 
 

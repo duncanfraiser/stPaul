@@ -10,12 +10,12 @@
         <img src="{{url('banners/churchView.png' )}}" alt="St Paul Cathloic Church">
       </div> 
       <div class="item">
-        <a href="{{url('/masstime/14')}}"><img src="{{url('/banners/GreenCrucifix.png')}}" alt="St Paul Cathloic Church"></a>
+        <a href="{{url('/masstime/14')}}"><img src="{{url('/banners/LentCrucifix.png')}}" alt="St Paul Cathloic Church"></a>
       </div>
 
 
       <div class="item">
-               <a href="{{url('RCIA/create')}}"><img src="{{url('banners/gotGod.png/')}}" alt="St Paul Cathloic Church"></a>
+               <a href="{{url('RCIA/create')}}"><img src="{{url('banners/Lent2018banner2.png/')}}" alt="St Paul Cathloic Church"></a>
       </div>
 
 
@@ -39,7 +39,6 @@
     </a>
 </div>
 </div>
-
 
 
 
